@@ -10,10 +10,8 @@ const clientLogos = [
   { name: "ITSvit", light: "/icons/tech/ITSvit-light.svg", dark: "/icons/tech/ITSvit-dark.svg" },
   { name: "Appexoft", light: "/icons/tech/appexoft-light.svg", dark: "/icons/tech/appexoft-dark.svg" },
   { name: "Acropolium", light: "/icons/tech/acropolium-light.svg", dark: "/icons/tech/acropolium-dark.svg" },
-  { name: "InAppo", light: "/icons/tech/inappo-light.svg", dark: "/icons/tech/inappo-dark.svg" },
   { name: "Red Jumpers", light: "/icons/tech/red-jumpers-ligt.svg", dark: "/icons/tech/red-jumpers-dark.svg" },
   { name: "1GameChanger", light: "/icons/tech/1gamechanger-light.svg", dark: "/icons/tech/1gamechanger-dark.svg" },
-  { name: "Equinox", light: "/icons/tech/Equinox-light.svg", dark: "/icons/tech/Equinox-dark.svg" },
   { name: "ABTO Software", light: "/icons/tech/abto-software-light.svg", dark: "/icons/tech/abtosoftware-dark.svg" },
   { name: "Yotewo", light: "/icons/tech/yotewo-light.svg", dark: "/icons/tech/yotewo-dark.svg" },
   { name: "DreamX", light: "/icons/tech/dreamx-light.svg", dark: "/icons/tech/dreamx-dark.svg" },
@@ -24,6 +22,8 @@ const clientLogos = [
   { name: "Collab IT company", light: "/icons/tech/logo-black.svg", dark: "/icons/tech/logo-white.svg" },
   ]
 
+ {/* { name: "InAppo", light: "/icons/tech/inappo-light.svg", dark: "/icons/tech/inappo-dark.svg" }, */}
+{/* { name: "Equinox", light: "/icons/tech/Equinox-light.svg", dark: "/icons/tech/Equinox-dark.svg" }, */}
 export function OurClientsSection() {
   const { t, locale } = useLocale()
   const { theme } = useTheme()
