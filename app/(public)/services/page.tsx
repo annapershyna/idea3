@@ -185,6 +185,14 @@ export default function ServicesPage() {
       reverse: false,
     },
     {
+      id: "real-time-3d-interactive-development",
+      title: t.realTime3DInteractiveDevelopment,
+      description: t.realTime3DInteractiveDevelopmentDesc,
+      image: "/images/213432fc8fbf61b5ea543d6c172ebac71c9a9a20.jpg",
+      imageAlt: "Real-time 3D and interactive Unity development",
+      reverse: true,
+    },
+    {
       id: "mobile-applications",
       title: t.mobileApplications,
       description: t.mobileApplicationsDesc,

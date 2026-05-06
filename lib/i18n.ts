@@ -34,6 +34,10 @@ export const translations = {
     qaAutomation: "Manual and Automation QA",
     devops: "DevOps",
     dataAnalytics: "Data Analytics",
+    unityDevelopment: "Unity development",
+    realTime3DInteractiveDevelopment: "Real-Time 3D & Interactive Development",
+    realTime3DInteractiveDevelopmentDesc:
+      "We build Unity-powered real-time 3D and interactive experiences for product demos, AR/VR concepts, simulations, configurators, and immersive brand activations. Our team combines C#, Unity, 3D asset integration, performance optimization, and platform-specific deployment to deliver responsive interactive products from prototype to release.",
     customWebSolutionsDesc:
       "We specialize in creating unique websites and web applications that fully meet your goals and requirements. Whether it's a corporate website, an eCommerce platform, or a custom web solution — our team of experienced developers works closely with you to understand your objectives and deliver solutions that exceed expectations.",
     uiUxDesignDesc:
@@ -262,6 +266,10 @@ export const translations = {
     qaAutomation: "Ручне та автоматизоване тестування (QA)",
     devops: "DevOps",
     dataAnalytics: "Аналітика даних",
+    unityDevelopment: "Розробка Unity",
+    realTime3DInteractiveDevelopment: "Real-Time 3D & Interactive Development",
+    realTime3DInteractiveDevelopmentDesc:
+      "Ми створюємо real-time 3D та інтерактивні рішення на Unity для продуктових демо, AR/VR-концептів, симуляцій, конфігураторів та імерсивних бренд-активацій. Наша команда поєднує C#, Unity, інтеграцію 3D-асетів, оптимізацію продуктивності та розгортання під конкретні платформи, щоб доводити інтерактивні продукти від прототипу до релізу.",
     customWebSolutionsDesc:
       "Ми спеціалізуємося на створенні унікальних вебсайтів та веб-додатків, які повністю відповідають вашим цілям та вимогам. Будь то корпоративний сайт, платформа eCommerce або кастомне веб-рішення — наша команда досвідчених розробників тісно співпрацює з вами, щоб зрозуміти ваші цілі та створити рішення, що перевищує очікування.",
     uiUxDesignDesc:
