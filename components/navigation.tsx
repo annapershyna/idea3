@@ -863,6 +863,7 @@ export function Navigation() {
                   <div
                     style={{
                       width: "100%",
+                      fontFamily: "Onest",
                       minHeight: "315px",
                       borderRadius: "14px",
                       background: isDark ? "#212121" : "#F5F5F5",
@@ -879,6 +880,7 @@ export function Navigation() {
                         onClick={() => setProjectsOpen(false)}
                         style={{
                           display: "block",
+                          fontFamily: "Onest",
                           width: "235px",
                           height: "276px",
                           borderRadius: "6px",
