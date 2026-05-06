@@ -719,7 +719,7 @@ export function Navigation() {
                           {t.dataAnalytics}
                         </Link>
                         <Link
-                          href="/services#unity"
+                          href="/services#real-time-3d-interactive-development"
                           className="transition-all duration-300 ease-out p-2"
                           style={{
                             fontFamily: "Onest",
@@ -746,7 +746,7 @@ export function Navigation() {
                             e.currentTarget.style.border = "none"
                           }}
                         >
-                          {t.unityDevelopment}
+                          {t.unityDevelopmentMenu}
                         </Link>
                       </div>
 
@@ -1815,7 +1815,7 @@ export function Navigation() {
                         {t.dataAnalytics}
                       </Link>
                       <Link
-                        href="/services#unity"
+                        href="/services#real-time-3d-interactive-development"
                         className="transition-all duration-300 ease-out p-2"
                         style={{
                           fontFamily: "Onest",
@@ -1847,7 +1847,7 @@ export function Navigation() {
                           e.currentTarget.style.color = isDark ? "#FFFFFF99" : "#21212199"
                         }}
                       >
-                        {t.unityDevelopment}
+                        {t.unityDevelopmentMenu}
                       </Link>
                     </div>
 
