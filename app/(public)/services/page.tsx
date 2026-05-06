@@ -16,6 +16,17 @@ declare global {
   }
 }
 
+const serviceTechIcons: Record<string, string> = {
+  ARKit: "/icons/tech/arkit.svg",
+  "AR Foundation": "/icons/tech/ar-foundation.svg",
+  WebGL: "/icons/tech/webgl.svg",
+  "Meta Quest": "/icons/tech/meta-quest.svg",
+  "C#": "/icons/tech/csharp.svg",
+  ARCore: "/icons/tech/arcore.svg",
+  "HTC Vive": "/icons/tech/htc-vive.svg",
+  "C# (.NET Framework)": "/icons/tech/dotnet-framework.svg",
+}
+
 export default function ServicesPage() {
   const { t } = useLocale()
 
@@ -296,18 +307,39 @@ export default function ServicesPage() {
                     </p>
                   )}
                   {service.stack && (
-                    <p
-                      className="mt-3"
-                      style={{
-                        fontFamily: "Onest",
-                        fontSize: "15px",
-                        lineHeight: "1.6",
-                        color: "var(--foreground)",
-                        opacity: 0.75,
-                      }}
-                    >
-                      {service.stack}
-                    </p>
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {service.stack.map((tech: string, i: number) => {
+                        const iconPath = serviceTechIcons[tech]
+
+                        return (
+                          <span
+                            key={i}
+                            className="px-3 py-2 rounded-[4px] text-xs font-medium flex items-center gap-2 transition-transform duration-200 hover:scale-105"
+                            style={{
+                              backgroundColor: isDark ? "#323130" : "#FFFFFF",
+                              color: isDark ? "#FFFFFF" : "#000000",
+                              border: isDark ? "none" : "1px solid #E0E0E0",
+                              fontFamily: "Onest",
+                            }}
+                          >
+                            {iconPath && (
+                              <span
+                                className="flex items-center justify-center rounded-[2px] flex-shrink-0"
+                                style={{
+                                  backgroundColor: "#FFFFFF",
+                                  padding: "2px",
+                                  width: "20px",
+                                  height: "20px",
+                                }}
+                              >
+                                <Image src={iconPath} alt={`${tech} icon`} width={16} height={16} />
+                              </span>
+                            )}
+                            {tech}
+                          </span>
+                        )
+                      })}
+                    </div>
                   )}
                   {service.buttonHref && service.buttonLabel && (
                     <Link

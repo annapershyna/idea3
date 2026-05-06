@@ -52,7 +52,7 @@ export const translations = {
       "Most products explain themselves with text. The best ones let you touch, try, and explore. We build AR try-ons, VR training simulators, 3D configurators, and interactive experiences on Unity: one codebase, every platform. No cross-platform chaos at launch, no PoC that ghosts you in week three.",
     unityDevelopmentCapabilities:
       "Mobile AR · VR simulations · 3D configurators · Interactive PoC · Legacy rescue",
-    unityDevelopmentStack: "ARKit · AR Foundation · WebGL · Meta Quest · C# · ARCore · HTC Vive · C# (.NET Framework)",
+    unityDevelopmentStack: ["ARKit", "AR Foundation", "WebGL", "Meta Quest", "C#", "ARCore", "HTC Vive", "C# (.NET Framework)"],
     unityDevelopmentButton: "See how it works in practice",
     getConsultation: "Get Consultation",
     sendUsMessage: "Send us your idea, and we'll reach out to provide recommendations on implementation.",
@@ -289,7 +289,7 @@ export const translations = {
       "Більшість продуктів пояснюють себе текстом. Найкращі — дозволяють доторкнутися, спробувати й дослідити. Ми створюємо AR-примірки, VR-тренажери, 3D-конфігуратори та інтерактивні рішення на Unity: одна кодова база — для всіх платформ. Жодного хаосу з кросплатформеністю на релізі, жодних PoC, що зникають на третьому тижні.",
     unityDevelopmentCapabilities:
       "Мобільний AR · VR-симуляції · 3D-конфігуратори · Інтерактивні PoC · Порятунок legacy-рішень",
-    unityDevelopmentStack: "ARKit · AR Foundation · WebGL · Meta Quest · C# · ARCore · HTC Vive · C# (.NET Framework)",
+    unityDevelopmentStack: ["ARKit", "AR Foundation", "WebGL", "Meta Quest", "C#", "ARCore", "HTC Vive", "C# (.NET Framework)"],
     unityDevelopmentButton: "Подивитися, як це працює на практиці",
     getConsultation: "Отримайте консультацію",
     sendUsMessage:
