@@ -30,6 +30,7 @@ export const translations = {
     staffAugmentation: "Staff Augmentation",
     customWebSolutions: "Custom web solutions",
     mobileApplications: "Mobile applications",
+    unityDevelopment: "Real-Time 3D & Interactive Development",
     uiUxDesign: "UI/UX and Graphic Design",
     qaAutomation: "Manual and Automation QA",
     devops: "DevOps",
@@ -46,6 +47,12 @@ export const translations = {
       "We apply modern analytical methods and tools to find valuable patterns, trends, and correlations in your data. From business analytics and predictive analytics to data visualization and report creation — our team helps you make informed decisions and drive strategic growth.",
     mobileApplicationsDesc:
       "We use cutting-edge technologies and best practices in the industry to create intuitive and functional mobile solutions tailored to your business needs. From concept and design to development and launch — we ensure a smooth and efficient process, delivering high-quality mobile apps that meet your goals and exceed expectations.",
+    unityDevelopmentDesc:
+      "Most products explain themselves with text. The best ones let you touch, try, and explore. We build AR try-ons, VR training simulators, 3D configurators, and interactive experiences on Unity: one codebase, every platform. No cross-platform chaos at launch, no PoC that ghosts you in week three.",
+    unityDevelopmentCapabilities:
+      "Mobile AR · VR simulations · 3D configurators · Interactive PoC · Legacy rescue",
+    unityDevelopmentStack: "ARKit · AR Foundation · WebGL · Meta Quest · C# · ARCore · HTC Vive · C# (.NET Framework)",
+    unityDevelopmentButton: "See how it works in practice",
     getConsultation: "Get Consultation",
     sendUsMessage: "Send us your idea, and we'll reach out to provide recommendations on implementation.",
     fileUploadInfo: "You can attach up to 3 files, each up to 10 MB.",
@@ -221,6 +228,7 @@ export const translations = {
     typeYourEmail: "Type your email",
     typeYourMessage: "Type your message",
     pleasAcceptTerms: "Please accept the Terms and Conditions",
+    pleaseAcceptTerms: "Please accept the Terms and Conditions",
     recaptchaNotLoaded: "reCAPTCHA not loaded. Refresh page.",
     messageSent: "Message sent successfully!",
     failedToSend: "Failed to send message. Please try again.",
@@ -258,6 +266,7 @@ export const translations = {
     staffAugmentation: "Розширення команди",
     customWebSolutions: "Індивідуальні веб-рішення",
     mobileApplications: "Мобільні додатки",
+    unityDevelopment: "Розробка в реальному часі 3D та інтерактивних рішень",
     uiUxDesign: "UI/UX та графічний дизайн",
     qaAutomation: "Ручне та автоматизоване тестування (QA)",
     devops: "DevOps",
@@ -274,6 +283,12 @@ export const translations = {
       "Ми застосовуємо сучасні аналітичні методи та інструменти, щоб знаходити цінні закономірності, тренди та кореляції у ваших даних. Від бізнес-аналітики та прогнозного аналізу до візуалізації даних і створення звітів — наша команда допомагає приймати обґрунтовані рішення та стимулювати стратегічне зростання.",
     mobileApplicationsDesc:
       "Ми використовуємо сучасні технології та кращі практики галузі, щоб створювати інтуїтивні та функціональні мобільні рішення, адаптовані під ваші бізнес-потреби. Від концепції та дизайну до розробки та запуску — ми забезпечуємо плавний та ефективний процес, доставляючи високоякісні мобільні додатки, які відповідають вашим цілям та перевищують очікування.",
+    unityDevelopmentDesc:
+      "Більшість продуктів пояснюють себе текстом. Найкращі — дозволяють доторкнутися, спробувати й дослідити. Ми створюємо AR-примірки, VR-тренажери, 3D-конфігуратори та інтерактивні рішення на Unity: одна кодова база — для всіх платформ. Жодного хаосу з кросплатформеністю на релізі, жодних PoC, що зникають на третьому тижні.",
+    unityDevelopmentCapabilities:
+      "Мобільний AR · VR-симуляції · 3D-конфігуратори · Інтерактивні PoC · Порятунок legacy-рішень",
+    unityDevelopmentStack: "ARKit · AR Foundation · WebGL · Meta Quest · C# · ARCore · HTC Vive · C# (.NET Framework)",
+    unityDevelopmentButton: "Подивитися, як це працює на практиці",
     getConsultation: "Отримайте консультацію",
     sendUsMessage:
       "Надішліть нам повідомлення з вашою ідеєю, і ми зв'яжемося, щоб надати рекомендації щодо реалізації.",
@@ -451,6 +466,7 @@ export const translations = {
     typeYourEmail: "Введіть свою електронну адресу",
     typeYourMessage: "Введіть своє повідомлення",
     pleasAcceptTerms: "Будь ласка, прийміть Умови та положення",
+    pleaseAcceptTerms: "Будь ласка, прийміть Умови та положення",
     recaptchaNotLoaded: "reCAPTCHA не завантажена. Оновіть сторінку.",
     messageSent: "Повідомлення відправлене успішно!",
     failedToSend: "Не вдалося надіслати повідомлення. Спробуйте ще раз.",
