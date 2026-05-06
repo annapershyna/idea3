@@ -34,6 +34,7 @@ export const translations = {
     qaAutomation: "Manual and Automation QA",
     devops: "DevOps",
     dataAnalytics: "Data Analytics",
+    unityDevelopment: "Unity development",
     customWebSolutionsDesc:
       "We specialize in creating unique websites and web applications that fully meet your goals and requirements. Whether it's a corporate website, an eCommerce platform, or a custom web solution — our team of experienced developers works closely with you to understand your objectives and deliver solutions that exceed expectations.",
     uiUxDesignDesc:
@@ -262,6 +263,7 @@ export const translations = {
     qaAutomation: "Ручне та автоматизоване тестування (QA)",
     devops: "DevOps",
     dataAnalytics: "Аналітика даних",
+    unityDevelopment: "розробка Unity",
     customWebSolutionsDesc:
       "Ми спеціалізуємося на створенні унікальних вебсайтів та веб-додатків, які повністю відповідають вашим цілям та вимогам. Будь то корпоративний сайт, платформа eCommerce або кастомне веб-рішення — наша команда досвідчених розробників тісно співпрацює з вами, щоб зрозуміти ваші цілі та створити рішення, що перевищує очікування.",
     uiUxDesignDesc:

@@ -220,6 +220,7 @@ export default function ServicesPage() {
 
       {/* Services Sections */}
       <section className="pb-16">
+        <div id="real-time-3d-interactive-development" className="scroll-mt-32" aria-hidden="true" />
         <div className="max-w-[1280px] mx-auto px-6">
           {services.map((service, index) => (
             <div key={index} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
