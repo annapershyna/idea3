@@ -185,14 +185,6 @@ export default function ServicesPage() {
       reverse: false,
     },
     {
-      id: "real-time-3d-interactive-development",
-      title: t.realTime3DInteractiveDevelopment,
-      description: t.realTime3DInteractiveDevelopmentDesc,
-      image: "/images/213432fc8fbf61b5ea543d6c172ebac71c9a9a20.jpg",
-      imageAlt: "Real-time 3D and interactive Unity development",
-      reverse: true,
-    },
-    {
       id: "mobile-applications",
       title: t.mobileApplications,
       description: t.mobileApplicationsDesc,
@@ -228,6 +220,7 @@ export default function ServicesPage() {
 
       {/* Services Sections */}
       <section className="pb-16">
+        <div id="real-time-3d-interactive-development" className="scroll-mt-32" aria-hidden="true" />
         <div className="max-w-[1280px] mx-auto px-6">
           {services.map((service, index) => (
             <div key={index} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>

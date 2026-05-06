@@ -32,6 +32,7 @@ const footerContent = {
     qa: "Manual and Automation QA",
     devops: "DevOps",
     dataAnalytics: "Data Analytics",
+    unityDevelopment: "Unity development",
     viewAllPosts: "View all posts",
     address: "Ukraine, Chernihiv,",
     street: "Instrumentalna Street, 24",
@@ -58,6 +59,7 @@ const footerContent = {
     qa: "Ручне тестування та автоматизація QA",
     devops: "DevOps",
     dataAnalytics: "Аналітика даних",
+    unityDevelopment: "розробка Unity",
     viewAllPosts: "Переглянути всі статті",
     address: "Україна, Чернігів,",
     street: "вул. Інструментальна, 24",
@@ -386,6 +388,15 @@ export function Footer() {
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
                   {t.dataAnalytics}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services#real-time-3d-interactive-development"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.unityDevelopment}
                 </Link>
               </li>
             </ul>
