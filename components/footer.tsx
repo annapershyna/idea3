@@ -28,6 +28,7 @@ const footerContent = {
     customWeb: "Custom web solutions",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",
     mobileApps: "Mobile applications",
+    unityDevelopment: "Unity development",
     uxui: "UI/UX and Graphic Design",
     qa: "Manual and Automation QA",
     devops: "DevOps",
@@ -54,6 +55,7 @@ const footerContent = {
     customWeb: "Кастомні веб-рішення",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",  
     mobileApps: "Мобільні додатки",
+    unityDevelopment: "Розробка Unity",
     uxui: "Дизайн UI/UX та графіка",
     qa: "Ручне тестування та автоматизація QA",
     devops: "DevOps",
@@ -386,6 +388,15 @@ export function Footer() {
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
                   {t.dataAnalytics}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services#real-time-3d-interactive-development"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.unityDevelopment}
                 </Link>
               </li>
             </ul>

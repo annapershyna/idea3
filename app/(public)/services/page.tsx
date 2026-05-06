@@ -16,6 +16,17 @@ declare global {
   }
 }
 
+const serviceTechIcons: Record<string, string> = {
+  ARKit: "/icons/tech/arkit.svg",
+  "AR Foundation": "/icons/tech/ar-foundation.svg",
+  WebGL: "/icons/tech/webgl.svg",
+  "Meta Quest": "/icons/tech/meta-quest.svg",
+  "C#": "/icons/tech/csharp.svg",
+  ARCore: "/icons/tech/arcore.svg",
+  "HTC Vive": "/icons/tech/htc-vive.svg",
+  "C# (.NET Framework)": "/icons/tech/dotnet-framework.svg",
+}
+
 export default function ServicesPage() {
   const { t } = useLocale()
 
@@ -192,6 +203,18 @@ export default function ServicesPage() {
       imageAlt: "Mobile Applications - app icons",
       reverse: true,
     },
+    {
+      id: "real-time-3d-interactive-development",
+      title: t.unityDevelopment,
+      description: t.unityDevelopmentDesc,
+      capabilities: t.unityDevelopmentCapabilities,
+      stack: t.unityDevelopmentStack,
+      buttonLabel: t.unityDevelopmentButton,
+      buttonHref: "/projects/ar-earring-virtual-try-on",
+      image: "/Unity.jpg",
+      imageAlt: "Unity real-time 3D and interactive development",
+      reverse: false,
+    },
   ]
 
   return (
@@ -253,18 +276,11 @@ export default function ServicesPage() {
                       WebkitBackgroundClip: hoveredIndex === index ? "text" : undefined,
                       WebkitTextFillColor: hoveredIndex === index ? "transparent" : undefined,
                       backgroundClip: hoveredIndex === index ? "text" : undefined,
-                      color: hoveredIndex === index ? undefined : (service.titleHighlight ? undefined : "inherit"),
+                      color: hoveredIndex === index ? undefined : "inherit",
                       transition: "all 0.3s ease",
                     }}
                   >
-                    {service.titleHighlight && hoveredIndex !== index ? (
-                      <>
-                        <span style={{ color: "#FF6200" }}>{service.titleHighlight}</span>{" "}
-                        {service.title.replace(service.titleHighlight, "").trim()}
-                      </>
-                    ) : (
-                      service.title
-                    )}
+                    {service.title}
                   </h2>
                   <p
                     style={{
@@ -277,6 +293,63 @@ export default function ServicesPage() {
                   >
                     {service.description}
                   </p>
+                  {service.capabilities && (
+                    <p
+                      className="mt-5 font-medium"
+                      style={{
+                        fontFamily: "Onest",
+                        fontSize: "16px",
+                        lineHeight: "1.6",
+                        color: "var(--foreground)",
+                      }}
+                    >
+                      {service.capabilities}
+                    </p>
+                  )}
+                  {service.stack && (
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {service.stack.map((tech: string, i: number) => {
+                        const iconPath = serviceTechIcons[tech]
+
+                        return (
+                          <span
+                            key={i}
+                            className="px-3 py-2 rounded-[4px] text-xs font-medium flex items-center gap-2 transition-transform duration-200 hover:scale-105"
+                            style={{
+                              backgroundColor: isDark ? "#323130" : "#FFFFFF",
+                              color: isDark ? "#FFFFFF" : "#000000",
+                              border: isDark ? "none" : "1px solid #E0E0E0",
+                              fontFamily: "Onest",
+                            }}
+                          >
+                            {iconPath && (
+                              <span
+                                className="flex items-center justify-center rounded-[2px] flex-shrink-0"
+                                style={{
+                                  backgroundColor: "#FFFFFF",
+                                  padding: "2px",
+                                  width: "20px",
+                                  height: "20px",
+                                }}
+                              >
+                                <Image src={iconPath} alt={`${tech} icon`} width={16} height={16} />
+                              </span>
+                            )}
+                            {tech}
+                          </span>
+                        )
+                      })}
+                    </div>
+                  )}
+                  {service.buttonHref && service.buttonLabel && (
+                    <Link
+                      href={service.buttonHref}
+                      className="mt-7 inline-flex h-10 items-center justify-center rounded-full bg-[#FF6200] px-5 text-sm font-medium text-white transition hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-black"
+                      style={{ fontFamily: "Onest" }}
+                    >
+                      {service.buttonLabel}
+                    </Link>
+                  )}
                 </div>
 
                 <div className={service.reverse ? "lg:col-start-1 lg:row-start-1" : ""}>
