@@ -920,72 +920,6 @@ export function Navigation() {
                         }}
                       >
                         <Link
-                          href="/projects#3"
-                          onClick={() => setProjectsOpen(false)}
-                          className="transition-all duration-300 ease-out"
-                          style={{
-                            fontFamily: "Onest",
-                            fontWeight: 400,
-                            fontSize: "16px",
-                            lineHeight: "100%",
-                            letterSpacing: "0.02em",
-                            color: isDark ? "#FFFFFF99" : "#21212199",
-                            padding: "6px 8px",
-                            borderRadius: "8px",
-                          }}
-                          onMouseDown={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                            e.currentTarget.style.border = "1px solid #FF620033"
-                          }}
-                          onMouseUp={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                            e.currentTarget.style.border = "none"
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = "transparent"
-                            e.currentTarget.style.border = "none"
-                          }}
-                        >
-                          {/* Using t.multibrandEcommerce from useLocale hook instead of currentTranslations */}
-                          {t.multibrandEcommerce}
-                        </Link>
-                        <Link
-                          href="/projects#4"
-                          onClick={() => setProjectsOpen(false)}
-                          className="transition-all duration-300 ease-out"
-                          style={{
-                            fontFamily: "Onest",
-                            fontWeight: 400,
-                            fontSize: "16px",
-                            lineHeight: "100%",
-                            letterSpacing: "0.02em",
-                            color: isDark ? "#FFFFFF99" : "#21212199",
-                            padding: "6px 8px",
-                            borderRadius: "8px",
-                          }}
-                          onMouseDown={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                            e.currentTarget.style.border = "1px solid #FF620033"
-                          }}
-                          onMouseUp={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                            e.currentTarget.style.border = "none"
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = "transparent"
-                            e.currentTarget.style.border = "none"
-                          }}
-                        >
-                          {/* Using t.statisticsPlatform from useLocale hook instead of currentTranslations */}
-                          {t.statisticsPlatform}
-                        </Link>
-                        <Link
                           href="/projects#2"
                           onClick={() => setProjectsOpen(false)}
                           className="transition-all duration-300 ease-out"
@@ -1017,39 +951,6 @@ export function Navigation() {
                         >
                           {/* Using t.sensorInfobox from useLocale hook instead of currentTranslations */}
                           {t.sensorInfobox}
-                        </Link>
-                        <Link
-                          href="/projects#1"
-                          onClick={() => setProjectsOpen(false)}
-                          className="transition-all duration-300 ease-out"
-                          style={{
-                            fontFamily: "Onest",
-                            fontWeight: 400,
-                            fontSize: "16px",
-                            lineHeight: "100%",
-                            letterSpacing: "0.02em",
-                            color: isDark ? "#FFFFFF99" : "#21212199",
-                            padding: "6px 8px",
-                            borderRadius: "8px",
-                          }}
-                          onMouseDown={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                            e.currentTarget.style.border = "1px solid #FF620033"
-                          }}
-                          onMouseUp={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                            e.currentTarget.style.border = "none"
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = isDark ? "#303030" : "#E6E6E6"
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = "transparent"
-                            e.currentTarget.style.border = "none"
-                          }}
-                        >
-                          {/* Using t.ecommercePlatform from useLocale hook instead of currentTranslations */}
-                          {t.ecommercePlatform}
                         </Link>
                         {featuredProjectLinks.map((project) => (
                           <Link
