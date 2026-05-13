@@ -62,8 +62,6 @@ const technologyGroups: TechnologyGroup[] = [
   },
 ]
 
-const allTechnologies = technologyGroups.flatMap((group) => group.items)
-
 const groupAlignmentClasses: Record<TechnologyGroup["align"], string> = {
   start: "lg:self-start",
   center: "lg:self-center",
@@ -91,7 +89,7 @@ export function TechnologiesSection() {
   return (
     <section className="overflow-hidden bg-background px-4 py-16 md:py-24 lg:py-28">
       <div className="mx-auto max-w-[1400px]">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(360px,0.8fr)_minmax(0,1.2fr)] lg:gap-16 xl:gap-24">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(300px,0.68fr)_minmax(0,1.32fr)] lg:gap-12 xl:gap-20">
           <div className="max-w-[520px] space-y-6 lg:space-y-8">
             <h2 className="text-5xl font-bold leading-none tracking-[-0.04em] text-foreground md:text-6xl lg:text-7xl">
               {t.title}
@@ -107,9 +105,9 @@ export function TechnologiesSection() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:hidden">
-            {allTechnologies.map((tech) => (
-              <TechCard key={tech.name} tech={tech} />
+          <div className="space-y-8 lg:hidden">
+            {technologyGroups.map((group) => (
+              <TechnologyGroupRow key={group.title} group={group} />
             ))}
           </div>
         </div>
@@ -120,9 +118,9 @@ export function TechnologiesSection() {
 
 function TechnologyGroupRow({ group }: { group: TechnologyGroup }) {
   return (
-    <div className={`flex w-fit flex-col gap-4 ${groupAlignmentClasses[group.align]}`}>
+    <div className={`flex w-full flex-col gap-4 ${groupAlignmentClasses[group.align]} lg:w-fit`}>
       <SectionLabel>{group.title}</SectionLabel>
-      <div className="flex flex-wrap gap-5 xl:gap-6">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:flex lg:flex-nowrap lg:gap-3 xl:gap-4">
         {group.items.map((tech) => (
           <TechCard key={tech.name} tech={tech} />
         ))}
@@ -143,18 +141,18 @@ function SectionLabel({ children }: { children: string }) {
 function TechCard({ tech }: { tech: Technology }) {
   return (
     <div
-      className="group flex min-h-[86px] items-center gap-4 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:gap-5 sm:px-5 lg:h-[88px] lg:w-[200px] xl:w-[220px]"
+      className="group flex min-h-[76px] items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[140px] lg:gap-2.5 lg:px-3 xl:h-[84px] xl:w-[160px] xl:gap-3 xl:px-4 2xl:w-[176px]"
     >
-      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:h-14 sm:w-14 lg:h-10 lg:w-10 xl:h-12 xl:w-12">
         <Image
           src={tech.logo || "/placeholder.svg"}
           alt={tech.label}
-          width={52}
-          height={52}
+          width={48}
+          height={48}
           className="h-full w-full object-contain"
         />
       </div>
-      <span className="text-base font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-lg">
+      <span className="text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-sm xl:text-base">
         {tech.label}
       </span>
     </div>
