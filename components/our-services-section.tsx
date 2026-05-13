@@ -40,7 +40,7 @@ const services: Service[] = [
       </svg>
     ),
     image: "/images/2204c945d90f1a3407139dd94b7ebcaa4ba9cadb.jpg",
-    link: "/services/custom-web",
+    link: "/services#custom-web-solutions",
     imagePosition: { row: "1", col: "3" },
   },
   {
@@ -136,7 +136,7 @@ const services: Service[] = [
       </svg>
     ),
     image: "/images/213432fc8fbf61b5ea543d6c172ebac71c9a9a20.jpg",
-    link: "/services/ux-ui-design",
+    link: "/services#ux-ui-design",
     imagePosition: { row: "1", col: "3 / 5" },
   },
   {
@@ -181,7 +181,7 @@ const services: Service[] = [
       </svg>
     ),
     image: "/images/ac4a09720223d67a185bfba73f852b33a006b2ab.jpg",
-    link: "/services/mobile-apps",
+    link: "/services#mobile-applications",
     imagePosition: { row: "1", col: "4 / 6" },
   },
   {
@@ -222,7 +222,7 @@ const services: Service[] = [
       </svg>
     ),
     image: "/images/3a8ceacf9a599490d7b40d1ec06dca37f1ea0d31.jpg",
-    link: "/services/qa-automation",
+    link: "/services#qa",
     imagePosition: { row: "2", col: "1" },
   },
   {
@@ -263,8 +263,27 @@ const services: Service[] = [
       </svg>
     ),
     image: "/images/b06cb8ec9ff2a325546732d42fb1b3b01127a90b.jpg",
-    link: "/services/devops",
+    link: "/services#devops",
     imagePosition: { row: "1 / 3", col: "4" },
+  },
+  {
+    id: "unity-development",
+    titleEn: "Unity Development",
+    titleUk: "Unity Development",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4 13.00005l9.50007 0m-9.50007 0l4.00019 4.49983m-4.00019 -4.49983l4.00019 -4.49983m5.49988 4.49983l4.99986 -9.00005m-4.99986 9.00005l4.99986 6.99995m0 -16l-5.99991 1.00005m5.99991 -1.00005l1.50007 5.49988m-1.50007 10.50012l1.50007 -5.49988m-1.50007 5.49988l-5.99991 -0.50002"
+          stroke="#FF6200"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    image: "/unity-development.png",
+    link: "/services#real-time-3d-interactive-development",
+    imagePosition: { row: "3", col: "5" },
   },
   {
     id: "data-analytics",
@@ -280,7 +299,7 @@ const services: Service[] = [
       </svg>
     ),
     image: "/images/a0ec971489a8dee7cdfcd858853644d722e28dc9.jpg",
-    link: "/services/data-analytics",
+    link: "/services#data-analytics",
     imagePosition: { row: "2", col: "6" },
   },
 ]
@@ -378,13 +397,17 @@ export function OurServicesSection() {
                         ? "2"
                         : service.id === "devops"
                           ? "3"
-                          : service.id === "data-analytics"
-                            ? "5"
-                            : "1",
+                          : service.id === "unity-development"
+                            ? "4"
+                            : service.id === "data-analytics"
+                              ? "5"
+                              : "1",
               gridRow:
                 service.id === "qa-automation" || service.id === "devops" || service.id === "data-analytics"
                   ? "2"
-                  : "1",
+                  : service.id === "unity-development"
+                    ? "3"
+                    : "1",
             }
 
             const backgroundStyle = isDark
