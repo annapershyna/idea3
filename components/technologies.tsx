@@ -1,25 +1,76 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
 import { useLocale } from "@/lib/locale-context"
 
-const technologies = [
-  { name: "Express", logo: "/images/express.svg", label: "Express" },
-  { name: "Flutter", logo: "/images/flutter.svg", label: "Flutter" },
-  { name: "React.js", logo: "/images/react.svg", label: "React.js" },
-  { name: "Vue.js", logo: "/images/vue.svg", label: "Vue.js" },
-  { name: "Nest.js", logo: "/images/nest.svg", label: "Nest.js" },
-  { name: "Node.js", logo: "/images/node.svg", label: "Node.js" },
-  { name: "GCP", logo: "/images/gcp.svg", label: "GCP" },
-  { name: "AWS", logo: "/images/aws.svg", label: "AWS" },
-  { name: "JS", logo: "/images/js.svg", label: "JS" },
+type Technology = {
+  name: string
+  logo: string
+  label: string
+}
+
+type TechnologyGroup = {
+  title: string
+  align: "start" | "center" | "end"
+  items: Technology[]
+}
+
+const technologyGroups: TechnologyGroup[] = [
+  {
+    title: "Mobile",
+    align: "end",
+    items: [
+      { name: "Flutter", logo: "/images/flutter.svg", label: "Flutter" },
+      { name: "React Native", logo: "/images/react.svg", label: "React Native" },
+    ],
+  },
+  {
+    title: "Backend",
+    align: "center",
+    items: [
+      { name: "Node.js", logo: "/images/node.svg", label: "Node.js" },
+      { name: "Nest.js", logo: "/images/nest.svg", label: "Nest.js" },
+      { name: "Python", logo: "/images/python.svg", label: "Python" },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    align: "start",
+    items: [
+      { name: "AWS", logo: "/images/aws.svg", label: "AWS" },
+      { name: "GCP", logo: "/images/gcp.svg", label: "GCP" },
+      { name: "Docker", logo: "/images/docker.svg", label: "Docker" },
+      { name: "Kubernetes", logo: "/images/kubernetes.svg", label: "Kubernetes" },
+    ],
+  },
+  {
+    title: "Frontend",
+    align: "center",
+    items: [
+      { name: "React", logo: "/images/react.svg", label: "React" },
+      { name: "Vue.js", logo: "/images/vue.svg", label: "Vue.js" },
+      { name: "Next.js", logo: "/images/next.svg", label: "Next.js" },
+    ],
+  },
+  {
+    title: "AI & Automation",
+    align: "end",
+    items: [
+      { name: "OpenAI", logo: "/images/openai.svg", label: "OpenAI" },
+      { name: "LangChain", logo: "/images/langchain.svg", label: "LangChain" },
+    ],
+  },
 ]
 
-const rows = [technologies.slice(0, 3), technologies.slice(3, 6), technologies.slice(6, 9)]
+const allTechnologies = technologyGroups.flatMap((group) => group.items)
+
+const groupAlignmentClasses: Record<TechnologyGroup["align"], string> = {
+  start: "lg:self-start",
+  center: "lg:self-center",
+  end: "lg:self-end",
+}
 
 export function TechnologiesSection() {
-  const [hovered, setHovered] = useState<string | null>(null)
   const { locale } = useLocale()
 
   const content = {
@@ -38,41 +89,27 @@ export function TechnologiesSection() {
   const t = content[locale as "en" | "uk"] || content.en
 
   return (
-    <section className="py-16 px-4 md:py-24 bg-background">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 items-start">
-          {/* Текст слева */}
-          <div className="space-y-6 max-w-sm lg:max-w-md xl:max-w-lg">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">{t.title}</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{t.description}</p>
+    <section className="overflow-hidden bg-background px-4 py-16 md:py-24 lg:py-28">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(360px,0.8fr)_minmax(0,1.2fr)] lg:gap-16 xl:gap-24">
+          <div className="max-w-[520px] space-y-6 lg:space-y-8">
+            <h2 className="text-5xl font-bold leading-none tracking-[-0.04em] text-foreground md:text-6xl lg:text-7xl">
+              {t.title}
+            </h2>
+            <p className="max-w-[500px] text-xl leading-[1.8] text-foreground/75 md:text-2xl md:leading-[1.8]">
+              {t.description}
+            </p>
           </div>
 
-          {/* Десктоп */}
-          <div className="hidden lg:flex flex-col items-end gap-[22px]">
-            <div className="flex gap-[22px]">
-              {rows[0].map((tech) => (
-                <TechCard key={tech.name} tech={tech} isHovered={hovered === tech.name} onHover={setHovered} />
-              ))}
-            </div>
-
-            {/* Второй ряд сдвинут влево */}
-            <div className="flex gap-[22px] mr-12 xl:mr-20">
-              {rows[1].map((tech) => (
-                <TechCard key={tech.name} tech={tech} isHovered={hovered === tech.name} onHover={setHovered} />
-              ))}
-            </div>
-
-            <div className="flex gap-[22px]">
-              {rows[2].map((tech) => (
-                <TechCard key={tech.name} tech={tech} isHovered={hovered === tech.name} onHover={setHovered} />
-              ))}
-            </div>
+          <div className="hidden min-w-0 flex-col gap-8 lg:flex xl:gap-10">
+            {technologyGroups.map((group) => (
+              <TechnologyGroupRow key={group.title} group={group} />
+            ))}
           </div>
 
-          {/* Мобильная */}
-          <div className="lg:hidden grid grid-cols-3 gap-4 auto-rows-fr">
-            {technologies.map((tech) => (
-              <MobileTechCard key={tech.name} tech={tech} isHovered={hovered === tech.name} onHover={setHovered} />
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:hidden">
+            {allTechnologies.map((tech) => (
+              <TechCard key={tech.name} tech={tech} />
             ))}
           </div>
         </div>
@@ -81,83 +118,45 @@ export function TechnologiesSection() {
   )
 }
 
-function TechCard({
-  tech,
-  isHovered,
-  onHover,
-}: { tech: any; isHovered: boolean; onHover: (name: string | null) => void }) {
-  const isDark = typeof document !== "undefined" && document.documentElement.classList.contains("dark")
-
+function TechnologyGroupRow({ group }: { group: TechnologyGroup }) {
   return (
-    <div
-      onMouseEnter={() => onHover(tech.name)}
-      onMouseLeave={() => onHover(null)}
-      style={
-        isHovered
-          ? {
-              background: `linear-gradient(180deg, ${isDark ? "#161515" : "#FAF9F8"} 0%, #FF6200 150%)`,
-            }
-          : undefined
-      }
-      className={`
-        flex items-center gap-5 px-5 py-4 rounded-2xl
-        w-[170px] h-[88px]
-        transition-all duration-300 cursor-pointer
-        bg-[var(--tech-card)]
-        border border-[var(--tech-card-border)]
-      `}
-    >
-      <div
-        className="w-16 h-16 bg-white rounded-lg flex items-start justify-start flex-shrink-0"
-        style={{ padding: "2px" }}
-      >
-        <Image
-          src={tech.logo || "/placeholder.svg"}
-          alt={tech.label}
-          width={60}
-          height={60}
-          className="object-contain w-full h-full"
-        />
+    <div className={`flex w-fit flex-col gap-4 ${groupAlignmentClasses[group.align]}`}>
+      <SectionLabel>{group.title}</SectionLabel>
+      <div className="flex flex-wrap gap-5 xl:gap-6">
+        {group.items.map((tech) => (
+          <TechCard key={tech.name} tech={tech} />
+        ))}
       </div>
-      <span className="text-base font-medium text-foreground">{tech.label}</span>
     </div>
   )
 }
 
-function MobileTechCard({
-  tech,
-  isHovered,
-  onHover,
-}: { tech: any; isHovered: boolean; onHover: (name: string | null) => void }) {
+function SectionLabel({ children }: { children: string }) {
+  return (
+    <div className="flex items-center gap-4 pl-1 text-sm font-semibold uppercase tracking-[0.02em] text-foreground/55">
+      <span className="h-px w-8 bg-foreground/35" aria-hidden="true" />
+      <span>{children}</span>
+    </div>
+  )
+}
+
+function TechCard({ tech }: { tech: Technology }) {
   return (
     <div
-      onMouseEnter={() => onHover(tech.name)}
-      onMouseLeave={() => onHover(null)}
-      style={
-        isHovered
-          ? {
-              background: `linear-gradient(180deg, ${document.documentElement.classList.contains("dark") ? "#161515" : "#FAF9F8"} 0%, #FF6200 150%)`,
-            }
-          : undefined
-      }
-      className={`
-        flex flex-row items-center justify-center gap-2 py-4 rounded-2xl transition-all duration-300 cursor-pointer
-        bg-[var(--tech-card)]
-        border border-[var(--tech-card-border)]
-        dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)]
-        hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)]
-      `}
+      className="group flex min-h-[86px] items-center gap-4 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:gap-5 sm:px-5 lg:h-[88px] lg:w-[200px] xl:w-[220px]"
     >
-      <div className="w-5 h-5 sm:w-8 sm:h-8 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
         <Image
           src={tech.logo || "/placeholder.svg"}
           alt={tech.label}
-          width={48}
-          height={48}
-          className="object-contain w-10 h-10 sm:w-12 sm:h-12"
+          width={52}
+          height={52}
+          className="h-full w-full object-contain"
         />
       </div>
-      <span className="text-sm font-semibold text-foreground px-2 text-center">{tech.label}</span>
+      <span className="text-base font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-lg">
+        {tech.label}
+      </span>
     </div>
   )
 }
