@@ -7,6 +7,7 @@ import { ScrollAnimationProvider } from "@/components/scroll-animation-provider"
 import { CookiesConsent } from "@/components/cookies-consent"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { ClientOnlyPopups } from "@/components/client-only-popups"
+import { HashScrollHandler } from "@/components/hash-scroll-handler"
 import "./globals.css"
 
 
@@ -67,6 +68,7 @@ export default function RootLayout({
             <Analytics />
             <CookiesConsent />
             <ClientOnlyPopups />
+            <HashScrollHandler />
             <ScrollToTop />
           </LocaleProvider>
         </ThemeProvider>
