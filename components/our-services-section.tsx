@@ -267,6 +267,15 @@ const services: Service[] = [
     imagePosition: { row: "1 / 3", col: "4" },
   },
   {
+    id: "unity-development",
+    titleEn: "Unity Development",
+    titleUk: "Unity Development",
+    icon: <Image src="/unity-orange.svg" alt="" width={24} height={24} />,
+    image: "/unity-development.png",
+    link: "https://ideateam.dev/services#real-time-3d-interactive-development",
+    imagePosition: { row: "3", col: "5" },
+  },
+  {
     id: "data-analytics",
     titleEn: "Data Analytics",
     titleUk: "Аналітика даних",
@@ -378,13 +387,17 @@ export function OurServicesSection() {
                         ? "2"
                         : service.id === "devops"
                           ? "3"
-                          : service.id === "data-analytics"
-                            ? "5"
-                            : "1",
+                          : service.id === "unity-development"
+                            ? "4"
+                            : service.id === "data-analytics"
+                              ? "5"
+                              : "1",
               gridRow:
                 service.id === "qa-automation" || service.id === "devops" || service.id === "data-analytics"
                   ? "2"
-                  : "1",
+                  : service.id === "unity-development"
+                    ? "3"
+                    : "1",
             }
 
             const backgroundStyle = isDark
