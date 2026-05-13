@@ -270,7 +270,17 @@ const services: Service[] = [
     id: "unity-development",
     titleEn: "Unity Development",
     titleUk: "Unity Development",
-    icon: <Image src="/unity-orange.svg" alt="" width={24} height={24} />,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4 13.00005l9.50007 0m-9.50007 0l4.00019 4.49983m-4.00019 -4.49983l4.00019 -4.49983m5.49988 4.49983l4.99986 -9.00005m-4.99986 9.00005l4.99986 6.99995m0 -16l-5.99991 1.00005m5.99991 -1.00005l1.50007 5.49988m-1.50007 10.50012l1.50007 -5.49988m-1.50007 5.49988l-5.99991 -0.50002"
+          stroke="#FF6200"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
     image: "/unity-development.png",
     link: "https://ideateam.dev/services#real-time-3d-interactive-development",
     imagePosition: { row: "3", col: "5" },
