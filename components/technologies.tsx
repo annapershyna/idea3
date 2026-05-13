@@ -58,6 +58,7 @@ const technologyGroups: TechnologyGroup[] = [
     items: [
       { name: "OpenAI", logo: "/images/openai.svg", label: "OpenAI" },
       { name: "LangChain", logo: "/images/langchain.svg", label: "LangChain" },
+      { name: "AI Integrations", logo: "/images/puzzle.svg", label: "AI Integrations" },
     ],
   },
 ]
@@ -147,7 +148,7 @@ function TechCard({ tech }: { tech: Technology }) {
     <div
       className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"
     >
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:h-14 sm:w-14 lg:h-9 lg:w-9 xl:h-11 xl:w-11">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white p-1.5 shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:h-10 sm:w-10 lg:h-6 lg:w-6 lg:rounded-md lg:p-1 xl:h-8 xl:w-8 xl:rounded-lg xl:p-1.5">
         <Image
           src={tech.logo || "/placeholder.svg"}
           alt={tech.label}
