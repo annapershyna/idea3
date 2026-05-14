@@ -100,7 +100,7 @@ function TechCard({
           : undefined
       }
       className={`
-        flex items-center gap-5 px-5 py-4 rounded-2xl
+        flex items-center gap-5 px-5 py-[0.85rem] rounded-2xl
         w-[170px] h-[88px]
         transition-all duration-300 cursor-pointer
         bg-[var(--tech-card)]
@@ -141,7 +141,7 @@ function MobileTechCard({
           : undefined
       }
       className={`
-        flex flex-row items-center justify-center gap-2 py-4 rounded-2xl transition-all duration-300 cursor-pointer
+        flex flex-row items-center justify-center gap-2 py-[0.85rem] rounded-2xl transition-all duration-300 cursor-pointer
         bg-[var(--tech-card)]
         border border-[var(--tech-card-border)]
         dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)]
