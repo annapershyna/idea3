@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="419" viewBox="0 0 1170 419" role="img" aria-labelledby="title desc">
+  <title id="title">CONTO.tech dark logo</title>
+  <desc id="desc">Dark CONTO.tech logo with blue O mark and yellow accent.</desc>
+  <g fill="none" fill-rule="evenodd">
+    <text x="-12" y="220" fill="#4a4a4a" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="250" font-weight="900" letter-spacing="-16">C</text>
+    <path fill="#1292ee" d="M312 34c-63.5 0-115 51.5-115 115s51.5 115 115 115 115-51.5 115-115S375.5 34 312 34Zm0 74c22.6 0 41 18.4 41 41s-18.4 41-41 41-41-18.4-41-41 18.4-41 41-41Z"/>
+    <path fill="#ffbd12" d="M310 0h76l-76 135z"/>
+    <text x="442" y="220" fill="#1292ee" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="250" font-weight="900" letter-spacing="-18">N</text>
+    <text x="660" y="220" fill="#4a4a4a" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="250" font-weight="900" letter-spacing="-18">TO</text>
+    <text x="652" y="392" fill="#4a4a4a" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="150" font-weight="900" letter-spacing="18">.tech</text>
+  </g>
+</svg>
