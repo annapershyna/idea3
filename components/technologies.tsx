@@ -146,7 +146,7 @@ function SectionLabel({ children }: { children: string }) {
 function TechCard({ tech }: { tech: Technology }) {
   return (
     <div
-      className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"
+      className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-[10.2px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"
     >
       <div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-lg bg-white p-[5px] shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:h-[34px] sm:w-[34px] lg:h-5 lg:w-5 lg:rounded-md lg:p-[3px] xl:h-[27px] xl:w-[27px] xl:rounded-lg xl:p-[5px]">
         <Image
