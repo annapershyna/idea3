@@ -1,121 +1,125 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
+import { useState } from "react"
 import { useLocale } from "@/lib/locale-context"
 
-const industries = {
+type IndustryItem = {
+  title: string
+  description: string
+}
+
+const industries: Record<"en" | "uk", IndustryItem[]> = {
   en: [
-    {
-      title: "Healthcare",
-      description: "HIPAA-ready apps, patient platforms, analytics systems",
-    },
-    {
-      title: "Fintech",
-      description: "Secure API-first financial products and integrations",
-    },
-    {
-      title: "Ecommerce",
-      description: "High-load stores, marketplaces, checkout flows",
-    },
-    {
-      title: "SaaS",
-      description: "Scalable platforms for startups and B2B products",
-    },
-    {
-      title: "Logistics",
-      description: "Real-time tracking automation and operational tools",
-    },
+    { title: "Healthcare", description: "HIPAA-ready apps, patient platforms, analytics systems" },
+    { title: "Fintech", description: "Secure API-first financial products and integrations" },
+    { title: "Ecommerce", description: "High-load stores, marketplaces, checkout flows" },
+    { title: "SaaS", description: "Scalable platforms for startups and B2B products" },
+    { title: "Logistics", description: "Real-time tracking automation and operational tools" },
   ],
   uk: [
-    {
-      title: "Охорона здоров’я",
-      description: "HIPAA-ready застосунки, платформи для пацієнтів та аналітичні системи",
-    },
-    {
-      title: "Фінтех",
-      description: "Захищені API-first фінансові продукти та інтеграції",
-    },
-    {
-      title: "Ecommerce",
-      description: "Високонавантажені магазини, маркетплейси та checkout-флоу",
-    },
-    {
-      title: "SaaS",
-      description: "Масштабовані платформи для стартапів і B2B-продуктів",
-    },
-    {
-      title: "Логістика",
-      description: "Відстеження в реальному часі, автоматизація та операційні інструменти",
-    },
+    { title: "Охорона здоров’я", description: "HIPAA-ready застосунки, платформи для пацієнтів та аналітичні системи" },
+    { title: "Фінтех", description: "Захищені API-first фінансові продукти та інтеграції" },
+    { title: "Ecommerce", description: "Високонавантажені магазини, маркетплейси та checkout-флоу" },
+    { title: "SaaS", description: "Масштабовані платформи для стартапів і B2B-продуктів" },
+    { title: "Логістика", description: "Відстеження в реальному часі, автоматизація та операційні інструменти" },
   ],
 }
 
 const content = {
   en: {
     pill: "Industries",
-    title: "Industries",
+    title: "Building digital solutions that drive industry forward",
     subtitle: "We build scalable digital products for fast-growing companies across highly demanding industries.",
+    cta: "Let’s talk",
   },
   uk: {
     pill: "Галузі",
-    title: "Галузі",
+    title: "Створюємо цифрові рішення, що рухають індустрії вперед",
     subtitle: "Ми створюємо масштабовані цифрові продукти для швидкозростаючих компаній у найвимогливіших індустріях.",
+    cta: "Обговорити проєкт",
   },
 }
 
 export function IndustriesSection() {
   const { locale } = useLocale()
-  const t = locale === "uk" ? content.uk : content.en
-  const cards = locale === "uk" ? industries.uk : industries.en
+  const lang = locale === "uk" ? "uk" : "en"
+  const t = content[lang]
+  const items = industries[lang]
+  const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section className="relative overflow-hidden bg-[#F4F4F6] px-4 py-20 sm:px-6 lg:px-8 dark:bg-[#0A0A0B]">
+    <section className="relative overflow-hidden bg-[#f5f5f8] px-4 py-20 sm:px-6 lg:px-8 dark:bg-[#06070b]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-40px] top-16 h-72 w-72 rounded-full bg-[#FF6200]/20 blur-3xl dark:bg-[#FF6200]/30" />
-        <div className="absolute bottom-10 right-[-60px] h-72 w-72 rounded-full bg-[#7C4DFF]/20 blur-3xl dark:bg-[#7C4DFF]/30" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(17,16,21,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(17,16,21,0.06)_1px,transparent_1px)] bg-[size:52px_52px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
+        <div className="absolute left-[8%] top-20 h-72 w-72 rounded-full bg-[#ff6200]/15 blur-3xl dark:bg-[#8e6bff]/25" />
+        <div className="absolute bottom-14 right-[8%] h-72 w-72 rounded-full bg-[#8e6bff]/15 blur-3xl dark:bg-[#00e7c2]/20" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 inline-flex rounded-full border border-black/10 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#FF6200] backdrop-blur dark:border-white/10 dark:bg-white/5">
-            {t.pill}
-          </p>
-          <h2 className="text-3xl font-semibold tracking-tight text-[#111015] sm:text-4xl lg:text-5xl dark:text-white">{t.title}</h2>
-          <p className="mt-5 text-base leading-relaxed text-[#5D5A66] sm:text-lg dark:text-[#B9B7C3]">{t.subtitle}</p>
-        </div>
+      <div className="relative mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[minmax(280px,0.9fr)_minmax(0,1.6fr)] lg:gap-10">
+        <aside className="lg:sticky lg:top-24 lg:h-fit">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#6d63ff] dark:text-[#9e97ff]">{t.pill}</p>
+          <h2 className="max-w-[20ch] text-3xl font-semibold leading-tight text-[#111015] sm:text-4xl dark:text-white">{t.title}</h2>
+          <p className="mt-6 max-w-[36ch] text-base leading-relaxed text-[#5d5a66] dark:text-[#a8a6b6]">{t.subtitle}</p>
+          <Link
+            href="/contact"
+            className="group mt-10 inline-flex items-center gap-3 border-b border-[#6d63ff]/60 pb-1 text-sm font-semibold uppercase tracking-[0.08em] text-[#111015] transition-colors hover:text-[#6d63ff] dark:text-white dark:hover:text-[#9e97ff]"
+          >
+            {t.cta}
+            <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+          </Link>
+        </aside>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {cards.map((industry, index) => (
-            <motion.article
-              key={industry.title}
-              initial={{ opacity: 0, y: 40, scale: 0.98 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.65, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative isolate min-h-[220px] overflow-hidden rounded-3xl border border-black/10 bg-white/75 p-7 shadow-[0_12px_40px_-24px_rgba(17,16,21,0.35)] backdrop-blur-xl dark:border-white/10 dark:bg-[#131216]/75 dark:shadow-[0_14px_50px_-24px_rgba(0,0,0,0.8)]"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,98,0,0.25),transparent_40%),radial-gradient(circle_at_85%_80%,rgba(124,77,255,0.2),transparent_38%)] opacity-40 transition-opacity duration-500 group-hover:opacity-90" />
+        <div className="space-y-4 sm:space-y-5">
+          {items.map((item, index) => {
+            const isActive = activeIndex === index
 
-              <div className="relative z-10 flex h-full flex-col justify-between">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold text-[#111015] dark:text-white">{industry.title}</h3>
-                  <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/80 text-sm text-[#111015] transition-all duration-500 group-hover:rotate-45 group-hover:border-[#FF6200]/50 group-hover:text-[#FF6200] dark:border-white/10 dark:bg-white/10 dark:text-white">
-                    ↗
-                  </span>
+            return (
+              <motion.article
+                key={item.title}
+                onViewportEnter={() => setActiveIndex(index)}
+                initial={{ opacity: 0, y: 36 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ amount: 0.5, once: false }}
+                transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white/65 p-5 backdrop-blur-xl transition-all duration-500 sm:rounded-3xl sm:p-7 dark:border-white/10 dark:bg-[#0c0f16]/80"
+              >
+                <div
+                  className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${
+                    isActive
+                      ? "opacity-100"
+                      : "opacity-30 group-hover:opacity-70"
+                  } bg-[radial-gradient(circle_at_78%_50%,rgba(122,103,255,0.32),transparent_36%),radial-gradient(circle_at_72%_82%,rgba(0,231,194,0.18),transparent_34%)]`}
+                />
+
+                <div className="relative z-10 grid items-start gap-6 sm:grid-cols-[68px_minmax(0,1fr)_140px] sm:gap-8">
+                  <div className="text-3xl font-medium leading-none text-[#6d63ff] sm:pt-1 dark:text-[#9e97ff]">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <div className="sm:border-l sm:border-black/10 sm:pl-8 dark:sm:border-white/10">
+                    <h3 className="text-2xl font-semibold text-[#111015] dark:text-white">{item.title}</h3>
+                    <motion.p
+                      initial={{ opacity: 0.35, y: 10 }}
+                      animate={{ opacity: isActive ? 1 : 0.7, y: 0 }}
+                      transition={{ duration: 0.35 }}
+                      className="mt-3 max-w-[54ch] text-base leading-relaxed text-[#5d5a66] dark:text-[#a8a6b6]"
+                    >
+                      {item.description}
+                    </motion.p>
+                  </div>
+
+                  <div className="hidden h-[112px] items-center justify-center rounded-2xl border border-black/10 bg-white/50 sm:flex dark:border-white/10 dark:bg-white/5">
+                    <div className="relative h-14 w-14">
+                      <div className="absolute inset-0 rounded-2xl bg-[#6d63ff]/25 blur-lg" />
+                      <div className="absolute inset-2 rounded-xl border border-[#6d63ff]/60" />
+                    </div>
+                  </div>
                 </div>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.45, delay: 0.12 + index * 0.08 }}
-                  className="mt-8 max-w-[34ch] text-sm leading-7 text-[#5D5A66] dark:text-[#B9B7C3]"
-                >
-                  {industry.description}
-                </motion.p>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            )
+          })}
         </div>
       </div>
     </section>
