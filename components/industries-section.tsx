@@ -74,7 +74,7 @@ export function IndustriesSection() {
               <div className="absolute left-1/2 top-1/2 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/20" />
               <div className="absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/15" />
 
-              <button type="button" onMouseEnter={() => setHoverCore(true)} onMouseLeave={() => setHoverCore(false)} onClick={() => setActive(null)} className="absolute left-1/2 top-1/2 z-40 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FF6200]/30 bg-black shadow-[0_0_50px_rgba(255,98,0,0.32)]" aria-label="IdeaTeam core">
+              <button type="button" onMouseEnter={() => setHoverCore(true)} onMouseLeave={() => setHoverCore(false)} onClick={() => setActive(null)} className="absolute left-1/2 top-1/2 z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FF6200]/30 bg-black shadow-[0_0_50px_rgba(255,98,0,0.32)]" aria-label="IdeaTeam core">
                 <Image src="/icon.svg" alt="IdeaTeam" width={24} height={24} className="mx-auto" />
               </button>
 
@@ -83,7 +83,7 @@ export function IndustriesSection() {
                 const isActive = active === index
                 return (
                   <motion.button key={item.title} type="button" onClick={() => setActive(index)} className="absolute z-10 w-[165px] text-left" initial={false}
-                    animate={isActive ? { left: "50%", top: "50%", x: point.x * 0.42, y: point.y * 0.42, scale: 1.03, zIndex: 20 } : { left: "50%", top: "50%", x: point.x + (hoverCore ? point.y * 0.045 : 0), y: point.y + (hoverCore ? -point.x * 0.045 : 0), scale: 1, zIndex: 10 }}
+                    animate={isActive ? { left: "50%", top: "50%", x: "-50%", y: "-50%", scale: 1.04, zIndex: 50 } : { left: "50%", top: "50%", x: point.x + (hoverCore ? point.y * 0.045 : 0), y: point.y + (hoverCore ? -point.x * 0.045 : 0), scale: 1, zIndex: 20 }}
                     transition={{ type: "spring", stiffness: 120, damping: 20 }}>
                     <div className={`rounded-lg border p-3 backdrop-blur-sm transition-colors ${isActive ? "border-[#FF6200]/60 bg-[#eef0f6] dark:bg-[#0f1118]" : "border-black/15 bg-white/80 hover:border-[#FF6200]/40 dark:border-white/20 dark:bg-[#0c0f16]/80"}`}>
                       <div className="text-xs font-semibold text-[#FF6200]">{String(index + 1).padStart(2, "0")}</div>
