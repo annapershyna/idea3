@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import Link from "next/link"
 import { useMemo, useState } from "react"
 import { useLocale } from "@/lib/locale-context"
@@ -30,7 +31,7 @@ const content = {
 }
 
 function IndustryIcon({ kind }: { kind: IndustryItem["icon"] }) {
-  const common = "h-10 w-10 text-[#FF6200]"
+  const common = "h-7 w-7 text-[#FF6200]"
   if (kind === "health") return <svg className={common} viewBox="0 0 24 24" fill="none"><path d="M9 2v20M2 9h20" stroke="currentColor" strokeWidth="1.6"/><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" strokeWidth="1.2" opacity=".6"/></svg>
   if (kind === "fintech") return <svg className={common} viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="3" stroke="currentColor" strokeWidth="1.5"/><path d="M2.5 9h19M6 14h4" stroke="currentColor" strokeWidth="1.5"/></svg>
   if (kind === "ecommerce") return <svg className={common} viewBox="0 0 24 24" fill="none"><path d="M5 8h14l-1.2 11H6.2L5 8Z" stroke="currentColor" strokeWidth="1.5"/><path d="M9 9V7a3 3 0 0 1 6 0v2" stroke="currentColor" strokeWidth="1.5"/></svg>
@@ -43,71 +44,103 @@ export function IndustriesSection() {
   const lang = locale === "uk" ? "uk" : "en"
   const t = content[lang]
   const items = industries[lang]
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState<number | null>(null)
   const [hoverCore, setHoverCore] = useState(false)
 
   const orbit = useMemo(() => [
-    { x: 0, y: -170 },
-    { x: 185, y: -58 },
-    { x: 160, y: 128 },
-    { x: -20, y: 192 },
-    { x: -190, y: -18 },
+    { x: 0, y: -205 },
+    { x: 206, y: -74 },
+    { x: 166, y: 156 },
+    { x: -166, y: 156 },
+    { x: -206, y: -74 },
   ], [])
 
   return (
-    <section className="relative overflow-hidden bg-[#08090d] px-4 py-20 sm:px-6 lg:px-8">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,98,0,0.12),transparent_45%)]" />
-      <div className="mx-auto max-w-7xl rounded-[36px] border border-white/10 bg-[#090b12]/90 p-6 sm:p-10 lg:p-14">
+    <section className="relative overflow-hidden bg-[#08090d] px-4 py-16 sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(255,98,0,0.1),transparent_45%)]" />
+      <div className="mx-auto max-w-7xl rounded-[28px] border border-white/10 bg-[#090b12]/90 p-5 sm:p-8 lg:p-12">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.4fr]">
           <div>
-            <p className="text-sm font-semibold tracking-[0.14em] text-[#FF6200]">{t.pill}</p>
-            <h2 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl">{t.title}</h2>
-            <p className="mt-7 max-w-[36ch] text-xl leading-relaxed text-white/60">{t.subtitle}</p>
-            <Link href="/contact" className="mt-10 inline-flex items-center gap-3 border-b border-[#FF6200]/70 pb-1 text-2xl text-white hover:text-[#FF6200]">
+            <p className="text-xs font-semibold tracking-[0.14em] text-[#FF6200] sm:text-sm">{t.pill}</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-5xl">{t.title}</h2>
+            <p className="mt-6 max-w-[36ch] text-base leading-relaxed text-white/60 sm:text-lg">{t.subtitle}</p>
+            <Link href="/contact" className="mt-8 inline-flex items-center gap-3 border-b border-[#FF6200]/70 pb-1 text-lg text-white hover:text-[#FF6200] sm:text-2xl">
               {t.cta}<span>↗</span>
             </Link>
           </div>
 
-          <div className="relative min-h-[680px]">
-            <div className="absolute left-1/2 top-1/2 hidden h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/25 lg:block" />
-            <div className="absolute left-1/2 top-1/2 hidden h-[410px] w-[410px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/20 lg:block" />
-            <div className="absolute left-1/2 top-1/2 hidden h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/15 lg:block" />
+          <div>
+            <div className="relative hidden min-h-[680px] lg:block">
+              <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/25" />
+              <div className="absolute left-1/2 top-1/2 h-[410px] w-[410px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/20" />
+              <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#FF6200]/15" />
 
-            <motion.button
-              type="button"
-              onMouseEnter={() => setHoverCore(true)}
-              onMouseLeave={() => setHoverCore(false)}
-              className="absolute left-1/2 top-1/2 z-20 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FF6200]/30 bg-black text-[#FF6200] shadow-[0_0_80px_rgba(255,98,0,0.35)]"
-            >
-              <span className="text-3xl font-bold">&gt;/</span>
-            </motion.button>
+              <button
+                type="button"
+                onMouseEnter={() => setHoverCore(true)}
+                onMouseLeave={() => setHoverCore(false)}
+                onClick={() => setActive(null)}
+                className="absolute left-1/2 top-1/2 z-30 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FF6200]/30 bg-black shadow-[0_0_60px_rgba(255,98,0,0.35)]"
+                aria-label="IdeaTeam core"
+              >
+                <Image src="/icon.svg" alt="IdeaTeam" width={30} height={30} className="mx-auto" />
+              </button>
 
-            {items.map((item, index) => {
-              const point = orbit[index]
-              const isActive = active === index
-              return (
-                <motion.button
+              {items.map((item, index) => {
+                const point = orbit[index]
+                const isActive = active === index
+                return (
+                  <motion.button
+                    key={item.title}
+                    type="button"
+                    onClick={() => setActive(index)}
+                    className="absolute z-10 w-[235px] text-left"
+                    initial={false}
+                    animate={
+                      isActive
+                        ? { left: "50%", top: "50%", x: "-50%", y: "-50%", scale: 1.02, zIndex: 20 }
+                        : {
+                            left: "50%",
+                            top: "50%",
+                            x: point.x + (hoverCore ? point.y * 0.05 : 0),
+                            y: point.y + (hoverCore ? -point.x * 0.05 : 0),
+                            scale: 1,
+                            zIndex: 10,
+                          }
+                    }
+                    transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                  >
+                    <div className={`rounded-xl border p-4 backdrop-blur-sm transition-colors ${isActive ? "border-[#FF6200]/60 bg-[#0f1118]" : "border-white/20 bg-[#0c0f16]/80 hover:border-[#FF6200]/45"}`}>
+                      <div className="text-lg font-semibold text-[#FF6200]">{String(index + 1).padStart(2, "0")}</div>
+                      <h3 className="mt-1 text-2xl font-semibold text-white">{item.title}</h3>
+                      <p className="mt-2 text-base leading-relaxed text-white/65">{item.description}</p>
+                      <div className="mt-3"><IndustryIcon kind={item.icon} /></div>
+                    </div>
+                  </motion.button>
+                )
+              })}
+            </div>
+
+            <div className="grid gap-3 lg:hidden sm:grid-cols-2">
+              {items.map((item, index) => (
+                <button
                   key={item.title}
                   type="button"
-                  onClick={() => setActive(index)}
-                  className="absolute z-10 w-[310px] text-left"
-                  initial={false}
-                  animate={
-                    isActive
-                      ? { x: "-50%", y: "-50%", left: "50%", top: "50%", scale: 1.02 }
-                      : { x: point.x + (hoverCore ? point.y * 0.06 : 0), y: point.y + (hoverCore ? -point.x * 0.06 : 0), left: "50%", top: "50%", scale: 1 }
-                  }
-                  transition={{ type: "spring", stiffness: 110, damping: 18 }}
+                  onClick={() => setActive(active === index ? null : index)}
+                  className={`rounded-xl border p-4 text-left transition-colors ${active === index ? "border-[#FF6200]/60 bg-[#0f1118]" : "border-white/20 bg-[#0c0f16]/80"}`}
                 >
-                  <div className={`rounded-2xl border p-5 backdrop-blur-sm transition-colors ${isActive ? "border-[#FF6200]/65 bg-[#0f1118]" : "border-white/20 bg-[#0c0f16]/80 hover:border-[#FF6200]/45"}`}>
-                    <div className="mb-2 text-xl font-semibold text-[#FF6200]">{String(index + 1).padStart(2, "0")}</div>
-                    <h3 className="text-4xl font-semibold text-white">{item.title}</h3>
-                    <p className="mt-3 text-2xl leading-relaxed text-white/65">{item.description}</p>
-                    <div className="mt-4"><IndustryIcon kind={item.icon} /></div>
-                  </div>
-                </motion.button>
-              )
-            })}
+                  <div className="text-sm font-semibold text-[#FF6200]">{String(index + 1).padStart(2, "0")}</div>
+                  <h3 className="mt-1 text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/70">{item.description}</p>
+                  <div className="mt-3"><IndustryIcon kind={item.icon} /></div>
+                </button>
+              ))}
+              <div className="sm:col-span-2 flex justify-center pt-2">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#FF6200]/40 bg-black shadow-[0_0_30px_rgba(255,98,0,0.28)]">
+                  <Image src="/icon.svg" alt="IdeaTeam" width={24} height={24} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
