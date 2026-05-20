@@ -48,11 +48,11 @@ export function IndustriesSection() {
   const [hoverCore, setHoverCore] = useState(false)
 
   const orbit = useMemo(() => [
-    { x: 132, y: -248 },
-    { x: 286, y: 6 },
-    { x: 184, y: 228 },
-    { x: -138, y: 148 },
-    { x: -178, y: -92 },
+    { x: 0, y: -220 },
+    { x: 210, y: -68 },
+    { x: 130, y: 178 },
+    { x: -130, y: 178 },
+    { x: -210, y: -68 },
   ], [])
 
   return (
@@ -78,8 +78,8 @@ export function IndustriesSection() {
                 const point = orbit[index]
                 const isActive = active === index
                 return (
-                  <motion.button key={item.title} type="button" onClick={() => setActive(active === index ? null : index)} className="absolute z-10 w-[165px] text-left" initial={false}
-                    animate={isActive ? { left: "50%", top: "50%", x: "-50%", y: "-50%", scale: 1.04, zIndex: 50 } : { left: "50%", top: "50%", x: point.x + (hoverCore ? point.y * 0.045 : 0), y: point.y + (hoverCore ? -point.x * 0.045 : 0), scale: 1, zIndex: 20 }}
+                  <motion.button key={item.title} type="button" onClick={() => setActive(active === index ? null : index)} className="absolute z-10 w-[165px] -translate-x-1/2 -translate-y-1/2 text-left" initial={false}
+                    animate={isActive ? { left: "50%", top: "50%", x: 0, y: 0, scale: 1.04, zIndex: 50 } : { left: "50%", top: "50%", x: point.x + (hoverCore ? point.y * 0.045 : 0), y: point.y + (hoverCore ? -point.x * 0.045 : 0), scale: 1, zIndex: 20 }}
                     transition={{ type: "spring", stiffness: 120, damping: 20 }}>
                     <div className={`rounded-lg border p-3 backdrop-blur-sm transition-colors ${isActive ? "border-[#FF6200]/60 bg-[#eef0f6] dark:bg-[#0f1118]" : "border-black/15 bg-white/80 hover:border-[#FF6200]/40 dark:border-white/20 dark:bg-[#0c0f16]/80"}`}>
                       <div className="text-xs font-semibold text-[#FF6200]">{String(index + 1).padStart(2, "0")}</div>
