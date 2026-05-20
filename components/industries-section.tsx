@@ -48,11 +48,11 @@ export function IndustriesSection() {
   const [hoverCore, setHoverCore] = useState(false)
 
   const orbit = useMemo(() => [
-    { x: 0, y: -218 },
-    { x: 190, y: -62 },
-    { x: 118, y: 154 },
-    { x: -118, y: 154 },
-    { x: -190, y: -62 },
+    { x: 132, y: -248 },
+    { x: 286, y: 6 },
+    { x: 184, y: 228 },
+    { x: -138, y: 148 },
+    { x: -178, y: -92 },
   ], [])
 
   return (
@@ -61,12 +61,8 @@ export function IndustriesSection() {
       <div className="mx-auto max-w-7xl p-2 sm:p-6 lg:p-10">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.4fr]">
           <div>
-            <p className="text-xs font-semibold tracking-[0.14em] text-[#FF6200] sm:text-sm">{t.pill}</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#111015] sm:text-5xl dark:text-white">{t.title}</h2>
             <p className="mt-6 max-w-[36ch] text-base leading-relaxed text-[#5f5b67] sm:text-lg dark:text-white/60">{t.subtitle}</p>
-            <Link href="/contact" className="mt-8 inline-flex items-center gap-3 border-b border-[#FF6200]/70 pb-1 text-lg text-[#111015] hover:text-[#FF6200] sm:text-2xl dark:text-white">
-              {t.cta}<span>↗</span>
-            </Link>
           </div>
 
           <div>
