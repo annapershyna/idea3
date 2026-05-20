@@ -48,7 +48,7 @@ export function IndustriesSection() {
   const [hoverCore, setHoverCore] = useState(false)
 
   const orbit = useMemo(() => [
-    { x: 0, y: -190 },
+    { x: 0, y: -218 },
     { x: 190, y: -62 },
     { x: 118, y: 154 },
     { x: -118, y: 154 },
@@ -82,7 +82,7 @@ export function IndustriesSection() {
                 const point = orbit[index]
                 const isActive = active === index
                 return (
-                  <motion.button key={item.title} type="button" onClick={() => setActive(index)} className="absolute z-10 w-[165px] text-left" initial={false}
+                  <motion.button key={item.title} type="button" onClick={() => setActive(active === index ? null : index)} className="absolute z-10 w-[165px] text-left" initial={false}
                     animate={isActive ? { left: "50%", top: "50%", x: "-50%", y: "-50%", scale: 1.04, zIndex: 50 } : { left: "50%", top: "50%", x: point.x + (hoverCore ? point.y * 0.045 : 0), y: point.y + (hoverCore ? -point.x * 0.045 : 0), scale: 1, zIndex: 20 }}
                     transition={{ type: "spring", stiffness: 120, damping: 20 }}>
                     <div className={`rounded-lg border p-3 backdrop-blur-sm transition-colors ${isActive ? "border-[#FF6200]/60 bg-[#eef0f6] dark:bg-[#0f1118]" : "border-black/15 bg-white/80 hover:border-[#FF6200]/40 dark:border-white/20 dark:bg-[#0c0f16]/80"}`}>
