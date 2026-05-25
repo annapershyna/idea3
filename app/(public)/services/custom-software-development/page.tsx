@@ -49,6 +49,28 @@ const process = [
   ["Post-launch iteration", "Ongoing feature development, performance monitoring, and technical support"],
 ]
 
+
+const techIcons: Record<string, string> = {
+  React: "/images/react.svg",
+  Vue: "/images/vue.svg",
+  "Next.js": "/images/next.svg",
+  TypeScript: "/icons/tech/logo-black.svg",
+  "Node.js": "/images/node.svg",
+  Python: "/images/python.svg",
+  Go: "/icons/tech/logo-black.svg",
+  PostgreSQL: "/icons/tech/mssql.svg",
+  MongoDB: "/icons/tech/mongodb.svg",
+  Redis: "/icons/tech/logo-black.svg",
+  AWS: "/images/aws.svg",
+  GCP: "/images/gcp.svg",
+  Docker: "/images/docker.svg",
+  Kubernetes: "/images/kubernetes.svg",
+  REST: "/icons/tech/logo-black.svg",
+  GraphQL: "/icons/tech/graphql.svg",
+  gRPC: "/icons/tech/logo-black.svg",
+  "GitHub Actions": "/icons/tech/github.svg",
+  Terraform: "/icons/tech/logo-black.svg",
+}
 export default function CustomSoftwareDevelopmentPage() {
   const [activeService, setActiveService] = useState(0)
 
@@ -69,20 +91,14 @@ export default function CustomSoftwareDevelopmentPage() {
                 <p className="text-foreground/80 mb-6 text-base leading-7">
           Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions web applications, SaaS platforms, enterprise software, CRM and ERP systems, and API integrations built around your architecture requirements, data model, and growth trajectory. Every codebase is CI/CD-ready, fully documented, and designed to support growth from hundreds to hundreds of thousands of users without structural rewrites. Our software engineering services cover the full cycle: from requirements analysis and system design to deployment and post-launch iteration.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
-          {[
-            ["Web development", "/services/custom-web-solutions"],
-            ["Mobile app development", "/services#mobile-applications"],
-            ["UI/UX design", "/services#ux-ui-design"],
-            ["QA & testing", "/services#qa"],
-            ["Digital analytics", "/services#data-analytics"],
-            ["IT consulting", "/contact"],
-          ].map(([item, href]) => (
-            <a key={item} href={href} className="group block">
-              <h3 className="text-3xl font-semibold mb-3 scroll-animate visible text-foreground group-hover:text-[#FF6200] transition-colors">{item}</h3>
-            </a>
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8 text-sm md:text-base">
+          {expertiseBullets.map((item) => (
+            <li key={item} className="flex items-center gap-2">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6200]" />
+              <a href={item === "Web development" ? "/services/custom-web-solutions" : item === "Mobile app development" ? "/services#mobile-applications" : item === "UI/UX design" ? "/services#ux-ui-design" : item === "QA & testing" ? "/services#qa" : item === "Digital analytics" ? "/services#data-analytics" : "/contact"} className="hover:text-[#FF6200] transition-colors">{item}</a>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="bg-[#2b2d34] text-white py-14 px-4">
@@ -142,7 +158,7 @@ export default function CustomSoftwareDevelopmentPage() {
                       </div>
                       <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:flex lg:w-auto lg:flex-nowrap lg:gap-2.5 xl:gap-3">
                         {(items as string[]).map((item) => (
-                          <div key={item} className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"><span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">{item}</span></div>
+                          <div key={item} className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"><div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-lg bg-white p-[5px] shadow-[0_8px_24px_rgba(0,0,0,0.08)]"><Image src={techIcons[item] || "/images/puzzle.svg"} alt={item} width={20} height={20} className="h-full w-full object-contain" /></div><span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">{item}</span></div>
                         ))}
                       </div>
                     </div>
@@ -202,8 +218,8 @@ export default function CustomSoftwareDevelopmentPage() {
             return (
               <div key={title}>
                 <div className="flex items-start gap-3 mb-2">
-                  <Icon className="h-5 w-5 text-[#FF6200] mt-1" />
-                  <h3 className="text-[#FF6200] text-2xl md:text-3xl leading-tight font-semibold">{title}</h3>
+                  <Icon className="h-12 w-12 text-[#FF6200] shrink-0" />
+                  <h3 className="text-[#FF6200] text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
                 </div>
                 <p className="text-white/80 text-[16px] leading-[1.35]">{text}</p>
               </div>
@@ -216,7 +232,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <h3 className="text-2xl md:text-[24px] font-semibold leading-tight">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
-      <RequestConsultationSection submitLabel="Get a technical estimate" />
+      <div className="-mt-4"><RequestConsultationSection submitLabel="Get a technical estimate" /></div>
 
       <FAQSection />
     </main>
