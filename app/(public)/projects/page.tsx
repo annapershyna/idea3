@@ -845,6 +845,7 @@ export default function ProjectsPage() {
                     {t.processStep3}
                   </p>
                 </div>
+              </div>
             </div>
           </AnimatedCard>
 
