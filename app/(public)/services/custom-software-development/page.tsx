@@ -54,7 +54,7 @@ const techIcons: Record<string, string> = {
   Vue: "/images/vue.svg",
   Next.js: "/images/next.svg",
   TypeScript: "/icons/tech/logo-black.svg",
-  "Node.js": "/images/node.svg",
+  Node.js: "/images/node.svg",
   Python: "/images/python.svg",
   Go: "/icons/tech/go.svg",
   PostgreSQL: "/icons/tech/mssql.svg",
@@ -67,7 +67,7 @@ const techIcons: Record<string, string> = {
   REST: "/icons/tech/logo-black.svg",
   GraphQL: "/icons/tech/graphql.svg",
   gRPC: "/icons/tech/grpc.svg",
-  GitHub Actions": "/icons/tech/github.svg",
+  GitHub Actions: "/icons/tech/github.svg",
   Terraform: "/icons/tech/terraform.svg",
 }
 export default function CustomSoftwareDevelopmentPage() {
