@@ -113,7 +113,7 @@ export default function CustomSoftwareDevelopmentPage() {
                     key={service.title}
                     onMouseEnter={() => setActiveService(index)}
                     onClick={() => setActiveService(index)}
-                    className={`w-full text-left py-4 border-b transition-colors text-2xl ${isActive ? "text-[#FF6200] border-[#FF6200]" : "text-white/80 border-white/15 hover:text-[#FF6200]"}`}
+                    className={`w-full text-left py-4 border-b transition-colors text-lg ${isActive ? "text-[#FF6200] border-[#FF6200]" : "text-white/80 border-white/15 hover:text-[#FF6200]"}`}
                   >
                     {service.title}
                   </button>
