@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import { BriefcaseBusiness, CheckCircle2, ClipboardCheck, Rocket, Wrench } from "lucide-react"
 import Image from "next/image"
 import { FAQSection } from "@/components/faq-section"
-import { RequestConsultationSection } from "@/components/request-consultation-section"
 
 const serviceDetails = [
   {
@@ -155,11 +155,11 @@ export default function CustomSoftwareDevelopmentPage() {
             <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
             <p className="text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg">
-              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
-              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Transparent process</h3><p className="text-white/70">Sprint demos, async updates, and direct access to your engineering team</p></div>
-              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Owned codebase</h3><p className="text-white/70">You get full IP rights, documentation, and repository access from day one</p></div>
-              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Architecture-first approach</h3><p className="text-white/70">Systems designed to scale before the first line of code is written</p></div>
-              <div className="border-b border-[#FF6200] pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Transparent process</h3><p className="text-white/70">Sprint demos, async updates, and direct access to your engineering team</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Owned codebase</h3><p className="text-white/70">You get full IP rights, documentation, and repository access from day one</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Architecture-first approach</h3><p className="text-white/70">Systems designed to scale before the first line of code is written</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
             </div>
           </div>
         </div>
@@ -168,20 +168,41 @@ export default function CustomSoftwareDevelopmentPage() {
       <section className="py-14 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-6xl text-center font-semibold mb-10">Our Development Process</h2>
         <div className="rounded-2xl bg-[#1f2026] p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
-          {process.map(([title, text]) => (
-            <div key={title}>
-              <h3 className="text-[#FF6200] text-2xl md:text-3xl leading-tight font-semibold mb-2">{title}</h3>
-              <p className="text-white/80 text-base md:text-lg leading-relaxed">{text}</p>
-            </div>
-          ))}
+          {process.map(([title, text], index) => {
+            const icons = [BriefcaseBusiness, ClipboardCheck, CheckCircle2, Rocket, Wrench]
+            const Icon = icons[index]
+            return (
+              <div key={title}>
+                <div className="flex items-start gap-3 mb-2">
+                  <Icon className="h-5 w-5 text-[#FF6200] mt-1" />
+                  <h3 className="text-[#FF6200] text-[34px] leading-[1.1] font-semibold">{title}</h3>
+                </div>
+                <p className="text-white/80 text-[16px] md:text-[20px] leading-[1.35]">{text}</p>
+              </div>
+            )
+          })}
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 pt-2 pb-4 text-center">
-        <h3 className="text-3xl md:text-5xl font-semibold">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
+        <h3 className="text-2xl md:text-[24px] font-semibold leading-tight">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
-      <RequestConsultationSection />
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <div className="rounded-2xl bg-[#1E1E1E] p-6 md:p-8 grid lg:grid-cols-2 gap-6 items-center">
+          <div className="space-y-4">
+            <h3 className="text-4xl font-bold text-white">Get Consultation</h3>
+            <input className="w-full bg-transparent border-b border-white/40 py-3 text-white" placeholder="*Type your Name" />
+            <input className="w-full bg-transparent border-b border-white/40 py-3 text-white" placeholder="*Type your Email" />
+            <textarea className="w-full bg-transparent border-b border-white/40 py-3 text-white" rows={3} placeholder="*Type your Massage" />
+            <button className="inline-flex items-center justify-center rounded-full bg-[#FF6200] text-white px-6 py-3 font-semibold">Get a technical estimate</button>
+          </div>
+          <div className="relative h-[320px] rounded-xl overflow-hidden">
+            <Image src="/images/f236a65b9dcdd59fe25f5a9694d5243e04bca53a-20-281-29.jpg" alt="Consultation" fill className="object-cover" />
+          </div>
+        </div>
+      </section>
+
       <FAQSection />
     </main>
   )
