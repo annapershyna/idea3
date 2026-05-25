@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { TechnologiesSection } from "@/components/technologies"
 import { FAQSection } from "@/components/faq-section"
 import { RequestConsultationSection } from "@/components/request-consultation-section"
 
@@ -75,8 +74,7 @@ export default function CustomSoftwareDevelopmentPage() {
       <section className="max-w-6xl mx-auto px-4 py-14">
         <h2 className="text-3xl md:text-4xl font-semibold mb-5">Custom Software Development for Growing Businesses</h2>
         <p className="text-[#3a3a3a] dark:text-white/75 mb-6">
-          Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it.
-          We design and engineer scalable software solutions built around your architecture requirements, data model, and growth trajectory.
+          Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions  web applications, SaaS platforms, enterprise software, CRM and ERP systems, and API integrations  built around your architecture requirements, data model, and growth trajectory. Every codebase is CI/CD-ready, fully documented, and designed to support growth from hundreds to hundreds of thousands of users without structural rewrites. Our software engineering services cover the full cycle: from requirements analysis and system design to deployment and post-launch iteration.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8">
           {expertiseBullets.map((item) => (
@@ -122,8 +120,20 @@ export default function CustomSoftwareDevelopmentPage() {
         </div>
       </section>
 
-      <TechnologiesSection />
-
+      <section className="max-w-6xl mx-auto px-4 py-14">
+        <div className="grid lg:grid-cols-[360px_1fr] gap-8 items-start">
+          <h2 className="text-4xl md:text-5xl font-semibold leading-tight">Technologies We Use</h2>
+          <div className="text-[#c8c8c8] leading-relaxed">
+            <p className="mb-4">Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:</p>
+            <p><span className="text-white font-semibold">Frontend:</span> React, Vue, Next.js, TypeScript</p>
+            <p><span className="text-white font-semibold">Backend:</span> Node.js, Python, Go</p>
+            <p><span className="text-white font-semibold">Databases:</span> PostgreSQL, MongoDB, Redis</p>
+            <p><span className="text-white font-semibold">Cloud:</span> AWS, GCP, Docker, Kubernetes</p>
+            <p><span className="text-white font-semibold">APIs:</span> REST, GraphQL, gRPC</p>
+            <p><span className="text-white font-semibold">CI/CD:</span> GitHub Actions, Terraform</p>
+          </div>
+        </div>
+      </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
         <h2 className="text-4xl md:text-6xl text-center font-semibold mb-10">Industries We Work With</h2>
@@ -153,12 +163,12 @@ export default function CustomSoftwareDevelopmentPage() {
           <div>
             <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
             <p className="text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
-            <div className="grid sm:grid-cols-2 gap-5 text-lg">
-              <div><h3 className="font-semibold">Full-stack teams</h3><p className="text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
-              <div><h3 className="font-semibold">Transparent process</h3><p className="text-white/70">Sprint demos, async updates, and direct access to your engineering team</p></div>
-              <div><h3 className="font-semibold">Owned codebase</h3><p className="text-white/70">You get full IP rights, documentation, and repository access from day one</p></div>
-              <div><h3 className="font-semibold">Architecture-first approach</h3><p className="text-white/70">Systems designed to scale before the first line of code is written</p></div>
-              <div><h3 className="font-semibold">No scope creep</h3><p className="text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg">
+              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
+              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Transparent process</h3><p className="text-white/70">Sprint demos, async updates, and direct access to your engineering team</p></div>
+              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Owned codebase</h3><p className="text-white/70">You get full IP rights, documentation, and repository access from day one</p></div>
+              <div className="border-b border-[#FF6200] pb-5"><h3 className="font-semibold">Architecture-first approach</h3><p className="text-white/70">Systems designed to scale before the first line of code is written</p></div>
+              <div className="border-b border-[#FF6200] pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
             </div>
           </div>
         </div>
@@ -169,11 +179,15 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="rounded-2xl bg-[#1f2026] p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
           {process.map(([title, text]) => (
             <div key={title}>
-              <h3 className="text-[#FF6200] text-3xl font-semibold mb-2">{title}</h3>
-              <p className="text-white/80 text-2xl leading-tight">{text}</p>
+              <h3 className="text-[#FF6200] text-[34px] leading-[1.1] font-semibold mb-2">{title}</h3>
+              <p className="text-white/80 text-[16px] md:text-[20px] leading-[1.35]">{text}</p>
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-4 pt-2 pb-4 text-center">
+        <h3 className="text-4xl md:text-6xl font-semibold">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
       <RequestConsultationSection />
