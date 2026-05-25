@@ -38,14 +38,7 @@ const serviceDetails = [
   },
 ]
 
-const expertiseBullets = [
-  "Web development",
-  "Mobile app development",
-  "UI/UX design",
-  "QA & testing",
-  "Digital analytics",
-  "IT consulting",
-]
+const expertiseBullets = ["Web development", "Mobile app development", "UI/UX design", "QA & testing", "Digital analytics", "IT consulting"]
 
 const process = [
   ["Discovery & architecture", "Requirements analysis, system design, tech stack selection, project roadmap"],
@@ -59,26 +52,26 @@ export default function CustomSoftwareDevelopmentPage() {
   const [activeService, setActiveService] = useState(0)
 
   return (
-    <main className="min-h-screen bg-[#f5f6fa] text-[#111] dark:bg-[#101114] dark:text-white">
+    <main className="min-h-screen bg-background text-foreground">
       <section className="relative pt-32 pb-20 px-4">
         <div className="absolute inset-0">
           <Image src="/alert-management-interface.jpg" alt="Custom software development services" fill className="object-cover opacity-35" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/25" />
         </div>
         <div className="relative max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold mb-4">Custom Software Development Services</h1>
-          <p className="max-w-3xl mx-auto text-white/80">Custom software development for growing businesses.</p>
+          <h1 className="text-4xl md:text-6xl font-semibold mb-4 text-white">Custom Software Development Services</h1>
+          <p className="max-w-3xl mx-auto text-white/80 text-base md:text-lg">Custom software development for growing businesses.</p>
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
         <h2 className="text-3xl md:text-4xl font-semibold mb-5">Custom Software Development for Growing Businesses</h2>
-        <p className="text-[#3a3a3a] dark:text-white/75 mb-6">
-          Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions  web applications, SaaS platforms, enterprise software, CRM and ERP systems, and API integrations  built around your architecture requirements, data model, and growth trajectory. Every codebase is CI/CD-ready, fully documented, and designed to support growth from hundreds to hundreds of thousands of users without structural rewrites. Our software engineering services cover the full cycle: from requirements analysis and system design to deployment and post-launch iteration.
+        <p className="text-muted-foreground mb-6 text-base leading-7">
+          Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions web applications, SaaS platforms, enterprise software, CRM and ERP systems, and API integrations built around your architecture requirements, data model, and growth trajectory. Every codebase is CI/CD-ready, fully documented, and designed to support growth from hundreds to hundreds of thousands of users without structural rewrites. Our software engineering services cover the full cycle: from requirements analysis and system design to deployment and post-launch iteration.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8 text-sm md:text-base">
           {expertiseBullets.map((item) => (
-            <div key={item} className="flex items-center gap-2 text-[#262626] dark:text-white/90">
+            <div key={item} className="flex items-center gap-2">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6200]" />
               {item}
             </div>
@@ -89,7 +82,7 @@ export default function CustomSoftwareDevelopmentPage() {
       <section className="bg-[#2b2d34] text-white py-14 px-4">
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
-            <h2 className="text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
             <div className="border-t border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
@@ -98,7 +91,7 @@ export default function CustomSoftwareDevelopmentPage() {
                     key={service.title}
                     onMouseEnter={() => setActiveService(index)}
                     onClick={() => setActiveService(index)}
-                    className={`w-full text-left py-4 border-b transition-colors ${isActive ? "text-[#FF6200] border-[#FF6200]" : "text-white/80 border-white/15 hover:text-[#FF6200]"}`}
+                    className={`w-full text-left py-4 border-b transition-colors text-2xl ${isActive ? "text-[#FF6200] border-[#FF6200]" : "text-white/80 border-white/15 hover:text-[#FF6200]"}`}
                   >
                     {service.title}
                   </button>
@@ -106,37 +99,35 @@ export default function CustomSoftwareDevelopmentPage() {
               })}
             </div>
           </div>
-          <div>
-            <article className="rounded-2xl overflow-hidden border border-white/10 bg-[#1b1d23]">
-              <div className="relative h-60 md:h-72">
-                <Image src={serviceDetails[activeService].image} alt={serviceDetails[activeService].title} fill className="object-cover" />
-              </div>
-              <div className="p-6 md:p-8">
-                <h3 className="text-4xl font-semibold mb-3">{serviceDetails[activeService].title}</h3>
-                <p className="text-white/70 text-xl leading-relaxed">{serviceDetails[activeService].description}</p>
-              </div>
-            </article>
-          </div>
+          <article className="rounded-2xl overflow-hidden border border-white/10 bg-[#1b1d23]">
+            <div className="relative h-60 md:h-72">
+              <Image src={serviceDetails[activeService].image} alt={serviceDetails[activeService].title} fill className="object-cover" />
+            </div>
+            <div className="p-6 md:p-8">
+              <h3 className="text-3xl font-semibold mb-3">{serviceDetails[activeService].title}</h3>
+              <p className="text-white/70 text-lg leading-relaxed">{serviceDetails[activeService].description}</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
         <div className="grid lg:grid-cols-[360px_1fr] gap-8 items-start">
-          <h2 className="text-4xl md:text-5xl font-semibold leading-tight">Technologies We Use</h2>
-          <div className="text-[#c8c8c8] leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-semibold leading-tight">Technologies We Use</h2>
+          <div className="text-muted-foreground leading-7">
             <p className="mb-4">Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:</p>
-            <p><span className="text-white font-semibold">Frontend:</span> React, Vue, Next.js, TypeScript</p>
-            <p><span className="text-white font-semibold">Backend:</span> Node.js, Python, Go</p>
-            <p><span className="text-white font-semibold">Databases:</span> PostgreSQL, MongoDB, Redis</p>
-            <p><span className="text-white font-semibold">Cloud:</span> AWS, GCP, Docker, Kubernetes</p>
-            <p><span className="text-white font-semibold">APIs:</span> REST, GraphQL, gRPC</p>
-            <p><span className="text-white font-semibold">CI/CD:</span> GitHub Actions, Terraform</p>
+            <p><span className="text-foreground font-semibold">Frontend:</span> React, Vue, Next.js, TypeScript</p>
+            <p><span className="text-foreground font-semibold">Backend:</span> Node.js, Python, Go</p>
+            <p><span className="text-foreground font-semibold">Databases:</span> PostgreSQL, MongoDB, Redis</p>
+            <p><span className="text-foreground font-semibold">Cloud:</span> AWS, GCP, Docker, Kubernetes</p>
+            <p><span className="text-foreground font-semibold">APIs:</span> REST, GraphQL, gRPC</p>
+            <p><span className="text-foreground font-semibold">CI/CD:</span> GitHub Actions, Terraform</p>
           </div>
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-10">Industries We Work With</h2>
+        <h2 className="text-3xl md:text-5xl text-center font-semibold mb-10">Industries We Work With</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             ["FinTech", "/samsung-product-showcase.jpg", "Payment infrastructure, lending platforms, financial reporting systems"],
@@ -179,15 +170,15 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="rounded-2xl bg-[#1f2026] p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
           {process.map(([title, text]) => (
             <div key={title}>
-              <h3 className="text-[#FF6200] text-[34px] leading-[1.1] font-semibold mb-2">{title}</h3>
-              <p className="text-white/80 text-[16px] md:text-[20px] leading-[1.35]">{text}</p>
+              <h3 className="text-[#FF6200] text-2xl md:text-3xl leading-tight font-semibold mb-2">{title}</h3>
+              <p className="text-white/80 text-base md:text-lg leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 pt-2 pb-4 text-center">
-        <h3 className="text-4xl md:text-6xl font-semibold">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
+        <h3 className="text-3xl md:text-5xl font-semibold">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
       <RequestConsultationSection />
