@@ -31,14 +31,16 @@ export function PremiumServicesOverview() {
               <a
                 key={card.title}
                 href={card.href}
-                className="group rounded-2xl border border-black/10 bg-white/50 p-8 backdrop-blur-sm shadow-[0_8px_32px_rgba(15,23,42,.08)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FF6200]/50 hover:shadow-[0_12px_48px_rgba(255,98,0,.15)] dark:border-white/10 dark:bg-[#191a20] dark:shadow-[0_10px_40px_rgba(0,0,0,.4)] dark:hover:border-[#FF6200]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] motion-reduce:transition-none flex flex-col items-center text-center"
+                className="group rounded-xl border border-white/10 bg-black/20 p-6 backdrop-blur-md transition-all duration-300 ease-out hover:border-[#FF6200]/40 hover:bg-black/30 dark:hover:shadow-[0_0_24px_rgba(255,98,0,.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] motion-reduce:transition-none flex items-start gap-4"
                 style={{ animationDelay: `${idx * 70}ms` }}
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] transition-all duration-300 group-hover:bg-[#FF6200]/15 group-hover:shadow-[0_0_28px_rgba(255,98,0,.3)]">
-                  <Icon className="h-7 w-7" />
+                <div className="mt-1 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-[#FF6200]/40 bg-[#FF6200]/15 text-[#FF6200] transition-all duration-300 group-hover:bg-[#FF6200]/25 group-hover:shadow-[0_0_16px_rgba(255,98,0,.25)]">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#111827] dark:text-[#F5F7FA]">{card.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-white/70">{card.description}</p>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/70">{card.description}</p>
+                </div>
               </a>
             )
           })}

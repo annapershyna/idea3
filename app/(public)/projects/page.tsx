@@ -786,8 +786,8 @@ export default function ProjectsPage() {
                     {t.processTitle}
                   </h3>
                 </div>
-              <div className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8">
-                <div className="flex items-start gap-3 md:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+                <div className="flex flex-col items-start gap-3 md:gap-4">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
                     <path d="M9 9L13.5 12L18 9" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M3 13.5H5" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -807,7 +807,7 @@ export default function ProjectsPage() {
                     {t.processStep1}
                   </p>
                 </div>
-                <div className="flex items-start gap-3 md:gap-4">
+                <div className="flex flex-col items-start gap-3 md:gap-4">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
                     <path d="M20 12V5.74853C20 5.5894 19.9368 5.43679 19.8243 5.32426L16.6757 2.17574C16.5632 2.06321 16.4106 2 16.2515 2H4.6C4.26863 2 4 2.26863 4 2.6V21.4C4 21.7314 4.26863 22 4.6 22H11" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M8 10H16M8 6H12M8 14H11" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -827,7 +827,7 @@ export default function ProjectsPage() {
                     {t.processStep2}
                   </p>
                 </div>
-                <div className="flex items-start gap-3 md:gap-4 ">
+                <div className="flex flex-col items-start gap-3 md:gap-4 ">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
                     <path d="M8 12L11 15L16 10" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -845,10 +845,6 @@ export default function ProjectsPage() {
                     {t.processStep3}
                   </p>
                 </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mt-6 md:mt-8">
-                <div></div>
-              </div>
             </div>
           </AnimatedCard>
 
