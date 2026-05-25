@@ -101,11 +101,11 @@ export default function CustomSoftwareDevelopmentPage() {
         </ul>
       </section>
 
-      <section className="bg-[#2b2d34] text-white py-14 px-4">
+      <section className="bg-[#eef1f6] text-foreground dark:bg-[#2b2d34] dark:text-white py-14 px-4">
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
-            <div className="border-t border-white/10">
+            <div className="border-t border-black/10 dark:border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
                 return (
@@ -113,7 +113,7 @@ export default function CustomSoftwareDevelopmentPage() {
                     key={service.title}
                     onMouseEnter={() => setActiveService(index)}
                     onClick={() => setActiveService(index)}
-                    className={`w-full text-left py-4 border-b transition-colors text-lg ${isActive ? "text-[#FF6200] border-[#FF6200]" : "text-white/80 border-white/15 hover:text-[#FF6200]"}`}
+                    className={`w-full text-left py-4 border-b transition-colors text-lg ${isActive ? "text-[#FF6200] border-[#FF6200]" : "text-foreground/80 border-black/15 dark:text-white/80 dark:border-white/15 hover:text-[#FF6200]"}`}
                   >
                     {service.title}
                   </button>
@@ -121,13 +121,13 @@ export default function CustomSoftwareDevelopmentPage() {
               })}
             </div>
           </div>
-          <article className="rounded-2xl overflow-hidden border border-white/10 bg-[#1b1d23]">
+          <article className="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-[#1b1d23]">
             <div className="relative h-60 md:h-72">
               <Image src={serviceDetails[activeService].image} alt={serviceDetails[activeService].title} fill className="object-cover" />
             </div>
             <div className="p-6 md:p-8">
               <h3 className="text-3xl font-semibold mb-3">{serviceDetails[activeService].title}</h3>
-              <p className="text-white/70 text-lg leading-relaxed">{serviceDetails[activeService].description}</p>
+              <p className="text-foreground/70 dark:text-white/70 text-lg leading-relaxed">{serviceDetails[activeService].description}</p>
             </div>
           </article>
         </div>
@@ -211,7 +211,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <section className="py-14 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-6xl text-center font-semibold mb-10">Our Development Process</h2>
-        <div className="rounded-2xl bg-[#1f2026] p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
+        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
           {process.map(([title, text], index) => {
             const icons = [BriefcaseBusiness, ClipboardCheck, CheckCircle2, Rocket, Wrench]
             const Icon = icons[index]
@@ -223,7 +223,7 @@ export default function CustomSoftwareDevelopmentPage() {
                     <h3 className="text-[#FF6200] text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
                   </div>
                 </div>
-                <p className="text-white/80 text-[16px] leading-[1.35] pl-8">{text}</p>
+                <p className="text-foreground/80 dark:text-white/80 text-[16px] leading-[1.35] pl-8">{text}</p>
               </div>
             )
           })}
