@@ -16,7 +16,7 @@ declare global {
   }
 }
 
-export function RequestConsultationSection() {
+export function RequestConsultationSection({ submitLabel }: { submitLabel?: string } = {}) {
   const { t } = useLocale()
 
   const [isDark, setIsDark] = useState(false)
@@ -321,7 +321,7 @@ export function RequestConsultationSection() {
           {t.sending || "Sending..."}
         </>
       ) : (
-        t.send || "Send"
+        submitLabel || t.send || "Send"
       )}
     </button>
   </div>

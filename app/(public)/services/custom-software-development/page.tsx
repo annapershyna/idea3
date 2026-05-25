@@ -4,6 +4,7 @@ import { useState } from "react"
 import { BriefcaseBusiness, CheckCircle2, ClipboardCheck, Rocket, Wrench } from "lucide-react"
 import Image from "next/image"
 import { FAQSection } from "@/components/faq-section"
+import { RequestConsultationSection } from "@/components/request-consultation-section"
 
 const serviceDetails = [
   {
@@ -65,8 +66,7 @@ export default function CustomSoftwareDevelopmentPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-5">Custom Software Development for Growing Businesses</h2>
-        <p className="text-muted-foreground mb-6 text-base leading-7">
+                <p className="text-muted-foreground mb-6 text-base leading-7">
           Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions web applications, SaaS platforms, enterprise software, CRM and ERP systems, and API integrations built around your architecture requirements, data model, and growth trajectory. Every codebase is CI/CD-ready, fully documented, and designed to support growth from hundreds to hundreds of thousands of users without structural rewrites. Our software engineering services cover the full cycle: from requirements analysis and system design to deployment and post-launch iteration.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8 text-sm md:text-base">
@@ -111,17 +111,21 @@ export default function CustomSoftwareDevelopmentPage() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <div className="grid lg:grid-cols-[360px_1fr] gap-8 items-start">
-          <h2 className="text-3xl md:text-4xl font-semibold leading-tight">Technologies We Use</h2>
-          <div className="text-muted-foreground leading-7">
-            <p className="mb-4">Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:</p>
-            <p><span className="text-foreground font-semibold">Frontend:</span> React, Vue, Next.js, TypeScript</p>
-            <p><span className="text-foreground font-semibold">Backend:</span> Node.js, Python, Go</p>
-            <p><span className="text-foreground font-semibold">Databases:</span> PostgreSQL, MongoDB, Redis</p>
-            <p><span className="text-foreground font-semibold">Cloud:</span> AWS, GCP, Docker, Kubernetes</p>
-            <p><span className="text-foreground font-semibold">APIs:</span> REST, GraphQL, gRPC</p>
-            <p><span className="text-foreground font-semibold">CI/CD:</span> GitHub Actions, Terraform</p>
+      <section className="overflow-hidden bg-background px-4 py-16 md:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(300px,0.42fr)_minmax(0,0.58fr)] lg:gap-8 xl:gap-12">
+            <div className="max-w-[520px] space-y-6 lg:space-y-8">
+              <h2 className="text-5xl font-bold leading-none tracking-[-0.04em] text-foreground md:text-6xl lg:text-7xl">Technologies We Use</h2>
+              <p className="max-w-[500px] text-xl leading-[1.8] text-foreground/75 md:text-2xl md:leading-[1.8]">Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:</p>
+            </div>
+            <div className="space-y-5 text-foreground/90 text-base md:text-lg">
+              <p><span className="font-semibold">Frontend:</span> React, Vue, Next.js, TypeScript</p>
+              <p><span className="font-semibold">Backend:</span> Node.js, Python, Go</p>
+              <p><span className="font-semibold">Databases:</span> PostgreSQL, MongoDB, Redis</p>
+              <p><span className="font-semibold">Cloud:</span> AWS, GCP, Docker, Kubernetes</p>
+              <p><span className="font-semibold">APIs:</span> REST, GraphQL, gRPC</p>
+              <p><span className="font-semibold">CI/CD:</span> GitHub Actions, Terraform</p>
+            </div>
           </div>
         </div>
       </section>
@@ -188,20 +192,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <h3 className="text-2xl md:text-[24px] font-semibold leading-tight">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-10">
-        <div className="rounded-2xl bg-[#1E1E1E] p-6 md:p-8 grid lg:grid-cols-2 gap-6 items-center">
-          <div className="space-y-4">
-            <h3 className="text-4xl font-bold text-white">Get Consultation</h3>
-            <input className="w-full bg-transparent border-b border-white/40 py-3 text-white" placeholder="*Type your Name" />
-            <input className="w-full bg-transparent border-b border-white/40 py-3 text-white" placeholder="*Type your Email" />
-            <textarea className="w-full bg-transparent border-b border-white/40 py-3 text-white" rows={3} placeholder="*Type your Massage" />
-            <button className="inline-flex items-center justify-center rounded-full bg-[#FF6200] text-white px-6 py-3 font-semibold">Get a technical estimate</button>
-          </div>
-          <div className="relative h-[320px] rounded-xl overflow-hidden">
-            <Image src="/images/f236a65b9dcdd59fe25f5a9694d5243e04bca53a-20-281-29.jpg" alt="Consultation" fill className="object-cover" />
-          </div>
-        </div>
-      </section>
+      <RequestConsultationSection submitLabel="Get a technical estimate" />
 
       <FAQSection />
     </main>
