@@ -66,15 +66,21 @@ export default function CustomSoftwareDevelopmentPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
-                <p className="text-muted-foreground mb-6 text-base leading-7">
+                <p className="text-foreground/80 mb-6 text-base leading-7">
           Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions web applications, SaaS platforms, enterprise software, CRM and ERP systems, and API integrations built around your architecture requirements, data model, and growth trajectory. Every codebase is CI/CD-ready, fully documented, and designed to support growth from hundreds to hundreds of thousands of users without structural rewrites. Our software engineering services cover the full cycle: from requirements analysis and system design to deployment and post-launch iteration.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8 text-sm md:text-base">
-          {expertiseBullets.map((item) => (
-            <div key={item} className="flex items-center gap-2">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6200]" />
-              {item}
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
+          {[
+            ["Web development", "/services/custom-web-solutions"],
+            ["Mobile app development", "/services#mobile-applications"],
+            ["UI/UX design", "/services#ux-ui-design"],
+            ["QA & testing", "/services#qa"],
+            ["Digital analytics", "/services#data-analytics"],
+            ["IT consulting", "/contact"],
+          ].map(([item, href]) => (
+            <a key={item} href={href} className="group block">
+              <h3 className="text-3xl font-semibold mb-3 scroll-animate visible text-foreground group-hover:text-[#FF6200] transition-colors">{item}</h3>
+            </a>
           ))}
         </div>
       </section>
@@ -118,13 +124,31 @@ export default function CustomSoftwareDevelopmentPage() {
               <h2 className="text-5xl font-bold leading-none tracking-[-0.04em] text-foreground md:text-6xl lg:text-7xl">Technologies We Use</h2>
               <p className="max-w-[500px] text-xl leading-[1.8] text-foreground/75 md:text-2xl md:leading-[1.8]">Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:</p>
             </div>
-            <div className="space-y-5 text-foreground/90 text-base md:text-lg">
-              <p><span className="font-semibold">Frontend:</span> React, Vue, Next.js, TypeScript</p>
-              <p><span className="font-semibold">Backend:</span> Node.js, Python, Go</p>
-              <p><span className="font-semibold">Databases:</span> PostgreSQL, MongoDB, Redis</p>
-              <p><span className="font-semibold">Cloud:</span> AWS, GCP, Docker, Kubernetes</p>
-              <p><span className="font-semibold">APIs:</span> REST, GraphQL, gRPC</p>
-              <p><span className="font-semibold">CI/CD:</span> GitHub Actions, Terraform</p>
+            <div className="hidden min-w-0 lg:flex lg:justify-end">
+              <div className="flex w-full max-w-[550px] flex-col gap-8 xl:max-w-[620px] xl:gap-10">
+                {[
+                  ["Frontend", ["React", "Vue", "Next.js", "TypeScript"]],
+                  ["Backend", ["Node.js", "Python", "Go"]],
+                  ["Databases", ["PostgreSQL", "MongoDB", "Redis"]],
+                  ["Cloud", ["AWS", "GCP", "Docker", "Kubernetes"]],
+                  ["APIs", ["REST", "GraphQL", "gRPC"]],
+                  ["CI/CD", ["GitHub Actions", "Terraform"]],
+                ].map(([title, items]) => (
+                  <div key={title as string} className="flex w-full flex-col">
+                    <div className="flex w-full flex-col gap-4 lg:w-auto">
+                      <div className="flex items-center gap-4 pl-1 text-sm font-semibold uppercase tracking-[0.02em] text-foreground/55">
+                        <span className="h-px w-8 bg-foreground/35" aria-hidden="true" />
+                        <span>{title as string}</span>
+                      </div>
+                      <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:flex lg:w-auto lg:flex-nowrap lg:gap-2.5 xl:gap-3">
+                        {(items as string[]).map((item) => (
+                          <div key={item} className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"><span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">{item}</span></div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -179,16 +203,16 @@ export default function CustomSoftwareDevelopmentPage() {
               <div key={title}>
                 <div className="flex items-start gap-3 mb-2">
                   <Icon className="h-5 w-5 text-[#FF6200] mt-1" />
-                  <h3 className="text-[#FF6200] text-[34px] leading-[1.1] font-semibold">{title}</h3>
+                  <h3 className="text-[#FF6200] text-2xl md:text-3xl leading-tight font-semibold">{title}</h3>
                 </div>
-                <p className="text-white/80 text-[16px] md:text-[20px] leading-[1.35]">{text}</p>
+                <p className="text-white/80 text-[16px] leading-[1.35]">{text}</p>
               </div>
             )
           })}
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 pt-2 pb-4 text-center">
+      <section className="max-w-6xl mx-auto px-4 pt-2 pb-2 text-center">
         <h3 className="text-2xl md:text-[24px] font-semibold leading-tight">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
