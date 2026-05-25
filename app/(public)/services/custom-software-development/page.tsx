@@ -181,29 +181,29 @@ export default function CustomSoftwareDevelopmentPage() {
             ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.jpg", "Custom storefronts, inventory management, B2B ordering portals"],
             ["SaaS startups", "/business-meeting-handshake-partnership.jpg", "Product development from MVP through scaled multi-tenant architecture"],
           ].map(([name, image, description]) => (
-            <article key={name} className="rounded-2xl overflow-hidden bg-[#191a20] border border-white/10">
+            <article key={name} className="rounded-2xl overflow-hidden bg-white dark:bg-[#191a20] border border-black/10 dark:border-white/10">
               <div className="relative h-48">
                 <Image src={image as string} alt={name as string} fill className="object-cover" />
                 <span className="absolute left-3 top-3 rounded-lg bg-[#FF6200] px-3 py-1 text-sm">{name}</span>
               </div>
-              <p className="p-4 text-white text-sm">{description}</p>
+              <p className="p-4 text-foreground dark:text-white text-sm">{description}</p>
             </article>
           ))}
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 pb-14">
-        <div className="rounded-2xl bg-[#1f2026] border border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
+        <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
           <Image src="/placeholder.jpg" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
             <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
-            <p className="text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
-            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg">
-              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
-              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Transparent process</h3><p className="text-white/70">Sprint demos, async updates, and direct access to your engineering team</p></div>
-              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Owned codebase</h3><p className="text-white/70">You get full IP rights, documentation, and repository access from day one</p></div>
-              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Architecture-first approach</h3><p className="text-white/70">Systems designed to scale before the first line of code is written</p></div>
-              <div className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
+            <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg text-foreground dark:text-white">
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-foreground/70 dark:text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Transparent process</h3><p className="text-foreground/70 dark:text-white/70">Sprint demos, async updates, and direct access to your engineering team</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Owned codebase</h3><p className="text-foreground/70 dark:text-white/70">You get full IP rights, documentation, and repository access from day one</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Architecture-first approach</h3><p className="text-foreground/70 dark:text-white/70">Systems designed to scale before the first line of code is written</p></div>
+              <div className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-foreground/70 dark:text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
             </div>
           </div>
         </div>
