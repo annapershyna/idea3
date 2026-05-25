@@ -4,7 +4,7 @@ import { useState } from "react"
 import { BriefcaseBusiness, CheckCircle2, ClipboardCheck, Rocket, Wrench } from "lucide-react"
 import Image from "next/image"
 import { FAQSection } from "@/components/faq-section"
-import { RequestConsultationSection } from "@/components/request-consultation-section"
+import { CustomEstimateConsultationSection } from "@/components/custom-estimate-consultation-section"
 
 const serviceDetails = [
   {
@@ -217,11 +217,13 @@ export default function CustomSoftwareDevelopmentPage() {
             const Icon = icons[index]
             return (
               <div key={title}>
-                <div className="flex items-start gap-3 mb-2">
-                  <Icon className="h-12 w-12 text-[#FF6200] shrink-0" />
-                  <h3 className="text-[#FF6200] text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
+                <div className="mb-2">
+                  <div className="flex items-start gap-3">
+                    <Icon className="h-5 w-5 text-[#FF6200] shrink-0 mt-1" />
+                    <h3 className="text-[#FF6200] text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
+                  </div>
                 </div>
-                <p className="text-white/80 text-[16px] leading-[1.35]">{text}</p>
+                <p className="text-white/80 text-[16px] leading-[1.35] pl-8">{text}</p>
               </div>
             )
           })}
@@ -232,7 +234,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <h3 className="text-2xl md:text-[24px] font-semibold leading-tight">Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.</h3>
       </section>
 
-      <div className="-mt-4"><RequestConsultationSection submitLabel="Get a technical estimate" /></div>
+      <div className="-mt-4"><CustomEstimateConsultationSection /></div>
 
       <FAQSection />
     </main>
