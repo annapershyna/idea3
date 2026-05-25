@@ -94,28 +94,28 @@ export default function CustomSoftwareDevelopmentPage() {
       <section className="pb-16 px-6"><div className="max-w-[1280px] mx-auto"><AnimatedSection><h2 className="text-3xl md:text-4xl font-semibold mb-8">{isUk ? "Наш процес розробки" : "Our Development Process"}</h2></AnimatedSection><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{process.map(([t, d], i) => <AnimatedSection key={t} delay={i * 80} className="rounded-2xl border border-border/80 bg-background/70 p-6"><h3 className="font-semibold text-xl mb-3">{t}</h3><p className="text-muted-foreground">{d}</p></AnimatedSection>)}</div></div></section>
 
       <section className="pb-16 px-6">
-        <div className="max-w-[1280px] mx-auto rounded-[28px] border border-border/70 overflow-hidden bg-gradient-to-br from-[#0f766e] via-[#0a4f63] to-[#062f46] dark:from-[#0b5a54] dark:via-[#063d4f] dark:to-[#041f34]">
+        <div className="max-w-[1280px] mx-auto rounded-[28px] border border-border/70 overflow-hidden bg-gradient-to-br from-[#FF6200]/95 via-[#FF7A1A]/85 to-[#B63D00]/90 dark:from-[#FF6200]/80 dark:via-[#D94F00]/75 dark:to-[#8F2F00]/80">
           <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10 lg:p-12">
             <AnimatedSection className="relative min-h-[440px] rounded-2xl border border-white/10 bg-white/5 p-4 md:p-6">
               <div className="absolute inset-0 opacity-35" style={{ backgroundImage: "radial-gradient(circle at center, rgba(255,255,255,0.14) 1px, transparent 1px)", backgroundSize: "46px 46px" }} />
               <div className="relative h-full">
-                <div className="absolute top-4 left-[12%] h-44 w-36 md:h-52 md:w-44 rounded-3xl bg-gradient-to-br from-cyan-100/80 to-teal-200/70 border border-white/30" />
-                <div className="absolute top-32 left-0 h-52 w-44 md:h-60 md:w-52 rounded-3xl bg-gradient-to-br from-slate-100/85 to-zinc-200/65 border border-white/30" />
-                <div className="absolute bottom-0 left-[16%] h-44 w-36 md:h-52 md:w-44 rounded-3xl bg-gradient-to-br from-rose-100/80 to-amber-100/70 border border-white/30" />
+                <div className="absolute top-4 left-[12%] h-44 w-36 md:h-52 md:w-44 rounded-3xl bg-gradient-to-br from-orange-100/85 to-amber-200/75 border border-white/30" />
+                <div className="absolute top-32 left-0 h-52 w-44 md:h-60 md:w-52 rounded-3xl bg-gradient-to-br from-orange-50/90 to-amber-100/70 border border-white/30" />
+                <div className="absolute bottom-0 left-[16%] h-44 w-36 md:h-52 md:w-44 rounded-3xl bg-gradient-to-br from-amber-100/85 to-orange-200/75 border border-white/30" />
               </div>
             </AnimatedSection>
 
             <div>
               <AnimatedSection>
                 <h2 className="text-3xl md:text-5xl font-semibold text-white">{isUk ? "Чому обирають Idea Team" : "Why Choose Idea Team"}</h2>
-                <p className="mt-4 text-base md:text-xl text-cyan-50/85 leading-8">{isUk ? "Ми поєднуємо технічну глибину, прозорий процес і продуктове мислення, щоб запускати складні системи без компромісів у якості." : "We combine technical depth, transparent delivery, and product thinking to ship complex systems without quality trade-offs."}</p>
+                <p className="mt-4 text-base md:text-xl text-white/90 leading-8">{isUk ? "Ми поєднуємо технічну глибину, прозорий процес і продуктове мислення, щоб запускати складні системи без компромісів у якості." : "We combine technical depth, transparent delivery, and product thinking to ship complex systems without quality trade-offs."}</p>
               </AnimatedSection>
               <div className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-7">
                 {why.map(({ icon: Icon, title, description }, i) => (
                   <AnimatedSection key={title} delay={i * 70} className="border-t border-white/20 pt-5">
-                    <Icon className="h-5 w-5 text-cyan-100 mb-3" />
+                    <Icon className="h-5 w-5 text-white/90 mb-3" />
                     <h3 className="text-2xl text-white/95 mb-2">{title}</h3>
-                    <p className="text-cyan-50/80 leading-7">{description}</p>
+                    <p className="text-white/80 leading-7">{description}</p>
                   </AnimatedSection>
                 ))}
               </div>
