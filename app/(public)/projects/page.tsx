@@ -772,7 +772,7 @@ export default function ProjectsPage() {
           {/* Process Steps */}
           <AnimatedCard delay={100}>
             <div className="rounded-[4px] p-6 md:p-8 lg:p-12 mb-12" style={{ backgroundColor: isDark ? "#1E1E1E" : "#F5F5F5" }}>
-            <div className="text-center md:text-left mb-10">
+            <div className="text-center mb-10">
                   <h3
                     className="font-semibold mb-2 md:mb-4 text-xl"
                     style={{
@@ -786,7 +786,7 @@ export default function ProjectsPage() {
                     {t.processTitle}
                   </h3>
                 </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8">
                 <div className="flex items-start gap-3 md:gap-4">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
                     <path d="M9 9L13.5 12L18 9" stroke="#FF6200" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

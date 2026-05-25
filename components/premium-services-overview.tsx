@@ -24,20 +24,20 @@ export function PremiumServicesOverview() {
           Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions built around your architecture requirements, data model, and growth trajectory.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card, idx) => {
             const Icon = card.icon
             return (
               <a
                 key={card.title}
                 href={card.href}
-                className="group rounded-3xl border border-black/10 bg-white/75 p-6 backdrop-blur-xl shadow-[0_10px_40px_rgba(15,23,42,.08)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#FF6200]/60 hover:shadow-[0_16px_50px_rgba(255,98,0,.18)] dark:border-white/10 dark:bg-white/[0.03] dark:shadow-[0_14px_44px_rgba(0,0,0,.35)] dark:hover:border-[#FF6200]/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] motion-reduce:transition-none"
+                className="group rounded-2xl border border-black/10 bg-white/50 p-8 backdrop-blur-sm shadow-[0_8px_32px_rgba(15,23,42,.08)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FF6200]/50 hover:shadow-[0_12px_48px_rgba(255,98,0,.15)] dark:border-white/10 dark:bg-[#191a20] dark:shadow-[0_10px_40px_rgba(0,0,0,.4)] dark:hover:border-[#FF6200]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] motion-reduce:transition-none flex flex-col items-center text-center"
                 style={{ animationDelay: `${idx * 70}ms` }}
               >
-                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-[#FF6200]/35 bg-[#FF6200]/12 text-[#FF6200] shadow-[0_0_0_0_rgba(255,98,0,0)] transition-all duration-300 group-hover:bg-[#FF6200]/18 group-hover:shadow-[0_0_26px_0_rgba(255,98,0,.35)]">
-                  <Icon className="h-5 w-5" />
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] transition-all duration-300 group-hover:bg-[#FF6200]/15 group-hover:shadow-[0_0_28px_rgba(255,98,0,.3)]">
+                  <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="text-2xl font-semibold text-[#111827] dark:text-[#F5F7FA]">{card.title}</h3>
+                <h3 className="text-xl font-semibold text-[#111827] dark:text-[#F5F7FA]">{card.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-white/70">{card.description}</p>
               </a>
             )

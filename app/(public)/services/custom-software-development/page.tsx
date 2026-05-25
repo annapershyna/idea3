@@ -82,7 +82,6 @@ export default function CustomSoftwareDevelopmentPage() {
         </div>
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-semibold mb-4 text-white">Custom Software Development Services</h1>
-          <p className="max-w-3xl mx-auto text-white/80 text-base md:text-lg">Custom software development for growing businesses.</p>
         </div>
       </section>
 
