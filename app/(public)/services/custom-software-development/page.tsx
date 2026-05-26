@@ -56,7 +56,7 @@ const pageCopy = {
     processTitle: "Our Development Process",
     costTitle: "Cost of Custom Software Development",
     costBody:
-      "Custom software development cost depends on system complexity, team composition, and engagement duration. A focused web application or internal tool starts at $15,000–$30,000. Mid-complexity SaaS platforms and CRM/ERP systems typically range from $40,000–$120,000. Enterprise software development with complex integrations and compliance requirements scales from $120,000 upward. We scope every project in detail before committing to a number—contact us for a technical estimate based on your specific requirements.",
+      "Custom software development cost depends on system complexity, team composition, and engagement duration. A focused web application or internal tool starts at $2,000. Mid-complexity SaaS platforms and CRM/ERP systems typically range from $5,000. Enterprise software development with complex integrations and compliance requirements scales from $5,000 upward. We scope every project in detail before committing to a number—contact us for a technical estimate based on your specific requirements.",
     cta: "See it in practice",
   },
   uk: {
@@ -65,7 +65,7 @@ const pageCopy = {
     processTitle: "Наш процес розробки",
     costTitle: "Вартість розробки кастомного програмного забезпечення",
     costBody:
-      "Вартість розробки кастомного ПЗ залежить від складності системи, складу команди та тривалості співпраці. Розробка цільового вебзастосунку або внутрішнього інструменту зазвичай стартує від $15,000–$30,000. SaaS-платформи середньої складності та CRM/ERP-системи зазвичай коштують у межах $40,000–$120,000. Корпоративна розробка з комплексними інтеграціями та вимогами комплаєнсу масштабується від $120,000 і вище. Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.",
+      "Вартість розробки кастомного ПЗ залежить від складності системи, складу команди та тривалості співпраці. Розробка цільового вебзастосунку або внутрішнього інструменту зазвичай стартує від $2,000. SaaS-платформи середньої складності та CRM/ERP-системи зазвичай коштують у межах $5,000. Корпоративна розробка з комплексними інтеграціями та вимогами комплаєнсу масштабується від $5,000 і вище. Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.",
     cta: "Дивитися в реальному кейсі",
   },
 } as const
