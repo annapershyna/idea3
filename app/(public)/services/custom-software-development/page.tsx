@@ -208,8 +208,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
           <Image src="/images/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
-            <h2 className="text-4xl md:text-6xl font-semibold mb-3">Why Choose Idea Team</h2>
-            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.whyChooseSubtitle}</p>
+            <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
             <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg text-foreground dark:text-white">
               <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-foreground/70 dark:text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
@@ -232,8 +231,7 @@ export default function CustomSoftwareDevelopmentPage() {
       </section>
       
       <section className="py-14 px-4 max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-3">Our Development Process</h2>
-        <p className="text-center text-base md:text-lg text-foreground/60 dark:text-white/60 mb-10">{copy.processTitle}</p>
+        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-6">Our Development Process</h2>
         <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
           {process.map(([title, text], index) => {
             const icons = [BriefcaseBusiness, ClipboardCheck, CheckCircle2, Rocket, Wrench]
