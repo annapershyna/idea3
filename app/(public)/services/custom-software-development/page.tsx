@@ -167,7 +167,7 @@ export default function CustomSoftwareDevelopmentPage() {
             ["EdTech", "/lenovo-landing-page-design.jpg", "LMS platforms, adaptive learning systems, certification infrastructure"],
             ["Logistics", "/original.webp", "Route optimization, warehouse management, real-time tracking systems"],
             ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.webp", "Custom storefronts, inventory management, B2B ordering portals"],
-            ["SaaS startups", "/business-meeting-handshake-partnership.jpg", "Product development from MVP through scaled multi-tenant architecture"],
+            ["SaaS startups", "/fintech-apps-development.jpg", "Product development from MVP through scaled multi-tenant architecture"],
           ].map(([name, image, description]) => (
             <article key={name} className="rounded-2xl overflow-hidden bg-white dark:bg-[#191a20] border border-black/10 dark:border-white/10">
               <div className="relative h-48">
