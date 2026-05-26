@@ -66,7 +66,7 @@ const techIcons: Record<string, string> = {
   Kubernetes: "/images/kubernetes.svg",
   REST: "/icons/tech/rest.svg",
   GraphQL: "/icons/tech/graphql.svg",
-  gRPC: "/icons/tech/grpc.svg",
+  gRPC: "/icons/tech/",
   "GitHub Actions": "/icons/tech/github.svg",
   Terraform: "/icons/tech/terraform.svg",
 }
