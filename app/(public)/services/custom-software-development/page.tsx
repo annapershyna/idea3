@@ -12,19 +12,19 @@ const serviceDetails = [
     title: "Web Applications",
     description:
       "Full-stack web application development - SPAs, B2B portals, internal tools, and real-time dashboards. Built with clean frontend/backend separation, optimized data layers, and cloud-native deployment on AWS or GCP.",
-    image: "/developers-collaborating-on-project.jpg",
+    image: "/mobile-app-testing.png",
   },
   {
     title: "SaaS Platforms",
     description:
       "SaaS development from architecture design through multi-tenant infrastructure setup, subscription billing integration, and scalability planning. Systems built to onboard thousands of customers without performance degradation.",
-    image: "/project-management-team.png",
+    image: "/SaaS.webp",
   },
   {
     title: "Enterprise Software",
     description:
       "Enterprise software development for complex organizational workflows: approval chains, role-based access control, audit logging, ERP integrations, and compliance-ready data architecture.",
-    image: "/business-partnership-meeting.png",
+    image: "/what-is-ERP.jpg",
   },
   {
     title: "CRM/ERP Systems",
@@ -36,7 +36,7 @@ const serviceDetails = [
     title: "API Integrations",
     description:
       "API integration services connecting internal systems, third-party platforms, and data pipelines. RESTful and GraphQL API design, webhook infrastructure, and integration testing across environments.",
-    image: "/developers-collaborating.jpg",
+    image: "/api-integration.jpg",
   },
 ]
 
