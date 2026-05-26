@@ -7,6 +7,7 @@ import AutoPlayYouTube from "@/components/autoplayyoutube"
 import { QuoteSection } from "@/components/quote-section"
 import { ExpertiseSection } from "@/components/expertise"
 import { OurServicesSection } from "@/components/our-services-section"
+import { IndustriesSection } from "@/components/industries-section"
 import { ConsultationBanner } from "@/components/consultation-banner"
 import { TechnologiesSection } from "@/components/technologies"
 import { OurProjectsSection } from "@/components/our-projects-section"
@@ -38,6 +39,7 @@ export default function HomePage() {
       <QuoteSection />
       <ExpertiseSection />
       <OurServicesSection />
+      <IndustriesSection />
       <ConsultationBanner />
       <TechnologiesSection />
       <OurProjectsSection />

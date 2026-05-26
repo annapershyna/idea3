@@ -16,29 +16,31 @@ export function PremiumServicesOverview() {
     <section className="relative overflow-hidden px-4 py-16 md:py-20 lg:py-24 transition-colors duration-300 bg-[radial-gradient(circle_at_top_right,rgba(255,140,0,.08),transparent_30%),#F7F8FA] dark:bg-[radial-gradient(circle_at_top_right,rgba(255,120,0,.15),transparent_35%),#07070A]">
       <div className="pointer-events-none absolute inset-0 opacity-[0.04] [background-image:radial-gradient(#ffffff_0.5px,transparent_0.5px)] [background-size:3px_3px] dark:opacity-[0.06]" />
       <div className="relative mx-auto max-w-6xl">
-        <span className="inline-flex rounded-full border border-foreground/15 bg-background/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-foreground/70 backdrop-blur">
+        <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
           Custom Software Development for Growing Businesses
-        </span>
+        </h2>
 
         <p className="mt-6 max-w-4xl text-[18px] leading-[1.7] text-[#4B5563] dark:text-white/72">
           Off-the-shelf platforms set the ceiling for what your product can do. Custom software development removes it. We design and engineer scalable software solutions built around your architecture requirements, data model, and growth trajectory.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card, idx) => {
             const Icon = card.icon
             return (
               <a
                 key={card.title}
                 href={card.href}
-                className="group rounded-3xl border border-black/10 bg-white/75 p-6 backdrop-blur-xl shadow-[0_10px_40px_rgba(15,23,42,.08)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#FF6200]/60 hover:shadow-[0_16px_50px_rgba(255,98,0,.18)] dark:border-white/10 dark:bg-white/[0.03] dark:shadow-[0_14px_44px_rgba(0,0,0,.35)] dark:hover:border-[#FF6200]/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] motion-reduce:transition-none"
+                className="group rounded-2xl border border-black/10 bg-white/70 p-6 backdrop-blur-md transition-all duration-300 ease-out hover:border-[#FF6200]/40 hover:bg-white dark:border-white/10 dark:bg-black/20 dark:hover:bg-black/30 dark:hover:shadow-[0_0_24px_rgba(255,98,0,.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] motion-reduce:transition-none flex items-start gap-4"
                 style={{ animationDelay: `${idx * 70}ms` }}
               >
-                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-[#FF6200]/35 bg-[#FF6200]/12 text-[#FF6200] shadow-[0_0_0_0_rgba(255,98,0,0)] transition-all duration-300 group-hover:bg-[#FF6200]/18 group-hover:shadow-[0_0_26px_0_rgba(255,98,0,.35)]">
-                  <Icon className="h-5 w-5" />
+                <div className="mt-1 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl border border-[#FF6200]/40 bg-[#FF6200]/15 text-[#FF6200] transition-all duration-300 group-hover:bg-[#FF6200]/25 group-hover:shadow-[0_0_16px_rgba(255,98,0,.25)]">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-2xl font-semibold text-[#111827] dark:text-[#F5F7FA]">{card.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-white/70">{card.description}</p>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-foreground dark:text-white">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/70 dark:text-white/70">{card.description}</p>
+                </div>
               </a>
             )
           })}
