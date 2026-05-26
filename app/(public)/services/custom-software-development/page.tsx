@@ -6,6 +6,7 @@ import Image from "next/image"
 import { FAQSection } from "@/components/faq-section"
 import { CustomEstimateConsultationSection } from "@/components/custom-estimate-consultation-section"
 import { PremiumServicesOverview } from "@/components/premium-services-overview"
+import { useLocale } from "@/lib/locale-context"
 
 const serviceDetails = [
   {
@@ -48,6 +49,26 @@ const process = [
   ["Post-launch iteration", "Ongoing feature development, performance monitoring, and technical support"],
 ]
 
+const pageCopy = {
+  en: {
+    servicesSubtitle: "Software Development Services We Provide",
+    whyChooseSubtitle: "Why Choose Idea Team",
+    processTitle: "Our Development Process",
+    costTitle: "Cost of Custom Software Development",
+    costBody:
+      "Custom software development cost depends on system complexity, team composition, and engagement duration. A focused web application or internal tool starts at $15,000–$30,000. Mid-complexity SaaS platforms and CRM/ERP systems typically range from $40,000–$120,000. Enterprise software development with complex integrations and compliance requirements scales from $120,000 upward. We scope every project in detail before committing to a number—contact us for a technical estimate based on your specific requirements.",
+    cta: "See it in practice",
+  },
+  uk: {
+    servicesSubtitle: "Послуги з розробки ПЗ, які ми надаємо",
+    whyChooseSubtitle: "Чому обирають Idea Team",
+    processTitle: "Наш процес розробки",
+    costTitle: "Вартість розробки кастомного програмного забезпечення",
+    costBody:
+      "Вартість розробки кастомного ПЗ залежить від складності системи, складу команди та тривалості співпраці. Розробка цільового вебзастосунку або внутрішнього інструменту зазвичай стартує від $15,000–$30,000. SaaS-платформи середньої складності та CRM/ERP-системи зазвичай коштують у межах $40,000–$120,000. Корпоративна розробка з комплексними інтеграціями та вимогами комплаєнсу масштабується від $120,000 і вище. Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.",
+    cta: "Дивитися в реальному кейсі",
+  },
+} as const
 
 const techIcons: Record<string, string> = {
   React: "/images/react.svg",
@@ -72,6 +93,8 @@ const techIcons: Record<string, string> = {
 }
 export default function CustomSoftwareDevelopmentPage() {
   const [activeService, setActiveService] = useState(0)
+  const { locale } = useLocale()
+  const copy = pageCopy[locale]
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -93,6 +116,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
+            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.servicesSubtitle}</p>
             <div className="border-t border-black/10 dark:border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
@@ -194,6 +218,7 @@ export default function CustomSoftwareDevelopmentPage() {
               <div className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-foreground/70 dark:text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
             </div>
           </div>
+          <button className="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF6200] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#e45700]">{copy.cta}</button>
         </div>
       </section>
 
