@@ -77,8 +77,8 @@ export default function CustomSoftwareDevelopmentPage() {
     <main className="min-h-screen bg-background text-foreground">
       <section className="relative pt-32 pb-20 px-4">
         <div className="absolute inset-0">
-          <Image src="/alert-management-interface.jpg" alt="Custom software development services" fill className="object-cover opacity-35" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/25" />
+          <Image src="/images/custom-software-development-hero.jpg" alt="Custom software development services" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </div>
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-semibold mb-4 text-white">Custom Software Development Services</h1>
@@ -208,7 +208,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 <div className="mb-2">
                   <div className="flex items-start gap-3">
                     <Icon className="h-5 w-5 text-[#FF6200] shrink-0 mt-1" />
-                    <h3 className="text-[#FF6200] text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
+                    <h3 className="text-foreground dark:text-white text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
                   </div>
                 </div>
                 <p className="text-foreground/80 dark:text-white/80 text-[16px] leading-[1.35] pl-8">{text}</p>
