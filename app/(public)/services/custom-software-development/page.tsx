@@ -182,7 +182,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <section className="max-w-6xl mx-auto px-4 pb-14">
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
-          <Image src="/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
+          <Image src="/images/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
             <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
             <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
