@@ -53,22 +53,22 @@ const techIcons: Record<string, string> = {
   React: "/images/react.svg",
   Vue: "/images/vue.svg",
   "Next.js": "/images/next.svg",
-  TypeScript: "/icons/tech/logo-black.svg",
+  TypeScript: "/icons/tech/typescript.svg",
   "Node.js": "/images/node.svg",
   Python: "/images/python.svg",
-  Go: "/icons/tech/logo-black.svg",
+  Go: "/icons/tech/go.svg",
   PostgreSQL: "/icons/tech/mssql.svg",
   MongoDB: "/icons/tech/mongodb.svg",
-  Redis: "/icons/tech/logo-black.svg",
+  Redis: "/icons/tech/redis.svg",
   AWS: "/images/aws.svg",
   GCP: "/images/gcp.svg",
   Docker: "/images/docker.svg",
   Kubernetes: "/images/kubernetes.svg",
-  REST: "/icons/tech/logo-black.svg",
+  REST: "/icons/tech/rest.svg",
   GraphQL: "/icons/tech/graphql.svg",
-  gRPC: "/icons/tech/logo-black.svg",
+  gRPC: "/icons/tech/grpc.svg",
   "GitHub Actions": "/icons/tech/github.svg",
-  Terraform: "/icons/tech/logo-black.svg",
+  Terraform: "/icons/tech/terraform.svg",
 }
 export default function CustomSoftwareDevelopmentPage() {
   const [activeService, setActiveService] = useState(0)
@@ -77,12 +77,11 @@ export default function CustomSoftwareDevelopmentPage() {
     <main className="min-h-screen bg-background text-foreground">
       <section className="relative pt-32 pb-20 px-4">
         <div className="absolute inset-0">
-          <Image src="/alert-management-interface.jpg" alt="Custom software development services" fill className="object-cover opacity-35" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/25" />
+          <Image src="/images/custom-software-development-hero.jpg" alt="Custom software development services" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </div>
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-semibold mb-4 text-white">Custom Software Development Services</h1>
-          <p className="max-w-3xl mx-auto text-white/80 text-base md:text-lg">Custom software development for growing businesses.</p>
         </div>
       </section>
 
@@ -147,7 +146,7 @@ export default function CustomSoftwareDevelopmentPage() {
                       </div>
                       <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:flex lg:w-auto lg:flex-nowrap lg:gap-2.5 xl:gap-3">
                         {(items as string[]).map((item) => (
-                          <div key={item} className="group flex min-h-[76px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[82px] sm:gap-4 sm:px-4 lg:h-[78px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[84px] xl:w-[146px] xl:gap-3 xl:px-3"><div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-lg bg-white p-[5px] shadow-[0_8px_24px_rgba(0,0,0,0.08)]"><Image src={techIcons[item] || "/images/puzzle.svg"} alt={item} width={20} height={20} className="h-full w-full object-contain" /></div><span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">{item}</span></div>
+                          <div key={item} className="group flex min-h-[61px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-[10px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[66px] sm:gap-4 sm:px-4 lg:h-[62px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[67px] xl:w-[146px] xl:gap-3 xl:px-3"><div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-lg bg-white p-[5px] shadow-[0_8px_24px_rgba(0,0,0,0.08)]"><Image src={techIcons[item] || "/images/puzzle.svg"} alt={item} width={20} height={20} className="h-full w-full object-contain" /></div><span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">{item}</span></div>
                         ))}
                       </div>
                     </div>
@@ -163,12 +162,12 @@ export default function CustomSoftwareDevelopmentPage() {
         <h2 className="text-3xl md:text-5xl text-center font-semibold mb-10">Industries We Work With</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            ["FinTech", "/samsung-product-showcase.jpg", "Payment infrastructure, lending platforms, financial reporting systems"],
-            ["HealthTech", "/business-partnership-meeting.png", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
+            ["FinTech", "/samsung-product-showcase.jpeg", "Payment infrastructure, lending platforms, financial reporting systems"],
+            ["HealthTech", "/ehealth.jpg", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
             ["EdTech", "/lenovo-landing-page-design.jpg", "LMS platforms, adaptive learning systems, certification infrastructure"],
-            ["Logistics", "/project-management-team.png", "Route optimization, warehouse management, real-time tracking systems"],
-            ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.jpg", "Custom storefronts, inventory management, B2B ordering portals"],
-            ["SaaS startups", "/business-meeting-handshake-partnership.jpg", "Product development from MVP through scaled multi-tenant architecture"],
+            ["Logistics", "/original.webp", "Route optimization, warehouse management, real-time tracking systems"],
+            ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.webp", "Custom storefronts, inventory management, B2B ordering portals"],
+            ["SaaS startups", "/fintech-apps-development.jpg", "Product development from MVP through scaled multi-tenant architecture"],
           ].map(([name, image, description]) => (
             <article key={name} className="rounded-2xl overflow-hidden bg-white dark:bg-[#191a20] border border-black/10 dark:border-white/10">
               <div className="relative h-48">
@@ -183,7 +182,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <section className="max-w-6xl mx-auto px-4 pb-14">
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
-          <Image src="/placeholder.jpg" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
+          <Image src="/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
             <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
             <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
@@ -209,7 +208,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 <div className="mb-2">
                   <div className="flex items-start gap-3">
                     <Icon className="h-5 w-5 text-[#FF6200] shrink-0 mt-1" />
-                    <h3 className="text-[#FF6200] text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
+                    <h3 className="text-foreground dark:text-white text-xl md:text-xl leading-tight font-semibold scroll-animate visible">{title}</h3>
                   </div>
                 </div>
                 <p className="text-foreground/80 dark:text-white/80 text-[16px] leading-[1.35] pl-8">{text}</p>
