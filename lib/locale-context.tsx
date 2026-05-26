@@ -17,15 +17,17 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en")
 
   useEffect(() => {
-    const stored = localStorage.getItem("locale") as Locale | null
-    if (stored && (stored === "en" || stored === "uk")) {
-      setLocaleState(stored)
+    const storedRaw = localStorage.getItem("locale")
+    const normalized = storedRaw === "ua" ? "uk" : storedRaw
+    if (normalized === "en" || normalized === "uk") {
+      setLocaleState(normalized)
     }
   }, [])
 
   const setLocale = (newLocale: Locale) => {
-    setLocaleState(newLocale)
-    localStorage.setItem("locale", newLocale)
+    const normalized = newLocale === "uk" ? "uk" : "en"
+    setLocaleState(normalized)
+    localStorage.setItem("locale", normalized)
   }
 
   const t = getTranslations(locale)
