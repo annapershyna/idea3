@@ -89,7 +89,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
 
 
-      <section className="bg-[#eef1f6] text-foreground dark:bg-[#2b2d34] dark:text-white py-14 px-4">
+      <section className="bg-[#eef1f6] text-foreground dark:bg-[#323130] dark:text-white py-14 px-4">
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
