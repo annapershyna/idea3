@@ -116,7 +116,6 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
-            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.servicesSubtitle}</p>
             <div className="border-t border-black/10 dark:border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
