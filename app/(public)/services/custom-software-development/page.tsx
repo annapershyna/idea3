@@ -165,7 +165,7 @@ export default function CustomSoftwareDevelopmentPage() {
             ["FinTech", "/samsung-product-showcase.jpeg", "Payment infrastructure, lending platforms, financial reporting systems"],
             ["HealthTech", "/ehealth.jpg", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
             ["EdTech", "/lenovo-landing-page-design.jpg", "LMS platforms, adaptive learning systems, certification infrastructure"],
-            ["Logistics", "/original.jpg", "Route optimization, warehouse management, real-time tracking systems"],
+            ["Logistics", "/original.webp", "Route optimization, warehouse management, real-time tracking systems"],
             ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.jpg", "Custom storefronts, inventory management, B2B ordering portals"],
             ["SaaS startups", "/business-meeting-handshake-partnership.jpg", "Product development from MVP through scaled multi-tenant architecture"],
           ].map(([name, image, description]) => (
