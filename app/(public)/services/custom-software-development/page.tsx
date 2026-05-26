@@ -53,7 +53,7 @@ const techIcons: Record<string, string> = {
   React: "/images/react.svg",
   Vue: "/images/vue.svg",
   "Next.js": "/images/next.svg",
-  TypeScript: "/icons/tech/logo-black.svg",
+  TypeScript: "/icons/tech/typescript.svg",
   "Node.js": "/images/node.svg",
   Python: "/images/python.svg",
   Go: "/icons/tech/go.svg",
