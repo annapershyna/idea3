@@ -66,7 +66,7 @@ const techIcons: Record<string, string> = {
   Kubernetes: "/images/kubernetes.svg",
   REST: "/icons/tech/rest.svg",
   GraphQL: "/icons/tech/graphql.svg",
-  gRPC: "/icons/tech/",
+  gRPC: "/icons/tech/grpc.svg",
   "GitHub Actions": "/icons/tech/github.svg",
   Terraform: "/icons/tech/terraform.svg",
 }
@@ -163,7 +163,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             ["FinTech", "/samsung-product-showcase.jpg", "Payment infrastructure, lending platforms, financial reporting systems"],
-            ["HealthTech", "/business-partnership-meeting.png", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
+            ["HealthTech", "/ehealth.jpg", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
             ["EdTech", "/lenovo-landing-page-design.jpg", "LMS platforms, adaptive learning systems, certification infrastructure"],
             ["Logistics", "/project-management-team.png", "Route optimization, warehouse management, real-time tracking systems"],
             ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.jpg", "Custom storefronts, inventory management, B2B ordering portals"],
