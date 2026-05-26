@@ -64,7 +64,7 @@ const techIcons: Record<string, string> = {
   GCP: "/images/gcp.svg",
   Docker: "/images/docker.svg",
   Kubernetes: "/images/kubernetes.svg",
-  REST: "/icons/tech/logo-black.svg",
+  REST: "/icons/tech/rest.svg",
   GraphQL: "/icons/tech/graphql.svg",
   gRPC: "/icons/tech/grpc.svg",
   "GitHub Actions": "/icons/tech/github.svg",
