@@ -93,6 +93,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
+            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">Послуги з розробки ПЗ, які ми надаємо</p>
             <div className="border-t border-black/10 dark:border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
@@ -184,7 +185,8 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
           <Image src="/images/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
-            <h2 className="text-4xl md:text-6xl font-semibold mb-6">Why Choose Idea Team</h2>
+            <h2 className="text-4xl md:text-6xl font-semibold mb-3">Why Choose Idea Team</h2>
+            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">Чому обирають Idea Team</p>
             <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.</p>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg text-foreground dark:text-white">
               <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Full-stack teams</h3><p className="text-foreground/70 dark:text-white/70">Developers, QA, and a PM on every engagement, not lone contractors</p></div>
@@ -193,12 +195,24 @@ export default function CustomSoftwareDevelopmentPage() {
               <div className="border-b border-[#FF6200] pt-5 pb-5"><h3 className="font-semibold">Architecture-first approach</h3><p className="text-foreground/70 dark:text-white/70">Systems designed to scale before the first line of code is written</p></div>
               <div className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1"><h3 className="font-semibold">No scope creep</h3><p className="text-foreground/70 dark:text-white/70">Fixed-scope or time-and-materials engagements scoped honestly upfront</p></div>
             </div>
+            <button className="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF6200] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#e45700]">See it in practice</button>
           </div>
         </div>
       </section>
 
+
       <section className="py-14 px-4 max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-10">Our Development Process</h2>
+        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-4">Cost of Custom Software Development</h2>
+          <p className="text-lg text-foreground/75 dark:text-white/75 mb-4">Custom software development cost depends on system complexity, team composition, and engagement duration. A focused web application or internal tool starts at $15,000–$30,000. Mid-complexity SaaS platforms and CRM/ERP systems typically range from $40,000–$120,000. Enterprise software development with complex integrations and compliance requirements scales from $120,000 upward. We scope every project in detail before committing to a number—contact us for a technical estimate based on your specific requirements.</p>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-3">Вартість розробки кастомного програмного забезпечення</h3>
+          <p className="text-lg text-foreground/75 dark:text-white/75">Вартість розробки кастомного ПЗ залежить від складності системи, складу команди та тривалості співпраці. Розробка цільового вебзастосунку або внутрішнього інструменту зазвичай стартує від $15,000–$30,000. SaaS-платформи середньої складності та CRM/ERP-системи зазвичай коштують у межах $40,000–$120,000. Корпоративна розробка з комплексними інтеграціями та вимогами комплаєнсу масштабується від $120,000 і вище. Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.</p>
+        </div>
+      </section>
+
+      <section className="py-14 px-4 max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-3">Our Development Process</h2>
+        <p className="text-center text-base md:text-lg text-foreground/60 dark:text-white/60 mb-10">Наш процес розробки</p>
         <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
           {process.map(([title, text], index) => {
             const icons = [BriefcaseBusiness, ClipboardCheck, CheckCircle2, Rocket, Wrench]
