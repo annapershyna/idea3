@@ -18,13 +18,13 @@ const serviceDetails = [
     title: "SaaS Platforms",
     description:
       "SaaS development from architecture design through multi-tenant infrastructure setup, subscription billing integration, and scalability planning. Systems built to onboard thousands of customers without performance degradation.",
-    image: "/SaaS.webp",
+    image: "/images/SaaS.webp",
   },
   {
     title: "Enterprise Software",
     description:
       "Enterprise software development for complex organizational workflows: approval chains, role-based access control, audit logging, ERP integrations, and compliance-ready data architecture.",
-    image: "/what-is-ERP.jpg",
+    image: "/images/what-is-ERP.jpg",
   },
   {
     title: "CRM/ERP Systems",
@@ -36,7 +36,7 @@ const serviceDetails = [
     title: "API Integrations",
     description:
       "API integration services connecting internal systems, third-party platforms, and data pipelines. RESTful and GraphQL API design, webhook infrastructure, and integration testing across environments.",
-    image: "/api-integration.jpg",
+    image: "/images/api-integration.jpg",
   },
 ]
 
