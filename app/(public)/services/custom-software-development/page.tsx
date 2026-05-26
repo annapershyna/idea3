@@ -162,7 +162,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <h2 className="text-3xl md:text-5xl text-center font-semibold mb-10">Industries We Work With</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            ["FinTech", "/samsung-product-showcase.jpg", "Payment infrastructure, lending platforms, financial reporting systems"],
+            ["FinTech", "/samsung-product-showcase.jpeg", "Payment infrastructure, lending platforms, financial reporting systems"],
             ["HealthTech", "/ehealth.jpg", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
             ["EdTech", "/lenovo-landing-page-design.jpg", "LMS platforms, adaptive learning systems, certification infrastructure"],
             ["Logistics", "/original.jpg", "Route optimization, warehouse management, real-time tracking systems"],
