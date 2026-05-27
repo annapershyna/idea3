@@ -98,7 +98,6 @@ const pageCopy = {
       "Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:",
     industriesTitle: "Industries We Work With",
     whyTitle: "Why Choose Idea Team",
-    whyChooseSubtitle: "Why Choose Idea Team",
     whyCards: [
       ["Full-stack teams", "Developers, QA, and a PM on every engagement, not lone contractors"],
       ["Transparent process", "Sprint demos, async updates, and direct access to your engineering team"],
@@ -123,7 +122,6 @@ const pageCopy = {
       "Наша компанія працює зі зрілим, перевіреним у продакшені технологічним стеком, обраним з урахуванням масштабованості, підтримуваності та розвиненої екосистеми:",
     industriesTitle: "Галузі, з якими ми працюємо",
     whyTitle: "Чому варто обрати Idea Team",
-    whyChooseSubtitle: "Чому обирають Idea Team",
     whyCards: [
       ["Повноцінні команди розробки", "Інженери, QA та PM на кожному проєкті, а не окремі виконавці"],
       ["Прозорий процес", "Демонстрації кожного спринту, асинхронні оновлення та прямий доступ до інженерної команди"],
