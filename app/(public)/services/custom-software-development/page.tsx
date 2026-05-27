@@ -344,7 +344,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <CustomEstimateConsultationSection />
       </div>
 
-      <FAQSection />
+      <FAQSection2 />
     </main>
   )
 }
