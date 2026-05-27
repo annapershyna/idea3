@@ -98,6 +98,7 @@ const pageCopy = {
       "Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:",
     industriesTitle: "Industries We Work With",
     whyTitle: "Why Choose Idea Team",
+    whyChooseSubtitle: "Why Choose Idea Team",
     whyCards: [
       ["Full-stack teams", "Developers, QA, and a PM on every engagement, not lone contractors"],
       ["Transparent process", "Sprint demos, async updates, and direct access to your engineering team"],
@@ -122,6 +123,7 @@ const pageCopy = {
       "Наша компанія працює зі зрілим, перевіреним у продакшені технологічним стеком, обраним з урахуванням масштабованості, підтримуваності та розвиненої екосистеми:",
     industriesTitle: "Галузі, з якими ми працюємо",
     whyTitle: "Чому варто обрати Idea Team",
+    whyChooseSubtitle: "Чому обирають Idea Team",
     whyCards: [
       ["Повноцінні команди розробки", "Інженери, QA та PM на кожному проєкті, а не окремі виконавці"],
       ["Прозорий процес", "Демонстрації кожного спринту, асинхронні оновлення та прямий доступ до інженерної команди"],
@@ -185,7 +187,6 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">{copy.servicesSubtitle}</h2>
-            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.servicesSubtitle}</p>
             <div className="border-t border-black/10 dark:border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
@@ -316,8 +317,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <section className="py-14 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-6xl text-center font-semibold mb-3">{copy.processTitle}</h2>
-        <p className="text-center text-base md:text-lg text-foreground/60 dark:text-white/60 mb-10">{copy.processTitle}</p>
-        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
+        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-10">
           {process.map((step, index) => {
             const icons = [BriefcaseBusiness, ClipboardCheck, CheckCircle2, Rocket, Wrench]
             const Icon = icons[index]
