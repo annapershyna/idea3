@@ -114,17 +114,17 @@ const pageCopy = {
     costTiers: [
       {
         label: "Focused App / Internal Tool",
-        range: "$15,000 – $30,000",
+        range: "$5,000+",
         desc: "Single-purpose web applications, admin panels, dashboards, and workflow automation tools.",
       },
       {
         label: "SaaS Platform / CRM / ERP",
-        range: "$40,000 – $120,000",
+        range: "$8,000+",
         desc: "Multi-tenant SaaS, custom CRM, ERP systems with third-party integrations and role-based access.",
       },
       {
         label: "Enterprise Software",
-        range: "$120,000+",
+        range: "$5,000+",
         desc: "Complex distributed systems, compliance-heavy platforms, and enterprise-grade integrations.",
       },
     ],
@@ -156,17 +156,17 @@ const pageCopy = {
     costTiers: [
       {
         label: "Цільовий додаток / внутрішній інструмент",
-        range: "$15,000 – $30,000",
+        range: "$5,000+",
         desc: "Вебзастосунки з однією функцією, адмін-панелі, дашборди та інструменти автоматизації процесів.",
       },
       {
         label: "SaaS-платформа / CRM / ERP",
-        range: "$40,000 – $120,000",
+        range: "$8,000+",
         desc: "Мульти-тенантний SaaS, кастомний CRM, ERP зі сторонніми інтеграціями та рольовим доступом.",
       },
       {
         label: "Корпоративне ПЗ",
-        range: "$120,000+",
+        range: "$5,000+",
         desc: "Складні розподілені системи, платформи з вимогами комплаєнсу та корпоративні інтеграції.",
       },
     ],
