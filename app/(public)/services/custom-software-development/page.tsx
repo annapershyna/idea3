@@ -10,7 +10,7 @@ import { useLocale } from "@/lib/locale-context"
 
 const serviceDetails = [
   {
-     title: { en: "Web Applications", uk: "Вебзастосунки" },
+    title: { en: "Web Applications", uk: "Вебзастосунки" },
     description: {
       en: "Full-stack web application development - SPAs, B2B portals, internal tools, and real-time dashboards. Built with clean frontend/backend separation, optimized data layers, and cloud-native deployment on AWS or GCP.",
       uk: "Повноцінна розробка вебзастосунків: SPA, B2B-портали, внутрішні інструменти та дашборди в реальному часі. Чітке розділення frontend/backend, оптимізовані шари даних і cloud-native деплой на AWS або GCP.",
@@ -34,10 +34,10 @@ const serviceDetails = [
     image: "/images/what-is-ERP.jpg",
   },
   {
-    title: { en: "Enterprise Software", uk: "Корпоративне ПЗ" },
+    title: { en: "CRM/ERP Systems", uk: "CRM/ERP системи" },
     description: {
-      en: "Enterprise software development for complex organizational workflows: approval chains, role-based access control, audit logging, ERP integrations, and compliance-ready data architecture.",
-      uk: "Розробка корпоративного ПЗ для складних бізнес-процесів: ланцюжки погодження, рольовий доступ, журнал аудиту, ERP-інтеграції та data-архітектура з урахуванням комплаєнсу.",
+      en: "Custom CRM and ERP development tailored to your sales, operations, or supply chain processes — or deep integrations into Salesforce, SAP, or HubSpot when a hybrid approach is the right call.",
+      uk: "Кастомна розробка CRM та ERP під ваші процеси продажів, операцій або ланцюгів постачання — або глибокі інтеграції із Salesforce, SAP чи HubSpot, коли доречний гібридний підхід.",
     },
     image: "/business-meeting-handshake-partnership.jpg",
   },
@@ -54,23 +54,38 @@ const serviceDetails = [
 const process = [
   {
     title: { en: "Discovery & architecture", uk: "Дослідження та архітектура" },
-    text: { en: "Requirements analysis, system design, tech stack selection, project roadmap", uk: "Аналіз вимог, проєктування системи, вибір стеку та дорожня карта проєкту" },
+    text: {
+      en: "Requirements analysis, system design, tech stack selection, project roadmap",
+      uk: "Аналіз вимог, проєктування системи, вибір стеку та дорожня карта проєкту",
+    },
   },
   {
     title: { en: "Sprint-based development", uk: "Спринтова розробка" },
-    text: { en: "Two-week cycles with demo-ready deliverables and stakeholder reviews", uk: "Двотижневі цикли з демо-результатами та рев’ю зі стейкхолдерами" },
+    text: {
+      en: "Two-week cycles with demo-ready deliverables and stakeholder reviews",
+      uk: "Двотижневі цикли з демо-результатами та рев’ю зі стейкхолдерами",
+    },
   },
   {
     title: { en: "QA & testing", uk: "QA та тестування" },
-    text: { en: "Automated unit, integration, and e2e testing integrated into CI/CD pipeline", uk: "Автоматизовані unit, integration та e2e тести, інтегровані в CI/CD" },
+    text: {
+      en: "Automated unit, integration, and e2e testing integrated into CI/CD pipeline",
+      uk: "Автоматизовані unit, integration та e2e тести, інтегровані в CI/CD",
+    },
   },
   {
     title: { en: "Deployment", uk: "Реліз" },
-    text: { en: "Containerized release to staging and production with rollback capability", uk: "Контейнеризований реліз у staging і production з можливістю rollback" },
+    text: {
+      en: "Containerized release to staging and production with rollback capability",
+      uk: "Контейнеризований реліз у staging і production з можливістю rollback",
+    },
   },
   {
     title: { en: "Post-launch iteration", uk: "Післярелізні ітерації" },
-    text: { en: "Ongoing feature development, performance monitoring, and technical support", uk: "Подальший розвиток функцій, моніторинг продуктивності та технічна підтримка" },
+    text: {
+      en: "Ongoing feature development, performance monitoring, and technical support",
+      uk: "Подальший розвиток функцій, моніторинг продуктивності та технічна підтримка",
+    },
   },
 ]
 
@@ -79,7 +94,8 @@ const pageCopy = {
     heroTitle: "Custom Software Development Services",
     servicesSubtitle: "Software Development Services We Provide",
     techTitle: "Technologies We Use",
-    techBody: "Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:",
+    techBody:
+      "Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:",
     industriesTitle: "Industries We Work With",
     whyTitle: "Why Choose Idea Team",
     whyChooseSubtitle: "Why Choose Idea Team",
@@ -95,14 +111,16 @@ const pageCopy = {
     costBody:
       "Custom software development cost depends on system complexity, team composition, and engagement duration. A focused web application or internal tool starts at $15,000–$30,000. Mid-complexity SaaS platforms and CRM/ERP systems typically range from $40,000–$120,000. Enterprise software development with complex integrations and compliance requirements scales from $120,000 upward. We scope every project in detail before committing to a number—contact us for a technical estimate based on your specific requirements.",
     cta: "See it in practice",
-    whyBody: "Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.",
+    whyBody:
+      "Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.",
     finalCta: "Tell us what you're building. We'll scope it, estimate it, and tell you exactly what it takes to ship it right.",
   },
   uk: {
     heroTitle: "Послуги з розробки програмного забезпечення",
     servicesSubtitle: "Послуги з розробки ПЗ, які ми надаємо",
     techTitle: "Технології, які ми використовуємо",
-    techBody: "Наша компанія працює зі зрілим, перевіреним у продакшені технологічним стеком, обраним з урахуванням масштабованості, підтримуваності та розвиненої екосистеми:",
+    techBody:
+      "Наша компанія працює зі зрілим, перевіреним у продакшені технологічним стеком, обраним з урахуванням масштабованості, підтримуваності та розвиненої екосистеми:",
     industriesTitle: "Галузі, з якими ми працюємо",
     whyTitle: "Чому варто обрати Idea Team",
     whyChooseSubtitle: "Чому обирають Idea Team",
@@ -118,7 +136,8 @@ const pageCopy = {
     costBody:
       "Вартість розробки кастомного ПЗ залежить від складності системи, складу команди та тривалості співпраці. Розробка цільового вебзастосунку або внутрішнього інструменту зазвичай стартує від $15,000–$30,000. SaaS-платформи середньої складності та CRM/ERP-системи зазвичай коштують у межах $40,000–$120,000. Корпоративна розробка з комплексними інтеграціями та вимогами комплаєнсу масштабується від $120,000 і вище. Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.",
     cta: "Дивитися в реальному кейсі",
-    whyBody: "Idea Team — це компанія з розробки кастомного програмного забезпечення, яка розглядає інженерну якість і продуктовий підхід як єдине ціле. Ми не передаємо код і не зникаємо після релізу - ми залишаємося відповідальними за результат через розгортання, тестування та перші ітерації після запуску.",
+    whyBody:
+      "Idea Team — це компанія з розробки кастомного програмного забезпечення, яка розглядає інженерну якість і продуктовий підхід як єдине ціле. Ми не передаємо код і не зникаємо після релізу - ми залишаємося відповідальними за результат через розгортання, тестування та перші ітерації після запуску.",
     finalCta: "Розкажіть, що ви будуєте. Ми підсумуємо, оцінимо і скажемо вам точно, що потрібно для правильного запуску.",
   },
 } as const
@@ -144,6 +163,7 @@ const techIcons: Record<string, string> = {
   "GitHub Actions": "/icons/tech/github.svg",
   Terraform: "/icons/tech/terraform.svg",
 }
+
 export default function CustomSoftwareDevelopmentPage() {
   const [activeService, setActiveService] = useState(0)
   const { locale } = useLocale()
@@ -163,12 +183,11 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <PremiumServicesOverview />
 
-
-
       <section className="bg-[#eef1f6] text-foreground dark:bg-[#323130] dark:text-white py-14 px-4">
         <div className="max-w-6xl mx-auto grid xl:grid-cols-[420px_1fr] gap-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8">Software Development Services We Provide</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-8">{copy.servicesSubtitle}</h2>
+            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.servicesSubtitle}</p>
             <div className="border-t border-black/10 dark:border-white/10">
               {serviceDetails.map((service, index) => {
                 const isActive = index === activeService
@@ -222,7 +241,17 @@ export default function CustomSoftwareDevelopmentPage() {
                       </div>
                       <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:flex lg:w-auto lg:flex-nowrap lg:gap-2.5 xl:gap-3">
                         {(items as string[]).map((item) => (
-                          <div key={item} className="group flex min-h-[61px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-[10px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[66px] sm:gap-4 sm:px-4 lg:h-[62px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[67px] xl:w-[146px] xl:gap-3 xl:px-3"><div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-lg bg-white p-[5px] shadow-[0_8px_24px_rgba(0,0,0,0.08)]"><Image src={techIcons[item] || "/images/puzzle.svg"} alt={item} width={20} height={20} className="h-full w-full object-contain" /></div><span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">{item}</span></div>
+                          <div
+                            key={item}
+                            className="group flex min-h-[61px] min-w-0 items-center gap-3 rounded-2xl border border-[var(--tech-card-border)] bg-[var(--tech-card)] px-3 py-[10px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:[background:linear-gradient(180deg,#FAF9F8_0%,#FF6200_150%)] dark:hover:[background:linear-gradient(180deg,#161515_0%,#FF6200_150%)] sm:min-h-[66px] sm:gap-4 sm:px-4 lg:h-[62px] lg:w-[130px] lg:gap-2 lg:px-2.5 xl:h-[67px] xl:w-[146px] xl:gap-3 xl:px-3"
+                          >
+                            <div className="flex h-[27px] w-[27px] shrink-0 items-center justify-center rounded-lg bg-white p-[5px] shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+                              <Image src={techIcons[item] || "/images/puzzle.svg"} alt={item} width={20} height={20} className="h-full w-full object-contain" />
+                            </div>
+                            <span className="min-w-0 break-words text-sm font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-white sm:text-base lg:text-xs xl:text-sm">
+                              {item}
+                            </span>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -264,36 +293,32 @@ export default function CustomSoftwareDevelopmentPage() {
             <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.whyChooseSubtitle}</p>
             <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">{copy.whyBody}</p>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg text-foreground dark:text-white">
-             {copy.whyCards.map(([title, text]) => (
-                <div key={title} className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1"><h3 className="font-semibold">{title}</h3><p className="text-foreground/70 dark:text-white/70">{text}</p></div>
+              {copy.whyCards.map(([title, text]) => (
+                <div key={title} className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1">
+                  <h3 className="font-semibold">{title}</h3>
+                  <p className="text-foreground/70 dark:text-white/70">{text}</p>
+                </div>
               ))}
             </div>
           </div>
-          <div className="mt-8">
-          <button className="inline-flex w-full items-center justify-center rounded-full bg-[#FF6200] px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-[#e45700] lg:w-[420px]">{copy.cta}</button>
+        </div>
+        <div className="mt-8">
+          <button className="inline-flex w-full items-center justify-center rounded-full bg-[#FF6200] px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-[#e45700] lg:w-[420px]">
+            {copy.cta}
+          </button>
         </div>
       </section>
-
 
       <section className="py-14 px-4 max-w-6xl mx-auto">
         <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10">
           <h2 className="text-3xl md:text-5xl font-semibold mb-4">{copy.costTitle}</h2>
           <p className="text-lg text-foreground/75 dark:text-white/75">{copy.costBody}</p>
-
-        </div>
         </div>
       </section>
-      
-     <section className="py-14 px-4 max-w-6xl mx-auto">
-        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-4">{copy.costTitle}</h2>
-          <p className="text-lg text-foreground/75 dark:text-white/75">{copy.costBody}</p>
 
-        </div>
-      </section>
-      
       <section className="py-14 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-6xl text-center font-semibold mb-3">{copy.processTitle}</h2>
+        <p className="text-center text-base md:text-lg text-foreground/60 dark:text-white/60 mb-10">{copy.processTitle}</p>
         <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6">
           {process.map((step, index) => {
             const icons = [BriefcaseBusiness, ClipboardCheck, CheckCircle2, Rocket, Wrench]
@@ -317,7 +342,9 @@ export default function CustomSoftwareDevelopmentPage() {
         <h3 className="text-2xl md:text-[24px] font-semibold leading-tight">{copy.finalCta}</h3>
       </section>
 
-      <div className="-mt-4"><CustomEstimateConsultationSection /></div>
+      <div className="-mt-4">
+        <CustomEstimateConsultationSection />
+      </div>
 
       <FAQSection />
     </main>
