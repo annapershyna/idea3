@@ -4,6 +4,7 @@ import { useState } from "react"
 import { BriefcaseBusiness, CheckCircle2, ClipboardCheck, Rocket, Wrench } from "lucide-react"
 import Image from "next/image"
 import { FAQSection } from "@/components/faq-section"
+import { FAQSection2 } from "@/components/faq-section2"
 import { CustomEstimateConsultationSection } from "@/components/custom-estimate-consultation-section"
 import { PremiumServicesOverview } from "@/components/premium-services-overview"
 import { useLocale } from "@/lib/locale-context"
@@ -265,20 +266,52 @@ export default function CustomSoftwareDevelopmentPage() {
       <section className="max-w-6xl mx-auto px-4 py-14">
         <h2 className="text-3xl md:text-5xl text-center font-semibold mb-10">{copy.industriesTitle}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            ["FinTech", "/samsung-product-showcase.jpeg", "Payment infrastructure, lending platforms, financial reporting systems"],
-            ["HealthTech", "/ehealth.jpg", "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms"],
-            ["EdTech", "/lenovo-landing-page-design.jpg", "LMS platforms, adaptive learning systems, certification infrastructure"],
-            ["Logistics", "/original.webp", "Route optimization, warehouse management, real-time tracking systems"],
-            ["Retail & eCommerce", "/ecommerce-landing-page-design-multiple-brands.jpg", "Custom storefronts, inventory management, B2B ordering portals"],
-            ["SaaS startups", "/fintech-apps-development.jpg", "Product development from MVP through scaled multi-tenant architecture"],
-          ].map(([name, image, description]) => (
-            <article key={name} className="rounded-2xl overflow-hidden bg-white dark:bg-[#191a20] border border-black/10 dark:border-white/10">
+          {(
+            [
+              {
+                name: "FinTech",
+                image: "/samsung-product-showcase.jpeg",
+                en: "Payment infrastructure, lending platforms, financial reporting systems",
+                uk: "Платіжна інфраструктура, платформи кредитування, системи фінансової звітності",
+              },
+              {
+                name: "HealthTech",
+                image: "/ehealth.jpg",
+                en: "HIPAA-compliant patient management, clinical workflow automation, telehealth platforms",
+                uk: "HIPAA-сумісне управління пацієнтами, автоматизація клінічних процесів, телемедичні платформи",
+              },
+              {
+                name: "EdTech",
+                image: "/lenovo-landing-page-design.jpg",
+                en: "LMS platforms, adaptive learning systems, certification infrastructure",
+                uk: "LMS-платформи, адаптивні системи навчання, інфраструктура сертифікації",
+              },
+              {
+                name: locale === "uk" ? "Логістика" : "Logistics",
+                image: "/original.webp",
+                en: "Route optimization, warehouse management, real-time tracking systems",
+                uk: "Оптимізація маршрутів, управління складом, системи відстеження в реальному часі",
+              },
+              {
+                name: locale === "uk" ? "Retail & eCommerce" : "Retail & eCommerce",
+                image: "/ecommerce-landing-page-design-multiple-brands.jpg",
+                en: "Custom storefronts, inventory management, B2B ordering portals",
+                uk: "Кастомні інтернет-магазини, управління товарними запасами, B2B-портали замовлень",
+              },
+              {
+                name: locale === "uk" ? "SaaS-стартапи" : "SaaS startups",
+                image: "/fintech-apps-development.jpg",
+                en: "Product development from MVP through scaled multi-tenant architecture",
+                uk: "Розробка продукту від MVP до масштабованої мульти-тенантної архітектури",
+              },
+            ] as const
+          ).map((industry) => (
+            <article key={industry.name} className="rounded-2xl overflow-hidden bg-white dark:bg-[#191a20] border border-black/10 dark:border-white/10">
               <div className="relative h-48">
-                <Image src={image as string} alt={name as string} fill className="object-cover" />
-                <span className="absolute left-3 top-3 rounded-lg bg-[#FF6200] px-3 py-1 text-sm">{name}</span>
+                <Image src={industry.image} alt={industry.name} fill className="object-cover" />
+                <span className="absolute left-3 top-3 rounded-lg bg-[#FF6200] px-3 py-1 text-sm">{industry.name}</span>
               </div>
-              <p className="p-4 text-foreground dark:text-white text-sm">{description}</p>
+              <p className="p-4 text-foreground dark:text-white text-sm">{locale === "uk" ? industry.uk : industry.en}</p>
             </article>
           ))}
         </div>
@@ -289,8 +322,7 @@ export default function CustomSoftwareDevelopmentPage() {
           <Image src="/images/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
             <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#111015] sm:text-5xl dark:text-white">{copy.whyTitle}</h2>
-            <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.whyChooseSubtitle}</p>
-            <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">{copy.whyBody}</p>
+            <p className="text-foreground/75 dark:text-white/75 mb-6 mt-3 text-lg">{copy.whyBody}</p>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg text-foreground dark:text-white">
               {copy.whyCards.map(([title, text]) => (
                 <div key={title} className="border-b border-[#FF6200] pt-5 pb-5 sm:col-span-1">
@@ -299,12 +331,12 @@ export default function CustomSoftwareDevelopmentPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-8">
+              <button className="inline-flex w-full items-center justify-center rounded-full bg-[#FF6200] px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-[#e45700] lg:w-[420px]">
+                {copy.cta}
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="mt-8">
-          <button className="inline-flex w-full items-center justify-center rounded-full bg-[#FF6200] px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-[#e45700] lg:w-[420px]">
-            {copy.cta}
-          </button>
         </div>
       </section>
 
