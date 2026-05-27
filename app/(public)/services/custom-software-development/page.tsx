@@ -378,9 +378,6 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
           {/* Top: title + body */}
           <div className="bg-[#f3f5fa] dark:bg-[#1f2026] px-8 md:px-12 py-10 md:py-12">
-            <span className="inline-block text-[#FF6200] text-sm font-semibold uppercase tracking-widest mb-3 font-[Onest]">
-              Pricing
-            </span>
             <h2 className="text-3xl md:text-5xl font-semibold leading-tight max-w-2xl font-[Onest]">
               {copy.costTitle}
             </h2>
