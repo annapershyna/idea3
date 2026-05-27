@@ -376,21 +376,17 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <section className="py-14 px-4 max-w-6xl mx-auto">
         <div className="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
-          {/* Top: title + subtitle */}
+          {/* Top: title + body */}
           <div className="bg-[#f3f5fa] dark:bg-[#1f2026] px-8 md:px-12 py-10 md:py-12">
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-              <div>
-                <span className="inline-block text-[#FF6200] text-sm font-semibold uppercase tracking-widest mb-3">
-                  Pricing
-                </span>
-                <h2 className="text-3xl md:text-5xl font-semibold leading-tight max-w-xl">
-                  {copy.costTitle}
-                </h2>
-              </div>
-              <p className="text-base text-foreground/60 dark:text-white/60 max-w-sm lg:text-right">
-                {copy.costBody}
-              </p>
-            </div>
+            <span className="inline-block text-[#FF6200] text-sm font-semibold uppercase tracking-widest mb-3 font-[Onest]">
+              Pricing
+            </span>
+            <h2 className="text-3xl md:text-5xl font-semibold leading-tight max-w-2xl font-[Onest]">
+              {copy.costTitle}
+            </h2>
+            <p className="mt-4 text-[16px] font-[Onest] text-foreground/60 dark:text-white/60 max-w-2xl">
+              {copy.costBody}
+            </p>
           </div>
 
           {/* Tiers */}
@@ -401,17 +397,17 @@ export default function CustomSoftwareDevelopmentPage() {
                 className="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 px-8 md:px-12 py-7 bg-white dark:bg-[#161515] hover:bg-[#fff7f2] dark:hover:bg-[#1f1a17] transition-colors duration-200"
               >
                 {/* Index */}
-                <span className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full border border-[#FF6200]/30 text-[#FF6200] text-sm font-semibold shrink-0">
+                <span className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full border border-[#FF6200]/30 text-[#FF6200] text-sm font-semibold shrink-0 font-[Onest]">
                   {i + 1}
                 </span>
                 {/* Label */}
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-lg text-foreground dark:text-white">{tier.label}</p>
-                  <p className="text-sm text-foreground/55 dark:text-white/55 mt-0.5">{tier.desc}</p>
+                  <p className="font-semibold text-[16px] font-[Onest] text-foreground dark:text-white">{tier.label}</p>
+                  <p className="text-[16px] font-[Onest] text-foreground/55 dark:text-white/55 mt-0.5">{tier.desc}</p>
                 </div>
                 {/* Price */}
                 <div className="sm:text-right shrink-0">
-                  <span className="text-2xl md:text-3xl font-bold text-[#FF6200] tabular-nums">{tier.range}</span>
+                  <span className="text-[16px] font-bold font-[Onest] text-[#FF6200] tabular-nums">{tier.range}</span>
                 </div>
               </div>
             ))}
