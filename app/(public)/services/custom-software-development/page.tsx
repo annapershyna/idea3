@@ -288,7 +288,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
           <Image src="/images/team.png" alt="Team" width={420} height={460} className="rounded-xl w-full h-auto object-cover" />
           <div>
-            <h2 className="text-4xl md:text-6xl font-semibold mb-3">{copy.whyTitle}</h2>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#111015] sm:text-5xl dark:text-white">{copy.whyTitle}</h2>
             <p className="text-base md:text-lg text-foreground/60 dark:text-white/60 mb-6">{copy.whyChooseSubtitle}</p>
             <p className="text-foreground/75 dark:text-white/75 mb-6 text-lg">{copy.whyBody}</p>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0 text-lg text-foreground dark:text-white">
