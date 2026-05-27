@@ -235,7 +235,7 @@ export default function CustomSoftwareDevelopmentPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-3xl md:text-5xl text-center font-semibold mb-10">{copy.industriesTitle}</h2
+        <h2 className="text-3xl md:text-5xl text-center font-semibold mb-10">{copy.industriesTitle}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             ["FinTech", "/samsung-product-showcase.jpeg", "Payment infrastructure, lending platforms, financial reporting systems"],
