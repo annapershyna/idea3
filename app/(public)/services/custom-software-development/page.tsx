@@ -92,6 +92,7 @@ const process = [
 const pageCopy = {
   en: {
     heroTitle: "Custom Software Development Services",
+    servicesSubtitle: "Software Development Services We Provide",
     techTitle: "Technologies We Use",
     techBody:
       "Our software development company works across a mature, production-proven stack selected for scalability, maintainability, and ecosystem support:",
