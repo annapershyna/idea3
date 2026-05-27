@@ -110,7 +110,24 @@ const pageCopy = {
     processTitle: "Our Development Process",
     costTitle: "Cost of Custom Software Development",
     costBody:
-      "Custom software development cost depends on system complexity, team composition, and engagement duration. A focused web application or internal tool starts at $15,000–$30,000. Mid-complexity SaaS platforms and CRM/ERP systems typically range from $40,000–$120,000. Enterprise software development with complex integrations and compliance requirements scales from $120,000 upward. We scope every project in detail before committing to a number—contact us for a technical estimate based on your specific requirements.",
+      "We scope every project in detail before committing to a number — contact us for a technical estimate based on your specific requirements.",
+    costTiers: [
+      {
+        label: "Focused App / Internal Tool",
+        range: "$15,000 – $30,000",
+        desc: "Single-purpose web applications, admin panels, dashboards, and workflow automation tools.",
+      },
+      {
+        label: "SaaS Platform / CRM / ERP",
+        range: "$40,000 – $120,000",
+        desc: "Multi-tenant SaaS, custom CRM, ERP systems with third-party integrations and role-based access.",
+      },
+      {
+        label: "Enterprise Software",
+        range: "$120,000+",
+        desc: "Complex distributed systems, compliance-heavy platforms, and enterprise-grade integrations.",
+      },
+    ],
     cta: "See it in practice",
     whyBody:
       "Idea Team is a custom software development company that treats engineering quality and product thinking as inseparable.",
@@ -135,7 +152,24 @@ const pageCopy = {
     processTitle: "Наш процес розробки",
     costTitle: "Вартість розробки кастомного програмного забезпечення",
     costBody:
-      "Вартість розробки кастомного ПЗ залежить від складності системи, складу команди та тривалості співпраці. Розробка цільового вебзастосунку або внутрішнього інструменту зазвичай стартує від $15,000–$30,000. SaaS-платформи середньої складності та CRM/ERP-системи зазвичай коштують у межах $40,000–$120,000. Корпоративна розробка з комплексними інтеграціями та вимогами комплаєнсу масштабується від $120,000 і вище. Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.",
+      "Ми детально оцінюємо кожен проєкт перед фіксацією бюджету — зв’яжіться з нами, щоб отримати технічну оцінку під ваші конкретні вимоги.",
+    costTiers: [
+      {
+        label: "Цільовий додаток / внутрішній інструмент",
+        range: "$15,000 – $30,000",
+        desc: "Вебзастосунки з однією функцією, адмін-панелі, дашборди та інструменти автоматизації процесів.",
+      },
+      {
+        label: "SaaS-платформа / CRM / ERP",
+        range: "$40,000 – $120,000",
+        desc: "Мульти-тенантний SaaS, кастомний CRM, ERP зі сторонніми інтеграціями та рольовим доступом.",
+      },
+      {
+        label: "Корпоративне ПЗ",
+        range: "$120,000+",
+        desc: "Складні розподілені системи, платформи з вимогами комплаєнсу та корпоративні інтеграції.",
+      },
+    ],
     cta: "Дивитися в реальному кейсі",
     whyBody:
       "Idea Team — це компанія з розробки кастомного програмного забезпечення, яка розглядає інженерну якість і продуктовий підхід як єдине ціле. Ми не передаємо код і не зникаємо після релізу - ми залишаємося відповідальними за результат через розгортання, тестування та перші ітерації після запуску.",
@@ -341,9 +375,47 @@ export default function CustomSoftwareDevelopmentPage() {
       </section>
 
       <section className="py-14 px-4 max-w-6xl mx-auto">
-        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-4">{copy.costTitle}</h2>
-          <p className="text-lg text-foreground/75 dark:text-white/75">{copy.costBody}</p>
+        <div className="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+          {/* Top: title + subtitle */}
+          <div className="bg-[#f3f5fa] dark:bg-[#1f2026] px-8 md:px-12 py-10 md:py-12">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+              <div>
+                <span className="inline-block text-[#FF6200] text-sm font-semibold uppercase tracking-widest mb-3">
+                  Pricing
+                </span>
+                <h2 className="text-3xl md:text-5xl font-semibold leading-tight max-w-xl">
+                  {copy.costTitle}
+                </h2>
+              </div>
+              <p className="text-base text-foreground/60 dark:text-white/60 max-w-sm lg:text-right">
+                {copy.costBody}
+              </p>
+            </div>
+          </div>
+
+          {/* Tiers */}
+          <div className="divide-y divide-black/10 dark:divide-white/10">
+            {copy.costTiers.map((tier, i) => (
+              <div
+                key={i}
+                className="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 px-8 md:px-12 py-7 bg-white dark:bg-[#161515] hover:bg-[#fff7f2] dark:hover:bg-[#1f1a17] transition-colors duration-200"
+              >
+                {/* Index */}
+                <span className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full border border-[#FF6200]/30 text-[#FF6200] text-sm font-semibold shrink-0">
+                  {i + 1}
+                </span>
+                {/* Label */}
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-lg text-foreground dark:text-white">{tier.label}</p>
+                  <p className="text-sm text-foreground/55 dark:text-white/55 mt-0.5">{tier.desc}</p>
+                </div>
+                {/* Price */}
+                <div className="sm:text-right shrink-0">
+                  <span className="text-2xl md:text-3xl font-bold text-[#FF6200] tabular-nums">{tier.range}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
