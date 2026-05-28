@@ -370,7 +370,7 @@ export default function MVPDevelopmentPage() {
                 href="https://calendar.app.google/sySAYTvgF8Zi264U7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 flex h-[40px] w-[200px] items-center justify-center overflow-hidden rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-[Onest] text-[14px] font-normal leading-[100%] whitespace-nowrap text-white transition duration-300 ease-out cursor-pointer"
+                className="mt-10 inline-flex min-h-[40px] min-w-[200px] max-w-full items-center justify-center rounded-[50px] bg-[#FF6200] px-6 py-[4px] text-center font-[Onest] text-[16px] font-normal leading-[100%] whitespace-nowrap text-white transition duration-300 ease-out cursor-pointer"
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
                 }}
