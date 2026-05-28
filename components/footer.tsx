@@ -27,6 +27,7 @@ const footerContent = {
     ecommercePlatform: "High-performance eCommerce platform",
     customWeb: "Custom web solutions",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",
+    arEarringTryOn: "AR Earring Virtual Try-On (Unity / Face Tracking)",
     mobileApps: "Mobile applications",
     unityDevelopment: "Unity development",
     uxui: "UI/UX and Graphic Design",
@@ -53,7 +54,8 @@ const footerContent = {
     sensorInfobox: "Sensor Infobox",
     ecommercePlatform: "Високопродуктивна платформа eCommerce",
     customWeb: "Кастомні веб-рішення",
-    waltairRobotics: "Waltair Robotics (Mobile App v4)",  
+    waltairRobotics: "Waltair Robotics (Mobile App v4)",
+    arEarringTryOn: "AR примірка сережок (Unity / Face Tracking)",
     mobileApps: "Мобільні додатки",
     unityDevelopment: "Розробка Unity",
     uxui: "Дизайн UI/UX та графіка",
@@ -321,9 +323,18 @@ export function Footer() {
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
                 >
-                 {t.waltairRobotics}
+                  {t.waltairRobotics}
                 </Link>
-              </li>              
+              </li>
+              <li>
+                <Link
+                  href="/projects/ar-earring-virtual-try-on"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                  {t.arEarringTryOn}
+                </Link>
+              </li>
             </ul>
           </div>
 
