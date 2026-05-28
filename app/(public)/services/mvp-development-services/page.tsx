@@ -346,7 +346,7 @@ export default function MVPDevelopmentPage() {
       <section className="max-w-6xl mx-auto px-4 pb-14">
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
           <Image
-            src="/images/team.png"
+            src="/images/MVP-Development.jpg"
             alt="MVP development team"
             width={420}
             height={460}
