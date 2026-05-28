@@ -24,6 +24,14 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://ideateam.dev/services/web-application-development</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Блог (основная страница + несколько актуальных постов) -->
   <url>
     <loc>https://ideateam.dev/blog</loc>
