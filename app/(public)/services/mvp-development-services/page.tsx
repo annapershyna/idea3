@@ -366,11 +366,49 @@ export default function MVPDevelopmentPage() {
               ))}
             </div>
             <div className="mt-8">
-              <button className="inline-flex w-full items-center justify-center rounded-full bg-[#FF6200] px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-[#e45700] lg:w-[420px]">
+              <a
+                href="https://calendar.app.google/sySAYTvgF8Zi264U7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative overflow-hidden flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full font-[Onest] font-normal text-base leading-[100%] text-white transition duration-300 ease-out bg-[#FF6200] cursor-pointer pt-4 mt-10"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#FF6200"
+                }}
+                onMouseDown={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(93.96deg, #FF6200 -62.56%, #000000 61.87%)"
+                }}
+                onMouseUp={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
+                }}
+              >
                 {copy.cta}
-              </button>
+              </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Common mistakes */}
+      <section className="py-14 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10">{copy.mistakesTitle}</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {copy.mistakes.map(([title, text], i) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#191a20] p-6"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#FF6200]/10 text-[#FF6200] text-xs font-bold shrink-0">
+                  {i + 1}
+                </span>
+                <h3 className="font-semibold text-foreground dark:text-white">{title}</h3>
+              </div>
+              <p className="text-sm text-foreground/65 dark:text-white/65 leading-relaxed">{text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -400,27 +438,6 @@ export default function MVPDevelopmentPage() {
               </div>
             )
           })}
-        </div>
-      </section>
-
-      {/* Common mistakes */}
-      <section className="py-14 px-4 max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10">{copy.mistakesTitle}</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {copy.mistakes.map(([title, text], i) => (
-            <div
-              key={title}
-              className="rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#191a20] p-6"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#FF6200]/10 text-[#FF6200] text-xs font-bold shrink-0">
-                  {i + 1}
-                </span>
-                <h3 className="font-semibold text-foreground dark:text-white">{title}</h3>
-              </div>
-              <p className="text-sm text-foreground/65 dark:text-white/65 leading-relaxed">{text}</p>
-            </div>
-          ))}
         </div>
       </section>
 
