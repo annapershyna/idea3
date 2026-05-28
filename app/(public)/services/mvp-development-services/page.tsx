@@ -98,7 +98,7 @@ const pageCopy = {
   en: {
     heroTitle: "MVP Development Services for Startups",
     heroSubtitle:
-      "Startups that launch an MVP before committing to full product development cut initial build costs by 60–70% and reach market validation up to 4 months faster.",
+      "Build and Launch Your MVP Faster",
     servicesSubtitle: "What Is Included in MVP Development",
     techTitle: "Recommended Tech Stack",
     techBody:
@@ -148,7 +148,7 @@ const pageCopy = {
   uk: {
     heroTitle: "Послуги з розробки MVP для стартапів",
     heroSubtitle:
-      "Стартапи, які запускають MVP до повномасштабної розробки, скорочують початкові витрати на 60–70% і досягають перевірки ринку на 4 місяці швидше.",
+      "Розробка програмного забезпечення для бізнесу, що зростає",
     servicesSubtitle: "Що входить у розробку MVP",
     techTitle: "Рекомендований технологічний стек",
     techBody:
