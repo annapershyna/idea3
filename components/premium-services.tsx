@@ -1,6 +1,5 @@
 "use client"
 
-import { Activity, BarChart3, Code2, Compass, Smartphone, TestTube2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 export function PremiumServices() {
