@@ -366,40 +366,28 @@ export default function MVPDevelopmentPage() {
               ))}
             </div>
             <div className="mt-8">
-              <button className="inline-flex w-full items-center justify-center rounded-full bg-[#FF6200] px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-[#e45700] lg:w-[420px]">
+              <a
+                href="https://calendar.app.google/sySAYTvgF8Zi264U7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-10 inline-flex min-h-[40px] min-w-[200px] max-w-full items-center justify-center rounded-[50px] bg-[#FF6200] px-6 py-[4px] text-center font-[Onest] text-[16px] font-normal leading-[100%] whitespace-nowrap text-white transition duration-300 ease-out cursor-pointer"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#FF6200"
+                }}
+                onMouseDown={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(93.96deg, #FF6200 -62.56%, #000000 61.87%)"
+                }}
+                onMouseUp={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
+                }}
+              >
                 {copy.cta}
-              </button>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-14 px-4 max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-3">{copy.processTitle}</h2>
-        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-10">
-          {process.map((step, index) => {
-            const icons = [Search, Layers, Plug, Monitor, Rocket]
-            const Icon = icons[index]
-            return (
-              <div key={step.title.en}>
-                <div className="mb-2">
-                  <span className="inline-block text-[#FF6200] text-xs font-semibold uppercase tracking-widest mb-2">
-                    {step.weeks[locale]}
-                  </span>
-                  <div className="flex items-start gap-3">
-                    <Icon className="h-5 w-5 text-[#FF6200] shrink-0 mt-1" />
-                    <h3 className="text-foreground dark:text-white text-xl leading-tight font-semibold">
-                      {step.title[locale]}
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-foreground/80 dark:text-white/80 text-[16px] leading-[1.35] pl-8">
-                  {step.text[locale]}
-                </p>
-              </div>
-            )
-          })}
         </div>
       </section>
 
@@ -457,6 +445,35 @@ export default function MVPDevelopmentPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-14 px-4 max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-6xl text-center font-semibold mb-3">{copy.processTitle}</h2>
+        <div className="rounded-2xl bg-[#f3f5fa] dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-6 md:p-10 grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-10">
+          {process.map((step, index) => {
+            const icons = [Search, Layers, Plug, Monitor, Rocket]
+            const Icon = icons[index]
+            return (
+              <div key={step.title.en}>
+                <div className="mb-2">
+                  <span className="inline-block text-[#FF6200] text-xs font-semibold uppercase tracking-widest mb-2">
+                    {step.weeks[locale]}
+                  </span>
+                  <div className="flex items-start gap-3">
+                    <Icon className="h-5 w-5 text-[#FF6200] shrink-0 mt-1" />
+                    <h3 className="text-foreground dark:text-white text-xl leading-tight font-semibold">
+                      {step.title[locale]}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-foreground/80 dark:text-white/80 text-[16px] leading-[1.35] pl-8">
+                  {step.text[locale]}
+                </p>
+              </div>
+            )
+          })}
         </div>
       </section>
 

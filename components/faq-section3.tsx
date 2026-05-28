@@ -15,57 +15,57 @@ interface FAQItem {
 const faqItems: FAQItem[] = [
   {
     id: 1,
-    questionEn: "What is custom software development?",
-    questionUk: "Що таке розробка кастомного програмного забезпечення?",
+    questionEn: "What is an MVP?",
+    questionUk: "Що таке MVP?",
     answerEn:
-      "Custom software development is the process of designing, engineering, and deploying software built specifically for one organization's workflows, data model, and technical requirements — as opposed to configuring an off-the-shelf product.",
+      "A minimum viable product is the smallest version of a product that delivers enough value to validate a core hypothesis with real users. It's not a rough prototype — it's a production-ready product scoped to the essential features needed to test demand and collect structured feedback.",
     answerUk:
-      "Розробка кастомного програмного забезпечення — це процес проектування, створення та розгортання систем, побудованих спеціально під бізнес-процеси, модель даних і технічні вимоги конкретної організації, на відміну від налаштування готових продуктів.",
+      "MVP - це найменша версія продукту, яка дозволяє перевірити основну гіпотезу на реальних користувачах. Це не прототип, а спрощений, але робочий продукт.",
   },
   {
     id: 2,
-    questionEn: "How much does custom software development cost?",
-    questionUk: "Скільки коштує розробка кастомного програмного забезпечення?",
+    questionEn: "How much does MVP development cost?",
+    questionUk: "Скільки коштує MVP?",
     answerEn:
-      "Cost depends on scope and complexity. Focused applications start around $15,000–$30,000. Full SaaS platforms and enterprise systems range from $40,000 to $150,000+. We provide detailed estimates after a scoping session.",
+      "A focused SaaS MVP typically costs $20,000–$45,000. Mobile MVPs range from $25,000–$55,000. Complex products with multiple user roles or marketplace features start at $50,000+.",
     answerUk:
-      "Вартість залежить від обсягу та складності. Сфокусовані додатки стартують від $15,000–$30,000. Повноцінні SaaS-платформи та корпоративні системи — від $40,000 до $150,000+. Ми надаємо детальну оцінку після сесії визначення обсягу.",
+      "Від $20,000 до $45,000 для SaaS. Мобільні MVP — від $25,000. Складні продукти — від $50,000+.",
   },
   {
     id: 3,
-    questionEn: "How long does software development take?",
-    questionUk: "Скільки часу займає розробка програмного забезпечення?",
+    questionEn: "How long does it take to build an MVP?",
+    questionUk: "Скільки часу займає MVP?",
     answerEn:
-      "A focused application or internal tool takes 6–12 weeks. A full SaaS platform or enterprise system typically requires 4–9 months, depending on integrations and compliance requirements.",
+      "Most MVPs ship in 6–12 weeks depending on scope and integration complexity. We define the timeline precisely during the scoping session before development begins.",
     answerUk:
-      "Сфокусований додаток або внутрішній інструмент зазвичай займає 6–12 тижнів. Повноцінна SaaS-платформа або корпоративна система — 4–9 місяців, залежно від інтеграцій і вимог до відповідності стандартам.",
+      "У середньому 6–12 тижнів залежно від обсягу та інтеграцій.",
   },
   {
     id: 4,
-    questionEn: "What technologies are best for scalable applications?",
-    questionUk: "Які технології найкраще підходять для масштабованих додатків?",
+    questionEn: "What features should an MVP include?",
+    questionUk: "Які функції має включати MVP?",
     answerEn:
-      "For most web applications and SaaS platforms: React or Next.js on the frontend, Node.js or Python on the backend, PostgreSQL for structured data, Redis for caching, and containerized deployment on AWS or GCP with Kubernetes for orchestration.",
+      "Only the features that directly test the core value proposition: authentication, the primary user flow, and one key integration (usually payments or data input). Everything else is a phase-two decision informed by real usage.",
     answerUk:
-      "Для більшості веб-додатків і SaaS-платформ: React або Next.js на фронтенді, Node.js або Python на бекенді, PostgreSQL для структурованих даних, Redis для кешування та контейнеризоване розгортання на AWS або Google Cloud з оркестрацією через Kubernetes.",
+      "Тільки ті, що перевіряють ключову цінність: автентифікація, основний сценарій і одна критична інтеграція.",
   },
   {
     id: 5,
-    questionEn: "When should a business choose custom software?",
-    questionUk: "Коли бізнесу варто обрати кастомну розробку?",
+    questionEn: "What tech stack is best for MVP development?",
+    questionUk: "Який стек найкращий для MVP?",
     answerEn:
-      "When off-the-shelf tools require workarounds that slow operations, when licensing costs exceed the value delivered, when you need integrations that existing platforms don't support, or when your product's competitive differentiation depends on proprietary functionality.",
+      "For most products: React or Next.js frontend, Node.js or Python backend, PostgreSQL or Supabase for data, Stripe for payments, deployed on Vercel or AWS. For mobile-first products, Flutter gives you iOS and Android from a single codebase.",
     answerUk:
-      "Коли готові інструменти вимагають обхідних рішень, що уповільнюють роботу; коли витрати на ліцензії перевищують цінність; коли потрібні інтеграції, яких не підтримують існуючі платформи; або коли конкурентна перевага залежить від унікального функціоналу.",
+      "React/Next.js, Node.js або Python, PostgreSQL, Stripe, Vercel або AWS.",
   },
   {
     id: 6,
-    questionEn: "What is the difference between SaaS and custom software?",
-    questionUk: "У чому різниця між SaaS і кастомним програмним забезпеченням?",
+    questionEn: "How do startups validate an idea with MVP?",
+    questionUk: "Як перевірити ідею через MVP?",
     answerEn:
-      "SaaS is a subscription-based product built for a broad market. Custom software is engineered for a single organization's specific requirements. You own the codebase, control the roadmap, and pay no per-seat licensing fees.",
+      "By defining measurable success criteria before launch - activation rate, retention at 7 days, conversion to paid, and treating the MVP as a controlled experiment. We help set those criteria during the scoping phase.",
     answerUk:
-      "SaaS — це підписний продукт для широкого ринку. Кастомне програмне забезпечення створюється під конкретні потреби організації. Ви володієте кодовою базою, контролюєте розвиток продукту і не сплачуєте ліцензії за користувачів.",
+      "Через вимірювані метрики: активація, утримання користувачів, конверсія. MVP розглядається як контрольований експеримент.",
   },
 ]
 
