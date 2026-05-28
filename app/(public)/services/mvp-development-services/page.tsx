@@ -5,7 +5,7 @@ import { Search, Layers, Monitor, Server, Plug, Rocket } from "lucide-react"
 import Image from "next/image"
 import { FAQSection3 } from "@/components/faq-section3"
 import { CustomEstimateConsultationSection } from "@/components/custom-estimate-consultation-section"
-import { PremiumServicesOverview } from "@/components/premium-services-overview"
+import { PremiumServicesOverview } from "@/components/premium-services"
 import { useLocale } from "@/lib/locale-context"
 
 const serviceDetails = [
@@ -239,7 +239,7 @@ export default function MVPDevelopmentPage() {
         </div>
       </section>
 
-      <PremiumServicesOverview />
+      <PremiumServices />
 
       {/* What's included — tabbed */}
       <section className="bg-[#eef1f6] text-foreground dark:bg-[#323130] dark:text-white py-14 px-4">
