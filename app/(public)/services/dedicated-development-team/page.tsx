@@ -239,7 +239,7 @@ export default function DedicatedDevelopmentTeamPage() {
       <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pb-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/team.png"
+            src="/images/Software-Development-Team.jpg"
             alt="Dedicated development team services"
             fill
             className="object-cover"
