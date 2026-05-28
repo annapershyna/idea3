@@ -69,7 +69,7 @@ const faqItems: FAQItem[] = [
   },
 ]
 
-export function FAQSection2() {
+export function FAQSection3() {
   const { locale } = useLocale()
   const [expandedId, setExpandedId] = useState<number | null>()
   const [isDark, setIsDark] = useState(true)
