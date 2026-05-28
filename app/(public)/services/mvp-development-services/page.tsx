@@ -15,7 +15,7 @@ const serviceDetails = [
       en: "Feature prioritization, user flow mapping, and technical constraints analysis. We define the minimum feature set that tests your core hypothesis — nothing more, nothing that delays launch.",
       uk: "Пріоритизація функцій, карта користувацьких сценаріїв та аналіз технічних обмежень. Визначаємо мінімальний набір функцій для перевірки гіпотези — без зайвого, що затримує запуск.",
     },
-    image: "/images/custom-software-development-hero.jpg",
+    image: "/images/ps.png",
   },
   {
     title: { en: "System Architecture", uk: "Архітектура системи" },
@@ -23,7 +23,7 @@ const serviceDetails = [
       en: "Database schema design, API structure, and third-party integration planning. Architecture decisions made before the first line of code — so the MVP codebase scales into the full product.",
       uk: "Проєктування схеми бази даних, структури API та планування інтеграцій. Архітектурні рішення приймаються до першого рядка коду — щоб кодова база MVP масштабувалась у повноцінний продукт.",
     },
-    image: "/images/SaaS.webp",
+    image: "/images/sa.png",
   },
   {
     title: { en: "Frontend Development", uk: "Фронтенд-розробка" },
@@ -39,7 +39,7 @@ const serviceDetails = [
       en: "Authentication, business logic, data layer, and API endpoints. Node.js or Python FastAPI for rapid development. Production-grade security and data handling from day one.",
       uk: "Автентифікація, бізнес-логіка, шар даних та API. Node.js або Python FastAPI для швидкої розробки. Продакшн-рівень безпеки та роботи з даними з першого дня.",
     },
-    image: "/images/what-is-ERP.jpg",
+    image: "/images/backend.jpg",
   },
   {
     title: { en: "Deployment & QA", uk: "Деплой та тестування" },
@@ -47,7 +47,7 @@ const serviceDetails = [
       en: "Production environment setup, CI/CD pipeline, domain and SSL configuration. Functional testing across core flows, cross-browser and device coverage before launch.",
       uk: "Налаштування production-середовища, CI/CD-пайплайн, домен та SSL. Функціональне тестування ключових сценаріїв, кросбраузерність і підтримка пристроїв перед запуском.",
     },
-    image: "/images/api-integration.jpg",
+    image: "/images/qa.jpg",
   },
 ]
 
@@ -346,7 +346,7 @@ export default function MVPDevelopmentPage() {
       <section className="max-w-6xl mx-auto px-4 pb-14">
         <div className="rounded-2xl bg-white dark:bg-[#1f2026] border border-black/10 dark:border-white/10 p-8 md:p-10 grid lg:grid-cols-[420px_1fr] gap-8 items-center">
           <Image
-            src="/images/team.png"
+            src="/images/MVP-Development.jpg"
             alt="MVP development team"
             width={420}
             height={460}
