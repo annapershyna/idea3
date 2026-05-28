@@ -128,12 +128,12 @@ const pageCopy = {
     costTiers: [
       {
         label: "Focused SaaS MVP",
-        range: "$20,000 – $45,000",
+        range: "$20,000+",
         desc: "Core user flows, authentication, one primary integration. Web-based, production-ready in 6–10 weeks.",
       },
       {
         label: "Mobile MVP (Flutter)",
-        range: "$25,000 – $55,000",
+        range: "$25,000+",
         desc: "iOS and Android from a single Flutter codebase with core flows and Stripe or backend API integration.",
       },
       {
@@ -183,7 +183,7 @@ const pageCopy = {
       },
       {
         label: "Мобільний MVP (Flutter)",
-        range: "$25,000 – $55,000",
+        range: "$25,000+",
         desc: "iOS та Android з однієї Flutter-кодової бази з основними сценаріями та Stripe або API-інтеграцією.",
       },
       {
