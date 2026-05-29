@@ -28,7 +28,7 @@ const testingTypes = [
       en: "Isolated tests for individual functions and modules. Fast execution, high coverage, and logic-error detection at the source with Jest, Pytest, or JUnit depending on your stack.",
       uk: "Ізольовані тести для окремих функцій і модулів. Швидке виконання, високе покриття та виявлення логічних помилок у джерелі за допомогою Jest, Pytest або JUnit залежно від стеку.",
     },
-    image: "/images/qa.jpg",
+    image: "/images/testing1.png",
   },
   {
     title: { en: "Integration Testing", uk: "Integration Testing" },
@@ -36,7 +36,7 @@ const testingTypes = [
       en: "Tests for service boundaries, API contracts, and database interactions that catch integration failures unit tests miss. Supertest, REST Assured, and custom API suites.",
       uk: "Тести для меж сервісів, API-контрактів і взаємодії з базою даних, які виявляють інтеграційні збої, пропущені модульними тестами. Supertest, REST Assured і кастомні API-набори.",
     },
-    image: "/qa-testing-dashboard.jpg",
+    image: "/images/testing2.png",
   },
   {
     title: { en: "End-to-End Testing", uk: "End-to-End Testing" },
@@ -44,7 +44,7 @@ const testingTypes = [
       en: "Full user-flow simulation in a browser or mobile environment with Selenium, Cypress, Playwright, or Appium, running against staging before production deployments.",
       uk: "Повна симуляція user flow у браузері або мобільному середовищі з Selenium, Cypress, Playwright чи Appium, що запускається у staging перед production-деплоєм.",
     },
-    image: "/mobile-app-testing.png",
+    image: "/images/End-to-End.png",
   },
   {
     title: { en: "Performance and Security Testing", uk: "Performance і Security Testing" },
@@ -52,7 +52,7 @@ const testingTypes = [
       en: "Load, stress, OWASP Top 10, dependency, and API security testing integrated into CI/CD with k6, Gatling, OWASP ZAP, Trivy, and Snyk.",
       uk: "Навантажувальне, стресове, OWASP Top 10, dependency та API security testing, інтегровані в CI/CD із k6, Gatling, OWASP ZAP, Trivy та Snyk.",
     },
-    image: "/sports-social-media-platform-testing-qa.jpg",
+    image: "/images/performance-testing.png",
   },
 ] as const;
 
