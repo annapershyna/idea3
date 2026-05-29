@@ -31,7 +31,7 @@ const services = [
       en: "We configure pipelines that run automated tests, build Docker images, push to container registries, and deploy to staging and production on every merge — with automated rollback on failure.",
       uk: "Ми налаштовуємо CI/CD-пайплайни, які запускають автоматизовані тести, збирають Docker-образи, публікують їх у контейнерні реєстри та розгортають у staging і production при кожному злитті змін — із автоматичним відкатом у разі помилки.",
     },
-    image: "/devops.png",
+    image: "/devops_symbol.jpg",
   },
   {
     title: {
@@ -42,7 +42,7 @@ const services = [
       en: "We provision and manage AWS and GCP infrastructure with Terraform so every resource is reproducible, auditable, version-controlled, tracked, and reversible.",
       uk: "Ми налаштовуємо та керуємо cloud-інфраструктурою на AWS і GCP за допомогою infrastructure-as-code з Terraform, щоб кожен ресурс був відтворюваним, придатним до аудиту, контрольованим у Git і оборотним.",
     },
-    image: "/dashboard-overview-screen.jpg",
+    image: "/wlasny-cloud.jpg",
   },
   {
     title: { en: "Kubernetes and Docker Solutions", uk: "Kubernetes і Docker Solutions" },
@@ -50,7 +50,7 @@ const services = [
       en: "Dockerfile optimization, EKS and GKE cluster setup, Helm charts, autoscaling, and zero-downtime rollout strategies: rolling updates, blue/green, and canary.",
       uk: "Оптимізація Dockerfile, налаштування кластерів EKS і GKE, Helm-чарти, autoscaling і стратегії розгортання без простоїв: rolling updates, blue/green та canary.",
     },
-    image: "/images/our-services-devops.png",
+    image: "/images/Kubernetes-and-Docker-Solutions.png",
   },
   {
     title: { en: "Monitoring and Security", uk: "Моніторинг і безпека" },
