@@ -302,7 +302,7 @@ export default function DevOpsServicesPage() {
       <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pb-24">
         <div className="absolute inset-0">
           <Image
-            src="/devops.png"
+            src="/devops.jpg"
             alt="DevOps consulting and infrastructure services"
             fill
             className="object-cover"
