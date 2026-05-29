@@ -338,7 +338,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services#custom-web-solutions"
+                  href="/services/web-application-development"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
@@ -347,7 +347,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#mobile-applications"
+                  href="/services/mobile-app-development"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
@@ -374,7 +374,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#devops"
+                  href="/services/devops-services"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
