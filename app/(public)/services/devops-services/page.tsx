@@ -50,7 +50,7 @@ const services = [
       en: "Dockerfile optimization, EKS and GKE cluster setup, Helm charts, autoscaling, and zero-downtime rollout strategies: rolling updates, blue/green, and canary.",
       uk: "Оптимізація Dockerfile, налаштування кластерів EKS і GKE, Helm-чарти, autoscaling і стратегії розгортання без простоїв: rolling updates, blue/green та canary.",
     },
-    image: "/images/Kubernetes-and-Docker-Solutions.png",
+    image: "/Kubernetes-and-Docker-Solutions.png",
   },
   {
     title: { en: "Monitoring and Security", uk: "Моніторинг і безпека" },
