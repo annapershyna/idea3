@@ -98,6 +98,21 @@ const techIcons: Record<string, string> = {
   AWS: "/images/aws.svg",
   GCP: "/images/gcp.svg",
   Terraform: "/icons/tech/terraform.svg",
+  Vault: "/icons/tech/vault.svg",
+  "Secrets Manager": "/icons/tech/aws-secrets-manager.svg",
+  "Vulnerability scanning": "/icons/tech/vulnerability-scanning.svg",
+  Prometheus: "/icons/tech/prometheus.svg",
+  Grafana: "/icons/tech/grafana.svg",
+  CloudWatch: "/icons/tech/aws-cloudwatch.svg",
+  Tracing: "/icons/tech/tracing.svg",
+  "Version control": "/icons/tech/vc.svg",
+  "Reusable modules": "/icons/tech/reuse.svg",
+   "Cloud Run": "/icons/tech/cloud-run.svg",
+   EKS: "/icons/tech/eks.svg",
+   GKE: "/icons/tech/gke.svg",
+   Helm: "/icons/tech/helm.svg",
+  "GitLab CI": "/icons/tech/gitlab.svg",
+  CircleCI: "/icons/tech/circleci.svg",
 };
 
 const processSteps = [
