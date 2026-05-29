@@ -10,7 +10,6 @@ import {
   ClipboardCheck,
   Code2,
   Database,
-  DollarSign,
   Gauge,
   GitBranch,
   MonitorCheck,
@@ -18,7 +17,6 @@ import {
   Smartphone,
   TestTube2,
   Wrench,
-  Zap,
 } from "lucide-react";
 import { RequestConsultationSection } from "@/components/request-consultation-section";
 import { useLocale } from "@/lib/locale-context";
@@ -161,7 +159,6 @@ const copy = {
     heroStat:
       "Automated test suites reduce manual QA effort by 60–80% and compress regression cycle time from days to under 30 minutes.",
     servicesTitle: "Types of QA Testing",
-    servicesEyebrow: "Coverage layers",
     processTitle: "Automated Testing Process",
     toolsTitle: "QA Tools and Technologies",
     toolsText:
@@ -212,7 +209,6 @@ const copy = {
     heroStat:
       "Автоматизовані набори тестів скорочують manual QA effort на 60–80% і зменшують regression cycle time з днів до 30 хвилин.",
     servicesTitle: "Типи QA тестування",
-    servicesEyebrow: "Рівні покриття",
     processTitle: "Процес автоматизованого тестування",
     toolsTitle: "QA інструменти і технології",
     toolsText:
@@ -290,9 +286,6 @@ export default function QAAutomationServicesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(255,98,0,0.20),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(255,98,0,0.12),transparent_30%)]" />
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <span className="mb-5 inline-flex items-center rounded-full border border-[#FF6200]/30 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6200]">
-              QA Automation
-            </span>
             <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-6xl xl:text-7xl">
               {page.heroTitle}
             </h1>
@@ -333,71 +326,62 @@ export default function QAAutomationServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <section className="bg-[#eef1f6] px-4 py-14 text-foreground dark:bg-[#323130] dark:text-white">
+        <div className="mx-auto grid max-w-6xl gap-10 xl:grid-cols-[420px_1fr]">
           <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6200]">
-              {page.servicesEyebrow}
-            </span>
-            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+            <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
               {page.servicesTitle}
             </h2>
+            <div className="border-t border-black/10 dark:border-white/10">
+              {testingTypes.map((item, index) => {
+                const isActive = activeType === index;
+                return (
+                  <button
+                    key={item.title.en}
+                    onMouseEnter={() => setActiveType(index)}
+                    onClick={() => setActiveType(index)}
+                    className={`w-full border-b py-4 text-left text-lg transition-colors ${
+                      isActive
+                        ? "border-[#FF6200] text-[#FF6200]"
+                        : "border-black/15 text-foreground/80 hover:text-[#FF6200] dark:border-white/15 dark:text-white/80"
+                    }`}
+                  >
+                    {item.title[lang]}
+                  </button>
+                );
+              })}
+            </div>
+            <Link
+              href="/projects"
+              className="relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-[#FF6200] px-8 py-4 font-[Onest] text-base font-normal leading-[100%] text-white transition duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-black sm:w-auto"
+            >
+              {lang === "uk" ? "Подивитись на практиці" : "See it in practice"}
+            </Link>
           </div>
-          <Link
-            href="/projects"
-            className="inline-flex items-center justify-center rounded-full border border-[#FF6200] px-5 py-3 text-sm font-semibold text-[#FF6200] transition hover:bg-[#FF6200] hover:text-white"
-          >
-            {lang === "uk" ? "Подивитись на практиці" : "See it in practice"}
-          </Link>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="space-y-3">
-            {testingTypes.map((item, index) => (
-              <button
-                key={item.title.en}
-                onClick={() => setActiveType(index)}
-                className={`w-full rounded-2xl border p-5 text-left transition-all duration-300 ${
-                  activeType === index
-                    ? "border-[#FF6200] bg-[#FF6200]/10 shadow-lg shadow-[#FF6200]/10"
-                    : "border-black/10 bg-white hover:border-[#FF6200]/40 dark:border-white/10 dark:bg-[#161515]"
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF6200] text-sm font-bold text-white">
-                    {index + 1}
-                  </span>
-                  <h3 className="text-xl font-semibold">{item.title[lang]}</h3>
-                </div>
-              </button>
-            ))}
-          </div>
-          <div className="overflow-hidden rounded-3xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#161515]">
-            <div className="relative h-72 overflow-hidden md:h-96">
+          <article className="overflow-hidden rounded-2xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#1b1d23]">
+            <div className="relative h-60 md:h-72">
               <Image
                 src={testingTypes[activeType].image}
                 alt={testingTypes[activeType].title[lang]}
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
-              <h3 className="absolute bottom-6 left-6 right-6 text-3xl font-semibold text-white md:text-4xl">
+            </div>
+            <div className="p-6 md:p-8">
+              <h3 className="mb-3 text-3xl font-semibold">
                 {testingTypes[activeType].title[lang]}
               </h3>
+              <p className="text-lg leading-relaxed text-foreground/70 dark:text-white/70">
+                {testingTypes[activeType].description[lang]}
+              </p>
             </div>
-            <p className="p-6 text-lg leading-relaxed text-foreground/70 dark:text-white/70 md:p-8">
-              {testingTypes[activeType].description[lang]}
-            </p>
-          </div>
+          </article>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="mb-10 max-w-3xl">
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6200]">
-            QA workflow
-          </span>
-          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+          <h2 className="text-3xl font-semibold md:text-5xl">
             {page.processTitle}
           </h2>
         </div>
@@ -485,10 +469,6 @@ export default function QAAutomationServicesPage() {
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <span className="mb-3 inline-flex items-center text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6200]">
-              <Zap className="mr-2 h-4 w-4" />
-              Quality impact
-            </span>
             <h2 className="text-3xl font-semibold md:text-5xl">{page.benefitsTitle}</h2>
           </div>
           <div className="space-y-3">
@@ -505,10 +485,6 @@ export default function QAAutomationServicesPage() {
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="overflow-hidden rounded-2xl border border-black/10 dark:border-white/10">
           <div className="bg-[#f3f5fa] px-8 py-10 dark:bg-[#1f2026] md:px-12 md:py-12">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#FF6200]">
-              <DollarSign className="mr-2 inline h-4 w-4" />
-              Cost
-            </span>
             <h2 className="max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
               {page.costTitle}
             </h2>
