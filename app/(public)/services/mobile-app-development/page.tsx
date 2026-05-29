@@ -109,6 +109,8 @@ const techIcons: Record<string, string> = {
   Kotlin: "/icons/tech/kotlin.svg",
   StoreKit: "/icons/tech/Storekit.svg",
   "Offline sync": "/icons/tech/network-wireless-offline.svg",
+  "Google Play": "/icons/tech/google-play.svg",
+  SQLite: "/icons/tech/sqlite.svg",
 };
 
 const processSteps = [
