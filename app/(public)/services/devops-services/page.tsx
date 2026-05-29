@@ -595,10 +595,6 @@ export default function DevOpsServicesPage() {
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="overflow-hidden rounded-2xl border border-black/10 dark:border-white/10">
           <div className="bg-[#f3f5fa] px-8 py-10 dark:bg-[#1f2026] md:px-12 md:py-12">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#FF6200]">
-              <DollarSign className="mr-2 inline h-4 w-4" />
-              Optimization
-            </span>
             <h2 className="max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
               {page.costTitle}
             </h2>
