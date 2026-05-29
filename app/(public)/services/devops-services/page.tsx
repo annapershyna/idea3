@@ -492,7 +492,7 @@ export default function DevOpsServicesPage() {
       <section className="mx-auto max-w-6xl px-4 pb-14">
         <div className="grid gap-8 rounded-2xl border border-black/10 bg-white p-8 dark:border-white/10 dark:bg-[#1f2026] md:p-10 lg:grid-cols-[420px_1fr] lg:items-center">
           <Image
-            src="/images/our-services-devops.png"
+            src="/images/our-services-devops.jpg"
             alt="Kubernetes and Docker solutions"
             width={420}
             height={460}
