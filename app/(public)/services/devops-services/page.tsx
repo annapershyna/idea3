@@ -16,7 +16,6 @@ import {
   GitBranch,
   Layers3,
   Lock,
-  RefreshCw,
   Rocket,
   ServerCog,
   Settings,
@@ -654,7 +653,22 @@ export default function DevOpsServicesPage() {
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-semibold">
                 <span>{question}</span>
-                <RefreshCw className="h-5 w-5 shrink-0 text-[#FF6200] transition-transform group-open:rotate-180" />
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 shrink-0 text-[#FF6200] transition-all duration-300 group-open:rotate-180 group-open:text-[#C0C0C0]"
+                  aria-hidden="true"
+                >
+                  <g transform="translate(1.67, 2.17)">
+                    <path
+                      d="M6.19757 9C5.81267 9.66667 4.85042 9.66667 4.46552 9L0.135391 1.5C-0.249509 0.833332 0.231617 -1.05781e-06 1.00142 -9.90511e-07L9.66167 -2.33408e-07C10.4315 -1.6611e-07 10.9126 0.833333 10.5277 1.5L6.19757 9Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
               </summary>
               <p className="mt-4 leading-relaxed text-foreground/70 dark:text-white/70">
                 {answer}
