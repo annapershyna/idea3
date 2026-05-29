@@ -365,7 +365,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#qa"
+                  href="/services/qa-automation-services"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
