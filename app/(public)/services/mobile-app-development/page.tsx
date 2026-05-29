@@ -101,6 +101,14 @@ const techIcons: Record<string, string> = {
   PostgreSQL: "/icons/tech/mssql.svg",
   Stripe: "/icons/tech/stripe.svg",
   TestFlight: "/icons/tech/flight.svg",
+  Google Pay: "/icons/tech/google-pay.svg",
+  Analytics: "/icons/tech/analytics.svg",
+  In-app purchases: "/icons/tech/revenue-cat-extension.svg",
+  Dart: "/icons/tech/dart.svg",
+  Swift: "/icons/tech/swift.svg",
+  Kotlin: "/icons/tech/kotlin.svg",
+  StoreKit: "/icons/tech/Storekit.svg",
+  Offline sync: "/icons/tech/network-wireless-offline.svg",
 };
 
 const processSteps = [
