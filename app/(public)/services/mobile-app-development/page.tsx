@@ -100,6 +100,7 @@ const techIcons: Record<string, string> = {
   Python: "/images/python.svg",
   PostgreSQL: "/icons/tech/mssql.svg",
   Stripe: "/icons/tech/stripe.svg",
+  TestFlight: "/icons/tech/flight.svg",
 };
 
 const processSteps = [
