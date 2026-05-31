@@ -34,6 +34,7 @@ const footerContent = {
     devops: "DevOps",
     mvpDevelopmentServices: "MVP development services",
     dedicatedDevelopmentTeam: "Dedicated development team",
+    aiintegrationservices: "AI Integration",
     dataAnalytics: "Data Analytics",
     viewAllPosts: "View all posts",
     address: "Ukraine, Chernihiv,",
@@ -63,6 +64,7 @@ const footerContent = {
     devops: "DevOps",
     mvpDevelopmentServices: "Послуги з розробки MVP",
     dedicatedDevelopmentTeam: "Послуги виділеної команди розробки",
+    aiintegrationservices: "AI-інтеграція",
     dataAnalytics: "Аналітика даних",
     viewAllPosts: "Переглянути всі статті",
     address: "Україна, Чернігів,",
@@ -358,6 +360,15 @@ export function Footer() {
                   {t.mobileApps}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/services/ai-integration-services"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.aiintegrationservices}
+                </Link>
+              </li>          
               <li>
                 <Link
                   href="/services#ux-ui-design"
