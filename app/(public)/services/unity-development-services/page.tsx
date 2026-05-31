@@ -78,7 +78,7 @@ const unityServices = [
       en: "Markerless and marker-based AR experiences built with AR Foundation, ARKit, and ARCore: virtual try-ons, product visualization in real space, in-store navigation overlays, and interactive marketing campaigns. Optimized for mid-range iOS and Android hardware with face tracking, plane detection, and image anchoring depending on the use case.",
       uk: "AR-досвіди з використанням AR Foundation, ARKit та ARCore: віртуальні примірки, візуалізація продуктів у просторі, навігаційні накладки та маркетингові інтерактиви. Оптимізовано для реальної продуктивності на iOS та Android пристроях середнього рівня.",
     },
-    image: "/Unity.jpg",
+    image: "/images/ar.jpg",
   },
   {
     title: { en: "VR Simulations", uk: "VR-симуляції" },
@@ -86,7 +86,7 @@ const unityServices = [
       en: "Training environments, architectural walkthroughs, safety procedure simulators, and onboarding experiences deployed across Meta Quest, HTC Vive, and OpenXR-compatible headsets. OpenXR reduces per-headset porting overhead, while physics interactions, spatial audio, and hand tracking are configured per simulation requirements.",
       uk: "Навчальні середовища, тренажери безпеки, архітектурні огляди та onboarding-системи для Meta Quest, HTC Vive та OpenXR-пристроїв. OpenXR зменшує overhead портингу між гарнітурами, а фізика, spatial audio та hand tracking налаштовуються під сценарій.",
     },
-    image: "/unity-development.png",
+    image: "/images/VR.png",
   },
   {
     title: { en: "3D Configurators and Interactive Products", uk: "3D-конфігуратори та інтерактивні продукти" },
@@ -94,7 +94,7 @@ const unityServices = [
       en: "Real-time 3D product configurators, interactive investor decks, gamified sales tools, and embedded WebGL experiences. Users select materials, colors, components, or configurations and see results rendered instantly, eliminating static photography for SKU variants.",
       uk: "Real-time 3D product configurators, інтерактивні investor decks, gamified sales tools та embedded WebGL experiences. Користувач змінює матеріали, кольори й компоненти та бачить результат у реальному часі без статичних зображень для кожного SKU.",
     },
-    image: "/samsung-product-showcase.jpeg",
+    image: "/images/3d.jpg",
   },
   {
     title: { en: "Interactive PoC Development", uk: "Інтерактивні прототипи" },
@@ -110,7 +110,7 @@ const unityServices = [
       en: "Inherited a Unity project with broken builds, unreadable code, outdated packages, or undocumented architecture? We audit code quality, asset pipeline, build configuration, and performance bottlenecks, then refactor and bring the project back to a shippable state.",
       uk: "Якщо Unity-проєкт має поламані збірки, unreadable code, застарілі packages або undocumented architecture, ми проводимо технічний аудит, refactor, стабілізацію та повертаємо його до shippable стану.",
     },
-    image: "/team-planning-strategy-whiteboard.jpg",
+    image: "/images/Code-audit.jpg",
   },
 ] as const;
 
