@@ -83,7 +83,7 @@ const aiServices = [
       en: "Direct API integration with OpenAI, Anthropic Claude, and Google Gemini. Prompt engineering, token optimization, structured output parsing, error handling, and cost monitoring.",
       uk: "Пряма інтеграція з OpenAI, Anthropic Claude і Google Gemini: налаштування запитів, оптимізація токенів, структурований вихід, обробка помилок і контроль вартості.",
     },
-    image: "/images/ai-integration.jpg",
+    image: "/images/ai-integration.png",
   },
   {
     title: { en: "AI Workflow Automation", uk: "Автоматизація AI-процесів" },
