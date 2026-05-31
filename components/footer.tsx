@@ -377,29 +377,35 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/devops-services"
-                  onClick={handleLinkClick}
-                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-                >
-                  {t.devops}
-                </Link>
-              </li>
-              <Link
-                  href="/services/mvp-development-services"
-                  onClick={handleLinkClick}
-                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-                >
-                  {t.mvpDevelopmentServices}
-                </Link>
-            <Link
-                  href="/services/dedicated-development-team"
-                  onClick={handleLinkClick}
-                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-                >
-                  {t.dedicatedDevelopmentTeam}
-                </Link>
-              </li>
+                <li>
+  <Link
+    href="/services/devops-services"
+    onClick={handleLinkClick}
+    className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+  >
+    {t.devops}
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/services/mvp-development-services"
+    onClick={handleLinkClick}
+    className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+  >
+    {t.mvpDevelopmentServices}
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/services/dedicated-development-team"
+    onClick={handleLinkClick}
+    className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+  >
+    {t.dedicatedDevelopmentTeam}
+  </Link>
+</li>
               <li>
                 <Link
                   href="/services#data-analytics"
