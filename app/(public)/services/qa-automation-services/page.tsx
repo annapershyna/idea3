@@ -512,10 +512,10 @@ export default function QAAutomationServicesPage() {
         </div>
       </section>
 
-      <section className="w-full px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-16 lg:px-12 lg:py-20">
-        <div className="relative mx-auto aspect-[5/3] max-w-[96%] overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] via-[#1a0f00] to-[#2a1708] sm:aspect-[5/2.6] sm:max-w-[92%] md:aspect-[5/1.9] md:max-w-6xl lg:aspect-[5/1.45] lg:max-w-7xl">
+            <section className="w-full px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-16 lg:px-12 lg:py-20">
+        <div className="relative mx-auto min-h-[520px] max-w-[96%] overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] via-[#1a0f00] to-[#2a1708] sm:min-h-[440px] sm:max-w-[92%] md:aspect-[5/1.9] md:min-h-0 md:max-w-6xl lg:aspect-[5/1.45] lg:max-w-7xl">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_#ff6200_12%,transparent_70%)] opacity-70 blur-xl md:opacity-90 md:blur-3xl" />
-          <div className="relative z-10 flex h-full flex-col items-center justify-center gap-4 px-6 sm:px-10 md:flex-row md:justify-between md:px-16 lg:px-24">
+          <div className="relative z-10 flex min-h-[520px] flex-col items-center justify-center gap-6 px-6 py-10 sm:min-h-[440px] sm:px-10 md:h-full md:min-h-0 md:flex-row md:justify-between md:px-16 md:py-0 lg:px-24">
             <div className="max-w-3xl text-center md:text-left">
               <h2 className="text-xl font-medium leading-[1.15] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-2xl md:text-3xl lg:text-[34px] xl:text-[40px]">
                 {page.ctaTitle}
@@ -528,7 +528,7 @@ export default function QAAutomationServicesPage() {
               href="https://calendar.app.google/sySAYTvgF8Zi264U7"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex h-[40px] w-[240px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[16px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] md:mt-0"
+              className="mt-2 flex min-h-[44px] w-full max-w-[300px] items-center justify-center rounded-[50px] bg-[#FF6200] px-5 py-3 text-center font-['Onest'] text-[16px] font-semibold leading-tight tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] md:mt-0 md:h-[40px] md:w-[240px] md:px-[14px] md:py-[4px] md:leading-none"
             >
               {page.ctaButton}
             </Link>
