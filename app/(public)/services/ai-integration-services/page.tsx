@@ -75,7 +75,7 @@ const aiServices = [
       en: "LLM-powered conversational interfaces integrated into your product or support infrastructure. Context-aware, grounded in your knowledge base via RAG, with session memory and fallback routing to human agents.",
       uk: "LLM-інтерфейси для продукту або підтримки, інтегровані з вашою базою знань через RAG, з контекстною пам’яттю та маршрутизацією до оператора.",
     },
-    image: "/ai-machine-learning-technology.jpg",
+    image: "/images/chat-gpt.jpg",
   },
   {
     title: { en: "LLM Integration", uk: "Інтеграція LLM" },
@@ -83,7 +83,7 @@ const aiServices = [
       en: "Direct API integration with OpenAI, Anthropic Claude, and Google Gemini. Prompt engineering, token optimization, structured output parsing, error handling, and cost monitoring.",
       uk: "Пряма інтеграція з OpenAI, Anthropic Claude і Google Gemini: налаштування запитів, оптимізація токенів, структурований вихід, обробка помилок і контроль вартості.",
     },
-    image: "/images/api-integration.jpg",
+    image: "/images/ai-integration.jpg",
   },
   {
     title: { en: "AI Workflow Automation", uk: "Автоматизація AI-процесів" },
@@ -91,7 +91,7 @@ const aiServices = [
       en: "End-to-end automation of multi-step business processes using LLMs and tool-calling: document intake, classification, extraction, routing, and output generation in one pipeline.",
       uk: "Автоматизація багатокрокових бізнес-процесів за допомогою LLM і tool-calling: обробка документів, класифікація, витяг даних, маршрутизація та генерація результатів у єдиному пайплайні.",
     },
-    image: "/dashboard-overview-screen.jpg",
+    image: "/images/ai-workflow-automation.jpg",
   },
   {
     title: { en: "AI Agents", uk: "AI-агенти" },
@@ -99,7 +99,7 @@ const aiServices = [
       en: "Autonomous agents that plan, use tools, and execute multi-step tasks without human input at each step. Built with LangChain or LlamaIndex and integrated with APIs, databases, and external services.",
       uk: "Автономні агенти, які планують дії, використовують інструменти та виконують складні багатокрокові задачі без участі людини на кожному етапі.",
     },
-    image: "/images/langchain.svg",
+    image: "/images/AI-Agents.jpeg",
   },
   {
     title: { en: "AI-Powered Search", uk: "AI-пошук" },
@@ -107,7 +107,7 @@ const aiServices = [
       en: "Semantic search over product data, documentation, or knowledge bases using vector embeddings, similarity retrieval, Pinecone or Weaviate, and hybrid dense/sparse search.",
       uk: "Семантичний пошук по даних продукту, документації або базі знань із використанням vector embeddings, similarity retrieval, Pinecone або Weaviate та гібридного пошуку.",
     },
-    image: "/analytics-charts-and-graphs.jpg",
+    image: "/images/GenAI-and-Search.jpg",
   },
   {
     title: { en: "AI Recommendation Systems", uk: "Рекомендаційні системи" },
@@ -115,7 +115,7 @@ const aiServices = [
       en: "Personalization engines that surface relevant products, content, or actions based on user behavior, context, and collaborative filtering signals inside your SaaS flows.",
       uk: "Персоналізація контенту та дій на основі поведінки користувача, контексту та сигналів взаємодії безпосередньо у SaaS-процесах.",
     },
-    image: "/images/SaaS.webp",
+    image: "/images/ai-recommendation-systems.jpeg",
   },
   {
     title: { en: "AI Document Processing", uk: "Обробка документів" },
@@ -123,7 +123,7 @@ const aiServices = [
       en: "Automated extraction, classification, and validation of structured data from PDFs, contracts, invoices, forms, and unstructured text with schema-based output validation.",
       uk: "Автоматичне вилучення, класифікація та валідація структурованих даних із PDF, контрактів, інвойсів, форм і неструктурованого тексту з перевіркою за схемами.",
     },
-    image: "/financial-charts-data-analysis.jpg",
+    image: "/images/ai-business-document.jpg",
   },
 ] as const;
 
