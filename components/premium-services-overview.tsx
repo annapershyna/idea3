@@ -9,7 +9,7 @@ const cards = [
   { title: { en: "UI/UX Design", uk: "UI/UX дизайн" }, description: { en: "Clean, conversion-driven product interfaces with reusable design systems and measurable usability outcomes.", uk: "Чисті, орієнтовані на конверсію інтерфейси з перевикористовуваними дизайн-системами та вимірюваними UX-результатами." }, icon: Compass, href: "/services#ux-ui-design" },
   { title: { en: "QA & Testing", uk: "QA та тестування" }, description: { en: "Automated and manual quality pipelines that reduce regressions and keep releases predictable.", uk: "Автоматизовані й ручні QA-процеси, що зменшують регресії та роблять релізи передбачуваними." }, icon: TestTube2, href: "/services/qa-automation-services" },
   { title: { en: "Digital Analytics", uk: "Цифрова аналітика" }, description: { en: "Data instrumentation and KPI-focused analytics pipelines to support faster product decisions.", uk: "Інструментування даних і KPI-орієнтована аналітика для швидших продуктових рішень." }, icon: BarChart3, href: "/services#data-analytics" },
-  { title: { en: "IT Consulting", uk: "IT консалтинг" }, description: { en: "Architecture and delivery guidance for teams scaling from MVP to enterprise-grade systems.", uk: "Архітектурний і delivery-консалтинг для команд, що масштабуються від MVP до enterprise-рівня." }, icon: Activity, href: "/contact" },
+  { title: { en: "IT Consulting", uk: "IT консалтинг" }, description: { en: "Architecture and delivery guidance for teams scaling from MVP to enterprise-grade systems.", uk: "Архітектурний і delivery-консалтинг для команд, що масштабуються від MVP до enterprise-рівня." }, icon: Activity, href: "/services/ai-integration-services" },
 ]
 
 export function PremiumServicesOverview() {
