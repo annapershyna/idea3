@@ -26,7 +26,10 @@ const footerContent = {
     sensorInfobox: "Sensor Infobox",
     ecommercePlatform: "High-performance eCommerce platform",
     customWeb: "Custom web solutions",
+    Symbotic: "Internal Monitoring System for Symbotic",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",
+    AREarring: "AR Earring Virtual Try-On (Unity)",
+    DevOps: "DevOps for Yotewo",
     mobileApps: "Mobile applications",
     unityDevelopment: "Unity development",
     uxui: "UI/UX and Graphic Design",
@@ -55,8 +58,11 @@ const footerContent = {
     statisticsPlatform: "Платформа статистики",
     sensorInfobox: "Sensor Infobox",
     ecommercePlatform: "Високопродуктивна платформа eCommerce",
+    AREarring: "AR примірка сережок (Unity)",
+    DevOps: "DevOps для Yotewo",
     customWeb: "Кастомні веб-рішення",
-    waltairRobotics: "Waltair Robotics (Mobile App v4)",  
+    waltairRobotics: "Waltair Robotics (Mobile App v4)",
+    Symbotic: "Система внутрішнього моніторингу для Symbotic",
     mobileApps: "Мобільні додатки",
     unityDevelopment: "Розробка Unity",
     uxui: "Дизайн UI/UX та графіка",
@@ -329,10 +335,36 @@ export function Footer() {
                 >
                  {t.waltairRobotics}
                 </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects/ar-earring-virtual-try-on"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                 {t.AREarring}
+                </Link>
               </li>              
+              <li>
+                <Link
+                  href="/projects/devops-for-yotewo"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                 {t.DevOps}
+                </Link>
+              </li> 
+              <li>
+                <Link
+                  href="/projects#internal-monitoring-system-symbotic"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                 {t.Symbotic}
+                </Link>
+              </li> 
             </ul>
           </div>
-
           <div className="lg:col-span-2">
             <Link
               href="/services"
@@ -388,34 +420,34 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-  <Link
-    href="/services/devops-services"
-    onClick={handleLinkClick}
-    className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-  >
-    {t.devops}
-  </Link>
-</li>
-
-<li>
-  <Link
-    href="/services/mvp-development-services"
-    onClick={handleLinkClick}
-    className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-  >
-    {t.mvpDevelopmentServices}
-  </Link>
-</li>
-
-<li>
-  <Link
-    href="/services/dedicated-development-team"
-    onClick={handleLinkClick}
-    className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-  >
-    {t.dedicatedDevelopmentTeam}
-  </Link>
-</li>
+              <Link
+                href="/services/devops-services"
+                onClick={handleLinkClick}
+                className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+              >
+                {t.devops}
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                href="/services/mvp-development-services"
+                onClick={handleLinkClick}
+                className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+              >
+                {t.mvpDevelopmentServices}
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                href="/services/dedicated-development-team"
+                onClick={handleLinkClick}
+                className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+              >
+                {t.dedicatedDevelopmentTeam}
+              </Link>
+            </li>
               <li>
                 <Link
                   href="/services#data-analytics"
