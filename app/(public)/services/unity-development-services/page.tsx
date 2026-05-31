@@ -392,7 +392,7 @@ export default function UnityDevelopmentServicesPage() {
       <section className="relative min-h-[560px] overflow-hidden px-4 pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="absolute inset-0">
           <Image
-            src="/Unity.jpg"
+            src="/images/Game-in-Unity.jpg"
             alt="Unity real-time 3D and interactive development"
             fill
             className="object-cover"
