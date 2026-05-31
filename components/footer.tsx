@@ -26,6 +26,7 @@ const footerContent = {
     sensorInfobox: "Sensor Infobox",
     ecommercePlatform: "High-performance eCommerce platform",
     customWeb: "Custom web solutions",
+    WebApp: "Web Application Development",
     Symbotic: "Internal Monitoring System for Symbotic",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",
     AREarring: "AR Earring Virtual Try-On (Unity)",
@@ -61,6 +62,7 @@ const footerContent = {
     AREarring: "AR примірка сережок (Unity)",
     DevOps: "DevOps для Yotewo",
     customWeb: "Кастомні веб-рішення",
+    WebApp: "Розробка web-додатків",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",
     Symbotic: "Система внутрішнього моніторингу для Symbotic",
     mobileApps: "Мобільні додатки",
@@ -376,13 +378,22 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services/web-application-development"
+                  href="/services/custom-software-development"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
                   {t.customWeb}
                 </Link>
               </li>
+               <li>
+                <Link
+                  href="/services/web-application-development"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.WebApp}
+                </Link>
+              </li>             
               <li>
                 <Link
                   href="/services/mobile-app-development"
