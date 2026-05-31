@@ -377,7 +377,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <li>
   <Link
     href="/services/devops-services"
     onClick={handleLinkClick}
