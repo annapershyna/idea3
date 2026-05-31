@@ -32,6 +32,8 @@ const footerContent = {
     uxui: "UI/UX and Graphic Design",
     qa: "Manual and Automation QA",
     devops: "DevOps",
+    mvpDevelopmentServices: "MVP development services",
+    dedicatedDevelopmentTeam: "Dedicated development team",
     dataAnalytics: "Data Analytics",
     viewAllPosts: "View all posts",
     address: "Ukraine, Chernihiv,",
@@ -59,6 +61,8 @@ const footerContent = {
     uxui: "Дизайн UI/UX та графіка",
     qa: "Ручне тестування та автоматизація QA",
     devops: "DevOps",
+    mvpDevelopmentServices: "Послуги з розробки MVP",
+    dedicatedDevelopmentTeam: "Послуги виділеної команди розробки",
     dataAnalytics: "Аналітика даних",
     viewAllPosts: "Переглянути всі статті",
     address: "Україна, Чернігів,",
@@ -381,6 +385,21 @@ export function Footer() {
                   {t.devops}
                 </Link>
               </li>
+              <Link
+                  href="/services/mvp-development-services"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.mvpDevelopmentServices}
+                </Link>
+            <Link
+                  href="/services/dedicated-development-team"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.dedicatedDevelopmentTeam}
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/services#data-analytics"
@@ -392,7 +411,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#real-time-3d-interactive-development"
+                  href="/services/unity-development-services"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
