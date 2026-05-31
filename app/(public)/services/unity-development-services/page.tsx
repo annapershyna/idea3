@@ -609,7 +609,6 @@ export default function UnityDevelopmentServicesPage() {
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid gap-8 rounded-3xl border border-black/10 bg-white p-8 dark:border-white/10 dark:bg-[#191a20] md:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <BadgeCheck className="mb-6 h-12 w-12 text-[#FF6200]" />
             <h2 className="text-3xl font-semibold md:text-4xl">
               {page.whyTitle}
             </h2>
