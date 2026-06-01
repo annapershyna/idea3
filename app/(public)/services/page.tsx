@@ -294,7 +294,7 @@ export default function ServicesPage() {
       buttonHref: "/projects/ar-earring-virtual-try-on",
       image: "/Unity.jpg",
       imageAlt: "Unity real-time 3D and interactive development",
-      reverse: false,
+      reverse: true,
     },
   ]
 
