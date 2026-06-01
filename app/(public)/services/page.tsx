@@ -42,7 +42,7 @@ const servicePageCopy = {
     aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
         webApplicationTitle: "Web Application Development",
         webApplicationDesc:
-      "We build scalable web applications with clean frontend/backend separation, optimized data layers, and cloud-native architecture — engineered for performance, security, and long-term maintainability. From SPAs and real-time dashboards to B2B portals and internal tooling, every system is designed to handle growing user load without architectural rewrites.",
+      "We build scalable web applications with clean frontend/backend separation, optimized data layers, and cloud-native architecture — engineered for performance, security, and long-term maintainability. From SPAs and real-time dashboards to B2B portals and internal tooling, every system is designed to handle growing user load.",
   },
   uk: {
     mvpTitle: "Послуги з розробки MVP",
@@ -59,7 +59,7 @@ const servicePageCopy = {
     aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
     webApplicationTitle: "Розробка web-додатків",
     webApplicationDesc:
-      "Ми будуємо масштабовані web-додатки з чітким розділенням frontend/backend, оптимізованими шарами даних і нативною хмарною архітектурою — розроблені для продуктивності, безпеки і довгострокової підтримуваності. Від SPA і дашбордів у режимі реального часу до B2B порталів і внутрішніх інструментів — кожна система спроектована для обробки зростаючого навантаження без архітектурних переписувань.",
+      "Ми будуємо масштабовані web-додатки з чітким розділенням frontend/backend, оптимізованими шарами даних і нативною хмарною архітектурою — розроблені для продуктивності, безпеки і довгострокової підтримуваності. Від SPA і дашбордів у режимі реального часу до B2B порталів і внутрішніх інструментів — кожна система спроектована для обробки зростаючого навантаження.",
   },
 } as const
 
