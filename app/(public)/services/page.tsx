@@ -196,10 +196,10 @@ export default function ServicesPage() {
       id: "custom-web-solutions",
       title: t.customWebSolutions,
       description: t.customWebSolutionsDesc,
-      image: "/images/custom-software-development-hero.jpg",
+      image: "/images/web-application-coding-1024x683.jpg",
       imageAlt: "Custom web solutions - laptop with code",
       href: "/services/custom-software-development",
-      reverse: false,
+      reverse: true,
     },
     {
       id: "web-application-development",
