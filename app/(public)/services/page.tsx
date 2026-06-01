@@ -40,6 +40,9 @@ const servicePageCopy = {
     aiDesc:
       "We integrate LLMs, AI agents, RAG architecture, AI-powered search, recommendation systems, and workflow automation directly into SaaS products and business operations with production-grade monitoring, cost control, and security.",
     aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
+        webApplicationTitle: "Web Application Development",
+        webApplicationDesc:
+      "We build scalable web applications with clean frontend/backend separation, optimized data layers, and cloud-native architecture — engineered for performance, security, and long-term maintainability. From SPAs and real-time dashboards to B2B portals and internal tooling, every system is designed to handle growing user load without architectural rewrites.",
   },
   uk: {
     mvpTitle: "Послуги з розробки MVP",
@@ -54,6 +57,9 @@ const servicePageCopy = {
     aiDesc:
       "Ми інтегруємо LLM, AI-агентів, RAG-архітектуру, AI-пошук, рекомендаційні системи та workflow automation безпосередньо у SaaS-продукти й бізнес-процеси з production-grade моніторингом, контролем вартості та безпекою.",
     aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
+    webApplicationTitle: "Розробка web-додатків",
+    webApplicationDesc:
+      "Ми будуємо масштабовані web-додатки з чітким розділенням frontend/backend, оптимізованими шарами даних і нативною хмарною архітектурою — розроблені для продуктивності, безпеки і довгострокової підтримуваності. Від SPA і дашбордів у режимі реального часу до B2B порталів і внутрішніх інструментів — кожна система спроектована для обробки зростаючого навантаження без архітектурних переписувань.",
   },
 } as const
 
@@ -190,8 +196,17 @@ export default function ServicesPage() {
       id: "custom-web-solutions",
       title: t.customWebSolutions,
       description: t.customWebSolutionsDesc,
-      image: "/images/3f00f5531b4c18a10739177bfb9caed239f86ebd.jpg",
+      image: "/images/custom-software-development-hero.jpg",
       imageAlt: "Custom web solutions - laptop with code",
+      href: "/services/custom-software-development",
+      reverse: false,
+    },
+    {
+      id: "web-application-development",
+      title: pageCopy.webApplicationTitle,
+      description: pageCopy.webApplicationDesc,
+      image: "/images/3f00f5531b4c18a10739177bfb9caed239f86ebd.jpg",
+      imageAlt: "web application development",
       href: "/services/web-application-development",
       reverse: false,
     },
