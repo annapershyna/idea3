@@ -11,7 +11,6 @@ declare global {
   interface Window {
     grecaptcha: {
       execute: (siteKey: string, options: { action: string }) => Promise<string>
-      ready: (callback: () => void) => void
     }
   }
 }
@@ -27,8 +26,40 @@ const serviceTechIcons: Record<string, string> = {
   "C# (.NET Framework)": "/icons/tech/dotnet-framework.svg",
 }
 
+const servicePageCopy = {
+  en: {
+    mvpTitle: "MVP Development Services",
+    mvpDesc:
+      "We scope, design, and ship production-ready MVPs for startups in 6–12 weeks, focusing on the smallest feature set that validates your core hypothesis and gives investors or early users a working product to test.",
+    mvpCapabilities: "Lean scope · Product architecture · SaaS MVP · Mobile MVP · Investor-ready demos",
+    dedicatedTitle: "Dedicated Development Team",
+    dedicatedDesc:
+      "We assemble dedicated developers, tech leads, and QA engineers who integrate into your sprint cadence, communication stack, and code review process — giving you production output from week one without a 3–4 month hiring cycle.",
+    dedicatedCapabilities: "Dedicated developers · Tech leads · QA engineers · Staff augmentation · Remote team onboarding",
+    aiTitle: "AI Integration Services",
+    aiDesc:
+      "We integrate LLMs, AI agents, RAG architecture, AI-powered search, recommendation systems, and workflow automation directly into SaaS products and business operations with production-grade monitoring, cost control, and security.",
+    aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
+  },
+  uk: {
+    mvpTitle: "Послуги з розробки MVP",
+    mvpDesc:
+      "Ми визначаємо scope, проектуємо та запускаємо production-ready MVP для стартапів за 6–12 тижнів, фокусуючись на мінімальному наборі функцій для перевірки ключової гіпотези.",
+    mvpCapabilities: "Lean scope · Product architecture · SaaS MVP · Mobile MVP · Демо для інвесторів",
+    dedicatedTitle: "Dedicated Development Team",
+    dedicatedDesc:
+      "Ми збираємо dedicated developers, tech leads і QA engineers, які інтегруються у ваш sprint cadence, communication stack і code review process — щоб команда давала результат з першого тижня без 3–4 місяців найму.",
+    dedicatedCapabilities: "Dedicated developers · Tech leads · QA engineers · Staff augmentation · Remote team onboarding",
+    aiTitle: "AI Integration Services",
+    aiDesc:
+      "Ми інтегруємо LLM, AI-агентів, RAG-архітектуру, AI-пошук, рекомендаційні системи та workflow automation безпосередньо у SaaS-продукти й бізнес-процеси з production-grade моніторингом, контролем вартості та безпекою.",
+    aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
+  },
+} as const
+
 export default function ServicesPage() {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
+  const pageCopy = servicePageCopy[locale]
 
   const [isDark, setIsDark] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -161,6 +192,7 @@ export default function ServicesPage() {
       description: t.customWebSolutionsDesc,
       image: "/images/3f00f5531b4c18a10739177bfb9caed239f86ebd.jpg",
       imageAlt: "Custom web solutions - laptop with code",
+      href: "/services/web-application-development",
       reverse: false,
     },
     {
@@ -177,6 +209,7 @@ export default function ServicesPage() {
       description: t.qaAutomationDesc,
       image: "/images/d99f7180c4bf0265069aa1c177dc0143e37e4d79.jpg",
       imageAlt: "Manual and Automation QA - testing screens",
+      href: "/services/qa-automation-services",
       reverse: false,
     },
     {
@@ -185,6 +218,7 @@ export default function ServicesPage() {
       description: t.devopsDesc,
       image: "/images/45fc920cb000857538e44a289f252b1506456ab8.jpg",
       imageAlt: "DevOps - keyboard and development",
+      href: "/services/devops-services",
       reverse: true,
     },
     {
@@ -201,7 +235,38 @@ export default function ServicesPage() {
       description: t.mobileApplicationsDesc,
       image: "/images/d00b7db9fb79ecd79b7d95fa7eecf2e662529ebe.jpg",
       imageAlt: "Mobile Applications - app icons",
+      href: "/services/mobile-app-development",
       reverse: true,
+    },
+    {
+      id: "mvp-development-services",
+      title: pageCopy.mvpTitle,
+      description: pageCopy.mvpDesc,
+      capabilities: pageCopy.mvpCapabilities,
+      image: "/images/MVP-Development.jpg",
+      imageAlt: "MVP development services for startups",
+      href: "/services/mvp-development-services",
+      reverse: false,
+    },
+    {
+      id: "dedicated-development-team",
+      title: pageCopy.dedicatedTitle,
+      description: pageCopy.dedicatedDesc,
+      capabilities: pageCopy.dedicatedCapabilities,
+      image: "/images/Software-Development-Team.jpg",
+      imageAlt: "Dedicated development team working together",
+      href: "/services/dedicated-development-team",
+      reverse: true,
+    },
+    {
+      id: "ai-integration-services",
+      title: pageCopy.aiTitle,
+      description: pageCopy.aiDesc,
+      capabilities: pageCopy.aiCapabilities,
+      image: "/ai-machine-learning-technology.jpg",
+      imageAlt: "AI integration services for SaaS and automation",
+      href: "/services/ai-integration-services",
+      reverse: false,
     },
     {
       id: "real-time-3d-interactive-development",
@@ -209,6 +274,7 @@ export default function ServicesPage() {
       description: t.unityDevelopmentDesc,
       capabilities: t.unityDevelopmentCapabilities,
       stack: t.unityDevelopmentStack,
+      href: "/projects/ar-earring-virtual-try-on",
       buttonLabel: t.unityDevelopmentButton,
       buttonHref: "/projects/ar-earring-virtual-try-on",
       image: "/Unity.jpg",
@@ -280,7 +346,16 @@ export default function ServicesPage() {
                       transition: "all 0.3s ease",
                     }}
                   >
-                    {service.title}
+                    {service.href ? (
+                      <Link
+                        href={service.href}
+                        className="inline-block text-inherit no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+                      >
+                        {service.title}
+                      </Link>
+                    ) : (
+                      service.title
+                    )}
                   </h2>
                   <p
                     style={{
@@ -353,15 +428,33 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={service.reverse ? "lg:col-start-1 lg:row-start-1" : ""}>
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
-                    <Image
-                      src={service.image || "/placeholder.svg"}
-                      alt={service.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
+                  {service.href ? (
+                    <Link
+                      href={service.href}
+                      aria-label={service.title}
+                      className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6200] focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+                    >
+                      <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                          src={service.image || "/placeholder.svg"}
+                          alt={service.imageAlt}
+                          fill
+                          className="object-cover transition-transform duration-300 hover:scale-105"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
+                      <Image
+                        src={service.image || "/placeholder.svg"}
+                        alt={service.imageAlt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -370,230 +463,226 @@ export default function ServicesPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-4 sm:px-6">
         <div className="max-w-[1280px] mx-auto">
-          <div className="rounded-2xl p-6 md:p-10 lg:p-12" style={{ background: "#1E1E1E" }}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Form */}
-              <div className="lg:col-span-2">
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="flex flex-row gap-8 items-stretch">
-                    <div className="flex-1 flex flex-col gap-4">
-                    <h2
-                      className="font-bold mb-8 text-white"
-                      style={{
-                        fontFamily: "Onest",
-                        fontWeight: 700,
-                        fontStyle: "normal",
-                        fontSize: "clamp(18px, 1.25vw, 24px)",
-                        lineHeight: "100%",
-                        letterSpacing: "-4%",
-                      }}
-                    >
-                      {t.contactFormHeading}
-                    </h2>
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block mb-2 text-white"
-                          style={{
-                            fontFamily: "Onest",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                          }}
-                        >
-                          {t.name || "Name"}
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder={t.typeYourName || "Type your Name"}
-                          required
-                          className="w-full px-4 py-3 rounded-[4px] border border-[#3A3A3A] text-white placeholder:text-white/50 bg-[#2A2A2A]"
-                          style={{ fontFamily: "Onest" }}
-                        />
-                      </div>
+          <div className="rounded-2xl p-5 sm:p-6 md:p-10 lg:p-12" style={{ background: "#1E1E1E" }}>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-stretch">
+                <div className="w-full min-w-0 xl:flex-1 flex flex-col gap-4">
+                  <h2
+                    className="font-bold mb-6 md:mb-8 text-white"
+                    style={{
+                      fontFamily: "Onest",
+                      fontWeight: 700,
+                      fontStyle: "normal",
+                      fontSize: "clamp(24px, 6vw, 32px)",
+                      lineHeight: "1.12",
+                      letterSpacing: "-0.04em",
+                    }}
+                  >
+                    {t.contactFormHeading}
+                  </h2>
 
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block mb-2 text-white"
-                          style={{
-                            fontFamily: "Onest",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                          }}
-                        >
-                          {t.email || "Email"}
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder={t.typeYourEmail || "Type your email"}
-                          required
-                          className="w-full px-4 py-3 rounded-[4px] border border-[#3A3A3A] text-white placeholder:text-white/50 bg-[#2A2A2A]"
-                          style={{ fontFamily: "Onest" }}
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="message"
-                          className="block mb-2 text-white"
-                          style={{
-                            fontFamily: "Onest",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                          }}
-                        >
-                          {t.message || "Message"}
-                        </label>
-                        <textarea
-                          id="message"
-                          rows={4}
-                          value={formData.message}
-                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          placeholder={t.typeYourMessage || "Type your message"}
-                          required
-                          className="w-full px-4 py-3 rounded-[4px] border border-[#3A3A3A] text-white placeholder:text-white/50 resize-none bg-[#2A2A2A]"
-                          style={{ fontFamily: "Onest" }}
-                        />
-                      </div>
-                    </div>
-                    <div className="relative flex-1 rounded-2xl overflow-hidden min-h-0 mb-1">
-                      <Image
-                        src="/images/f236a65b9dcdd59fe25f5a9694d5243e04bca53a-20-281-29.jpg"
-                        alt="Developer working at desk"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap items-center gap-6 mt-4">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className={`
-                        relative overflow-hidden
-                        flex items-center justify-center gap-[10px]
-                        text-[16px] font-medium leading-[1]
-                        text-white
-                        transition duration-300 ease-out
-                        disabled:cursor-not-allowed disabled:opacity-50
-                        bg-[#FF6200] rounded-[50px]
-                        hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000]
-                        active:bg-gradient-to-br active:from-[#FF6200] active:to-[#000000]
-                        active:scale-[0.98]
-                      `}
-                      onMouseEnter={(e) => {
-                        if (!isSubmitting) {
-                          e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (!isSubmitting) {
-                          e.currentTarget.style.background = "#FF6200"
-                        }
-                      }}
-                      onMouseDown={(e) => {
-                        if (!isSubmitting) {
-                          e.currentTarget.style.background = "linear-gradient(93.96deg, #FF6200 -62.56%, #000000 61.87%)"
-                        }
-                      }}
-                      onMouseUp={(e) => {
-                        if (!isSubmitting) {
-                          e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
-                        }
-                      }}
-                      style={{
-                        width: "264px",
-                        height: "40px",
-                        padding: "4px 14px",
-                        fontFamily: "Onest",
-                      }}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="w-5 h-5 animate-spin" />
-                          {t.sending || "Sending..."}
-                        </>
-                      ) : (
-                        t.send || "Send"
-                      )}
-                    </button>
-
+                  <div>
                     <label
-                      htmlFor="attach-file"
-                      className="flex items-center gap-2 cursor-pointer text-white hover:opacity-80 transition"
-                      style={{ fontFamily: "Onest", fontSize: "16px" }}
+                      htmlFor="name"
+                      className="block mb-2 text-white"
+                      style={{
+                        fontFamily: "Onest",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                      }}
                     >
-                      <Paperclip size={18} color="#FF6200" />
-                      {t.attachFile || "Attach file (optional)"}
+                      {t.name || "Name"}
                     </label>
-
                     <input
-                      ref={fileInputRef}
-                      id="attach-file"
-                      type="file"
-                      multiple
-                      accept=".doc,.docx,.pdf,.ppt,.pptx"
-                      onChange={handleFileSelect}
-                      className="hidden"
-                    />
-                  </div>
-
-                  {files.length > 0 && (
-                    <div className="flex flex-wrap gap-3 mt-3">
-                      {files.map((file, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center gap-2 px-4 py-2 bg-[#2A2A2A] rounded-full text-white text-sm border border-[#3A3A3A]"
-                        >
-                          <span className="truncate max-w-[180px]">{file.name}</span>
-                          <button type="button" onClick={() => removeFile(idx)}>
-                            <X size={14} />
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  <div className="flex items-start gap-3 mt-5">
-                    <input
-                      type="checkbox"
-                      id="terms"
-                      checked={formData.acceptTerms}
-                      onChange={(e) => setFormData({ ...formData, acceptTerms: e.target.checked })}
-                      className="mt-1 w-4 h-4 rounded border-[#3A3A3A] bg-[#2A2A2A]"
-                    />
-                    <label className="text-sm text-white/80" style={{ fontFamily: "Onest" }}>
-                      {t.iAccept || "I Accept"}{" "}
-                      <Link href="/terms" className="underline text-white hover:text-[#FF6200]">
-                        {t.acceptTerms || "Terms and Conditions"}
-                      </Link>
-                      .<br />
-                      {t.bySubmitting || "By submitting your email, you accept terms and conditions."}<br />
-                      {t.mayEcho || "We may send you occasionally marketing emails."}
-                    </label>
-                  </div>
-
-                  {submitStatus && (
-                    <div
-                      className={`p-4 rounded-[4px] mt-5 ${submitStatus.type === "success" ? "bg-green-500/20 text-green-400" : "bg-red-500/20 text-red-400"
-                        }`}
+                      type="text"
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder={t.typeYourName || "Type your Name"}
+                      required
+                      className="w-full px-4 py-3 rounded-[4px] border border-[#3A3A3A] text-white placeholder:text-white/50 bg-[#2A2A2A]"
                       style={{ fontFamily: "Onest" }}
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-white"
+                      style={{
+                        fontFamily: "Onest",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                      }}
                     >
-                      {submitStatus.message}
-                    </div>
-                  )}
-                </form>
+                      {t.email || "Email"}
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder={t.typeYourEmail || "Type your email"}
+                      required
+                      className="w-full px-4 py-3 rounded-[4px] border border-[#3A3A3A] text-white placeholder:text-white/50 bg-[#2A2A2A]"
+                      style={{ fontFamily: "Onest" }}
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block mb-2 text-white"
+                      style={{
+                        fontFamily: "Onest",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                      }}
+                    >
+                      {t.message || "Message"}
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder={t.typeYourMessage || "Type your message"}
+                      required
+                      className="w-full px-4 py-3 rounded-[4px] border border-[#3A3A3A] text-white placeholder:text-white/50 resize-none bg-[#2A2A2A]"
+                      style={{ fontFamily: "Onest" }}
+                    />
+                  </div>
+                </div>
+
+                <div className="relative hidden xl:block xl:flex-1 rounded-2xl overflow-hidden min-h-[420px] mb-1">
+                  <Image
+                    src="/images/f236a65b9dcdd59fe25f5a9694d5243e04bca53a-20-281-29.jpg"
+                    alt="Developer working at desk"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
-            </div>
+
+              <div className="flex flex-col lg:flex-row lg:flex-wrap items-stretch lg:items-center gap-4 lg:gap-6 mt-4">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`
+                    relative overflow-hidden
+                    flex w-full lg:w-[264px] items-center justify-center gap-[10px]
+                    text-[16px] font-medium leading-[1]
+                    text-white
+                    transition duration-300 ease-out
+                    disabled:cursor-not-allowed disabled:opacity-50
+                    bg-[#FF6200] rounded-[50px]
+                    hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000]
+                    active:bg-gradient-to-br active:from-[#FF6200] active:to-[#000000]
+                    active:scale-[0.98]
+                  `}
+                  onMouseEnter={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.background = "#FF6200"
+                    }
+                  }}
+                  onMouseDown={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.background = "linear-gradient(93.96deg, #FF6200 -62.56%, #000000 61.87%)"
+                    }
+                  }}
+                  onMouseUp={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.background = "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)"
+                    }
+                  }}
+                  style={{
+                    height: "40px",
+                    padding: "4px 14px",
+                    fontFamily: "Onest",
+                  }}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      {t.sending || "Sending..."}
+                    </>
+                  ) : (
+                    t.send || "Send"
+                  )}
+                </button>
+
+                <label
+                  htmlFor="attach-file"
+                  className="flex items-center justify-center lg:justify-start gap-2 cursor-pointer text-white hover:opacity-80 transition"
+                  style={{ fontFamily: "Onest", fontSize: "16px" }}
+                >
+                  <Paperclip size={18} color="#FF6200" />
+                  {t.attachFile || "Attach file (optional)"}
+                </label>
+
+                <input
+                  ref={fileInputRef}
+                  id="attach-file"
+                  type="file"
+                  multiple
+                  accept=".doc,.docx,.pdf,.ppt,.pptx"
+                  onChange={handleFileSelect}
+                  className="hidden"
+                />
+              </div>
+
+              {files.length > 0 && (
+                <div className="flex flex-wrap gap-3 mt-3">
+                  {files.map((file, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 px-4 py-2 bg-[#2A2A2A] rounded-full text-white text-sm border border-[#3A3A3A]"
+                    >
+                      <span className="truncate max-w-[180px]">{file.name}</span>
+                      <button type="button" onClick={() => removeFile(idx)}>
+                        <X size={14} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div className="flex items-start gap-3 mt-5">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  checked={formData.acceptTerms}
+                  onChange={(e) => setFormData({ ...formData, acceptTerms: e.target.checked })}
+                  className="mt-1 w-4 h-4 rounded border-[#3A3A3A] bg-[#2A2A2A]"
+                />
+                <label className="text-sm text-white/80" style={{ fontFamily: "Onest" }}>
+                  {t.iAccept || "I Accept"}{" "}
+                  <Link href="/terms" className="underline text-white hover:text-[#FF6200]">
+                    {t.acceptTerms || "Terms and Conditions"}
+                  </Link>
+                  .<br />
+                  {t.bySubmitting || "By submitting your email, you accept terms and conditions."}<br />
+                  {t.mayEcho || "We may send you occasionally marketing emails."}
+                </label>
+              </div>
+
+              {submitStatus && (
+                <div
+                  className={`p-4 rounded-[4px] mt-5 ${submitStatus.type === "success" ? "bg-green-500/20 text-green-400" : "bg-red-500/20 text-red-400"
+                    }`}
+                  style={{ fontFamily: "Onest" }}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </section>
