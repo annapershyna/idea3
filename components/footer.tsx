@@ -26,12 +26,19 @@ const footerContent = {
     sensorInfobox: "Sensor Infobox",
     ecommercePlatform: "High-performance eCommerce platform",
     customWeb: "Custom web solutions",
+    WebApp: "Web Application Development",
+    Symbotic: "Internal Monitoring System for Symbotic",
     waltairRobotics: "Waltair Robotics (Mobile App v4)",
+    AREarring: "AR Earring Virtual Try-On (Unity)",
+    DevOps: "DevOps for Yotewo",
     mobileApps: "Mobile applications",
     unityDevelopment: "Unity development",
     uxui: "UI/UX and Graphic Design",
     qa: "Manual and Automation QA",
     devops: "DevOps",
+    mvpDevelopmentServices: "MVP development services",
+    dedicatedDevelopmentTeam: "Dedicated development team",
+    aiintegrationservices: "AI Integration",
     dataAnalytics: "Data Analytics",
     viewAllPosts: "View all posts",
     address: "Ukraine, Chernihiv,",
@@ -52,13 +59,20 @@ const footerContent = {
     statisticsPlatform: "Платформа статистики",
     sensorInfobox: "Sensor Infobox",
     ecommercePlatform: "Високопродуктивна платформа eCommerce",
+    AREarring: "AR примірка сережок (Unity)",
+    DevOps: "DevOps для Yotewo",
     customWeb: "Кастомні веб-рішення",
-    waltairRobotics: "Waltair Robotics (Mobile App v4)",  
+    WebApp: "Розробка web-додатків",
+    waltairRobotics: "Waltair Robotics (Mobile App v4)",
+    Symbotic: "Система внутрішнього моніторингу для Symbotic",
     mobileApps: "Мобільні додатки",
     unityDevelopment: "Розробка Unity",
     uxui: "Дизайн UI/UX та графіка",
     qa: "Ручне тестування та автоматизація QA",
     devops: "DevOps",
+    mvpDevelopmentServices: "Послуги з розробки MVP",
+    dedicatedDevelopmentTeam: "Послуги виділеної команди розробки",
+    aiintegrationservices: "AI-інтеграція",
     dataAnalytics: "Аналітика даних",
     viewAllPosts: "Переглянути всі статті",
     address: "Україна, Чернігів,",
@@ -323,10 +337,36 @@ export function Footer() {
                 >
                  {t.waltairRobotics}
                 </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects/ar-earring-virtual-try-on"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                 {t.AREarring}
+                </Link>
               </li>              
+              <li>
+                <Link
+                  href="/projects/devops-for-yotewo"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                 {t.DevOps}
+                </Link>
+              </li> 
+              <li>
+                <Link
+                  href="/projects#internal-monitoring-system-symbotic"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300 line-clamp-2"
+                >
+                 {t.Symbotic}
+                </Link>
+              </li> 
             </ul>
           </div>
-
           <div className="lg:col-span-2">
             <Link
               href="/services"
@@ -338,22 +378,40 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services#custom-web-solutions"
+                  href="/services/custom-software-development"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
                   {t.customWeb}
                 </Link>
               </li>
+               <li>
+                <Link
+                  href="/services/web-application-development"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.WebApp}
+                </Link>
+              </li>             
               <li>
                 <Link
-                  href="/services#mobile-applications"
+                  href="/services/mobile-app-development"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
                   {t.mobileApps}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/services/ai-integration-services"
+                  onClick={handleLinkClick}
+                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+                >
+                  {t.aiintegrationservices}
+                </Link>
+              </li>          
               <li>
                 <Link
                   href="/services#ux-ui-design"
@@ -365,7 +423,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#qa"
+                  href="/services/qa-automation-services"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
@@ -373,14 +431,34 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services#devops"
-                  onClick={handleLinkClick}
-                  className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
-                >
-                  {t.devops}
-                </Link>
-              </li>
+              <Link
+                href="/services/devops-services"
+                onClick={handleLinkClick}
+                className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+              >
+                {t.devops}
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                href="/services/mvp-development-services"
+                onClick={handleLinkClick}
+                className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+              >
+                {t.mvpDevelopmentServices}
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                href="/services/dedicated-development-team"
+                onClick={handleLinkClick}
+                className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
+              >
+                {t.dedicatedDevelopmentTeam}
+              </Link>
+            </li>
               <li>
                 <Link
                   href="/services#data-analytics"
@@ -392,7 +470,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#real-time-3d-interactive-development"
+                  href="/services/unity-development-services"
                   onClick={handleLinkClick}
                   className="text-[#A7A7A7] hover:text-[#FFFFFF] active:text-[#FBC6A3] text-sm transition-colors duration-300"
                 >
