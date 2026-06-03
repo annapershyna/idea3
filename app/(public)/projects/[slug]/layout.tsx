@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { slug: string } | 
       excerpt: "Markerless AR earring try-on PoC built with Unity face tracking, dynamic anchors, and realistic accessory physics.",
     },
     "devops-for-yotewo": {
-      title: "DevOps for Yotewo",
+      title: "DevOps",
       excerpt: "End-to-end DevOps ecosystem across AWS and Azure with CI/CD automation, secure networking, and cost governance.",
     },
   }
