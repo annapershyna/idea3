@@ -289,7 +289,7 @@ export default function ServicesPage() {
       description: t.unityDevelopmentDesc,
       capabilities: t.unityDevelopmentCapabilities,
       stack: t.unityDevelopmentStack,
-      href: "/projects/ar-earring-virtual-try-on",
+      href: "/services/unity-development-services",
       buttonLabel: t.unityDevelopmentButton,
       buttonHref: "/projects/ar-earring-virtual-try-on",
       image: "/Unity.jpg",
