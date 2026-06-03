@@ -182,7 +182,7 @@ export default function ServicesPage() {
     setSubmitStatus(null)
 
     try {
-      // Wait for grecaptcha to be ready
+      // Wait for grecaptcha ready
       await new Promise<void>((resolve) => {
         if ((window as any).grecaptcha) {
           resolve()
