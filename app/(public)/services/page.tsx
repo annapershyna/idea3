@@ -24,6 +24,43 @@ const serviceTechIcons: Record<string, string> = {
   ARCore: "/icons/tech/arcore.svg",
   "HTC Vive": "/icons/tech/htc-vive.svg",
   "C# (.NET Framework)": "/icons/tech/dotnet-framework.svg",
+  TypeScript: "/icons/tech/typescript.svg",
+  React: "/icons/tech/react.svg",
+  "Next.js": "/icons/tech/nextjs.svg",
+  "Node.js": "/icons/tech/nodejs.svg",
+  GraphQL: "/icons/tech/graphql.svg",
+  PostgreSQL: "/icons/tech/postgresql.svg",
+  "Tailwind CSS": "/icons/tech/tailwindcss.svg",
+  Vercel: "/icons/tech/vercel.svg",
+  Figma: "/icons/tech/figma.svg",
+  "Adobe XD": "/icons/tech/adobe-xd.svg",
+  Prototyping: "/icons/tech/prototyping.svg",
+  "Design Systems": "/icons/tech/design-systems.svg",
+  "User Research": "/icons/tech/user-research.svg",
+  Accessibility: "/icons/tech/accessibility.svg",
+  Jest: "/icons/tech/jest.svg",
+  Cypress: "/icons/tech/cypress.svg",
+  Playwright: "/icons/tech/playwright.svg",
+  Selenium: "/icons/tech/selenium.svg",
+  TestRail: "/icons/tech/testrail.svg",
+  "API Testing": "/icons/tech/api-testing.svg",
+  Kubernetes: "/icons/tech/kubernetes.svg",
+  Docker: "/icons/tech/docker.svg",
+  Terraform: "/icons/tech/terraform.svg",
+  GitHub: "/icons/tech/github.svg",
+  CircleCI: "/icons/tech/circleci.svg",
+  AWS: "/icons/tech/aws.svg",
+  "Cloud Run": "/icons/tech/cloud-run.svg",
+  Grafana: "/icons/tech/grafana.svg",
+  Python: "/icons/tech/python.svg",
+  "Data Visualization": "/icons/tech/analytics.svg",
+  BigQuery: "/icons/tech/bigquery.svg",
+  "React Native": "/icons/tech/react-native.svg",
+  Flutter: "/icons/tech/flutter.svg",
+  Swift: "/icons/tech/swift.svg",
+  Kotlin: "/icons/tech/kotlin.svg",
+  Firebase: "/icons/tech/firebase.svg",
+  Stripe: "/icons/tech/stripe.svg",
 }
 
 const servicePageCopy = {
@@ -40,8 +77,8 @@ const servicePageCopy = {
     aiDesc:
       "We integrate LLMs, AI agents, RAG architecture, AI-powered search, recommendation systems, and workflow automation directly into SaaS products and business operations with production-grade monitoring, cost control, and security.",
     aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
-        webApplicationTitle: "Web Application Development",
-        webApplicationDesc:
+    webApplicationTitle: "Web Application Development",
+    webApplicationDesc:
       "We build scalable web applications with clean frontend/backend separation, optimized data layers, and cloud-native architecture — engineered for performance, security, and long-term maintainability. From SPAs and real-time dashboards to B2B portals and internal tooling, every system is designed to handle growing user load.",
   },
   uk: {
@@ -59,7 +96,7 @@ const servicePageCopy = {
     aiCapabilities: "LLM integration · AI agents · RAG · AI search · Document processing · Workflow automation",
     webApplicationTitle: "Розробка web-додатків",
     webApplicationDesc:
-      "Ми будуємо масштабовані web-додатки з чітким розділенням frontend/backend, оптимізованими шарами даних і нативною хмарною архітектурою — розроблені для продуктивності, безпеки і довгострокової підтримуваності. Від SPA і дашбордів у режимі реального часу до B2B порталів і внутрішніх інструментів — кожна система спроектована для обробки зростаючого навантаження.",
+      "Ми будуємо масштабовані web-додатки з чітким розділенням frontend/backend, оптимізованими шарами даних і нативною хмарною архітектурою — спроектовані для продуктивності, безпеки та довгострокової підтримки.",
   },
 } as const
 
@@ -200,6 +237,7 @@ export default function ServicesPage() {
       imageAlt: "Custom web solutions - laptop with code",
       href: "/services/custom-software-development",
       reverse: true,
+      stack: t.customWebSolutionsStack,
     },
     {
       id: "web-application-development",
@@ -209,6 +247,7 @@ export default function ServicesPage() {
       imageAlt: "web application development",
       href: "/services/web-application-development",
       reverse: false,
+      stack: t.customWebSolutionsStack,
     },
     {
       id: "ux-ui-design",
@@ -217,6 +256,7 @@ export default function ServicesPage() {
       image: "/images/8d64c3f21c11f588925bab77e415bd557cad385b.jpg",
       imageAlt: "UX/UI and Graphic Design workspace",
       reverse: true,
+      stack: t.uiUxDesignStack,
     },
     {
       id: "qa",
@@ -226,6 +266,7 @@ export default function ServicesPage() {
       imageAlt: "Manual and Automation QA - testing screens",
       href: "/services/qa-automation-services",
       reverse: false,
+      stack: t.qaAutomationStack,
     },
     {
       id: "devops",
@@ -235,6 +276,7 @@ export default function ServicesPage() {
       imageAlt: "DevOps - keyboard and development",
       href: "/services/devops-services",
       reverse: true,
+      stack: t.devopsStack,
     },
     {
       id: "data-analytics",
@@ -243,6 +285,7 @@ export default function ServicesPage() {
       image: "/images/ee788060a2aeeb43a086780a10e052075317f0cd.jpg",
       imageAlt: "Data Analytics - graphs and charts",
       reverse: false,
+      stack: t.dataAnalyticsStack,
     },
     {
       id: "mobile-applications",
@@ -252,6 +295,7 @@ export default function ServicesPage() {
       imageAlt: "Mobile Applications - app icons",
       href: "/services/mobile-app-development",
       reverse: true,
+      stack: t.mobileApplicationsStack,
     },
     {
       id: "mvp-development-services",
@@ -262,6 +306,7 @@ export default function ServicesPage() {
       imageAlt: "MVP development services for startups",
       href: "/services/mvp-development-services",
       reverse: false,
+      stack: t.customWebSolutionsStack,
     },
     {
       id: "dedicated-development-team",
@@ -272,6 +317,7 @@ export default function ServicesPage() {
       imageAlt: "Dedicated development team working together",
       href: "/services/dedicated-development-team",
       reverse: true,
+      stack: t.customWebSolutionsStack,
     },
     {
       id: "ai-integration-services",
@@ -282,6 +328,7 @@ export default function ServicesPage() {
       imageAlt: "AI integration services for SaaS and automation",
       href: "/services/ai-integration-services",
       reverse: false,
+      stack: ["Python", "OpenAI", "Anthropic", "LangChain", "Pinecone", "ChromaDB"],
     },
     {
       id: "real-time-3d-interactive-development",
@@ -434,7 +481,7 @@ export default function ServicesPage() {
                   {service.buttonHref && service.buttonLabel && (
                     <Link
                       href={service.buttonHref}
-                      className="mt-7 inline-flex h-10 items-center justify-center rounded-full bg-[#FF6200] px-5 text-sm font-medium text-white transition hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-black"
+                      className="mt-7 inline-flex h-10 items-center justify-center rounded-full bg-[#FF6200] px-5 text-sm font-medium text-white transition hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#FF8533]"
                       style={{ fontFamily: "Onest" }}
                     >
                       {service.buttonLabel}
