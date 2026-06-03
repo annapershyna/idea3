@@ -273,7 +273,7 @@ export default function ServicesPage() {
       title: t.devops,
       description: t.devopsDesc,
       image: "/images/45fc920cb000857538e44a289f252b1506456ab8.jpg",
-      imageAlt: "DevOps - keyboard and development",
+      imageAlt: "DevOps development",
       href: "/services/devops-services",
       reverse: true,
       stack: t.devopsStack,
