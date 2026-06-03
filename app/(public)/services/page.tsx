@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-const serviceTechIcons: Record<string, string> = {
+const serviceTechIcons: Record<string, string | null> = {
   ARKit: "/icons/tech/arkit.svg",
   "AR Foundation": "/icons/tech/ar-foundation.svg",
   WebGL: "/icons/tech/webgl.svg",
@@ -25,42 +25,47 @@ const serviceTechIcons: Record<string, string> = {
   "HTC Vive": "/icons/tech/htc-vive.svg",
   "C# (.NET Framework)": "/icons/tech/dotnet-framework.svg",
   TypeScript: "/icons/tech/typescript.svg",
-  React: "/icons/tech/react.svg",
-  "Next.js": "/icons/tech/nextjs.svg",
+  React: null,
+  "Next.js": null,
   "Node.js": "/icons/tech/nodejs.svg",
   GraphQL: "/icons/tech/graphql.svg",
-  PostgreSQL: "/icons/tech/postgresql.svg",
-  "Tailwind CSS": "/icons/tech/tailwindcss.svg",
+  PostgreSQL: null,
+  "Tailwind CSS": null,
   Vercel: "/icons/tech/vercel.svg",
-  Figma: "/icons/tech/figma.svg",
-  "Adobe XD": "/icons/tech/adobe-xd.svg",
-  Prototyping: "/icons/tech/prototyping.svg",
-  "Design Systems": "/icons/tech/design-systems.svg",
-  "User Research": "/icons/tech/user-research.svg",
-  Accessibility: "/icons/tech/accessibility.svg",
+  Figma: null,
+  "Adobe XD": null,
+  Prototyping: null,
+  "Design Systems": null,
+  "User Research": null,
+  Accessibility: null,
   Jest: "/icons/tech/jest.svg",
   Cypress: "/icons/tech/cypress.svg",
   Playwright: "/icons/tech/playwright.svg",
-  Selenium: "/icons/tech/selenium.svg",
-  TestRail: "/icons/tech/testrail.svg",
-  "API Testing": "/icons/tech/api-testing.svg",
-  Kubernetes: "/icons/tech/kubernetes.svg",
-  Docker: "/icons/tech/docker.svg",
+  Selenium: null,
+  TestRail: null,
+  "API Testing": null,
+  Kubernetes: null,
+  Docker: null,
   Terraform: "/icons/tech/terraform.svg",
   GitHub: "/icons/tech/github.svg",
   CircleCI: "/icons/tech/circleci.svg",
-  AWS: "/icons/tech/aws.svg",
+  AWS: null,
   "Cloud Run": "/icons/tech/cloud-run.svg",
   Grafana: "/icons/tech/grafana.svg",
-  Python: "/icons/tech/python.svg",
+  Python: null,
   "Data Visualization": "/icons/tech/analytics.svg",
-  BigQuery: "/icons/tech/bigquery.svg",
-  "React Native": "/icons/tech/react-native.svg",
+  BigQuery: null,
+  "React Native": null,
   Flutter: "/icons/tech/flutter.svg",
   Swift: "/icons/tech/swift.svg",
   Kotlin: "/icons/tech/kotlin.svg",
   Firebase: "/icons/tech/firebase.svg",
   Stripe: "/icons/tech/stripe.svg",
+  OpenAI: "/icons/tech/openai.svg",
+  Anthropic: "/icons/tech/anthropic.svg",
+  LangChain: "/icons/tech/langchain.svg",
+  Pinecone: "/icons/tech/pinecone.svg",
+  ChromaDB: "/icons/tech/chromadb.svg",
 }
 
 const servicePageCopy = {
@@ -182,7 +187,6 @@ export default function ServicesPage() {
     setSubmitStatus(null)
 
     try {
-      // Wait for grecaptcha ready
       await new Promise<void>((resolve) => {
         if ((window as any).grecaptcha) {
           resolve()
@@ -328,7 +332,7 @@ export default function ServicesPage() {
       imageAlt: "AI integration services for SaaS and automation",
       href: "/services/ai-integration-services",
       reverse: false,
-      stack: ["Python", "OpenAI", "Anthropic", "LangChain", "Pinecone", "ChromaDB"],
+      stack: ["OpenAI", "Anthropic", "LangChain", "Pinecone", "ChromaDB"],
     },
     {
       id: "real-time-3d-interactive-development",
