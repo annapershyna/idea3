@@ -45,7 +45,7 @@ export function Navigation() {
     },
     {
       href: "/projects/devops-for-yotewo",
-      label: "DevOps for Yotewo",
+      label: "DevOps",
     },
   ]
   
