@@ -38,16 +38,22 @@ export const translations = {
     dataAnalytics: "Data Analytics",
     customWebSolutionsDesc:
       "We specialize in creating unique websites and web applications that fully meet your goals and requirements. Whether it's a corporate website, an eCommerce platform, or a custom web solution — our team of experienced developers works closely with you to understand your objectives and deliver solutions that exceed expectations.",
+    customWebSolutionsStack: ["TypeScript", "React", "Next.js", "Node.js", "GraphQL", "PostgreSQL", "Tailwind CSS", "Vercel"],
     uiUxDesignDesc:
       "We create intuitive interfaces (UI) and engaging user experiences (UX) that attract your audience and increase conversions. Our team of talented designers combines creativity with best industry practices. Whether it's a website redesign, mobile app interface, or branding — we work with you to ensure the design precisely matches your vision and brand identity.",
+    uiUxDesignStack: ["Figma", "Adobe XD", "Prototyping", "Design Systems", "User Research", "Accessibility"],
     qaAutomationDesc:
       "Our experienced QA team conducts manual testing to identify issues and ensure functionality, ease of use, and compatibility across various platforms and devices. Additionally, we use automation testing tools to optimize repetitive processes and speed up testing cycles, delivering products to the market faster without compromising quality.",
+    qaAutomationStack: ["Jest", "Cypress", "Playwright", "Selenium", "TestRail", "API Testing"],
     devopsDesc:
       "We provide a full range of DevOps services, including continuous integration, continuous delivery, infrastructure automation, and cloud deployment. Thanks to our expertise, your organization can accelerate product delivery to the market, improve quality, and increase efficiency.",
+    devopsStack: ["Kubernetes", "Docker", "Terraform", "GitHub", "CircleCI", "AWS", "Cloud Run", "Grafana"],
     dataAnalyticsDesc:
       "We apply modern analytical methods and tools to find valuable patterns, trends, and correlations in your data. From business analytics and predictive analytics to data visualization and report creation — our team helps you make informed decisions and drive strategic growth.",
+    dataAnalyticsStack: ["Python", "PostgreSQL", "Grafana", "Analytics", "Data Visualization", "BigQuery"],
     mobileApplicationsDesc:
       "We use cutting-edge technologies and best practices in the industry to create intuitive and functional mobile solutions tailored to your business needs. From concept and design to development and launch — we ensure a smooth and efficient process, delivering high-quality mobile apps that meet your goals and exceed expectations.",
+    mobileApplicationsStack: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Stripe"],
     unityDevelopmentDesc:
       "Most products explain themselves with text. The best ones let you touch, try, and explore. We build AR try-ons, VR training simulators, 3D configurators, and interactive experiences on Unity: one codebase, every platform. No cross-platform chaos at launch, no PoC that ghosts you in week three.",
     unityDevelopmentCapabilities:
@@ -274,19 +280,25 @@ export const translations = {
     devops: "DevOps",
     dataAnalytics: "Аналітика даних",
     customWebSolutionsDesc:
-      "Ми спеціалізуємося на створенні унікальних вебсайтів та веб-додатків, які повністю відповідають вашим цілям та вимогам. Будь то корпоративний сайт, платформа eCommerce або кастомне веб-рішення — наша команда досвідчених розробників тісно співпрацює з вами, щоб зрозуміти ваші цілі та створити рішення, що перевищує очікування.",
+      "Ми спеціалізуємося на створенні унікальних вебсайтів та веб-додатків, які повністю відповідають вашим цілям та вимогам. Чи то корпоративний веб-сайт, платформа електронної комерції чи спеціальне веб-рішення — наша команда досвідчених розробників працює з вами, щоб зрозуміти ваші завдання та надати рішення, що перевищують очікування.",
+    customWebSolutionsStack: ["TypeScript", "React", "Next.js", "Node.js", "GraphQL", "PostgreSQL", "Tailwind CSS", "Vercel"],
     uiUxDesignDesc:
-      "Ми створюємо інтуїтивні інтерфейси (UI) та захоплюючий користувацький досвід (UX), які приваблюють аудиторію та підвищують конверсії. Наша команда талановитих дизайнерів поєднує креативність з кращими галузевими практиками. Будь то редизайн сайту, інтерфейс мобільного додатку чи брендінг, ми працюємо з вами, щоб дизайн точно відповідав вашій візії та ідентичності бренду.",
+      "Ми створюємо інтуїтивні інтерфейси (UI) та захоплюючий користувацький досвід (UX), які приваблюють вашу аудиторію та збільшують конверсію. Наша коман��а талановитих дизайнерів поєднує креативність з кращими практиками галузі. Чи то редизайн веб-сайту, інтерфейс мобільного застосунку чи брендинг — ми працюємо з вами, щоб переконатися, що дизайн точно відповідає вашому бачення та ідентичності бренду.",
+    uiUxDesignStack: ["Figma", "Adobe XD", "Прототипування", "Design Systems", "User Research", "Доступність"],
     qaAutomationDesc:
-      "Наша досвідчена QA-команда проводить ручне тестування, щоб виявити проблеми та забезпечити функціональність, зручність та сумісність на різних платформах та пристроях. Крім того, ми використовуємо інструменти автоматизованого тестування, щоб оптимізувати повторювані процеси та прискорити тестові цикли, забезпечуючи швидший вихід продукту на ринок без втрати якості.",
+      "Наша досвідчена QA-команда проводить ручне тестування, щоб виявити проблеми та забезпечити функціональність, зручність та сумісність на різних платформах та пристроях. Крім того, ми використовуємо інструменти автоматизованого тестування, щоб оптимізувати повторювані процеси та прискорити цикли тестування, доставляючи продукти на ринок швидше без компромісів щодо якості.",
+    qaAutomationStack: ["Jest", "Cypress", "Playwright", "Selenium", "TestRail", "API Testing"],
     devopsDesc:
-      "Ми надаємо повний спектр DevOps-послуг, включаючи безперервну інтеграцію, безперервну доставку, автоматизацію інфраструктури та розгортання в хмарі. Завдяки нашій експертизі ваша організація зможе прискорити вихід продукту на ринок, покращити якість і підвищити ефективність.",
+      "Ми надаємо повний спектр DevOps-послуг, включаючи безперервну інтеграцію, безперервну доставку, автоматизацію інфраструктури та розгортання в хмарі. Завдяки нашому досвіду ваша організація може прискорити поставку продуктів на ринок, поліпшити якість та підвищити ефективність.",
+    devopsStack: ["Kubernetes", "Docker", "Terraform", "GitHub", "CircleCI", "AWS", "Cloud Run", "Grafana"],
     dataAnalyticsDesc:
-      "Ми застосовуємо сучасні аналітичні методи та інструменти, щоб знаходити цінні закономірності, тренди та кореляції у ваших даних. Від бізнес-аналітики та прогнозного аналізу до візуалізації даних і створення звітів — наша команда допомагає приймати обґрунтовані рішення та стимулювати стратегічне зростання.",
+      "Ми застосовуємо сучасні аналітичні методи та інструменти, щоб знаходити цінні закономірності, тренди та кореляції у ваших даних. Від бізнес-аналітики та прогнозної аналітики до візуалізації даних та створення звітів — наша команда допомагає вам приймати обґрунтовані рішення та стимулювати стратегічний рост.",
+    dataAnalyticsStack: ["Python", "PostgreSQL", "Grafana", "Аналітика", "Візуалізація даних", "BigQuery"],
     mobileApplicationsDesc:
-      "Ми використовуємо сучасні технології та кращі практики галузі, щоб створювати інтуїтивні та функціональні мобільні рішення, адаптовані під ваші бізнес-потреби. Від концепції та дизайну до розробки та запуску — ми забезпечуємо плавний та ефективний процес, доставляючи високоякісні мобільні додатки, які відповідають вашим цілям та перевищують очікування.",
+      "Ми використовуємо сучасні технології та кращі практики галузі, щоб створювати інтуїтивні та функціональні мобільні рішення, адаптовані до ваших бізнес-потреб. Від концепції та дизайну до розробки та запуску — ми забезпечуємо плавний та ефективний процес, доставляючи високоякісні мобільні застосунки, які відповідають вашим цілям та перевищують очікування.",
+    mobileApplicationsStack: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Stripe"],
     unityDevelopmentDesc:
-      "Більшість продуктів пояснюють себе текстом. Найкращі — дозволяють доторкнутися, спробувати й дослідити. Ми створюємо AR-примірки, VR-тренажери, 3D-конфігуратори та інтерактивні рішення на Unity: одна кодова база — для всіх платформ. Жодного хаосу з кросплатформеністю на релізі, жодних PoC, що зникають на третьому тижні.",
+      "Більшість продуктів пояснюють себе текстом. Найкращі — дозволяють доторкнутися, спробувати й дослідити. Ми створюємо AR-примірки, VR-симулятори, 3D-конфігуратори та інтерактивні досвіди на Unity: одна кодова база, будь-яка платформа. Без кросплатформного хаосу при запуску, без PoC, що зникає у третьому тижні.",
     unityDevelopmentCapabilities:
       "Мобільний AR · VR-симуляції · 3D-конфігуратори · Інтерактивні PoC · Порятунок legacy-рішень",
     unityDevelopmentStack: ["ARKit", "AR Foundation", "WebGL", "Meta Quest", "C#", "ARCore", "HTC Vive", "C# (.NET Framework)"],
