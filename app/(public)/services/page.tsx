@@ -373,7 +373,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Sections */}
+      {/* Service Section */}
       <section className="pb-16">
         <div className="max-w-[1280px] mx-auto px-6">
           {services.map((service, index) => (
