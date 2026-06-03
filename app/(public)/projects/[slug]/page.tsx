@@ -84,7 +84,7 @@ const techIcons: Record<string, string> = {
 const defaultProjectsData: Record<string, any> = {
   "devops-for-yotewo": {
     title: { en: "DevOps", uk: "DevOps" },
-    featured_image: "/yotewo-blog.png",
+    featured_image: "/devops.png",
     client: { en: "NDA", uk: "NDA" },
     industry: { en: "Cloud Infrastructure / DevOps", uk: "Хмарна інфраструктура / DevOps" },
     duration: { en: "Infrastructure setup phase", uk: "Етап побудови інфраструктури" },
