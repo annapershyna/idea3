@@ -173,8 +173,8 @@ const defaultProjects = [
   {
     id: "7",
     title: {
-      en: "DevOps for Yotewo",
-      uk: "DevOps для Yotewo",
+      en: "DevOps",
+      uk: "DevOps",
     },
     slug: "devops-for-yotewo",
     featured_image: "/yotewo-blog.png",
