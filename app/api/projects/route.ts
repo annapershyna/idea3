@@ -42,7 +42,7 @@ export async function GET(request: Request) {
         image: "/images/3a8ceacf9a599490d7b40d1ec06dca37f1ea0d31.jpg",
         shortDescription: {
           en: "Implemented solution to enhance user engagement and increase visibility for marketing efforts.",
-          uk: "Реалізованого рішення для підвищення залученості користувачів та видимості при маркетингових зусиллях.",
+          uk: "Реалізованого рішення для підвищення залученості користувачів та видимості при маркетингових зу…",
         },
       },
       {
@@ -93,11 +93,11 @@ export async function GET(request: Request) {
         slug: "waltair-robotics",
         image: "/Waltair-Robotics-1.png",
         shortDescription: {
-          en: "Mobile version was stabilized and improved. Fixed regressions in session timers, navigation flow, and video playback, as well as inconsistent UI behavior across devices and orientations. Resolved socket synchronization issues, improved overall code maintainability by reducing monolithic structure, and addressed instability caused by third-party libraries. Added proper localization support and enhanced data visualization capabilities.",
-          uk: "Виправлена мобільна версія, яка мала низку проблем, що впливали на зручність використання та підтримку, зокрема регресії в таймерах сесій, навігації та відтворенні відео, а також нестабільну поведінку інтерфейсу на різних пристроях і в різних орієнтаціях. Додатково виникали проблеми із синхронізацією socket-подій, монолітною та складною для підтримки структурою коду й нестабільністю сторонніх бібліотек. Крім того, бракувало підтримки локалізації та можливостей для візуалізації даних.",
+          en: "Mobile version was stabilized and improved. Fixed regressions in session timers, navigation flow, and video playback, as well as inconsistent UI behavior across devices and orientat…",
+          uk: "Виправлена мобільна версія, яка мала низку проблем, що впливали на зручність використання та підтр…",
         },
       },
-           {
+            {
         id: "5",
         title: {
           en: "Testing Expertise for a Sports Social Platform",
@@ -113,14 +113,14 @@ export async function GET(request: Request) {
       {
         id: "7",
         title: {
-          en: "DevOps for Yotewo",
-          uk: "DevOps для Yotewo",
+          en: "Devops",
+          uk: "Devops",
         },
         slug: "devops-for-yotewo",
-        image: "/yotewo-blog.png",
+        image: "/devops.png",
         shortDescription: {
           en: "Built end-to-end DevOps infrastructure across AWS and Azure with automated CI/CD, secure networking, cost controls, and scalable delivery.",
-          uk: "Побудовано end-to-end DevOps-інфраструктуру на AWS та Azure з автоматизованим CI/CD, secure networking, контролем витрат і готовністю до масштабування.",
+          uk: "Побудовано end-to-end DevOps-інфраструктуру на AWS та Azure з автоматизованим CI/CD, secure networking, контролем витрат …",
         },
       },
     ]
@@ -162,7 +162,7 @@ export async function GET(request: Request) {
         image: "/images/3a8ceacf9a599490d7b40d1ec06dca37f1ea0d31.jpg",
         shortDescription: {
           en: "Implemented solution to enhance user engagement and increase visibility for marketing efforts.",
-          uk: "Реалізованого рішення для підвищення залученості користувачів та видимості при маркетингових зусиллях.",
+          uk: "Реалізованого рішення для підвищення залученості користувачів та видимості при маркетингових зу…",
         },
       },
       {
@@ -213,8 +213,8 @@ export async function GET(request: Request) {
         slug: "waltair-robotics",
         image: "/Waltair-Robotics-1.png",
         shortDescription: {
-          en: "Mobile version was stabilized and improved. Fixed regressions in session timers, navigation flow, and video playback, as well as inconsistent UI behavior across devices and orientations. Resolved socket synchronization issues, improved overall code maintainability by reducing monolithic structure, and addressed instability caused by third-party libraries. Added proper localization support and enhanced data visualization capabilities.",
-          uk: "Виправлена мобільна версія, яка мала низку проблем, що впливали на зручність використання та підтримку, зокрема регресії в таймерах сесій, навігації та відтворенні відео, а також нестабільну поведінку інтерфейсу на різних пристроях і в різних орієнтаціях. Додатково виникали проблеми із синхронізацією socket-подій, монолітною та складною для підтримки структурою коду й нестабільністю сторонніх бібліотек. Крім того, бракувало підтримки локалізації та можливостей для візуалізації даних.",
+          en: "Mobile version was stabilized and improved. Fixed regressions in session timers, navigation flow, and video playback, as well as inconsistent UI behavior across devices and orienta…",
+          uk: "Виправлена мобільна версія, яка мала низку проблем, що впливали на зручність використання та підт…",
         },
       },
       {
