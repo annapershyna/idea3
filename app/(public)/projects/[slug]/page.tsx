@@ -83,9 +83,9 @@ const techIcons: Record<string, string> = {
 // Default project data for fallback
 const defaultProjectsData: Record<string, any> = {
   "devops-for-yotewo": {
-    title: { en: "DevOps for Yotewo", uk: "DevOps для Yotewo" },
+    title: { en: "DevOps", uk: "DevOps" },
     featured_image: "/yotewo-blog.png",
-    client: { en: "Yotewo", uk: "Yotewo" },
+    client: { en: "NDA", uk: "NDA" },
     industry: { en: "Cloud Infrastructure / DevOps", uk: "Хмарна інфраструктура / DevOps" },
     duration: { en: "Infrastructure setup phase", uk: "Етап побудови інфраструктури" },
     team: { en: "DevOps Engineer", uk: "DevOps Engineer" },
