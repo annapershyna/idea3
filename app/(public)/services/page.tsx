@@ -33,6 +33,7 @@ const serviceTechIcons: Record<string, string | null> = {
   "Tailwind CSS": "/icons/tech/tailwindcss.svg",
   Vercel: "/icons/tech/vercel.svg",
   Figma: "/icons/tech/figma.svg",
+  Analytics: "/icons/tech/analytics2.svg",
   "Adobe XD": "/icons/tech/adobe-xd-1.svg", 
   Prototyping: "/icons/tech/prototyping.svg",
   "Design Systems": "/icons/tech/design.svg",
