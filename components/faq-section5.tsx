@@ -18,9 +18,9 @@ const faqItems: FAQItem[] = [
     questionEn: "How much does mobile app development cost?",
     questionUk: "Скільки коштує розробка мобільного додатку?",
     answerEn:
-      "A Flutter MVP for both platforms starts at $25,000–$50,000. Mid-complexity cross-platform apps: $50,000–$100,000. Native builds for complex products: $80,000+ per platform.",
+      "A Flutter MVP for both platforms starts at $2,500+. Mid-complexity cross-platform apps: $5,000+. Native builds for complex products: $5,000+ per platform.",
     answerUk:
-      "Flutter MVP для обох платформ стартує від $25,000–$50,000. Mid-complexity кросплатформні додатки — $50,000–$100,000. Нативні застосунки для складних продуктів — від $80,000+ за платформу.",
+      "Flutter MVP для обох платформ стартує від $2,500+. Mid-complexity кросплатформні додатки — $5,000+. Нативні застосунки для складних продуктів — від $5,000+ за платформу.",
   },
   {
     id: 2,
