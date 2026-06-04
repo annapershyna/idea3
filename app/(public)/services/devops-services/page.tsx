@@ -219,8 +219,8 @@ const copy = {
     costText:
       "We audit existing infrastructure for oversized instances, idle resources, unattached volumes, and missing auto-scaling policies — then implement rightsizing, spot instance strategies, reserved capacity planning, and automated shutdown schedules for non-production environments.",
     costTiers: [
-      ["CI/CD and cloud setup", "$5,000 – $15,000", "Focused pipeline setup and cloud configuration engagement."],
-      ["Ongoing DevOps retainer", "$2,000 – $6,000 / month", "Infrastructure management based on environment complexity."],
+      ["CI/CD and cloud setup", "$500+", "Focused pipeline setup and cloud configuration engagement."],
+      ["Ongoing DevOps retainer", "$500+ / month", "Infrastructure management based on environment complexity."],
       ["Optimization impact", "20–35% lower spend", "Typical cloud cost reduction within 60 days after audit and optimization."],
     ],
     ctaTitle: "Need a DevOps infrastructure audit?",
@@ -288,8 +288,8 @@ const copy = {
     costText:
       "Ми проводимо аудит існуючої інфраструктури на предмет надмірно великих інстансів, неактивних ресурсів, незакріплених дисків і відсутніх політик автоматичного масштабування, після чого впроваджуємо rightsizing, spot instance strategies, reserved capacity planning та автоматизоване вимкнення non-production середовищ.",
     costTiers: [
-      ["CI/CD та cloud setup", "$5,000 – $15,000", "Сфокусоване налаштування CI/CD та конфігурації хмарної інфраструктури."],
-      ["Постійний DevOps retainer", "$2,000 – $6,000 / місяць", "Infrastructure management залежно від складності середовища."],
+      ["CI/CD та cloud setup", "$500+", "Сфокусоване налаштування CI/CD та конфігурації хмарної інфраструктури."],
+      ["Постійний DevOps retainer", "$500+ / місяць", "Infrastructure management залежно від складності середовища."],
       ["Optimization impact", "20–35% lower spend", "Типове скорочення cloud costs протягом 60 днів після аудиту та оптимізації."],
     ],
     ctaTitle: "Потрібен аудит DevOps-інфраструктури?",
