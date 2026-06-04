@@ -529,7 +529,7 @@ export function Navigation() {
                       {/* Column 1 - 30% width */}
                       <div className="flex flex-col gap-3" style={{ width: "30%" }}>
                         <Link
-                          href="/services#custom-web-solutions"
+                          href="/services/custom-software-development"
                           className="transition-all duration-300 ease-out p-2"
                           style={{
                             fontFamily: "Onest",
@@ -560,7 +560,7 @@ export function Navigation() {
                           {t.customWebSolutions}
                         </Link>
                         <Link
-                          href="/services#mobile-applications"
+                          href="/services/mobile-app-development"
                           className="transition-all duration-300 ease-out p-2"
                           style={{
                             fontFamily: "Onest",
@@ -621,6 +621,37 @@ export function Navigation() {
                           {/* Using t.uiUxDesign from useLocale hook instead of currentTranslations */}
                           {t.uiUxDesign}
                         </Link>
+                        <Link
+                          href="/services/ai-integration-services"
+                          className="transition-all duration-300 ease-out p-2"
+                          style={{
+                            fontFamily: "Onest",
+                            fontWeight: 400,
+                            fontSize: "16px",
+                            lineHeight: "100%",
+                            letterSpacing: "0.02em",
+                            color: isDark ? "#FFFFFF99" : "#21212199",
+                            borderRadius: "8px",
+                          }}
+                          onMouseDown={(e) => {
+                            e.currentTarget.style.background = isDark ? "#303030" : "#F5F5F5"
+                            e.currentTarget.style.border = "1px solid #FF620033"
+                          }}
+                          onMouseUp={(e) => {
+                            e.currentTarget.style.background = isDark ? "#303030" : "#F5F5F5"
+                            e.currentTarget.style.border = "none"
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = isDark ? "#303030" : "#F5F5F5"
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = "transparent"
+                            e.currentTarget.style.border = "none"
+                          }}
+                        >
+                          {/* Using t.mobileApplications from useLocale hook instead of currentTranslations */}
+                          {t.ai}
+                        </Link>
                       </div>
 
                       {/* Column 2 - 30% width */}
@@ -657,7 +688,7 @@ export function Navigation() {
                           {t.qaAutomation}
                         </Link>
                         <Link
-                          href="/services#devops"
+                          href="/services/devops-services"
                           className="transition-all duration-300 ease-out p-2"
                           style={{
                             fontFamily: "Onest",
@@ -719,7 +750,7 @@ export function Navigation() {
                           {t.dataAnalytics}
                         </Link>
                         <Link
-                          href="/services#real-time-3d-interactive-development"
+                          href="/services/unity-development-services"
                           className="transition-all duration-300 ease-out p-2"
                           style={{
                             fontFamily: "Onest",
