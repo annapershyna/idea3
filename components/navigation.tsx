@@ -657,7 +657,7 @@ export function Navigation() {
                       {/* Column 2 - 30% width */}
                       <div className="flex flex-col gap-3" style={{ width: "30%" }}>
                         <Link
-                          href="/services#qa"
+                          href="/services/qa-automation-services"
                           className="transition-all duration-300 ease-out p-2"
                           style={{
                             fontFamily: "Onest",
