@@ -128,17 +128,17 @@ const pageCopy = {
     costTiers: [
       {
         label: "Focused SaaS MVP",
-        range: "$20,000+",
+        range: "$2,000+",
         desc: "Core user flows, authentication, one primary integration. Web-based, production-ready in 6–10 weeks.",
       },
       {
         label: "Mobile MVP (Flutter)",
-        range: "$25,000+",
+        range: "$2,500+",
         desc: "iOS and Android from a single Flutter codebase with core flows and Stripe or backend API integration.",
       },
       {
         label: "Complex MVP",
-        range: "$50,000+",
+        range: "$5,000+",
         desc: "Multiple user roles, marketplace mechanics, custom workflows, or compliance-adjacent data handling.",
       },
     ],
@@ -178,17 +178,17 @@ const pageCopy = {
     costTiers: [
       {
         label: "Сфокусований SaaS MVP",
-        range: "$20,000 – $45,000",
+        range: "$2,000+",
         desc: "Ключові сценарії, автентифікація, одна основна інтеграція. Веб, готовий до продакшну за 6–10 тижнів.",
       },
       {
         label: "Мобільний MVP (Flutter)",
-        range: "$25,000+",
+        range: "$2,500+",
         desc: "iOS та Android з однієї Flutter-кодової бази з основними сценаріями та Stripe або API-інтеграцією.",
       },
       {
         label: "Складний MVP",
-        range: "$50,000+",
+        range: "$5,000+",
         desc: "Кілька ролей користувачів, механіка маркетплейсу, кастомні workflow або робота з чутливими даними.",
       },
     ],
