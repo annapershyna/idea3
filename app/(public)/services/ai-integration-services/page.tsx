@@ -253,11 +253,11 @@ const copy = {
       "SaaS products that integrate AI capabilities into core user workflows see measurable retention and engagement improvements. Common patterns include AI-assisted content creation in editors, intelligent search over user-generated data, LLM-driven onboarding flows, and proactive anomaly detection in dashboards. We integrate AI features as first-class product capabilities with the same engineering standards applied to the rest of the product.",
     costTitle: "Cost of AI Integration",
     costText:
-      "A focused LLM integration for a single use case typically ranges from $15,000–$35,000. Multi-workflow AI automation with agent orchestration and custom RAG pipelines ranges from $40,000–$100,000. Ongoing AI operations retainers covering model updates, monitoring, and capability expansion run $2,500–$6,000/month.",
+      "A focused LLM integration for a single use case typically ranges from $3,000+. Multi-workflow AI automation with agent orchestration and custom RAG pipelines ranges from $5,000+. Ongoing AI operations retainers covering model updates, monitoring, and capability expansion run $2,500–$6,000/month.",
     costTiers: [
-      ["Single-use-case LLM integration", "$15,000 – $35,000", "Chatbot, document processing, search, or one focused product capability."],
-      ["Multi-workflow AI automation", "$40,000 – $100,000", "Agent orchestration, custom RAG pipelines, workflow automation, and production hardening."],
-      ["AI operations retainer", "$2,500 – $6,000 / month", "Model updates, monitoring, cost optimization, evaluation, and capability expansion."],
+      ["Single-use-case LLM integration", "$3,000+", "Chatbot, document processing, search, or one focused product capability."],
+      ["Multi-workflow AI automation", "$5,000+", "Agent orchestration, custom RAG pipelines, workflow automation, and production hardening."],
+      ["AI operations retainer", "$500+ / month", "Model updates, monitoring, cost optimization, evaluation, and capability expansion."],
     ] as const,
     ctaTitle: "Ready to scope an AI integration?",
     ctaText:
@@ -267,7 +267,7 @@ const copy = {
     faqs: [
       ["What are AI integration services?", "AI integration services connect large language models and AI infrastructure to your existing product or business workflows, enabling automation, intelligent search, document processing, and conversational interfaces without building AI models from scratch."],
       ["How can AI improve business processes?", "AI automates document-heavy tasks, resolves repetitive support queries without escalation, generates and summarizes content at scale, and surfaces relevant information through semantic search — typically reducing time-on-task by 50–80%."],
-      ["How much does AI integration cost?", "A focused single-use-case integration ranges from $15,000–$35,000. Multi-workflow automation with RAG and agents ranges from $40,000–$100,000. Ongoing operations retainers run $2,500–$6,000/month."],
+      ["How much does AI integration cost?", "A focused single-use-case integration ranges from $3,000+. Multi-workflow automation with RAG and agents ranges from $5,000+. Ongoing operations retainers run $2,500–$6,000/month."],
       ["What is LLM integration?", "LLM integration is the process of connecting a large language model API such as OpenAI, Claude, or Gemini to your product, including prompt engineering, input/output handling, error management, token cost optimization, and monitoring."],
       ["How do AI agents work?", "AI agents are LLM-based systems that can plan, decide which tools to use, and execute multi-step tasks autonomously. They combine an LLM's reasoning capability with defined tools such as API calls, database queries, and file operations."],
       ["What businesses benefit from AI automation?", "Any business with high-volume document processing, repetitive knowledge work, customer support at scale, or large datasets users need to query in natural language can benefit. SaaS, financial services, legal, healthcare, logistics, and eCommerce are frequent adopters."],
@@ -303,11 +303,11 @@ const copy = {
       "SaaS-продукти з інтегрованим AI отримують вимірне зростання retention та engagement. Типові сценарії: AI-асистоване створення контенту в редакторах, інтелектуальний пошук по user-generated data, LLM-based onboarding flows і proactive anomaly detection у dashboards. Ми інтегруємо AI як повноцінну частину продукту з тими ж інженерними стандартами, що й основну систему.",
     costTitle: "Вартість AI-інтеграції",
     costText:
-      "Сфокусована інтеграція LLM для одного сценарію зазвичай коштує $15,000–$35,000. Комплексна AI-автоматизація з агентами та custom RAG pipelines — $40,000–$100,000. Постійний супровід з оновленням моделей, моніторингом і розвитком функціоналу — $2,500–$6,000/місяць.",
+      "Сфокусована інтеграція LLM для одного сценарію зазвичай коштує $3,000+. Комплексна AI-автоматизація з агентами та custom RAG pipelines — $5,000+. Постійний супровід з оновленням моделей, моніторингом і розвитком функціоналу — $2,500–$6,000/місяць.",
     costTiers: [
-      ["Інтеграція LLM для одного use case", "$15,000 – $35,000", "Чат бот, обробка документів, пошук або одна сфокусована product capability."],
-      ["Комплексна AI-автоматизація", "$40,000 – $100,000", "Agent orchestration, custom RAG pipelines, workflow automation і production hardening."],
-      ["AI operations retainer", "$2,500 – $6,000 / місяць", "Оновлення моделей, моніторинг, cost optimization, evaluation і розширення можливостей."],
+      ["Інтеграція LLM для одного use case", "$3,000+", "Чат бот, обробка документів, пошук або одна сфокусована product capability."],
+      ["Комплексна AI-автоматизація", "$5,000+", "Agent orchestration, custom RAG pipelines, workflow automation і production hardening."],
+      ["AI operations retainer", "$500+ / місяць", "Оновлення моделей, моніторинг, cost optimization, evaluation і розширення можливостей."],
     ] as const,
     ctaTitle: "Готові оцінити AI-інтеграцію?",
     ctaText:
@@ -317,7 +317,7 @@ const copy = {
     faqs: [
       ["Що таке AI-інтеграційні сервіси?", "AI-інтеграційні сервіси — це підключення великих мовних моделей та AI-інфраструктури до вашого продукту або бізнес-процесів, що забезпечує автоматизацію, інтелектуальний пошук, обробку документів і діалогові інтерфейси без створення моделей з нуля."],
       ["Як AI може покращити бізнес-процеси?", "AI автоматизує задачі з обробкою документів, вирішує повторювані запити підтримки без оператора, генерує та узагальнює контент у масштабі й забезпечує релевантний семантичний пошук. У середньому це скорочує час виконання задач на 50–80%."],
-      ["Скільки коштує AI-інтеграція?", "Сфокусована інтеграція одного сценарію використання коштує $15,000–$35,000. Комплексна автоматизація кількох процесів із RAG і агентами — $40,000–$100,000. Постійний супровід — $2,500–$6,000 на місяць."],
+      ["Скільки коштує AI-інтеграція?", "Сфокусована інтеграція одного сценарію використання коштує $3,000+. Комплексна автоматизація кількох процесів із RAG і агентами — $5,000+. Постійний супровід — $2,500–$6,000 на місяць."],
       ["Що таке інтеграція LLM?", "Інтеграція великих мовних моделей — це підключення API OpenAI, Claude або Gemini до вашого продукту, включно з налаштуванням запитів, обробкою входів і виходів, керуванням помилками, оптимізацією вартості токенів і моніторингом."],
       ["Як працюють AI-агенти?", "AI-агенти — це системи на основі мовних моделей, які можуть планувати дії, обирати інструменти та виконувати багатокрокові задачі автономно. Вони поєднують логіку LLM із зовнішніми API, базами даних і сервісами."],
       ["Для яких бізнесів корисна AI-автоматизація?", "Для будь-яких бізнесів із великим обсягом обробки даних, документів або звернень. Найчастіше це SaaS, фінансові сервіси, юриспруденція, медицина, логістика та eCommerce."],
