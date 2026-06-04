@@ -182,11 +182,11 @@ const copy = {
     ],
     costTitle: "QA Automation Cost",
     costText:
-      "A focused engagement covering CI/CD integration and core e2e flows starts at $8,000–$20,000. Comprehensive multi-layer automation for a mid-complexity application ranges from $20,000–$50,000. Ongoing QA retainers for coverage maintenance run $2,000–$5,000/month.",
+      "A focused engagement covering CI/CD integration and core e2e flows starts at $1,500+. Comprehensive multi-layer automation for a mid-complexity application ranges from $2,000+. Ongoing QA retainers for coverage maintenance run $2,000–$5,000/month.",
     costTiers: [
-      ["Core e2e and CI/CD setup", "$8,000 – $20,000", "Pull request checks, key user flows, reporting, and deployment gates."],
-      ["Comprehensive QA automation", "$20,000 – $50,000", "Unit, integration, e2e, performance, and security coverage for a mid-complexity app."],
-      ["Ongoing QA retainer", "$2,000 – $5,000 / month", "Coverage maintenance, new feature tests, flaky-test cleanup, and reporting support."],
+      ["Core e2e and CI/CD setup", "$1,500+", "Pull request checks, key user flows, reporting, and deployment gates."],
+      ["Comprehensive QA automation", "$2,500+", "Unit, integration, e2e, performance, and security coverage for a mid-complexity app."],
+      ["Ongoing QA retainer", "$1,000+ / month", "Coverage maintenance, new feature tests, flaky-test cleanup, and reporting support."],
     ] as const,
     ctaTitle: "Need to fix your coverage gaps?",
     ctaText:
@@ -232,11 +232,11 @@ const copy = {
     ],
     costTitle: "Вартість QA Automation",
     costText:
-      "Сфокусований проект, що охоплює інтеграцію CI/CD і ключові наскрізні сценарії, стартує від $8,000–$20,000. Комплексне впровадження автоматизації QA для застосунків середньої складності — від $20,000–$50,000. Постійний супровід QA для підтримки та розширення покриття — від $2,000–$5,000 на місяць.",
+      "Сфокусований проект, що охоплює інтеграцію CI/CD і ключові наскрізні сценарії, стартує від $1,500+. Комплексне впровадження автоматизації QA для застосунків середньої складності — від $2,000–$50,000. Постійний супровід QA для підтримки та розширення покриття — від $2,000–$5,000 на місяць.",
     costTiers: [
-      ["Базове e2e та CI/CD налаштування", "$8,000 – $20,000", "Pull request checks, ключові user flows, звітність і deployment gates."],
-      ["Комплексна QA automation", "$20,000 – $50,000", "Unit, integration, e2e, performance і security coverage для застосунку середньої складності."],
-      ["Постійний QA retainer", "$2,000 – $5,000 / місяць", "Підтримка покриття, тести для нових функцій, cleanup flaky tests і reporting support."],
+      ["Базове e2e та CI/CD налаштування", "$1,500 +", "Pull request checks, ключові user flows, звітність і deployment gates."],
+      ["Комплексна QA automation", "$2,000+", "Unit, integration, e2e, performance і security coverage для застосунку середньої складності."],
+      ["Постійний QA retainer", "$1,000+ / місяць", "Підтримка покриття, тести для нових функцій, cleanup flaky tests і reporting support."],
     ] as const,
     ctaTitle: "Потрібно закрити прогалини в тестовому покритті?",
     ctaText:
