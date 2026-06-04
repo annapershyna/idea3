@@ -223,17 +223,17 @@ const copy = {
     costTiers: [
       [
         "Flutter MVP",
-        "$25,000 – $50,000",
+        "$2,500+",
         "iOS and Android with core flows and basic integrations.",
       ],
       [
         "Mid-complexity app",
-        "$50,000 – $100,000",
+        "$5,000+",
         "Custom UI, real-time features, payment integration, and richer backend workflows.",
       ],
       [
         "Native complex product",
-        "$80,000+ per platform",
+        "$5,000+ per platform",
         "Platform-specific integrations, advanced device APIs, and complex native UX requirements.",
       ],
     ],
@@ -300,17 +300,17 @@ const copy = {
     costTiers: [
       [
         "Flutter MVP",
-        "$25,000 – $50,000",
+        "$2,500+",
         "iOS і Android з ключовими сценаріями та базовими інтеграціями.",
       ],
       [
         "Додаток середньої складності",
-        "$50,000 – $100,000",
+        "$5,000+",
         "Кастомний інтерфейс, real-time фічі, платіжні інтеграції та складніші backend workflows.",
       ],
       [
         "Складний нативний продукт",
-        "$80,000+ за платформу",
+        "$5,000+ за платформу",
         "Платформо-специфічні інтеграції, advanced device APIs і складні native UX вимоги.",
       ],
     ],
