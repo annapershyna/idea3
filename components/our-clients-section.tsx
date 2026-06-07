@@ -20,6 +20,7 @@ const clientLogos = [
   { name: "Sonomics", light: "/icons/tech/son-light.svg", dark: "/icons/tech/son-dark.svg" },
   { name: "Powercode", light: "/icons/tech/powercode-light.svg", dark: "/icons/tech/powercode-dark.svg" },
   { name: "Collab IT company", light: "/icons/tech/logo-black.svg", dark: "/icons/tech/logo-white.svg" },
+  { name: "CONTO.tech", light: "/icons/tech/conto-dark.svg", dark: "/icons/tech/conto-light.svg" },
   ]
 
  {/* { name: "InAppo", light: "/icons/tech/inappo-light.svg", dark: "/icons/tech/inappo-dark.svg" }, */}
