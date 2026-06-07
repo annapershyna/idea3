@@ -160,7 +160,7 @@ const copy = {
     heroTitle: "IoT Solutions & Hardware Integration Services",
     heroSubtitle: "Connect, Monitor, and Control Your Devices at Scale",
     intro:
-      "We design and implement comprehensive IoT systems that connect hardware devices with cloud platforms, enabling real-time monitoring, predictive analytics, and intelligent automation. From industrial IoT to smart home solutions, we handle device integration, data management, and system scalability.[...]
+      "We design and implement comprehensive IoT systems that connect hardware devices with cloud platforms, enabling real-time monitoring, predictive analytics, and intelligent automation. From industrial IoT to smart home solutions, we handle device integration, data management, and system scalability.",
     introStat:
       "Companies using IoT solutions experience an average 25-35% improvement in operational efficiency and 40-50% reduction in maintenance costs through predictive insights.",
     servicesTitle: "IoT Services We Provide",
@@ -207,7 +207,7 @@ const copy = {
     heroTitle: "Послуги IoT рішень та інтеграції обладнання",
     heroSubtitle: "З'єднайте, моніторте та керуйте своїми пристроями у масштабі",
     intro:
-      "Ми проектуємо та впроваджуємо комплексні системи IoT, які з'єднують апаратні пристрої з хмарними платформами, забезпечуючи моніторинг у реальному часі, передбачувальну аналітику та розумну автоматизацію. Від промислового IoT до рішень для смартних будинків - ми займаємося інтеграцією пристроїв, управлінням даними та масштабованістю системи.[...]
+      "Ми проектуємо та впроваджуємо комплексні системи IoT, які з'єднують апаратні пристрої з хмарними платформами, забезпечуючи моніторинг у реальному часі, передбачувальну аналітику та розумну автоматизацію. Від промислового IoT до рішень для смартних будинків — ми займаємося інтеграцією пристроїв, управлінням даними та масштабованістю системи.",
     introStat:
       "Компанії, які використовують рішення IoT, відчувають середнє поліпшення операційної ефективності на 25-35% та зниження витрат на обслуговування на 40-50% завдяки передбачувальним інсайтам.",
     servicesTitle: "Послуги IoT, які ми надаємо",
