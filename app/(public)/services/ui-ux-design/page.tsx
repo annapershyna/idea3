@@ -18,7 +18,6 @@ import {
   Eye,
 } from "lucide-react";
 import { RequestConsultationSection } from "@/components/request-consultation-section";
-import { FAQSection5 } from "@/components/faq-section5";
 import { useLocale } from "@/lib/locale-context";
 
 const services = [
@@ -28,7 +27,7 @@ const services = [
       en: "Design That Converts and Delights.",
       uk: "Дизайн, який конвертує та захоплює.",
     },
-    image: "/images/ui-ux-mobile.jpg",
+    image: "/images/ui-ux-mobile.png",
   },
   {
     title: { en: "Web Application Design", uk: "Дизайн веб-додатків" },
@@ -44,7 +43,7 @@ const services = [
       en: "Complete visual identity systems including logo design, color palettes, typography, and brand guidelines. Graphic design that communicates your brand story effectively.",
       uk: "Повні системи візуальної ідентичності включаючи дизайн логотипу, кольорові палітри, типографію та брендові гайдлайни. Графічний дизайн, який ефективно передає вашу брендову історію.",
     },
-    image: "/images/ui-ux-brand.jpg",
+    image: "/images/ui-ux-brand.jpeg",
   },
   {
     title: { en: "Design Systems & Component Libraries", uk: "Дизайн-системи та бібліотеки компонентів" },
@@ -59,7 +58,7 @@ const services = [
 const stacks = [
   {
     label: "Design Tools",
-    items: ["Figma", "Adobe XD", "Framer", "Principle"],
+    items: ["Figma", "Adobe XD", "Framer", "Principle", "Webflow"],
     icon: Palette,
   },
   { label: "Prototyping", items: ["Interactive Prototypes", "User Flows", "Wireframes", "Handoff"], icon: Layers },
@@ -70,7 +69,7 @@ const stacks = [
   },
   {
     label: "Design Systems",
-    items: ["Component Libraries", "Design Tokens", "Documentation", "Brand Guidelines"],
+    items: ["Component Libraries", "Documentation", "Brand Guidelines"],
     icon: Settings,
   },
   {
@@ -80,20 +79,35 @@ const stacks = [
   },
   {
     label: "Collaboration",
-    items: ["FigJam", "Design Reviews", "Feedback Tools", "Developer Handoff"],
+    items: ["FigJam", "Maze"],
     icon: Users,
   },
 ] as const;
 
 const techIcons: Record<string, string> = {
   Figma: "/icons/tech/figma.svg",
-  "Adobe XD": "/icons/tech/adobe-xd.svg",
+  FigJam: "/icons/tech/figma.svg",
+  "Adobe XD": "/icons/tech/adobe-xd-1.svg",
   Framer: "/icons/tech/framer.svg",
   Principle: "/icons/tech/principle.svg",
-  "User Research": "/icons/tech/user-research.svg",
-  "Usability Testing": "/icons/tech/testing.svg",
+  Webflow: "/icons/tech/webflow.svg",
+  "User Research": "/icons/tech/user-research-2.svg",
+  "Usability Testing": "/icons/tech/usability-testingg.svg",
   Accessibility: "/icons/tech/accessibility.svg",
   "Design Systems": "/icons/tech/design-system.svg",
+  Maze: "/icons/tech/Maze.svg",
+  "Adobe Creative Suite": "/icons/tech/Adobe_Creative_Suite.svg",
+  Illustration: "/icons/tech/Adobe-illustrator.svg",
+  Animation: "/icons/tech/animation.svg",
+  "Motion Design": "/icons/tech/motion-design.svg",
+  "Component Libraries": "/icons/tech/libraries.svg",
+  Documentation: "/icons/tech/documentation.svg",
+  "Brand Guidelines": "/icons/tech/brand-guidelines.svg",
+  "A/B Testing": "/icons/tech/ab-testing.svg",
+  "Interactive Prototypes": "/icons/tech/interactive-prototypes.svg",
+  "User Flows": "/icons/tech/user-flows.svg",
+  Wireframes: "/icons/tech/wireframes.svg",
+  Handoff: "/icons/tech/handoff.svg",
 };
 
 const processSteps = [
@@ -159,34 +173,41 @@ const copy = {
     practiceCta: "See it in practice",
     designPhilosophy:
       "At IdeaTeam, we don't just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in competitive markets. Every design decision is rooted in user research, validated through testing, and optimized for measurable business outcomes.",
-    whyChooseTitle: "Why Choose IdeaTeam for Design",
+    whyChooseTitle: "Why Choose IdeaTeam for Your Product Design",
     whyChooseItems: [
-      "User-first approach backed by research and validation",
-      "Full-cycle product design from concept to production",
-      "Modern, conversion-oriented design thinking",
-      "Seamless collaboration with development teams",
-      "Fast iterations based on feedback",
-      "Proven expertise across industries",
+      "User-first approach — every design decision is based on real user needs and validated through research and testing",
+      "Full-cycle product design from concept to production-ready design system",
+      "Modern, consistent and conversion-oriented graphic design",
+      "Seamless collaboration between design and development teams",
+      "Fast iterations based on user feedback and business goals",
+      "Proven experience across various industries and types of digital products",
+    ],
+    practiceCta: "See it in practice",
+    designValueTitle: "Why product design matters for your business",
+    designValueItems: [
+      "Professional design services are much more than just making interfaces look good. In today\u2019s competitive market, thoughtful product design directly affects user retention, conversion rates, and overall business success.",
+      "A well-designed digital product builds trust, simplifies complex tasks, and creates emotional connection with your audience. Companies that invest in quality UI/UX see significantly better results compared to those who treat design as an afterthought.",
+      "At IdeaTeam, we help you create not only beautiful but also effective solutions that support your long-term goals and give you a strong competitive advantage.",
     ],
     techTitle: "Design Tools & Technologies",
     processTitle: "Our Design Process",
-    costTitle: "UI/UX Design Pricing",
+    costTitle: "How Much Does Quality Product Design Cost in 2026?",
     costText:
-      "The cost of product design depends on the complexity of the project, the depth of research, and the scope of deliverables. At IdeaTeam we offer transparent pricing and several cooperation formats — from fixed-price projects to dedicated design teams. We always focus on delivering maximum value for your investment. Most clients see return on design investment through increased conversions and stronger market position within the first months after launch.",
+      "The cost of product design depends on the complexity of the project, the depth of research, and the scope of deliverables. At IdeaTeam we offer transparent pricing and several cooperation formats — from fixed-price projects to dedicated design teams.\n\nWe always focus on delivering maximum value for your investment. Most clients see return on design investment through increased conversions and stronger market position within the first months after launch.",
     costTiers: [
       [
         "Startup MVP Design",
-        "$3,000+",
+        "$1,000+",
         "5-10 key screens, basic design system, wireframes and prototypes.",
       ],
       [
         "Product Design Project",
-        "$8,000+",
+        "$2,000+",
         "Complete product flow, design system, high-fidelity mockups, user testing.",
       ],
       [
         "Enterprise Design Program",
-        "$20,000+",
+        "$2,500+",
         "Multi-product ecosystem, comprehensive design system, ongoing optimization.",
       ],
     ],
@@ -262,41 +283,47 @@ const copy = {
     heroTitle: "Послуги UI/UX та графічного дизайну",
     heroSubtitle: "Дизайн, який конвертує та захоплює",
     intro:
-      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі дослідження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
+      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл����дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
     introStat:
       "Компанії, які інвестують у професійний UI/UX дизайн, бачать 25-30% вищі показники конверсії, 40-60% покращення задоволення користувачів та значно кращу утримання клієнтів порівняно з тими, хто розглядає дизайн як другорядний етап.",
     servicesTitle: "Послуги дизайну, які ми надаємо",
     practiceCta: "Подивитись на практиці",
     designPhilosophy:
       "В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям виділятися на конкурентному ринку. Кожне рішення ґрунтується на користувацьких дослідженнях, перевіряється через тестування та оптимізується для вимірюваних бізнес-результатів.",
-    whyChooseTitle: "Чому обирають IdeaTeam для дизайну",
+   whyChooseTitle: "Чому обирають IdeaTeam для продуктового дизайну",
     whyChooseItems: [
-      "Орієнтований на користувача підхід підкріплений дослідженнями та валідацією",
-      "Повний цикл продуктового дизайну від концепції до продакшену",
-      "Сучасне, орієнтоване на конверсію дизайн-мислення",
-      "Тісна співпраця з командами розробки",
-      "Швидкі ітерації на основі зворотного зв'язку",
-      "Доведена експертиза у різних галузях",
+      "Орієнтований на користувача підхід — кожне дизайн-рішення ґрунтується на реальних потребах користувачів і валідується через дослідження та тестування",
+      "Повний цикл продуктового дизайну від концепції до готової до продакшену дизайн-системи",
+      "Сучасний, узгоджений та орієнтований на конверсію графічний дизайн",
+      "Тісна взаємодія між командами дизайну та розробки",
+      "Швидкі ітерації на основі відгуків користувачів та бізнес-цілей",
+      "Підтверджений досвід у різних галузях та типах цифрових продуктів",
+    ],
+    designValueTitle: "Чому продуктовий дизайн важливий для вашого бізнесу",
+    designValueItems: [
+      "Професійні дизайн-послуги — це набагато більше, ніж просто красиві інтерфейси. На сучасному конкурентному ринку продуманий продуктовий дизайн безпосередньо впливає на утримання користувачів, показники конверсії та загальний успіх бізнесу.",
+      "Добре спроектований цифровий продукт будує довіру, спрощує складні завдання та створює емоційний зв'язок з аудиторією. Компанії, що інвестують у якісний UI/UX, отримують значно кращі результати порівняно з тими, хто ставиться до дизайну як до другорядного питання.",
+      "В IdeaTeam ми допомагаємо створювати не лише красиві, але й ефективні рішення, які підтримують ваші довгострокові цілі та забезпечують сильну конкурентну перевагу.",
     ],
     techTitle: "Дизайн-інструменти та технології",
     processTitle: "Наш процес дизайну",
-    costTitle: "Ціноутворення UI/UX дизайну",
+    costTitle: "Скільки коштує якісний продуктовий дизайн у 2026 році?",
     costText:
-      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та гнучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів. Ми завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
+      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та гнучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів.\n\nМи завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
     costTiers: [
       [
         "Дизайн Startup MVP",
-        "$3,000+",
+        "$1,000+",
         "5-10 ключових екранів, базова дизайн-система, wire-фрейми та прототипи.",
       ],
       [
         "Проект продуктового дизайну",
-        "$8,000+",
+        "$2,000+",
         "Повний flow продукту, дизайн-система, високоякісні макети, користувацьке тестування.",
       ],
       [
         "Корпоративна дизайн-програма",
-        "$20,000+",
+        "$2,500+",
         "Екосистема кількох продуктів, комплексна дизайн-система, постійна оптимізація.",
       ],
     ],
@@ -370,6 +397,27 @@ const copy = {
   },
 } as const;
 
+function FaqIndicator() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-4 w-4 shrink-0 text-[#FF6200] transition-all duration-300 group-open:rotate-180 group-open:text-[#C0C0C0]"
+      aria-hidden="true"
+    >
+      <g transform="translate(1.67, 2.17)">
+        <path
+          d="M6.19757 9C5.81267 9.66667 4.85042 9.66667 4.46552 9L0.135391 1.5C-0.249509 0.833332 0.231617 -1.05781e-06 1.00142 -9.90511e-07L9.66167 -2.33408e-07C10.4315 -1.6611e-07 10.9126 0.833333 10.5277 1.5L6.19757 9Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
+}
+
 export default function UIUXDesignPage() {
   const [activeService, setActiveService] = useState(0);
   const { locale } = useLocale();
@@ -377,16 +425,16 @@ export default function UIUXDesignPage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pb-24">
+      <section className="relative min-h-[560px] overflow-hidden px-4 pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="absolute inset-0">
           <Image
-            src="/images/ui-ux-hero.jpg"
+            src="/images/ui-ux-designer.png"
             alt="UI/UX and graphic design services"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/62 to-black/20" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
         <div className="relative mx-auto max-w-6xl">
@@ -402,9 +450,26 @@ export default function UIUXDesignPage() {
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(255,98,0,.10),transparent_32%),#F7F8FA] px-4 py-16 dark:bg-[radial-gradient(circle_at_top_right,rgba(255,98,0,.05),transparent_32%),#1a1a1a]">
         <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#111_0.5px,transparent_0.5px)] [background-size:3px_3px]"></div>
         <div className="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_360px] lg:items-center">
-          <p className="text-[18px] leading-[1.8] text-[#4B5563] dark:text-white/72 md:text-xl">
-            {page.intro}
-          </p>
+          <div className="text-[18px] leading-[1.8] text-[#4B5563] dark:text-white/72 md:text-xl space-y-4">
+            <p>
+              We create intuitive and visually compelling digital experiences that users love and businesses benefit from. Our <strong>UI/UX design services combine deep user research, strategic product design</strong>, and high-quality graphic design to deliver interfaces that drive engagement, increase conversions, and support sustainable business growth. 
+            </p>
+            <p>
+              At IdeaTeam, <strong>we don&apos;t just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in a competitive market.</strong> Whether you are launching a new{" "}
+              <Link href="/services/mobile-app-development" className="font-semibold text-[#FF6200] hover:underline">
+                mobile app
+              </Link>
+              , redesigning a{" "}
+              <Link href="/services/web-application-development" className="font-semibold text-[#FF6200] hover:underline">
+                web platform
+              </Link>
+              , building a{" "}
+              <Link href="/services/custom-software-development" className="font-semibold text-[#FF6200] hover:underline">
+                SaaS product
+              </Link>
+              , or need a complete visual identity, our team turns your idea into a polished, user-centric solution ready for successful development.
+            </p>
+          </div>
           <div className="rounded-2xl border border-black/10 bg-white p-7 shadow-sm dark:border-white/10 dark:bg-[#191a20]">
             <Sparkles className="mb-5 h-10 w-10 text-[#FF6200]" />
             <p className="text-2xl font-semibold leading-tight text-foreground dark:text-white">
@@ -414,9 +479,9 @@ export default function UIUXDesignPage() {
         </div>
       </section>
 
-      <section className="bg-[#eef1f6] px-4 py-14 text-foreground dark:bg-[#323130] dark:text-white">
+      <section id="services" className="bg-[#eef1f6] px-4 py-14 text-foreground dark:bg-[#323130] dark:text-white">
         <div className="mx-auto grid max-w-6xl gap-10 xl:grid-cols-[420px_1fr]">
-          <div>
+          <div className="flex flex-col">
             <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
               {page.servicesTitle}
             </h2>
@@ -439,61 +504,88 @@ export default function UIUXDesignPage() {
                 );
               })}
             </div>
+            {/* Button hidden on mobile — shown on desktop below the list */}
             <Link
               href="https://ideateam.dev/projects/"
-              className="relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-[#FF6200] px-8 py-4 font-[Onest] text-base font-normal leading-[100%] text-white transition-all duration-300"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background =
-                  "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#FF6200";
-              }}
+              className="mt-8 hidden h-[40px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[14px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] xl:flex md:text-[16px]"
             >
               {page.practiceCta}
             </Link>
           </div>
-          <article className="overflow-hidden rounded-2xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#1b1d23]">
-            <div className="relative h-60 md:h-72">
-              <Image
-                src={services[activeService].image}
-                alt={services[activeService].title[locale]}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 md:p-8">
-              <h3 className="mb-3 text-3xl font-semibold">
-                {services[activeService].title[locale]}
-              </h3>
-              <p className="text-lg leading-relaxed text-foreground/70 dark:text-white/70">
-                {services[activeService].description[locale]}
-              </p>
-            </div>
-          </article>
+          <div className="flex flex-col gap-0">
+            <article className="overflow-hidden rounded-2xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#1b1d23]">
+              <div className="relative h-60 md:h-72">
+                <Image
+                  src={services[activeService].image}
+                  alt={services[activeService].title[locale]}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="mb-3 text-3xl font-semibold">
+                  {services[activeService].title[locale]}
+                </h3>
+                <p className="text-lg leading-relaxed text-foreground/70 dark:text-white/70">
+                  {services[activeService].description[locale]}
+                </p>
+              </div>
+            </article>
+            {/* Button shown on mobile — below the image+text card */}
+            <Link
+              href="https://ideateam.dev/projects/"
+              className="mt-6 flex h-[40px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[14px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] xl:hidden md:text-[16px]"
+            >
+              {page.practiceCta}
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="space-y-10">
-          <div>
-            <h2 className="mb-8 text-3xl font-semibold md:text-5xl">
-              {page.designPhilosophy}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          {/* Left: sticky title + philosophy + CTA */}
+          <div className="lg:sticky lg:top-24">
+            <h2 className="text-3xl font-semibold md:text-5xl">
+              {page.whyChooseTitle}
             </h2>
+            <p className="mt-6 text-lg leading-[1.8] text-foreground/75 dark:text-white/75">
+              {page.designPhilosophy}
+            </p>
+            <Link
+              href="https://ideateam.dev/projects/"
+              className="mt-8 inline-flex min-h-[44px] items-center justify-center rounded-[50px] bg-[#FF6200] px-6 py-3 font-['Onest'] text-[15px] font-semibold leading-snug text-white transition-all hover:bg-[#e45700]"
+            >
+              {page.practiceCta}
+            </Link>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {/* Right: vertical benefit cards */}
+          <div className="space-y-3">
             {page.whyChooseItems.map((item) => (
               <div
                 key={item}
-                className="flex gap-4 rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+                className="flex gap-4 rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-[#161515]"
               >
-                <Check className="h-6 w-6 shrink-0 text-[#FF6200] mt-1" />
-                <p className="font-medium text-foreground dark:text-white">
+                <Sparkles className="mt-1 h-5 w-5 shrink-0 text-[#FF6200]" />
+                <p className="leading-relaxed text-foreground/75 dark:text-white/75">
                   {item}
                 </p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f3f5fa] px-4 py-14 dark:bg-[#1f2026] sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl space-y-6">
+          {page.designValueItems.map((para, i) => (
+            <p
+              key={i}
+              className="text-lg leading-[1.8] text-foreground/75 dark:text-white/75 md:text-xl"
+            >
+              {para}
+            </p>
+          ))}
         </div>
       </section>
 
@@ -568,9 +660,11 @@ export default function UIUXDesignPage() {
             <h2 className="max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
               {page.costTitle}
             </h2>
-            <p className="mt-4 max-w-2xl text-[16px] text-foreground/60 dark:text-white/60">
-              {page.costText}
-            </p>
+            <div className="mt-4 space-y-3 text-[16px] leading-relaxed text-justify text-foreground/60 dark:text-white/60">
+              {page.costText.split("\n\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
           </div>
           <div className="divide-y divide-black/10 dark:divide-white/10">
             {page.costTiers.map(([label, range, desc], index) => (
@@ -598,10 +692,10 @@ export default function UIUXDesignPage() {
         </div>
       </section>
 
-      <section className="w-full px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-16 lg:px-12 lg:py-20">
-        <div className="relative mx-auto aspect-[5/3] max-w-[96%] overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] via-[#1a0f00] to-[#2a1708] sm:aspect-[5/2.6] sm:max-w-[92%]">
+      <section className="w-full px-5 py-2 sm:px-8 sm:py-3 md:px-10 md:py-3 lg:px-12 lg:py-4">
+        <div className="relative mx-auto max-w-[96%] overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] via-[#1a0f00] to-[#2a1708] sm:max-w-[92%]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_#ff6200_12%,transparent_70%)] opacity-70 blur-xl md:opacity-90 md:blur-3xl" />
-          <div className="relative z-10 flex h-full flex-col items-center justify-center gap-4 px-6 sm:px-10 md:flex-row md:justify-between md:px-16 lg:px-24">
+          <div className="relative z-10 flex flex-col items-center justify-between gap-6 px-6 py-8 sm:px-10 sm:py-10 md:flex-row md:gap-10 md:px-16 md:py-12 lg:px-24">
             <div className="max-w-3xl text-center md:text-left">
               <h2 className="text-xl font-medium leading-[1.15] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-2xl md:text-3xl lg:text-[34px] xl:text-[40px]">
                 {page.ctaTitle}
@@ -614,7 +708,7 @@ export default function UIUXDesignPage() {
               href="https://calendar.app.google/sySAYTvgF8Zi264U7"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex h-[40px] w-[220px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[16px] font-semibold leading-none transition-all hover:bg-[#e45700]"
+              className="inline-flex min-h-[44px] w-full shrink-0 items-center justify-center rounded-[50px] bg-[#FF6200] px-6 py-3 text-center font-['Onest'] text-[16px] font-semibold leading-snug text-white transition-all hover:bg-[#e45700] md:w-auto md:min-w-[200px]"
             >
               {page.ctaButton}
             </Link>
@@ -626,7 +720,27 @@ export default function UIUXDesignPage() {
         <RequestConsultationSection />
       </div>
 
-      <FAQSection5 faqTitle={page.faqTitle} faqItems={page.faqItems} />
+      <section className="mx-auto max-w-6xl px-4 py-14">
+        <h2 className="mb-8 text-3xl font-semibold md:text-5xl">
+          {page.faqTitle}
+        </h2>
+        <div className="space-y-4">
+          {page.faqItems.map(({ question, answer }) => (
+            <details
+              key={question}
+              className="group rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-semibold">
+                <span>{question}</span>
+                <FaqIndicator />
+              </summary>
+              <p className="mt-4 leading-relaxed text-foreground/70 dark:text-white/70">
+                {answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
