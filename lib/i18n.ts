@@ -29,7 +29,7 @@ export const translations = {
     mobileDevelopment: "Mobile Development",
     staffAugmentation: "Staff Augmentation",
     customWebSolutions: "Custom web solutions",
-    ai: "AI Integration",
+    ai: "AI Integration Services",
     mobileApplications: "Mobile applications",
     unityDevelopment: "Real-Time 3D & Interactive Development",
     unityDevelopmentMenu: "Unity development",
@@ -37,9 +37,7 @@ export const translations = {
     qaAutomation: "Manual and Automation QA",
     devops: "DevOps",
     dataAnalytics: "Data Analytics",
-    iotSolutions: "IoT Solutions & Hardware Integration",
-    iotSolutionsMenu: "IoT solutions",
-     customWebSolutionsDesc:
+    customWebSolutionsDesc:
       "We specialize in creating unique websites and web applications that fully meet your goals and requirements. Whether it's a corporate website, an eCommerce platform, or a custom web solution — our team of experienced developers works closely with you to understand your objectives and deliver solutions that exceed expectations.",
     customWebSolutionsStack: ["TypeScript", "React", "Next.js", "Node.js", "GraphQL", "PostgreSQL", "Tailwind CSS", "Vercel"],
     uiUxDesignDesc:
@@ -275,7 +273,7 @@ export const translations = {
     mobileDevelopment: "Мобільна розробка",
     staffAugmentation: "Розширення команди",
     customWebSolutions: "Індивідуальні веб-рішення",
-    ai: "AI-інтеграція",
+    ai: "AI-інтеграційні послуги",
     mobileApplications: "Мобільні додатки",
     unityDevelopment: "Розробка в реальному часі 3D та інтерактивних рішень",
     unityDevelopmentMenu: "Розробка Unity",
@@ -283,8 +281,6 @@ export const translations = {
     qaAutomation: "Ручне та автоматизоване тестування (QA)",
     devops: "DevOps",
     dataAnalytics: "Аналітика даних",
-    iotSolutions: "Рішення IoT та інтеграція обладнання",
-    iotSolutionsMenu: "Рішення IoT",
     customWebSolutionsDesc:
       "Ми спеціалізуємося на створенні унікальних вебсайтів та веб-додатків, які повністю відповідають вашим цілям та вимогам. Чи то корпоративний веб-сайт, платформа електронної комерції чи спеціальне веб-рішення — наша команда досвідчених розробників працює з вами, щоб зрозуміти ваші завдання та надати рішення, що перевищують очікування.",
     customWebSolutionsStack: ["TypeScript", "React", "Next.js", "Node.js", "GraphQL", "PostgreSQL", "Tailwind CSS", "Vercel"],
@@ -479,7 +475,7 @@ export const translations = {
     mayEcho: "Ми можемо час від часу надсилати вам маркетингові листи.",
     attachFileOptional: "Додати файл (необов'язково)",
     caseStudyText:
-      "Пишаймося нашою недавною роботою з автоматизації системи Admin, де ми створили GraphQL API та Vue dashboard з відсте[...]
+      "Пишаймося нашою недавною роботою з автоматизації системи Admin, де ми створили GraphQL API та Vue dashboard з відстеженням у реальному часі для швидшого та розумнішого моніторингу обладнання.",
     // Services Page Contact Form
     contactFormHeading: "Надішліть нам нотатки з вашою ідеєю й ми допоможемо її впровадити",
     typeYourName: "Введіть своє ім'я",
