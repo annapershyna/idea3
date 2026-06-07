@@ -27,7 +27,7 @@ const services = [
       en: "Design That Converts and Delights.",
       uk: "Дизайн, який конвертує та захоплює.",
     },
-    image: "/images/ui-ux-mobile.jpg",
+    image: "/images/ui-ux-mobile.png",
   },
   {
     title: { en: "Web Application Design", uk: "Дизайн веб-додатків" },
@@ -35,7 +35,7 @@ const services = [
       en: "Scalable, responsive web interfaces for SaaS platforms, dashboards, and web applications. Design systems that support rapid development and consistent user experiences.",
       uk: "Масштабовані, адаптивні веб-інтерфейси для SaaS платформ, дашбордів та веб-додатків. Дизайн-системи, які підтримують швидку розробку та узгоджений користувацький досвід.",
     },
-    image: "/images/ui-ux-web.jpg",
+    image: "/images/ui-ux-web.png",
   },
   {
     title: { en: "Brand Identity & Visual Design", uk: "Брендова ідентичність та візуальний дизайн" },
@@ -43,7 +43,7 @@ const services = [
       en: "Complete visual identity systems including logo design, color palettes, typography, and brand guidelines. Graphic design that communicates your brand story effectively.",
       uk: "Повні системи візуальної ідентичності включаючи дизайн логотипу, кольорові палітри, типографію та брендові гайдлайни. Графічний дизайн, який ефективно передає вашу брендову історію.",
     },
-    image: "/images/ui-ux-brand.jpg",
+    image: "/images/ui-ux-brand.png",
   },
   {
     title: { en: "Design Systems & Component Libraries", uk: "Дизайн-системи та бібліотеки компонентів" },
@@ -51,7 +51,7 @@ const services = [
       en: "Reusable design systems that scale across multiple products. Component libraries, documentation, and design tokens that accelerate development and ensure consistency.",
       uk: "Повторно використовувані дизайн-системи, які масштабуються на кілька продуктів. Бібліотеки компонентів, документація та дизайн-токени, які прискорюють розробку та забезпечують узгодженість.",
     },
-    image: "/images/ui-ux-design-systems.jpg",
+    image: "/images/ui-ux-design-systems.png",
   },
 ] as const;
 
@@ -261,7 +261,7 @@ const copy = {
     heroTitle: "Послуги UI/UX та графічного дизайну",
     heroSubtitle: "Дизайн, який конвертує та захоплює",
     intro:
-      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі дослідження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
+      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл��дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
     introStat:
       "Компанії, які інвестують у професійний UI/UX дизайн, бачать 25-30% вищі показники конверсії, 40-60% покращення задоволення користувачів та значно кращу утримання клієнтів порівняно з тими, хто розглядає дизайн як другорядний етап.",
     servicesTitle: "Послуги дизайну, які ми надаємо",
@@ -397,16 +397,16 @@ export default function UIUXDesignPage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pb-24">
+      <section className="relative min-h-[560px] overflow-hidden px-4 pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="absolute inset-0">
           <Image
-            src="/images/ui-ux-hero.jpg"
+            src="/images/ui-ux-hero.png"
             alt="UI/UX and graphic design services"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/62 to-black/20" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
         <div className="relative mx-auto max-w-6xl">
@@ -422,9 +422,30 @@ export default function UIUXDesignPage() {
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(255,98,0,.10),transparent_32%),#F7F8FA] px-4 py-16 dark:bg-[radial-gradient(circle_at_top_right,rgba(255,98,0,.05),transparent_32%),#1a1a1a]">
         <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#111_0.5px,transparent_0.5px)] [background-size:3px_3px]"></div>
         <div className="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_360px] lg:items-center">
-          <p className="text-[18px] leading-[1.8] text-[#4B5563] dark:text-white/72 md:text-xl">
-            {page.intro}
-          </p>
+          <div className="text-[18px] leading-[1.8] text-[#4B5563] dark:text-white/72 md:text-xl space-y-4">
+            <p>
+              We create intuitive and visually compelling digital experiences that users love and businesses benefit from. Our{" "}
+              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+                UI/UX design services
+              </Link>{" "}
+              combine deep user research, strategic product design, and high-quality graphic design to deliver interfaces that drive engagement, increase conversions, and support sustainable business growth. 
+            </p>
+            <p>
+              At IdeaTeam, we don&apos;t just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in a competitive market. Whether you are launching a new{" "}
+              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+                mobile app
+              </Link>
+              , redesigning a{" "}
+              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+                web platform
+              </Link>
+              , building a{" "}
+              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+                SaaS product
+              </Link>
+              , or need a complete visual identity, our team turns your idea into a polished, user-centric solution ready for successful development.
+            </p>
+          </div>
           <div className="rounded-2xl border border-black/10 bg-white p-7 shadow-sm dark:border-white/10 dark:bg-[#191a20]">
             <Sparkles className="mb-5 h-10 w-10 text-[#FF6200]" />
             <p className="text-2xl font-semibold leading-tight text-foreground dark:text-white">
@@ -461,14 +482,7 @@ export default function UIUXDesignPage() {
             </div>
             <Link
               href="https://ideateam.dev/projects/"
-              className="relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-[#FF6200] px-8 py-4 font-[Onest] text-base font-normal leading-[100%] text-white transition-all duration-300"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background =
-                  "linear-gradient(92.84deg, #FF6200 29.79%, #000000 100.07%)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#FF6200";
-              }}
+              className="mt-8 flex h-[40px] w-full items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[14px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] md:text-[16px]"
             >
               {page.practiceCta}
             </Link>
@@ -497,22 +511,27 @@ export default function UIUXDesignPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="space-y-10">
           <div>
-            <h2 className="mb-8 text-3xl font-semibold md:text-5xl">
+            <p className="max-w-3xl text-lg leading-[1.8] text-foreground/75 dark:text-white/75 md:text-xl">
               {page.designPhilosophy}
-            </h2>
+            </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {page.whyChooseItems.map((item) => (
-              <div
-                key={item}
-                className="flex gap-4 rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
-              >
-                <Check className="h-6 w-6 shrink-0 text-[#FF6200] mt-1" />
-                <p className="font-medium text-foreground dark:text-white">
-                  {item}
-                </p>
-              </div>
-            ))}
+          <div>
+            <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+              {page.whyChooseTitle}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {page.whyChooseItems.map((item) => (
+                <div
+                  key={item}
+                  className="flex gap-4 rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+                >
+                  <Check className="h-6 w-6 shrink-0 text-[#FF6200] mt-1" />
+                  <p className="font-medium text-foreground dark:text-white">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
