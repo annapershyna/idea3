@@ -18,7 +18,6 @@ import {
   Eye,
 } from "lucide-react";
 import { RequestConsultationSection } from "@/components/request-consultation-section";
-import { FAQSection5 } from "@/components/faq-section5";
 import { useLocale } from "@/lib/locale-context";
 
 const services = [
@@ -282,7 +281,7 @@ const copy = {
     processTitle: "Наш процес дизайну",
     costTitle: "Ціноутворення UI/UX дизайну",
     costText:
-      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та гнучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів. Ми завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
+      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та ��нучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів. Ми завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
     costTiers: [
       [
         "Дизайн Startup MVP",
@@ -369,6 +368,27 @@ const copy = {
     ],
   },
 } as const;
+
+function FaqIndicator() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-4 w-4 shrink-0 text-[#FF6200] transition-all duration-300 group-open:rotate-180 group-open:text-[#C0C0C0]"
+      aria-hidden="true"
+    >
+      <g transform="translate(1.67, 2.17)">
+        <path
+          d="M6.19757 9C5.81267 9.66667 4.85042 9.66667 4.46552 9L0.135391 1.5C-0.249509 0.833332 0.231617 -1.05781e-06 1.00142 -9.90511e-07L9.66167 -2.33408e-07C10.4315 -1.6611e-07 10.9126 0.833333 10.5277 1.5L6.19757 9Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
+}
 
 export default function UIUXDesignPage() {
   const [activeService, setActiveService] = useState(0);
@@ -626,7 +646,27 @@ export default function UIUXDesignPage() {
         <RequestConsultationSection />
       </div>
 
-      <FAQSection5 faqTitle={page.faqTitle} faqItems={page.faqItems} />
+      <section className="mx-auto max-w-6xl px-4 py-14">
+        <h2 className="mb-8 text-3xl font-semibold md:text-5xl">
+          {page.faqTitle}
+        </h2>
+        <div className="space-y-4">
+          {page.faqItems.map(({ question, answer }) => (
+            <details
+              key={question}
+              className="group rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-semibold">
+                <span>{question}</span>
+                <FaqIndicator />
+              </summary>
+              <p className="mt-4 leading-relaxed text-foreground/70 dark:text-white/70">
+                {answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

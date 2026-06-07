@@ -18,7 +18,6 @@ import {
   Settings,
 } from "lucide-react";
 import { RequestConsultationSection } from "@/components/request-consultation-section";
-import { FAQSection5 } from "@/components/faq-section5";
 import { useLocale } from "@/lib/locale-context";
 
 const services = [
@@ -202,6 +201,59 @@ const copy = {
     ctaText:
       "Tell us about your hardware, requirements, and goals. We'll design a scalable IoT solution tailored to your needs.",
     ctaButton: "Plan your IoT system",
+    faqTitle: "Frequently Asked Questions",
+    faqItems: [
+      {
+        question: "What are IoT solutions and hardware integration services?",
+        answer:
+          "IoT solutions connect physical devices, sensors, and machines to cloud platforms so they can collect data, be monitored in real time, and be controlled remotely. Our hardware integration services cover device configuration, firmware, connectivity, data pipelines, dashboards, and automation — turning disconnected hardware into a unified, intelligent system.",
+      },
+      {
+        question: "What types of hardware can you integrate?",
+        answer:
+          "We work with a wide range of devices including Arduino, Raspberry Pi, ESP32, STM32, industrial PLCs, environmental and motion sensors, and custom hardware. We handle device configuration, firmware development, sensor calibration, and secure connectivity to cloud platforms.",
+      },
+      {
+        question: "Which communication protocols do you support?",
+        answer:
+          "We implement industry-standard IoT protocols such as MQTT, CoAP, HTTP, and WebSocket, choosing the right one based on power constraints, network conditions, latency, and data volume. This ensures reliable, efficient device-to-cloud communication at scale.",
+      },
+      {
+        question: "How do you ensure real-time monitoring and alerting?",
+        answer:
+          "We build live dashboards and alerting systems that track device health, environmental conditions, and operational metrics. When anomalies or threshold violations occur, the system sends instant notifications so your team can react before issues escalate.",
+      },
+      {
+        question: "Can you handle large-scale IoT deployments?",
+        answer:
+          "Yes. Our architecture is designed to scale from pilot projects with a handful of devices to enterprise deployments with thousands of connected endpoints. We use time-series databases, scalable cloud infrastructure, and edge computing where appropriate to maintain performance.",
+      },
+      {
+        question: "Do you provide data analytics and predictive maintenance?",
+        answer:
+          "We build data pipelines that collect, store, and analyze sensor data, and we apply machine learning models for predictive maintenance and anomaly detection. This helps reduce downtime, lower maintenance costs, and extend equipment lifespan.",
+      },
+      {
+        question: "Which cloud platforms do you work with?",
+        answer:
+          "We work with AWS IoT Core, Azure IoT, and Google Cloud, as well as edge computing solutions. We help you select the platform that best fits your requirements for scalability, security, cost, and existing infrastructure.",
+      },
+      {
+        question: "How much does an IoT project cost?",
+        answer:
+          "Costs vary based on device complexity, scale, data volume, and analytics requirements. A pilot system starts at $5,000+, mid-scale deployments from $15,000+, and enterprise platforms from $50,000+. We provide transparent estimates after understanding your specific needs.",
+      },
+      {
+        question: "How long does an IoT implementation take?",
+        answer:
+          "Timelines depend on scope and complexity. A pilot system typically takes a few weeks, while mid-scale and enterprise deployments span several months. We follow a clear process from requirements and hardware setup through integration, monitoring, and deployment.",
+      },
+      {
+        question: "Do you provide ongoing support after deployment?",
+        answer:
+          "Yes. We offer continuous support including monitoring, scaling, firmware updates, and optimization. As your business and device fleet grow, we help expand your IoT capabilities and keep the system secure and reliable.",
+      },
+    ],
   },
   uk: {
     heroTitle: "Послуги IoT рішень та інтеграції обладнання",
@@ -249,8 +301,82 @@ const copy = {
     ctaText:
       "Розкажіть про своє обладнання, вимоги та цілі. Ми розробимо масштабоване рішення IoT, адаптоване під ваші потреби.",
     ctaButton: "Спланувати вашу IoT систему",
+    faqTitle: "Часті запитання",
+    faqItems: [
+      {
+        question: "Що таке IoT рішення та послуги інтеграції обладнання?",
+        answer:
+          "IoT рішення з'єднують фізичні пристрої, датчики та обладнання з хмарними платформами, щоб вони могли збирати дані, моніторитися в реальному часі та керуватися віддалено. Наші послуги інтеграції обладнання охоплюють конфігурацію пристроїв, прошивки, підключення, конвеєри даних, дашборди та автоматизацію — перетворюючи розрізнене обладнання на єдину інтелектуальну систему.",
+      },
+      {
+        question: "Яке обладнання ви можете інтегрувати?",
+        answer:
+          "Ми працюємо з широким спектром пристроїв, включаючи Arduino, Raspberry Pi, ESP32, STM32, промислові PLC, датчики середовища та руху, а також кастомне обладнання. Ми займаємося конфігурацією пристроїв, розробкою прошивки, калібруванням датчиків та безпечним підключенням до хмарних платформ.",
+      },
+      {
+        question: "Які комунікаційні протоколи ви підтримуєте?",
+        answer:
+          "Ми впроваджуємо стандартні протоколи IoT, такі як MQTT, CoAP, HTTP та WebSocket, обираючи оптимальний залежно від енергоспоживання, умов мережі, затримки та обсягу даних. Це забезпечує надійний та ефективний зв'язок пристрій-хмара у масштабі.",
+      },
+      {
+        question: "Як ви забезпечуєте моніторинг у реальному часі та оповіщення?",
+        answer:
+          "Ми створюємо живі дашборди та системи оповіщень, які відстежують стан пристроїв, умови навколишнього середовища та операційні метрики. У разі аномалій чи порушення лімітів система надсилає миттєві сповіщення, щоб ваша команда могла відреагувати до загострення проблеми.",
+      },
+      {
+        question: "Чи можете ви реалізувати масштабні розгортання IoT?",
+        answer:
+          "Так. Наша архітектура розрахована на масштабування від пілотних проектів із кількома пристроями до корпоративних розгортань із тисячами підключених точок. Ми використовуємо time-series бази даних, масштабовану хмарну інфраструктуру та edge computing там, де це доречно, для підтримки продуктивності.",
+      },
+      {
+        question: "Чи надаєте ви аналітику даних та передбачувальне обслуговування?",
+        answer:
+          "Ми будуємо конвеєри даних, які збирають, зберігають та аналізують дані датчиків, і застосовуємо моделі машинного навчання для передбачувального обслуговування та виявлення аномалій. Це допомагає зменшити простої, знизити витрати на обслуговування та продовжити термін служби обладнання.",
+      },
+      {
+        question: "З якими хмарними платформами ви працюєте?",
+        answer:
+          "Ми працюємо з AWS IoT Core, Azure IoT та Google Cloud, а також з рішеннями edge computing. Ми допоможемо вам обрати платформу, яка найкраще відповідає вашим вимогам щодо масштабованості, безпеки, вартості та наявної інфраструктури.",
+      },
+      {
+        question: "Скільки коштує IoT проект?",
+        answer:
+          "Вартість залежить від складності пристроїв, масштабу, обсягу даних та вимог до аналітики. Пілотна система стартує від $5,000+, розгортання середнього масштабу — від $15,000+, корпоративні платформи — від $50,000+. Ми надаємо прозорі кошториси після ознайомлення з вашими потребами.",
+      },
+      {
+        question: "Скільки часу займає впровадження IoT?",
+        answer:
+          "Терміни залежать від обсягу та складності. Пілотна система зазвичай займає кілька тижнів, тоді як розгортання середнього масштабу та корпоративні охоплюють кілька місяців. Ми дотримуємося чіткого процесу від вимог і налаштування обладнання до інтеграції, моніторингу та розгортання.",
+      },
+      {
+        question: "Чи надаєте ви підтримку після розгортання?",
+        answer:
+          "Так. Ми пропонуємо постійну підтримку, включаючи моніторинг, масштабування, оновлення прошивок та оптимізацію. У міру зростання вашого бізнесу та парку пристроїв ми допомагаємо розширювати можливості IoT і підтримувати систему безпечною та надійною.",
+      },
+    ],
   },
 } as const;
+
+function FaqIndicator() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-4 w-4 shrink-0 text-[#FF6200] transition-all duration-300 group-open:rotate-180 group-open:text-[#C0C0C0]"
+      aria-hidden="true"
+    >
+      <g transform="translate(1.67, 2.17)">
+        <path
+          d="M6.19757 9C5.81267 9.66667 4.85042 9.66667 4.46552 9L0.135391 1.5C-0.249509 0.833332 0.231617 -1.05781e-06 1.00142 -9.90511e-07L9.66167 -2.33408e-07C10.4315 -1.6611e-07 10.9126 0.833333 10.5277 1.5L6.19757 9Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
+}
 
 export default function IoTSolutionsPage() {
   const [activeService, setActiveService] = useState(0);
@@ -509,7 +635,27 @@ export default function IoTSolutionsPage() {
         <RequestConsultationSection />
       </div>
 
-      <FAQSection5 />
+      <section className="mx-auto max-w-6xl px-4 py-14">
+        <h2 className="mb-8 text-3xl font-semibold md:text-5xl">
+          {page.faqTitle}
+        </h2>
+        <div className="space-y-4">
+          {page.faqItems.map(({ question, answer }) => (
+            <details
+              key={question}
+              className="group rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-semibold">
+                <span>{question}</span>
+                <FaqIndicator />
+              </summary>
+              <p className="mt-4 leading-relaxed text-foreground/70 dark:text-white/70">
+                {answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
