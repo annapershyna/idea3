@@ -34,7 +34,7 @@ const services = [
     title: { en: "Real-Time Monitoring", uk: "Моніторинг у реальному часі" },
     description: {
       en: "Live dashboards and alerting systems for monitoring device health, environmental conditions, and operational metrics. Instant notifications for anomalies and threshold violations.",
-      uk: "Живі дашборди та системи оповіщень для моніторингу здоров'я пристроїв, умов навколишнього середовища та операційних метрик. Миттєві сповіщення про аномалії та порушення порогів.",
+      uk: "Живі дашборди та системи оповіщень для моніторингу здоров'я пристроїв, умов навколишнього середовища та операційних метрик. Миттєві сповіщення про аномалії та порушення лімітів.",
     },
     image: "/images/iot-monitoring.jpg",
   },
