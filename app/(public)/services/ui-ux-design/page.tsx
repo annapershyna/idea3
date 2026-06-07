@@ -35,7 +35,7 @@ const services = [
       en: "Scalable, responsive web interfaces for SaaS platforms, dashboards, and web applications. Design systems that support rapid development and consistent user experiences.",
       uk: "Масштабовані, адаптивні веб-інтерфейси для SaaS платформ, дашбордів та веб-додатків. Дизайн-системи, які підтримують швидку розробку та узгоджений користувацький досвід.",
     },
-    image: "/images/ui-ux-web.png",
+    image: "/images/ui-ux-web.jpg",
   },
   {
     title: { en: "Brand Identity & Visual Design", uk: "Брендова ідентичність та візуальний дизайн" },
@@ -43,7 +43,7 @@ const services = [
       en: "Complete visual identity systems including logo design, color palettes, typography, and brand guidelines. Graphic design that communicates your brand story effectively.",
       uk: "Повні системи візуальної ідентичності включаючи дизайн логотипу, кольорові палітри, типографію та брендові гайдлайни. Графічний дизайн, який ефективно передає вашу брендову історію.",
     },
-    image: "/images/ui-ux-brand.png",
+    image: "/images/ui-ux-brand.jpeg",
   },
   {
     title: { en: "Design Systems & Component Libraries", uk: "Дизайн-системи та бібліотеки компонентів" },
@@ -51,14 +51,14 @@ const services = [
       en: "Reusable design systems that scale across multiple products. Component libraries, documentation, and design tokens that accelerate development and ensure consistency.",
       uk: "Повторно використовувані дизайн-системи, які масштабуються на кілька продуктів. Бібліотеки компонентів, документація та дизайн-токени, які прискорюють розробку та забезпечують узгодженість.",
     },
-    image: "/images/ui-ux-design-systems.png",
+    image: "/images/ui-ux-design-systems.jpg",
   },
 ] as const;
 
 const stacks = [
   {
     label: "Design Tools",
-    items: ["Figma", "Adobe XD", "Framer", "Principle"],
+    items: ["Figma", "Adobe XD", "Framer", "Principle", "Webflow"],
     icon: Palette,
   },
   { label: "Prototyping", items: ["Interactive Prototypes", "User Flows", "Wireframes", "Handoff"], icon: Layers },
@@ -69,7 +69,7 @@ const stacks = [
   },
   {
     label: "Design Systems",
-    items: ["Component Libraries", "Design Tokens", "Documentation", "Brand Guidelines"],
+    items: ["Component Libraries", "Documentation", "Brand Guidelines"],
     icon: Settings,
   },
   {
@@ -79,20 +79,35 @@ const stacks = [
   },
   {
     label: "Collaboration",
-    items: ["FigJam", "Design Reviews", "Feedback Tools", "Developer Handoff"],
+    items: ["FigJam", "Maze"],
     icon: Users,
   },
 ] as const;
 
 const techIcons: Record<string, string> = {
   Figma: "/icons/tech/figma.svg",
-  "Adobe XD": "/icons/tech/adobe-xd.svg",
+  FigJam: "/icons/tech/figma.svg",
+  "Adobe XD": "/icons/tech/adobe-xd-1.svg",
   Framer: "/icons/tech/framer.svg",
   Principle: "/icons/tech/principle.svg",
-  "User Research": "/icons/tech/user-research.svg",
-  "Usability Testing": "/icons/tech/testing.svg",
+  Webflow: "/icons/tech/webflow.svg",
+  "User Research": "/icons/tech/user-research-2.svg",
+  "Usability Testing": "/icons/tech/usability-testingg.svg",
   Accessibility: "/icons/tech/accessibility.svg",
   "Design Systems": "/icons/tech/design-system.svg",
+  Maze: "/icons/tech/Maze.svg",
+  "Adobe Creative Suite": "/icons/tech/Adobe_Creative_Suite.svg",
+  Illustration: "/icons/tech/Adobe-illustrator.svg",
+  Animation: "/icons/tech/animation.svg",
+  "Motion Design": "/icons/tech/motion-design.svg",
+  "Component Libraries": "/icons/tech/libraries.svg",
+  Documentation: "/icons/tech/documentation.svg",
+  "Brand Guidelines": "/icons/tech/brand-guidelines.svg",
+  "A/B Testing": "/icons/tech/ab-testing.svg",
+  "Interactive Prototypes": "/icons/tech/interactive-prototypes.svg",
+  "User Flows": "/icons/tech/user-flows.svg",
+  Wireframes: "/icons/tech/wireframes.svg",
+  Handoff: "/icons/tech/handoff.svg",
 };
 
 const processSteps = [
@@ -155,6 +170,7 @@ const copy = {
     introStat:
       "Companies investing in professional UI/UX design see 25-30% higher conversion rates, 40-60% improvement in user satisfaction, and significantly better customer retention compared to those treating design as an afterthought.",
     servicesTitle: "Design Services We Deliver",
+    practiceCta: "See it in practice",
     designPhilosophy:
       "At IdeaTeam, we don't just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in competitive markets. Every design decision is rooted in user research, validated through testing, and optimized for measurable business outcomes.",
     whyChooseTitle: "Why Choose IdeaTeam for Your Product Design",
@@ -181,17 +197,17 @@ const copy = {
     costTiers: [
       [
         "Startup MVP Design",
-        "$3,000+",
+        "$1,000+",
         "5-10 key screens, basic design system, wireframes and prototypes.",
       ],
       [
         "Product Design Project",
-        "$8,000+",
+        "$2,000+",
         "Complete product flow, design system, high-fidelity mockups, user testing.",
       ],
       [
         "Enterprise Design Program",
-        "$20,000+",
+        "$2,500+",
         "Multi-product ecosystem, comprehensive design system, ongoing optimization.",
       ],
     ],
@@ -267,14 +283,14 @@ const copy = {
     heroTitle: "Послуги UI/UX та графічного дизайну",
     heroSubtitle: "Дизайн, який конвертує та захоплює",
     intro:
-      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл������дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
+      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл����дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
     introStat:
       "Компанії, які інвестують у професійний UI/UX дизайн, бачать 25-30% вищі показники конверсії, 40-60% покращення задоволення користувачів та значно кращу утримання клієнтів порівняно з тими, хто розглядає дизайн як другорядний етап.",
     servicesTitle: "Послуги дизайну, які ми надаємо",
     practiceCta: "Подивитись на практиці",
     designPhilosophy:
       "В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям виділятися на конкурентному ринку. Кожне рішення ґрунтується на користувацьких дослідженнях, перевіряється через тестування та оптимізується для вимірюваних бізнес-результатів.",
-    whyChooseTitle: "Чому обирають IdeaTeam для продуктового дизайну",
+   whyChooseTitle: "Чому обирають IdeaTeam для продуктового дизайну",
     whyChooseItems: [
       "Орієнтований на користувача підхід — кожне дизайн-рішення ґрунтується на реальних потребах користувачів і валідується через дослідження та тестування",
       "Повний цикл продуктового дизайну від концепції до готової до продакшену дизайн-системи",
@@ -297,17 +313,17 @@ const copy = {
     costTiers: [
       [
         "Дизайн Startup MVP",
-        "$3,000+",
+        "$1,000+",
         "5-10 ключових екранів, базова дизайн-система, wire-фрейми та прототипи.",
       ],
       [
         "Проект продуктового дизайну",
-        "$8,000+",
+        "$2,000+",
         "Повний flow продукту, дизайн-система, високоякісні макети, користувацьке тестування.",
       ],
       [
         "Корпоративна дизайн-програма",
-        "$20,000+",
+        "$2,500+",
         "Екосистема кількох продуктів, комплексна дизайн-система, постійна оптимізація.",
       ],
     ],
@@ -412,7 +428,7 @@ export default function UIUXDesignPage() {
       <section className="relative min-h-[560px] overflow-hidden px-4 pb-20 pt-32 md:pb-24 md:pt-40">
         <div className="absolute inset-0">
           <Image
-            src="/images/ui-ux-hero.png"
+            src="/images/ui-ux-designer.png"
             alt="UI/UX and graphic design services"
             fill
             className="object-cover"
@@ -436,23 +452,19 @@ export default function UIUXDesignPage() {
         <div className="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_360px] lg:items-center">
           <div className="text-[18px] leading-[1.8] text-[#4B5563] dark:text-white/72 md:text-xl space-y-4">
             <p>
-              We create intuitive and visually compelling digital experiences that users love and businesses benefit from. Our{" "}
-              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
-                UI/UX design services
-              </Link>{" "}
-              combine deep user research, strategic product design, and high-quality graphic design to deliver interfaces that drive engagement, increase conversions, and support sustainable business growth. 
+              We create intuitive and visually compelling digital experiences that users love and businesses benefit from. Our <strong>UI/UX design services combine deep user research, strategic product design</strong>, and high-quality graphic design to deliver interfaces that drive engagement, increase conversions, and support sustainable business growth. 
             </p>
             <p>
-              At IdeaTeam, we don&apos;t just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in a competitive market. Whether you are launching a new{" "}
-              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+              At IdeaTeam, <strong>we don&apos;t just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in a competitive market.</strong> Whether you are launching a new{" "}
+              <Link href="/services/mobile-app-development" className="font-semibold text-[#FF6200] hover:underline">
                 mobile app
               </Link>
               , redesigning a{" "}
-              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+              <Link href="/services/web-application-development" className="font-semibold text-[#FF6200] hover:underline">
                 web platform
               </Link>
               , building a{" "}
-              <Link href="#services" className="font-semibold text-[#FF6200] hover:underline">
+              <Link href="/services/custom-software-development" className="font-semibold text-[#FF6200] hover:underline">
                 SaaS product
               </Link>
               , or need a complete visual identity, our team turns your idea into a polished, user-centric solution ready for successful development.
