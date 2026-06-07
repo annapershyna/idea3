@@ -261,7 +261,7 @@ const copy = {
     heroTitle: "Послуги UI/UX та графічного дизайну",
     heroSubtitle: "Дизайн, який конвертує та захоплює",
     intro:
-      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл��дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
+      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл����дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
     introStat:
       "Компанії, які інвестують у професійний UI/UX дизайн, бачать 25-30% вищі показники конверсії, 40-60% покращення задоволення користувачів та значно кращу утримання клієнтів порівняно з тими, хто розглядає дизайн як другорядний етап.",
     servicesTitle: "Послуги дизайну, які ми надаємо",
@@ -455,9 +455,9 @@ export default function UIUXDesignPage() {
         </div>
       </section>
 
-      <section className="bg-[#eef1f6] px-4 py-14 text-foreground dark:bg-[#323130] dark:text-white">
+      <section id="services" className="bg-[#eef1f6] px-4 py-14 text-foreground dark:bg-[#323130] dark:text-white">
         <div className="mx-auto grid max-w-6xl gap-10 xl:grid-cols-[420px_1fr]">
-          <div>
+          <div className="flex flex-col">
             <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
               {page.servicesTitle}
             </h2>
@@ -480,58 +480,68 @@ export default function UIUXDesignPage() {
                 );
               })}
             </div>
+            {/* Button hidden on mobile — shown on desktop below the list */}
             <Link
               href="https://ideateam.dev/projects/"
-              className="mt-8 flex h-[40px] w-full items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[14px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] md:text-[16px]"
+              className="mt-8 hidden h-[40px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[14px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] xl:flex md:text-[16px]"
             >
               {page.practiceCta}
             </Link>
           </div>
-          <article className="overflow-hidden rounded-2xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#1b1d23]">
-            <div className="relative h-60 md:h-72">
-              <Image
-                src={services[activeService].image}
-                alt={services[activeService].title[locale]}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 md:p-8">
-              <h3 className="mb-3 text-3xl font-semibold">
-                {services[activeService].title[locale]}
-              </h3>
-              <p className="text-lg leading-relaxed text-foreground/70 dark:text-white/70">
-                {services[activeService].description[locale]}
-              </p>
-            </div>
-          </article>
+          <div className="flex flex-col gap-0">
+            <article className="overflow-hidden rounded-2xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#1b1d23]">
+              <div className="relative h-60 md:h-72">
+                <Image
+                  src={services[activeService].image}
+                  alt={services[activeService].title[locale]}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="mb-3 text-3xl font-semibold">
+                  {services[activeService].title[locale]}
+                </h3>
+                <p className="text-lg leading-relaxed text-foreground/70 dark:text-white/70">
+                  {services[activeService].description[locale]}
+                </p>
+              </div>
+            </article>
+            {/* Button shown on mobile — below the image+text card */}
+            <Link
+              href="https://ideateam.dev/projects/"
+              className="mt-6 flex h-[40px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[14px] font-semibold leading-none tracking-[0.02em] text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-[#FF6200] hover:to-[#000000] active:bg-gradient-to-r active:from-[#FF6200] active:to-[#000000] xl:hidden md:text-[16px]"
+            >
+              {page.practiceCta}
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="space-y-10">
-          <div>
-            <p className="max-w-3xl text-lg leading-[1.8] text-foreground/75 dark:text-white/75 md:text-xl">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-16">
+          {/* Left column: heading + philosophy paragraph */}
+          <div className="lg:sticky lg:top-24">
+            <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+              {page.whyChooseTitle}
+            </h2>
+            <p className="text-lg leading-[1.8] text-foreground/75 dark:text-white/75">
               {page.designPhilosophy}
             </p>
           </div>
-          <div>
-            <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
-              {page.whyChooseTitle}
-            </h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {page.whyChooseItems.map((item) => (
-                <div
-                  key={item}
-                  className="flex gap-4 rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
-                >
-                  <Check className="h-6 w-6 shrink-0 text-[#FF6200] mt-1" />
-                  <p className="font-medium text-foreground dark:text-white">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
+          {/* Right column: benefits grid 2-col */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {page.whyChooseItems.map((item) => (
+              <div
+                key={item}
+                className="flex gap-4 rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+              >
+                <Check className="mt-1 h-6 w-6 shrink-0 text-[#FF6200]" />
+                <p className="font-medium text-foreground dark:text-white">
+                  {item}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -607,7 +617,7 @@ export default function UIUXDesignPage() {
             <h2 className="max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
               {page.costTitle}
             </h2>
-            <p className="mt-4 max-w-2xl text-[16px] text-foreground/60 dark:text-white/60">
+            <p className="mt-4 text-[16px] text-justify text-foreground/60 leading-relaxed dark:text-white/60">
               {page.costText}
             </p>
           </div>
@@ -637,10 +647,10 @@ export default function UIUXDesignPage() {
         </div>
       </section>
 
-      <section className="w-full px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-16 lg:px-12 lg:py-20">
-        <div className="relative mx-auto aspect-[5/3] max-w-[96%] overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] via-[#1a0f00] to-[#2a1708] sm:aspect-[5/2.6] sm:max-w-[92%]">
+      <section className="w-full px-5 py-2 sm:px-8 sm:py-3 md:px-10 md:py-3 lg:px-12 lg:py-4">
+        <div className="relative mx-auto max-w-[96%] overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] via-[#1a0f00] to-[#2a1708] sm:max-w-[92%]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_#ff6200_12%,transparent_70%)] opacity-70 blur-xl md:opacity-90 md:blur-3xl" />
-          <div className="relative z-10 flex h-full flex-col items-center justify-center gap-4 px-6 sm:px-10 md:flex-row md:justify-between md:px-16 lg:px-24">
+          <div className="relative z-10 flex flex-col items-center justify-between gap-6 px-6 py-8 sm:px-10 sm:py-10 md:flex-row md:gap-10 md:px-16 md:py-12 lg:px-24">
             <div className="max-w-3xl text-center md:text-left">
               <h2 className="text-xl font-medium leading-[1.15] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-2xl md:text-3xl lg:text-[34px] xl:text-[40px]">
                 {page.ctaTitle}
@@ -653,7 +663,7 @@ export default function UIUXDesignPage() {
               href="https://calendar.app.google/sySAYTvgF8Zi264U7"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex h-[40px] w-[220px] items-center justify-center rounded-[50px] bg-[#FF6200] px-[14px] py-[4px] text-center font-['Onest'] text-[16px] font-semibold leading-none transition-all hover:bg-[#e45700]"
+              className="inline-flex min-h-[44px] w-full shrink-0 items-center justify-center rounded-[50px] bg-[#FF6200] px-6 py-3 text-center font-['Onest'] text-[16px] font-semibold leading-snug text-white transition-all hover:bg-[#e45700] md:w-auto md:min-w-[200px]"
             >
               {page.ctaButton}
             </Link>
