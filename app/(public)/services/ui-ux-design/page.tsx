@@ -152,7 +152,7 @@ const copy = {
     heroTitle: "UI/UX & Graphic Design Services",
     heroSubtitle: "Design That Converts and Delights",
     intro:
-      "We create intuitive and visually compelling digital experiences that users love and businesses benefit from. Our UI/UX design services combine deep user research, strategic product design, and high-quality graphic design to deliver interfaces that drive engagement, increase conversions, and support sustainable business growth.[...]
+      "We create intuitive and visually compelling digital experiences that users love and businesses benefit from. Our UI/UX design services combine deep user research, strategic product design, and high-quality graphic design to deliver interfaces that drive engagement, increase conversions, and support sustainable business growth. At IdeaTeam, we don't just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in a competitive market. Whether you are launching a new mobile app, redesigning a web platform, building a SaaS product, or need a complete visual identity, our team turns your idea into a polished, user-centric solution ready for successful development.",
     introStat:
       "Companies investing in professional UI/UX design see 25-30% higher conversion rates, 40-60% improvement in user satisfaction, and significantly better customer retention compared to those treating design as an afterthought.",
     servicesTitle: "Design Services We Deliver",
@@ -172,7 +172,7 @@ const copy = {
     processTitle: "Our Design Process",
     costTitle: "UI/UX Design Pricing",
     costText:
-      "Design project costs depend on complexity, scope, research depth, and deliverables. We offer flexible engagement models from project-based work to dedicated design teams.",
+      "The cost of product design depends on the complexity of the project, the depth of research, and the scope of deliverables. At IdeaTeam we offer transparent pricing and several cooperation formats — from fixed-price projects to dedicated design teams. We always focus on delivering maximum value for your investment. Most clients see return on design investment through increased conversions and stronger market position within the first months after launch.",
     costTiers: [
       [
         "Startup MVP Design",
@@ -190,16 +190,79 @@ const copy = {
         "Multi-product ecosystem, comprehensive design system, ongoing optimization.",
       ],
     ],
-    ctaTitle: "Ready to design a product users will love?",
+    ctaTitle: "Ready to build a product your users will fall in love with?",
     ctaText:
-      "Let's discuss your vision. Our design team will help you create an exceptional user experience that drives real business results.",
+      "Let's discuss your project. IdeaTeam's design team will help you create an exceptional user experience that drives real business results.",
     ctaButton: "Start your design project",
+    faqTitle: "Frequently Asked Questions",
+    faqItems: [
+      {
+        question: "What are UI/UX and Graphic Design Services?",
+        answer:
+          "Our UI/UX design services focus on creating intuitive, beautiful, and functional interfaces for digital products. We combine user experience research, strategic product design, and professional graphic design to deliver solutions that users love and that drive real business results. From mobile apps to complex web platforms, we help turn your idea into a polished product.",
+      },
+      {
+        question: "Why is professional product design important for my business?",
+        answer:
+          "Quality product design directly impacts user engagement, conversion rates, and long-term success. A well-crafted user-centric interface builds trust, reduces churn, and helps your digital product stand out in a competitive market. Companies that invest in expert design services typically see faster growth and better ROI.",
+      },
+      {
+        question: "What is included in your full-cycle design services?",
+        answer:
+          "We provide end-to-end design services including user research, wireframing, UI/UX design, interactive prototyping, graphic design, design systems, and smooth handoff to development. The process ensures your product is validated with user feedback before development begins.",
+      },
+      {
+        question: "How do you ensure a user-centric approach in every project?",
+        answer:
+          "We place the user at the center of every decision. Through in-depth research, audience analysis, and regular user feedback loops, our designers create experiences that solve real problems and feel natural. This approach leads to higher satisfaction and successful digital products.",
+      },
+      {
+        question: "What types of projects do you work on?",
+        answer:
+          "We handle a wide range of projects including mobile app UI/UX, web applications, SaaS platforms, dashboards, landing pages, and complete brand graphic design. Our team has expertise across multiple industry sectors and delivers both standalone design and design and development solutions.",
+      },
+      {
+        question: "How long does the design process usually take?",
+        answer:
+          "The timeline depends on project scope and complexity. A typical product design journey takes 4 to 12 weeks. We use a lean process with clear stages to deliver high-quality results as efficiently as possible while keeping you involved throughout.",
+      },
+      {
+        question: "Do you collaborate with our internal team and developers?",
+        answer:
+          "Yes. Our design team works as an extension of your team. We maintain close collaboration with your stakeholders, product managers, and development specialists to ensure seamless integration and that all designs are technically feasible to build.",
+      },
+      {
+        question: "How do you validate ideas before full development?",
+        answer:
+          "We validate concepts early through user research, competitor analysis, wireframes, and interactive prototypes. This helps gather valuable insight, reduce risks, and make informed decisions — saving time and budget while increasing the chances of success.",
+      },
+      {
+        question: "What tools do you use for UI/UX and Graphic Design?",
+        answer:
+          "We master modern tools such as Figma, FigJam, Framer, Adobe Creative Suite, and Maze. These collaboration tools allow real-time feedback, fast iterations, and efficient delivery of production-ready digital design assets.",
+      },
+      {
+        question: "What is the difference between UI Design and UX Design?",
+        answer:
+          "UI design focuses on the visual aspects — colors, typography, icons, and aesthetics. UX design concentrates on the overall user experience — flows, usability, and how easily users achieve their goals. We excel at both, delivering harmonious product design where beauty meets functionality.",
+      },
+      {
+        question: "How much do your design services cost?",
+        answer:
+          "Pricing depends on the project scope, depth of research, and deliverables. We offer flexible models including fixed-price design services, dedicated designer teams, and phased payments. We always aim to deliver maximum value aligned with your business goals.",
+      },
+      {
+        question: "Why should I choose IdeaTeam for my next design project?",
+        answer:
+          "Clients choose us for our user-centric approach, proven expertise, and focus on measurable results. We don't just deliver beautiful designs — we create successful digital products that support your business growth. Our team becomes a true partner on your journey from idea to market.",
+      },
+    ],
   },
   uk: {
     heroTitle: "Послуги UI/UX та графічного дизайну",
     heroSubtitle: "Дизайн, який конвертує та захоплює",
     intro:
-      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі дослідження, стратегічний продуктовий дизайн та високоякісний графічний дизайн.[...]
+      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі дослідження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
     introStat:
       "Компанії, які інвестують у професійний UI/UX дизайн, бачать 25-30% вищі показники конверсії, 40-60% покращення задоволення користувачів та значно кращу утримання клієнтів порівняно з тими, хто розглядає дизайн як другорядний етап.",
     servicesTitle: "Послуги дизайну, які ми надаємо",
@@ -219,7 +282,7 @@ const copy = {
     processTitle: "Наш процес дизайну",
     costTitle: "Ціноутворення UI/UX дизайну",
     costText:
-      "Вартість проектів дизайну залежить від складності, обсягу, глибини досліджень та розроблюваних матеріалів. Ми пропонуємо гнучкі формати взаємодії від проектних робіт до виділених дизайн-команд.",
+      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та гнучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів. Ми завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
     costTiers: [
       [
         "Дизайн Startup MVP",
@@ -237,10 +300,73 @@ const copy = {
         "Екосистема кількох продуктів, комплексна дизайн-система, постійна оптимізація.",
       ],
     ],
-    ctaTitle: "Готові створити продукт, у який закохаються користувачі?",
+    ctaTitle: "Готові створити продукт, у який закохаються ваші користувачі?",
     ctaText:
-      "Давайте обговоримо вашу бачення. Наша дизайн-команда допоможе розробити винятковий користувацький досвід, який приноситиме реальні бізнес-результати.",
+      "Давайте обговоримо ваш проект. Команда дизайнерів IdeaTeam допоможе розробити винятковий користувацький досвід, який приноситиме реальні бізнес-результати.",
     ctaButton: "Почати ваш дизайн-проект",
+    faqTitle: "Часті запитання",
+    faqItems: [
+      {
+        question: "Що таке послуги UI/UX та графічного дизайну?",
+        answer:
+          "Наші послуги UI/UX-дизайну спрямовані на створення інтуїтивних, красивих і функціональних інтерфейсів для цифрових продуктів. Ми поєднуємо дослідження користувацького досвіду, стратегічний продуктовий дизайн та професійний графічний дизайн, щоб створювати рішення, які подобаються людям і приносять бізнес-результат.",
+      },
+      {
+        question: "Чому професійний продуктовий дизайн важливий для бізнесу?",
+        answer:
+          "Якісний продуктовий дизайн суттєво впливає на залученість користувачів, конверсії та довгостроковий успіх. Орієнтований на користувача інтерфейс підвищує довіру, зменшує відтік клієнтів і допомагає цифровому продукту виділятися на конкурентному ринку.",
+      },
+      {
+        question: "Що входить у повний цикл послуг дизайну?",
+        answer:
+          "Ми надаємо комплексні послуги дизайну: дослідження користувачів, вайрфреймінг, UI/UX-дизайн, інтерактивні прототипи, графічний дизайн, дизайн-системи та плавну передачу матеріалів розробникам. Процес гарантує, що продукт перевіряється з реальними користувачами ще до початку розробки.",
+      },
+      {
+        question: "Як ви забезпечуєте орієнтованість на користувача в кожному проекті?",
+        answer:
+          "Ми ставимо користувача в центр кожного рішення. Завдяки глибоким дослідженням, аналізу аудиторії та регулярному зворотному зв'язку наші дизайнери створюють досвід, який вирішує реальні проблеми та відчувається природним. Це призводить до вищого рівня задоволення та успішних цифрових продуктів.",
+      },
+      {
+        question: "Які типи проектів ви виконуєте?",
+        answer:
+          "Ми працюємо з різними проектами: UI/UX мобільних застосунків, веб-додатками, SaaS-платформами, дашбордами, лендінгами та повним графічним дизайном бренду. Маємо експертизу в багатьох галузях і реалізуємо як окремі дизайн-проекти, так і комплексні рішення дизайн та розробки.",
+      },
+      {
+        question: "Скільки часу займає процес дизайну?",
+        answer:
+          "Терміни залежать від складності проекту. Зазвичай повний цикл продуктового дизайну триває від 4 до 12 тижнів. Ми застосовуємо lean підхід із чіткими етапами для ефективної роботи без втрати якості.",
+      },
+      {
+        question: "Чи співпрацюєте ви з нашою внутрішньою командою та розробниками?",
+        answer:
+          "Так. Наша команда дизайну стає продовженням вашої команди. Ми активно співпрацюємо зі стейкхолдерами, продакт-менеджерами та розробниками, щоб забезпечити технічну реалізованість усіх рішень.",
+      },
+      {
+        question: "Як ви валідуєте ідеї перед повноцінною розробкою?",
+        answer:
+          "Ми проводимо ранню валідацію через дослідження, аналіз конкурентів, вайрфрейми та інтерактивні прототипи. Це дозволяє зібрати цінні інсайти, зменшити ризики та приймати обґрунтовані рішення — заощаджуючи час і бюджет.",
+      },
+      {
+        question: "Які інструменти ви використовуєте для UI/UX та графічного дизайну?",
+        answer:
+          "Ми професійно працюємо з сучасними інструментами: Figma, FigJam, Framer, Adobe Creative Suite та Maze. Ці інструменти забезпечують зворотний зв'язок у реальному часі, швидкі ітерації та ефективну передачу готових дизайн-матеріалів.",
+      },
+      {
+        question: "Чим відрізняється UI-дизайн від UX-дизайну?",
+        answer:
+          "UI-дизайн відповідає за візуальну складову — кольори, типографіку, іконки та естетику. UX-дизайн зосереджений на загальному користувацькому досвіді — сценаріях, зручності та тому, наскільки легко користувачі досягають своїх цілей. Ми майстерно поєднуємо обидва напрямки.",
+      },
+      {
+        question: "Скільки коштують ваші послуги дизайну?",
+        answer:
+          "Вартість залежить від обсягу проекту, глибини досліджень та переліку робіт. Ми пропонуємо гнучкі моделі співпраці, включаючи фіксовану вартість, виділені команди дизайнерів та поетапну оплату. Завжди прагнемо до максимальної цінності відповідно до ваших бізнес-цілей.",
+      },
+      {
+        question: "Чому варто обрати IdeaTeam для наступного дизайн-проекту?",
+        answer:
+          "Клієнти обирають нас завдяки користувацько-орієнтованому підходу, глибокій експертизі та фокусу на реальних бізнес-результатах. Ми не просто створюємо красиві дизайни — ми розробляємо успішні цифрові продукти, що підтримують зростання вашого бізнесу. Наша команда стає надійним партнером на шляху від ідеї до ринку.",
+      },
+    ],
   },
 } as const;
 
@@ -500,7 +626,7 @@ export default function UIUXDesignPage() {
         <RequestConsultationSection />
       </div>
 
-      <FAQSection5 />
+      <FAQSection5 faqTitle={page.faqTitle} faqItems={page.faqItems} />
     </main>
   );
 }
