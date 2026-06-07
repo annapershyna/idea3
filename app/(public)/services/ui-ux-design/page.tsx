@@ -155,23 +155,29 @@ const copy = {
     introStat:
       "Companies investing in professional UI/UX design see 25-30% higher conversion rates, 40-60% improvement in user satisfaction, and significantly better customer retention compared to those treating design as an afterthought.",
     servicesTitle: "Design Services We Deliver",
-    practiceCta: "See it in practice",
     designPhilosophy:
       "At IdeaTeam, we don't just make things look beautiful — we design digital products that solve real problems, simplify complex processes, and help companies stand out in competitive markets. Every design decision is rooted in user research, validated through testing, and optimized for measurable business outcomes.",
-    whyChooseTitle: "Why Choose IdeaTeam for Design",
+    whyChooseTitle: "Why Choose IdeaTeam for Your Product Design",
     whyChooseItems: [
-      "User-first approach backed by research and validation",
-      "Full-cycle product design from concept to production",
-      "Modern, conversion-oriented design thinking",
-      "Seamless collaboration with development teams",
-      "Fast iterations based on feedback",
-      "Proven expertise across industries",
+      "User-first approach — every design decision is based on real user needs and validated through research and testing",
+      "Full-cycle product design from concept to production-ready design system",
+      "Modern, consistent and conversion-oriented graphic design",
+      "Seamless collaboration between design and development teams",
+      "Fast iterations based on user feedback and business goals",
+      "Proven experience across various industries and types of digital products",
+    ],
+    practiceCta: "See it in practice",
+    designValueTitle: "Why product design matters for your business",
+    designValueItems: [
+      "Professional design services are much more than just making interfaces look good. In today\u2019s competitive market, thoughtful product design directly affects user retention, conversion rates, and overall business success.",
+      "A well-designed digital product builds trust, simplifies complex tasks, and creates emotional connection with your audience. Companies that invest in quality UI/UX see significantly better results compared to those who treat design as an afterthought.",
+      "At IdeaTeam, we help you create not only beautiful but also effective solutions that support your long-term goals and give you a strong competitive advantage.",
     ],
     techTitle: "Design Tools & Technologies",
     processTitle: "Our Design Process",
-    costTitle: "UI/UX Design Pricing",
+    costTitle: "How Much Does Quality Product Design Cost in 2026?",
     costText:
-      "The cost of product design depends on the complexity of the project, the depth of research, and the scope of deliverables. At IdeaTeam we offer transparent pricing and several cooperation formats — from fixed-price projects to dedicated design teams. We always focus on delivering maximum value for your investment. Most clients see return on design investment through increased conversions and stronger market position within the first months after launch.",
+      "The cost of product design depends on the complexity of the project, the depth of research, and the scope of deliverables. At IdeaTeam we offer transparent pricing and several cooperation formats — from fixed-price projects to dedicated design teams.\n\nWe always focus on delivering maximum value for your investment. Most clients see return on design investment through increased conversions and stronger market position within the first months after launch.",
     costTiers: [
       [
         "Startup MVP Design",
@@ -261,27 +267,33 @@ const copy = {
     heroTitle: "Послуги UI/UX та графічного дизайну",
     heroSubtitle: "Дизайн, який конвертує та захоплює",
     intro:
-      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл����дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
+      "Ми створюємо інтуїтивно зрозумілі та візуально привабливі цифрові продукти, які подобаються користувачам і приносять реальну користь бізнесу. Наші послуги UI/UX-дизайну поєднують глибокі користувацькі досл������дження, стратегічний продуктовий дизайн та високоякісний графічний дизайн. Результат — інтерфейси, що підвищують залученість, збільшують конверсії та сприяють сталому зростанню бізнесу. В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям ефективно виділятися на конкурентному ринку. Незалежно від того, чи ви запускаєте новий мобільний застосунок, оновлюєте веб-платформу, створюєте SaaS-продукт чи потребуєте повної візуальної ідентичності бренду — наша команда перетворює вашу ідею на відшліфоване, орієнтоване на користувача рішення, повністю готове до успішної розробки.",
     introStat:
       "Компанії, які інвестують у професійний UI/UX дизайн, бачать 25-30% вищі показники конверсії, 40-60% покращення задоволення користувачів та значно кращу утримання клієнтів порівняно з тими, хто розглядає дизайн як другорядний етап.",
     servicesTitle: "Послуги дизайну, які ми надаємо",
     practiceCta: "Подивитись на практиці",
     designPhilosophy:
       "В IdeaTeam ми не просто робимо красиві інтерфейси — ми розробляємо цифрові продукти, які вирішують реальні проблеми, спрощують складні процеси та допомагають компаніям виділятися на конкурентному ринку. Кожне рішення ґрунтується на користувацьких дослідженнях, перевіряється через тестування та оптимізується для вимірюваних бізнес-результатів.",
-    whyChooseTitle: "Чому обирають IdeaTeam для дизайну",
+    whyChooseTitle: "Чому обирають IdeaTeam для продуктового дизайну",
     whyChooseItems: [
-      "Орієнтований на користувача підхід підкріплений дослідженнями та валідацією",
-      "Повний цикл продуктового дизайну від концепції до продакшену",
-      "Сучасне, орієнтоване на конверсію дизайн-мислення",
-      "Тісна співпраця з командами розробки",
-      "Швидкі ітерації на основі зворотного зв'язку",
-      "Доведена експертиза у різних галузях",
+      "Орієнтований на користувача підхід — кожне дизайн-рішення ґрунтується на реальних потребах користувачів і валідується через дослідження та тестування",
+      "Повний цикл продуктового дизайну від концепції до готової до продакшену дизайн-системи",
+      "Сучасний, узгоджений та орієнтований на конверсію графічний дизайн",
+      "Тісна взаємодія між командами дизайну та розробки",
+      "Швидкі ітерації на основі відгуків користувачів та бізнес-цілей",
+      "Підтверджений досвід у різних галузях та типах цифрових продуктів",
+    ],
+    designValueTitle: "Чому продуктовий дизайн важливий для вашого бізнесу",
+    designValueItems: [
+      "Професійні дизайн-послуги — це набагато більше, ніж просто красиві інтерфейси. На сучасному конкурентному ринку продуманий продуктовий дизайн безпосередньо впливає на утримання користувачів, показники конверсії та загальний успіх бізнесу.",
+      "Добре спроектований цифровий продукт будує довіру, спрощує складні завдання та створює емоційний зв'язок з аудиторією. Компанії, що інвестують у якісний UI/UX, отримують значно кращі результати порівняно з тими, хто ставиться до дизайну як до другорядного питання.",
+      "В IdeaTeam ми допомагаємо створювати не лише красиві, але й ефективні рішення, які підтримують ваші довгострокові цілі та забезпечують сильну конкурентну перевагу.",
     ],
     techTitle: "Дизайн-інструменти та технології",
     processTitle: "Наш процес дизайну",
-    costTitle: "Ціноутворення UI/UX дизайну",
+    costTitle: "Скільки коштує якісний продуктовий дизайн у 2026 році?",
     costText:
-      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та ��нучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів. Ми завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
+      "Вартість продуктового дизайну залежить від складності проекту, глибини досліджень та обсягу робіт. В IdeaTeam ми пропонуємо прозоре ціноутворення та гнучкі формати співпраці — від фіксованої вартості проекту до виділеної команди дизайнерів.\n\nМи завжди орієнтуємося на максимальну цінність для ваших інвестицій. Більшість клієнтів бачать окупність витрат на дизайн завдяки зростанню конверсій та посиленню ринкових позицій вже в перші місяці після запуску.",
     costTiers: [
       [
         "Дизайн Startup MVP",
@@ -518,31 +530,50 @@ export default function UIUXDesignPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-16">
-          {/* Left column: heading + philosophy paragraph */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          {/* Left: sticky title + philosophy + CTA */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+            <h2 className="text-3xl font-semibold md:text-5xl">
               {page.whyChooseTitle}
             </h2>
-            <p className="text-lg leading-[1.8] text-foreground/75 dark:text-white/75">
+            <p className="mt-6 text-lg leading-[1.8] text-foreground/75 dark:text-white/75">
               {page.designPhilosophy}
             </p>
+            <Link
+              href="https://ideateam.dev/projects/"
+              className="mt-8 inline-flex min-h-[44px] items-center justify-center rounded-[50px] bg-[#FF6200] px-6 py-3 font-['Onest'] text-[15px] font-semibold leading-snug text-white transition-all hover:bg-[#e45700]"
+            >
+              {page.practiceCta}
+            </Link>
           </div>
-          {/* Right column: benefits grid 2-col */}
-          <div className="grid gap-4 sm:grid-cols-2">
+          {/* Right: vertical benefit cards */}
+          <div className="space-y-3">
             {page.whyChooseItems.map((item) => (
               <div
                 key={item}
-                className="flex gap-4 rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#191a20]"
+                className="flex gap-4 rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-[#161515]"
               >
-                <Check className="mt-1 h-6 w-6 shrink-0 text-[#FF6200]" />
-                <p className="font-medium text-foreground dark:text-white">
+                <Sparkles className="mt-1 h-5 w-5 shrink-0 text-[#FF6200]" />
+                <p className="leading-relaxed text-foreground/75 dark:text-white/75">
                   {item}
                 </p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f3f5fa] px-4 py-14 dark:bg-[#1f2026] sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl space-y-6">
+          {page.designValueItems.map((para, i) => (
+            <p
+              key={i}
+              className="text-lg leading-[1.8] text-foreground/75 dark:text-white/75 md:text-xl"
+            >
+              {para}
+            </p>
+          ))}
         </div>
       </section>
 
@@ -617,9 +648,11 @@ export default function UIUXDesignPage() {
             <h2 className="max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
               {page.costTitle}
             </h2>
-            <p className="mt-4 text-[16px] text-justify text-foreground/60 leading-relaxed dark:text-white/60">
-              {page.costText}
-            </p>
+            <div className="mt-4 space-y-3 text-[16px] leading-relaxed text-justify text-foreground/60 dark:text-white/60">
+              {page.costText.split("\n\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
           </div>
           <div className="divide-y divide-black/10 dark:divide-white/10">
             {page.costTiers.map(([label, range, desc], index) => (
