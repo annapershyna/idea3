@@ -25,8 +25,8 @@ const services = [
   {
     title: { en: "Mobile App UI/UX Design", uk: "UI/UX дизайн мобільних додатків" },
     description: {
-      en: "Beautiful, intuitive interfaces for iOS and Android applications. We design for performance, accessibility, and user delight with platform-specific guidelines.",
-      uk: "Красиві, інтуїтивні інтерфейси для iOS та Android додатків. Ми проектуємо з урахуванням продуктивності, доступності та задоволення користувача з дотриманням платформних рекомендацій.",
+      en: "Design That Converts and Delights.",
+      uk: "Дизайн, який конвертує та захоплює.",
     },
     image: "/images/ui-ux-mobile.jpg",
   },
